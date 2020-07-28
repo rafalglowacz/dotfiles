@@ -1,6 +1,24 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+[[ -f /etc/bash_completion.d/docker-machine-prompt.bash ]] && source /etc/bash_completion.d/docker-machine-prompt.bash
+
+eval "$(ssh-agent -s)" > /dev/null
+alias workspace='cd /home/rafal/Dev/asd/laradock; docker-compose exec --user laradock workspace bash'
+alias wsr='cd /home/rafal/Dev/asd/laradock; docker-compose exec workspace bash'
+alias ws='workspace'
+alias gd='git diff -w HEAD'
+alias dc='docker-compose'
+alias de='docker-compose-exec'
+alias dm='docker-machine'
+alias gs='git status'
+alias gcav='git commit -av && git push'
+alias clip='xclip -sel clip'
+alias k='kubectl'
+alias lh='ls -lh'
+alias watch='watch '
+export LESS='XRi'
+
 # Path to your oh-my-zsh installation.
 export ZSH="/home/rafal/.oh-my-zsh"
 
