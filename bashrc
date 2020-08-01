@@ -2,7 +2,7 @@
 export GOPATH=~/Dev/go
 export KUBECONFIG=~/.kube/config-virtualbox
 
-source /etc/bash_completion.d/docker-machine-prompt.bash
+[[ -f /etc/bash_completion.d/docker-machine-prompt.bash ]] && source /etc/bash_completion.d/docker-machine-prompt.bash
 
 eval "$(ssh-agent -s)" > /dev/null
 alias workspace='cd /home/rafal/Dev/asd/laradock; docker-compose exec --user laradock workspace bash'
@@ -78,7 +78,9 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;35m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$(__docker_machine_ps1) \$ '
+    which docker-machine && \
+        PS1='${debian_chroot:+($debian_chroot)}\[\033[01;35m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$(__docker_machine_ps1) \$ ' || \
+        PS1='${debian_chroot:+($debian_chroot)}\[\033[01;35m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -139,6 +141,6 @@ fi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-source <(kubectl completion bash)
+which kubectl && source <(kubectl completion bash)
 
 PATH="$HOME/.yarn/bin:$PATH"
