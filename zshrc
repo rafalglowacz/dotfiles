@@ -4,8 +4,15 @@
 [[ -f /etc/bash_completion.d/docker-machine-prompt.bash ]] && source /etc/bash_completion.d/docker-machine-prompt.bash
 
 eval "$(ssh-agent -s)" > /dev/null
-alias workspace='cd /home/rafal/Dev/asd/laradock; docker-compose exec --user laradock workspace bash'
-alias wsr='cd /home/rafal/Dev/asd/laradock; docker-compose exec workspace bash'
+
+[[ -d /home/rafal/Dev/asd/laradock ]] \
+    && alias workspace='cd /home/rafal/Dev/asd/laradock; docker-compose exec --user laradock workspace bash' \
+    || alias workspace='cd /home/rafal/Dev/laradock-asd; docker-compose exec --user laradock workspace bash'
+
+[[ -d /home/rafal/Dev/asd/laradock ]] \
+    && alias wsr='cd /home/rafal/Dev/asd/laradock; docker-compose exec workspace bash' \
+    || alias wsr='cd /home/rafal/Dev/laradock-asd; docker-compose exec workspace bash'
+
 alias ws='workspace'
 alias gd='git diff -w HEAD'
 alias dc='docker-compose'
