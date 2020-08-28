@@ -13,6 +13,7 @@ alias dc='docker-compose'
 alias de='docker-compose-exec'
 alias dm='docker-machine'
 alias gs='git status'
+alias gcav='git commit -av'
 alias clip='xclip -sel clip'
 alias k='kubectl'
 alias lh='ls -lh'
@@ -143,4 +144,4 @@ fi
 
 which kubectl && source <(kubectl completion bash)
 
-PATH="$HOME/.yarn/bin:$PATH"
+PATH="$HOME/bin:$HOME/.yarn/bin:$PATH"
