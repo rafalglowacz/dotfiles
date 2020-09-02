@@ -1,5 +1,7 @@
 [alias]
 	co = checkout
+	d = diff -w
+	b = branch
 [pull]
 	rebase = false
 [core]

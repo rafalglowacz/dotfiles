@@ -65,7 +65,7 @@ alias gs='git status'
 alias grhh='git reset --hard HEAD'
 alias gcav='git commit -av; git push'
 alias gcava='git commit -av --amend'
-alias gpf='git push'
+alias gpf='git push --force'
 alias d='git diff -w HEAD'
 
 # Theming section  
