@@ -22,7 +22,7 @@ HISTSIZE=1000
 SAVEHIST=500
 #export EDITOR=/usr/bin/nano
 #export VISUAL=/usr/bin/nano
-WORDCHARS=${WORDCHARS//\/[&;]}                                  # Don't consider certain characters part of the word
+WORDCHARS='*?_-[]~=;!#$%^(){}<>'                                # Don't consider certain characters part of the word
 
 
 ## Keybindings section
@@ -52,21 +52,44 @@ bindkey '^[[1;5C' forward-word                                  #
 bindkey '^H' backward-kill-word                                 # delete previous word with ctrl+backspace
 bindkey '^[[Z' undo                                             # Shift+tab undo last action
 
+# Custom
+bindkey \^U backward-kill-line
+
 ## Alias section 
 alias cp="cp -i"                                                # Confirm before overwriting something
 alias df='df -h'                                                # Human-readable sizes
 alias free='free -m'                                            # Show sizes in MB
 alias gitu='git add . && git commit && git push'
 
-alias workspace='cd /home/rafal/Dev/asd/laradock; docker-compose exec --user laradock workspace bash'
-alias wsr='cd /home/rafal/Dev/asd/laradock; docker-compose exec workspace bash'
+## Laradock aliases
+[[ -d /home/rafal/Dev/asd/laradock ]] \
+    && alias workspace='cd /home/rafal/Dev/asd/laradock; docker-compose exec --user laradock workspace bash' \
+    || alias workspace='cd /home/rafal/Dev/laradock-asd; docker-compose exec --user laradock workspace bash'
+
+[[ -d /home/rafal/Dev/asd/laradock ]] \
+    && alias wsr='cd /home/rafal/Dev/asd/laradock; docker-compose exec workspace bash' \
+    || alias wsr='cd /home/rafal/Dev/laradock-asd; docker-compose exec workspace bash'
+
 alias ws='workspace'
+
+## Git aliases
 alias gs='git status'
-alias grhh='git reset --hard HEAD'
-alias gcav='git commit -av; git push'
-alias gcava='git commit -av --amend'
-alias gpf='git push --force'
 alias gd='git diff -w HEAD'
+alias gpf='git push --force'
+alias grhh='git reset --hard HEAD'
+alias gcav='git commit -av && git push'
+alias gcava='git commit -av --amend'
+
+## Docker aliases
+alias dc='docker-compose'
+alias de='docker-compose-exec'
+alias dm='docker-machine'
+
+## Misc aliases
+alias clip='xclip -sel clip'
+alias k='kubectl'
+alias lh='ls -lh'
+alias watch='watch '
 
 # Theming section  
 autoload -U compinit colors zcalc
@@ -206,5 +229,10 @@ case $(basename "$(cat "/proc/$PPID/comm")") in
 esac
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+eval "$(fasd --init auto)"
+
+[[ -f /etc/bash_completion.d/docker-machine-prompt.bash ]] && source /etc/bash_completion.d/docker-machine-prompt.bash
+
+eval "$(ssh-agent -s)" > /dev/null
 
 export PATH="$HOME/bin:$HOME/.cargo/bin:$PATH"

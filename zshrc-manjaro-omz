@@ -1,10 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-[[ -f /etc/bash_completion.d/docker-machine-prompt.bash ]] && source /etc/bash_completion.d/docker-machine-prompt.bash
-
-eval "$(ssh-agent -s)" > /dev/null
-
+## Laradock aliases
 [[ -d /home/rafal/Dev/asd/laradock ]] \
     && alias workspace='cd /home/rafal/Dev/asd/laradock; docker-compose exec --user laradock workspace bash' \
     || alias workspace='cd /home/rafal/Dev/laradock-asd; docker-compose exec --user laradock workspace bash'
@@ -14,17 +11,25 @@ eval "$(ssh-agent -s)" > /dev/null
     || alias wsr='cd /home/rafal/Dev/laradock-asd; docker-compose exec workspace bash'
 
 alias ws='workspace'
+
+## Git aliases
+alias gs='git status'
 alias gd='git diff -w HEAD'
+alias gpf='git push --force'
+alias grhh='git reset --hard HEAD'
+alias gcav='git commit -av && git push'
+alias gcava='git commit -av --amend'
+
+## Docker aliases
 alias dc='docker-compose'
 alias de='docker-compose-exec'
 alias dm='docker-machine'
-alias gs='git status'
-alias gcav='git commit -av && git push'
+
+## Misc aliases
 alias clip='xclip -sel clip'
 alias k='kubectl'
 alias lh='ls -lh'
 alias watch='watch '
-export LESS='XRi'
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/rafal/.oh-my-zsh"
@@ -131,6 +136,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+WORDCHARS='*?_-[]~=;!#$%^(){}<>'
+
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
@@ -139,3 +146,10 @@ bindkey '^ ' autosuggest-accept
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 eval "$(fasd --init auto)"
+
+[[ -f /etc/bash_completion.d/docker-machine-prompt.bash ]] && source /etc/bash_completion.d/docker-machine-prompt.bash
+
+eval "$(ssh-agent -s)" > /dev/null
+
+export LESS='XRi'
+export PATH="$HOME/bin:$HOME/.cargo/bin:$PATH"
