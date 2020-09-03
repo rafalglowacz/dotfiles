@@ -66,7 +66,7 @@ alias grhh='git reset --hard HEAD'
 alias gcav='git commit -av; git push'
 alias gcava='git commit -av --amend'
 alias gpf='git push --force'
-alias d='git diff -w HEAD'
+alias gd='git diff -w HEAD'
 
 # Theming section  
 autoload -U compinit colors zcalc
@@ -157,7 +157,7 @@ export LESS_TERMCAP_se=$'\E[0m'
 export LESS_TERMCAP_so=$'\E[01;47;34m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;36m'
-export LESS=RX
+export LESS=XRi
 
 
 ## Plugins section: Enable fish style features
