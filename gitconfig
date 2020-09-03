@@ -2,6 +2,7 @@
 	co = checkout
 	d = diff -w
 	b = branch
+	st = status
 [pull]
 	rebase = false
 [core]
