@@ -140,7 +140,7 @@ WORDCHARS='*?_-[]~=;!#$%^(){}<>'
 
 # This apparently conflicts with concatenating killed text for yanking and requires zsh 5.9 (not yet released as of 2020-09-04) to work correctly.
 # See https://github.com/zsh-users/zsh-syntax-highlighting/issues/150
-# source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # See https://github.com/zsh-users/zsh-autosuggestions/issues/363
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
