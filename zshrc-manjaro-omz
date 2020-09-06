@@ -158,3 +158,6 @@ eval "$(ssh-agent -s)" > /dev/null
 
 export LESS='XRi'
 export PATH="$HOME/bin:$HOME/.cargo/bin:$PATH"
+
+autoload -U select-word-style
+select-word-style shell
