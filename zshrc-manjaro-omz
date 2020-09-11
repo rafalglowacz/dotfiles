@@ -1,36 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-## Laradock aliases
-[[ -d /home/rafal/Dev/asd/laradock ]] \
-    && alias workspace='cd /home/rafal/Dev/asd/laradock; docker-compose exec --user laradock workspace bash' \
-    || alias workspace='cd /home/rafal/Dev/laradock-asd; docker-compose exec --user laradock workspace bash'
-
-[[ -d /home/rafal/Dev/asd/laradock ]] \
-    && alias wsr='cd /home/rafal/Dev/asd/laradock; docker-compose exec workspace bash' \
-    || alias wsr='cd /home/rafal/Dev/laradock-asd; docker-compose exec workspace bash'
-
-alias ws='workspace'
-
-## Git aliases
-alias gs='git status'
-alias gd='git diff -w HEAD'
-alias gpf='git push --force'
-alias grhh='git reset --hard HEAD'
-alias gcav='git commit -av && git push'
-alias gcava='git commit -av --amend'
-
-## Docker aliases
-alias dc='docker-compose'
-alias de='docker-compose-exec'
-alias dm='docker-machine'
-
-## Misc aliases
-alias clip='xclip -sel clip'
-alias k='kubectl'
-alias lh='ls -lh'
-alias watch='watch '
-
 # Path to your oh-my-zsh installation.
 export ZSH="/home/rafal/.oh-my-zsh"
 
@@ -136,14 +106,46 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+## Laradock aliases
+[[ -d /home/rafal/Dev/asd/laradock ]] \
+    && alias workspace='cd /home/rafal/Dev/asd/laradock; docker-compose exec --user laradock workspace bash' \
+    || alias workspace='cd /home/rafal/Dev/laradock-asd; docker-compose exec --user laradock workspace bash'
+
+[[ -d /home/rafal/Dev/asd/laradock ]] \
+    && alias wsr='cd /home/rafal/Dev/asd/laradock; docker-compose exec workspace bash' \
+    || alias wsr='cd /home/rafal/Dev/laradock-asd; docker-compose exec workspace bash'
+
+alias ws='workspace'
+
+## Git aliases
+alias gs='git status'
+alias gd='git diff -w HEAD'
+alias gpf='git push --force'
+alias grhh='git reset --hard HEAD'
+alias gcav='git commit -av && git push'
+alias gcava='git commit -av --amend'
+
+## Docker aliases
+alias dc='docker-compose'
+alias de='docker-compose-exec'
+alias dm='docker-machine'
+
+## Misc aliases
+alias clip='xclip -sel clip'
+alias k='kubectl'
+alias lh='ls -lh'
+alias watch='watch '
+
 WORDCHARS='*?_-[]~=;!#$%^(){}<>'
 
 # This apparently conflicts with concatenating killed text for yanking and requires zsh 5.9 (not yet released as of 2020-09-04) to work correctly.
 # See https://github.com/zsh-users/zsh-syntax-highlighting/issues/150
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+[ -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # See https://github.com/zsh-users/zsh-autosuggestions/issues/363
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+[ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ] && source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+[ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ] && source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_IGNORE_WIDGETS+=(backward-kill-word)
 
 bindkey \^U backward-kill-line
