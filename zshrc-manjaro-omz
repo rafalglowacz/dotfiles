@@ -139,10 +139,13 @@ alias diff='diff --color=always'
 
 WORDCHARS='*?_-[]~=;!#$%^(){}<>'
 
+autoload -U select-word-style
+select-word-style shell
+
 # This apparently conflicts with concatenating killed text for yanking and requires zsh 5.9 (not yet released as of 2020-09-04) to work correctly.
 # See https://github.com/zsh-users/zsh-syntax-highlighting/issues/150
-# [ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-# [ -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+[ -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # See https://github.com/zsh-users/zsh-autosuggestions/issues/363
 [ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ] && source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -161,6 +164,3 @@ eval "$(ssh-agent -s)" > /dev/null
 
 export LESS='XRi'
 export PATH="$HOME/bin:$HOME/.cargo/bin:$PATH"
-
-autoload -U select-word-style
-select-word-style shell
