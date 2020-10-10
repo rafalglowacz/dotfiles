@@ -138,10 +138,7 @@ alias lh='ls -lh'
 alias watch='watch '
 alias diff='diff --color=always'
 
-WORDCHARS='*?_-[]~=;!#$%^(){}<>'
-
-autoload -U select-word-style
-select-word-style shell
+WORDCHARS='*?_-[]~=;!#$%^(){}<>/'
 
 # This apparently conflicts with concatenating killed text for yanking and requires zsh 5.9 (not yet released as of 2020-09-04) to work correctly.
 # See https://github.com/zsh-users/zsh-syntax-highlighting/issues/150
@@ -151,7 +148,7 @@ select-word-style shell
 # See https://github.com/zsh-users/zsh-autosuggestions/issues/363
 [ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ] && source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ] && source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-ZSH_AUTOSUGGEST_IGNORE_WIDGETS+=(backward-kill-word)
+ZSH_AUTOSUGGEST_IGNORE_WIDGETS+=(backward-kill-word backward-kill-dir)
 
 bindkey \^U backward-kill-line
 bindkey '^ ' autosuggest-accept
@@ -164,4 +161,28 @@ eval "$(fasd --init auto)"
 eval "$(ssh-agent -s)" > /dev/null
 
 export LESS='XRi'
-export PATH="$HOME/bin:$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.config/composer/vendor/bin:$HOME/bin:$HOME/.cargo/bin:$PATH"
+
+# Alt+Backspace
+backward-kill-dir () {
+    local WORDCHARS=${WORDCHARS/\/}
+    zle backward-kill-word
+}
+zle -N backward-kill-dir
+bindkey '^[^?' backward-kill-dir
+
+# Alt+Left
+backward-word-dir () {
+    local WORDCHARS=${WORDCHARS/\/}
+    zle backward-word
+}
+zle -N backward-word-dir
+bindkey "^[[1;3D" backward-word-dir
+
+# Alt+Right
+forward-word-dir () {
+    local WORDCHARS=${WORDCHARS/\/}
+    zle forward-word
+}
+zle -N forward-word-dir
+bindkey "^[[1;3C" forward-word-dir
