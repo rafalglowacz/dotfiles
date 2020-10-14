@@ -138,7 +138,7 @@ alias lh='ls -lh'
 alias watch='watch '
 alias diff='diff --color=always'
 
-WORDCHARS='*?_-[]~=;!#$%^(){}<>/'
+WORDCHARS='*?_-[]~=;.!@#$%^&(){}<>/\|'
 
 # This apparently conflicts with concatenating killed text for yanking and requires zsh 5.9 (not yet released as of 2020-09-04) to work correctly.
 # See https://github.com/zsh-users/zsh-syntax-highlighting/issues/150
