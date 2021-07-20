@@ -1,8 +1,13 @@
+# Initialize environment-dependent variables
+[ -f ~/.zshrc-env ] && source ~/.zshrc-env
+if [ -z $LARADOCK_DIR ]; then LARADOCK_DIR=$HOME/Dev/laradock; fi
+if [ -z $LARADOCK_SHELL ]; then LARADOCK_SHELL=zsh; fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/rafal/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -108,13 +113,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 ## Laradock aliases
-[[ -d /home/rafal/Dev/asd/laradock ]] \
-    && alias workspace='cd /home/rafal/Dev/asd/laradock; docker-compose exec --user laradock workspace bash' \
-    || alias workspace='cd /home/rafal/Dev/laradock-asd; docker-compose exec --user laradock workspace bash'
-
-[[ -d /home/rafal/Dev/asd/laradock ]] \
-    && alias wsr='cd /home/rafal/Dev/asd/laradock; docker-compose exec workspace bash' \
-    || alias wsr='cd /home/rafal/Dev/laradock-asd; docker-compose exec workspace bash'
+alias workspace="cd $LARADOCK_DIR; docker-compose exec --user laradock workspace $LARADOCK_SHELL"
+alias wsr="cd $LARADOCK_DIR; docker-compose exec workspace $LARADOCK_SHELL"
 
 alias ws='workspace'
 
@@ -130,6 +130,7 @@ alias gcava='git commit -av --amend'
 alias dc='docker-compose'
 alias de='docker-compose-exec'
 alias dm='docker-machine'
+alias sail='bash vendor/bin/sail'
 
 ## Misc aliases
 alias clip='xclip -sel clip'
@@ -142,8 +143,8 @@ WORDCHARS='*?_-[]~=;.!@#$%^&(){}<>/\|'
 
 # This apparently conflicts with concatenating killed text for yanking and requires zsh 5.9 (not yet released as of 2020-09-04) to work correctly.
 # See https://github.com/zsh-users/zsh-syntax-highlighting/issues/150
-[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-[ -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# [ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# [ -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # See https://github.com/zsh-users/zsh-autosuggestions/issues/363
 [ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ] && source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -167,6 +168,7 @@ export PATH="$HOME/.config/composer/vendor/bin:$HOME/bin:$HOME/.cargo/bin:$PATH"
 backward-kill-dir () {
     local WORDCHARS=''
     zle backward-kill-word
+    zle -f kill
 }
 zle -N backward-kill-dir
 bindkey '^[^?' backward-kill-dir
