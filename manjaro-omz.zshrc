@@ -152,9 +152,10 @@ WORDCHARS='*?_-[]~=;.!@#$%^&(){}<>/\|'
 [ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ] && source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ] && source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_IGNORE_WIDGETS+=(backward-kill-word backward-kill-dir)
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 
 bindkey \^U backward-kill-line
-bindkey '^ ' autosuggest-accept
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 eval "$(fasd --init auto)"
