@@ -165,6 +165,8 @@ eval "$(ssh-agent -s)" > /dev/null
 export LESS='XRi'
 export PATH="$HOME/.config/composer/vendor/bin:$HOME/bin:$HOME/.cargo/bin:$PATH"
 
+TERM=xterm-256color
+
 # Alt+Backspace
 backward-kill-dir () {
     local WORDCHARS=''
