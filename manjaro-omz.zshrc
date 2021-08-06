@@ -158,7 +158,7 @@ ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 bindkey \^U backward-kill-line
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-eval "$(fasd --init auto)"
+command -v fasd > /dev/null && eval "$(fasd --init auto)"
 
 [[ -f /etc/bash_completion.d/docker-machine-prompt.bash ]] && source /etc/bash_completion.d/docker-machine-prompt.bash
 
@@ -191,3 +191,5 @@ forward-word-dir () {
 }
 zle -N forward-word-dir
 bindkey "^[[1;3C" forward-word-dir
+
+[ -f $(dirname $0)/.zshrc-custom ] && source $(dirname $0)/.zshrc-custom
