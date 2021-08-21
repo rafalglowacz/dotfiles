@@ -160,7 +160,12 @@ command -v fasd > /dev/null && eval "$(fasd --init auto)"
 
 [[ -f /etc/bash_completion.d/docker-machine-prompt.bash ]] && source /etc/bash_completion.d/docker-machine-prompt.bash
 
-eval "$(ssh-agent -s)" > /dev/null
+# Get this script from https://github.com/wwalker/ssh-find-agent. It doesn't seem to be perfectly compatible with ZSH -
+# running `ssh_find_agent` (no arguments) returns an error that traces back to arrays working differently in Bash and
+# ZSH. But the part that finds the existing agent works fine, although it didn't work for me at first, only started
+# working after reboot.
+source $HOME/bin/ssh-find-agent/ssh-find-agent.sh
+ssh_find_agent -a || eval $(ssh-agent) > /dev/null
 
 export LESS='XRi'
 export PATH="$HOME/.config/composer/vendor/bin:$HOME/bin:$HOME/.cargo/bin:$PATH"
