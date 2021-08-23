@@ -169,7 +169,10 @@ source $HOME/bin/ssh-find-agent/ssh-find-agent.sh
 ssh_find_agent -a || eval $(ssh-agent) > /dev/null
 
 export LESS='XRi'
-export PATH="$HOME/.config/composer/vendor/bin:$HOME/bin:$HOME/.cargo/bin:$PATH"
+
+PATH="$HOME/.config/composer/vendor/bin:$HOME/bin:$HOME/.cargo/bin:$PATH"
+[ -d "$HOME/bin2" ] && PATH="$HOME/bin2:$PATH"
+export PATH
 
 TERM=xterm-256color
 
