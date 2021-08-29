@@ -142,6 +142,7 @@ alias lh='ls -lh'
 alias watch='watch '
 alias diff='diff --color=always'
 alias asno='apt search --names-only'
+alias jq='jq -C'
 
 WORDCHARS='*?_-[]~=;.!@#$%^&(){}<>/\|'
 
