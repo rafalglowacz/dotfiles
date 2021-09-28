@@ -180,8 +180,7 @@ TERM=xterm-256color
 
 # Alt+Backspace
 backward-kill-dir () {
-    local WORDCHARS=''
-    zle backward-kill-word
+    zle vi-backward-kill-word
     zle -f kill
 }
 zle -N backward-kill-dir
@@ -189,16 +188,14 @@ bindkey '^[^?' backward-kill-dir
 
 # Alt+Left
 backward-word-dir () {
-    local WORDCHARS=''
-    zle backward-word
+    zle vi-backward-word
 }
 zle -N backward-word-dir
 bindkey "^[[1;3D" backward-word-dir
 
 # Alt+Right
 forward-word-dir () {
-    local WORDCHARS=''
-    zle forward-word
+    zle vi-forward-word
 }
 zle -N forward-word-dir
 bindkey "^[[1;3C" forward-word-dir
