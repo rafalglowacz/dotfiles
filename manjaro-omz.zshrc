@@ -144,6 +144,7 @@ alias diff='diff --color=always'
 alias asno='apt search --names-only'
 alias jq='jq -C'
 alias art='php artisan'
+alias bat='batcat -p'
 
 WORDCHARS='*?_-[]~=;.!@#$%^&(){}<>/\|'
 
