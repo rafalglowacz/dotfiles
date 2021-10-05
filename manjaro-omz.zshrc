@@ -131,8 +131,6 @@ alias gpuoh='git push -u origin HEAD'
 
 ## Docker aliases
 alias dc='docker-compose'
-alias de='docker-compose-exec'
-alias dm='docker-machine'
 alias sail='bash vendor/bin/sail'
 
 ## Misc aliases
