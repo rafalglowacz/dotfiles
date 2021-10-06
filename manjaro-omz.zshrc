@@ -128,6 +128,7 @@ alias grhh='git reset --hard HEAD'
 alias gcav='git commit -av && git push'
 alias gcava='git commit -av --amend'
 alias gpuoh='git push -u origin HEAD'
+alias gmnn='git merge --no-commit --no-ff'
 
 ## Docker aliases
 alias dc='docker-compose'
