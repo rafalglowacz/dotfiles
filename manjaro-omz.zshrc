@@ -132,8 +132,6 @@ alias gmnn='git merge --no-commit --no-ff'
 
 ## Docker aliases
 alias dc='docker-compose'
-alias de='docker-compose-exec'
-alias dm='docker-machine'
 alias sail='bash vendor/bin/sail'
 
 ## Misc aliases
@@ -145,6 +143,7 @@ alias diff='diff --color=always'
 alias asno='apt search --names-only'
 alias jq='jq -C'
 alias art='php artisan'
+alias bat='batcat -p'
 
 WORDCHARS='*?_-[]~=;.!@#$%^&(){}<>/\|'
 
