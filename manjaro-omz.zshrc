@@ -129,6 +129,8 @@ alias gcav='git commit -av && git push'
 alias gcava='git commit -av --amend'
 alias gpuoh='git push -u origin HEAD'
 alias gmnn='git merge --no-commit --no-ff'
+alias good='git bisect good'
+alias bad='git bisect bad'
 
 ## Docker aliases
 alias dc='docker-compose'

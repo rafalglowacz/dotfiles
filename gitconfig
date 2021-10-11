@@ -3,9 +3,13 @@
 	d = diff -w
 	b = branch
 	st = status
+	r = reflog --date iso
 [pull]
 	rebase = false
 [core]
 	editor = vim
 [include]
 	path = ~/.gitconfig.local
+[stash]
+    showPatch = 1
+    showStat = 0
