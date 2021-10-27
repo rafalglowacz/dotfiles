@@ -1,1 +1,5 @@
 --pager=less
+--ignore-dir=vendor
+--ignore-dir=storage
+--ignore-dir=.idea
+--ignore-dir=docker_volumes
