@@ -13,3 +13,5 @@
 [stash]
     showPatch = 1
     showStat = 0
+[init]
+	defaultBranch = main
