@@ -1,5 +1,5 @@
 # Initialize environment-dependent variables
-[ -f ~/.zshrc-env ] && source ~/.zshrc-env
+[ -f $0 ] && [ -f $(dirname $0)/.zshrc-env ] && source $(dirname $0)/.zshrc-env
 if [ -z $LARADOCK_DIR ]; then LARADOCK_DIR=$HOME/Dev/laradock; fi
 if [ -z $LARADOCK_SHELL ]; then LARADOCK_SHELL=zsh; fi
 
@@ -169,8 +169,10 @@ command -v fasd > /dev/null && eval "$(fasd --init auto)"
 # running `ssh_find_agent` (no arguments) returns an error that traces back to arrays working differently in Bash and
 # ZSH. But the part that finds the existing agent works fine, although it didn't work for me at first, only started
 # working after reboot.
-source $HOME/bin/ssh-find-agent/ssh-find-agent.sh
-ssh_find_agent -a || eval $(ssh-agent) > /dev/null
+if [[ $IGNORE_SSH_AGENT_FINDER_IF_NOT_EXISTS != true ]] || [ -f $HOME/bin/ssh-find-agent/ssh-find-agent.sh ]; then
+    source $HOME/bin/ssh-find-agent/ssh-find-agent.sh
+    ssh_find_agent -a || eval $(ssh-agent) > /dev/null
+fi
 
 export LESS='XRi'
 
