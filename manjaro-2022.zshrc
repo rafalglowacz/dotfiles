@@ -262,3 +262,5 @@ alias ls='ls $LS_OPTIONS'
     ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=244'
   fi
 }
+
+bindkey \^U backward-kill-line
