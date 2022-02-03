@@ -267,3 +267,9 @@ bindkey \^U backward-kill-line
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 command -v fasd > /dev/null && eval "$(fasd --init auto)"
+
+export LESS='XRi'
+
+PATH="$HOME/bin:$PATH"
+[ -d "$HOME/bin2" ] && PATH="$HOME/bin2:$PATH"
+export PATH
