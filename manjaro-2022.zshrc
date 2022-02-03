@@ -22,6 +22,7 @@ zstyle ':completion:*' rehash true                              # automatically 
 zstyle ':completion:*' accept-exact '*(N)'
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.zsh/cache
+zstyle ':completion:*' menu select
 HISTFILE=~/.zhistory
 HISTSIZE=10000
 SAVEHIST=10000
