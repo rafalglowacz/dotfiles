@@ -63,6 +63,34 @@ alias df='df -h'                                                # Human-readable
 alias free='free -m'                                            # Show sizes in MB
 alias gitu='git add . && git commit && git push'
 
+## Git aliases
+alias gs='git status'
+alias gd='git diff -w HEAD'
+alias gpf='git push --force'
+alias grh='git reset --hard'
+alias grhh='git reset --hard HEAD'
+alias gcav='git commit -av && git push'
+alias gcava='git commit -av --amend'
+alias gpuoh='git push -u origin HEAD'
+alias gmnn='git merge --no-commit --no-ff'
+alias good='git bisect good'
+alias bad='git bisect bad'
+
+## Docker aliases
+alias dc='docker-compose'
+alias sail='bash vendor/bin/sail'
+
+## Misc aliases
+alias clip='xclip -sel clip'
+alias k='kubectl'
+alias lh='ls -lh'
+alias watch='watch '
+alias diff='diff --color=always'
+alias asno='apt search --names-only'
+alias jq='jq -C'
+alias art='php artisan'
+alias bat='batcat -p'
+
 # Theming section
 autoload -U compinit colors zcalc
 compinit -d
