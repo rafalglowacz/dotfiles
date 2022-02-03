@@ -264,3 +264,6 @@ alias ls='ls $LS_OPTIONS'
 }
 
 bindkey \^U backward-kill-line
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+command -v fasd > /dev/null && eval "$(fasd --init auto)"
