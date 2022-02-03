@@ -263,6 +263,8 @@ alias ls='ls $LS_OPTIONS'
   fi
 }
 
+WORDCHARS='*?_-[]~=;.!@#$%^&(){}<>/\|'
+
 bindkey \^U backward-kill-line
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -273,3 +275,25 @@ export LESS='XRi'
 PATH="$HOME/bin:$PATH"
 [ -d "$HOME/bin2" ] && PATH="$HOME/bin2:$PATH"
 export PATH
+
+# Alt+Backspace
+backward-kill-dir () {
+    zle vi-backward-kill-word
+    zle -f kill
+}
+zle -N backward-kill-dir
+bindkey '^[^?' backward-kill-dir
+
+# Alt+Left
+backward-word-dir () {
+    zle vi-backward-word
+}
+zle -N backward-word-dir
+bindkey "^[[1;3D" backward-word-dir
+
+# Alt+Right
+forward-word-dir () {
+    zle vi-forward-word
+}
+zle -N forward-word-dir
+bindkey "^[[1;3C" forward-word-dir
