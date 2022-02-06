@@ -1,3 +1,8 @@
+# Initialize environment-dependent variables
+[ -f $0 ] && [ -f $(dirname $0)/.zshrc-env ] && source $(dirname $0)/.zshrc-env
+if [ -z $LARADOCK_DIR ]; then LARADOCK_DIR=$HOME/Dev/laradock; fi
+if [ -z $LARADOCK_SHELL ]; then LARADOCK_SHELL=zsh; fi
+
 # Use powerline
 USE_POWERLINE="true"
 
@@ -63,6 +68,12 @@ alias cp="cp -i"                                                # Confirm before
 alias df='df -h'                                                # Human-readable sizes
 alias free='free -m'                                            # Show sizes in MB
 alias gitu='git add . && git commit && git push'
+
+## Laradock aliases
+alias workspace="cd $LARADOCK_DIR; docker-compose exec --user laradock workspace $LARADOCK_SHELL"
+alias wsr="cd $LARADOCK_DIR; docker-compose exec workspace $LARADOCK_SHELL"
+
+alias ws='workspace'
 
 ## Git aliases
 alias gs='git status'
