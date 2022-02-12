@@ -1,0 +1,12 @@
+{
+    "workbench.sideBar.location": "right",
+    "git.enableSmartCommit": true,
+    "editor.fontSize": 15,
+    "editor.rulers": [
+        120
+    ],
+    "window.openFoldersInNewWindow": "on",
+    "workbench.colorTheme": "Monokai",
+    "window.menuBarVisibility": "toggle",
+    "window.newWindowDimensions": "inherit",
+}
