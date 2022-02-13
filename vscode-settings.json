@@ -9,4 +9,5 @@
     "workbench.colorTheme": "Monokai",
     "window.menuBarVisibility": "toggle",
     "window.newWindowDimensions": "inherit",
+    "workbench.startupEditor": "none",
 }
