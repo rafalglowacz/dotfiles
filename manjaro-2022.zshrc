@@ -281,6 +281,15 @@ bindkey \^U backward-kill-line
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 command -v fasd > /dev/null && eval "$(fasd --init auto)"
 
+# Get this script from https://github.com/wwalker/ssh-find-agent. It doesn't seem to be perfectly compatible with ZSH -
+# running `ssh_find_agent` (no arguments) returns an error that traces back to arrays working differently in Bash and
+# ZSH. But the part that finds the existing agent works fine, although it didn't work for me at first, only started
+# working after reboot.
+if [[ $IGNORE_SSH_AGENT_FINDER_IF_NOT_EXISTS != true ]] || [ -f $HOME/bin/ssh-find-agent/ssh-find-agent.sh ]; then
+    source $HOME/bin/ssh-find-agent/ssh-find-agent.sh
+    ssh_find_agent -a || eval $(ssh-agent) > /dev/null
+fi
+
 export LESS='XRi'
 
 PATH="$HOME/bin:$PATH"
