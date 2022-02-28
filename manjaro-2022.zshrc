@@ -102,6 +102,7 @@ alias diff='diff --color=always'
 alias asno='apt search --names-only'
 alias jq='jq -C'
 alias art='php artisan'
+alias c='clear'
 
 # Theming section
 autoload -U compinit colors zcalc
