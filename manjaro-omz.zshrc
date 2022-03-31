@@ -139,7 +139,7 @@ alias sail='bash vendor/bin/sail'
 ## Misc aliases
 alias clip='xclip -sel clip'
 alias k='kubectl'
-alias lh='ls -lh'
+alias lh='exa -lh'
 alias watch='watch '
 alias diff='diff --color=always'
 alias asno='apt search --names-only'
