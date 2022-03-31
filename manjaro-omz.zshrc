@@ -146,6 +146,7 @@ alias asno='apt search --names-only'
 alias jq='jq -C'
 alias art='php artisan'
 alias bat='batcat -p'
+alias c='clear'
 
 WORDCHARS='*?_-[]~=;.!@#$%^&(){}<>/\|'
 
