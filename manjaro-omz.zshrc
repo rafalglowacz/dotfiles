@@ -14,18 +14,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # Some nice informative ones are: amuse candy aussiegeek
-# ZSH_THEME="candy"
-
-# Instead of setting a theme, here's the entire contents of the theme file (~/.oh-my-zsh/themes/candy.zsh-theme) so that
-# I can tweak colors
-
-PROMPT=$'%{$fg_bold[yellow]%}%n@%m %{$fg[blue]%}%D{[%X]} %{$reset_color%}%{$fg[white]%}[%~]%{$reset_color%} $(git_prompt_info)\
-%{$fg[blue]%}->%{$fg_bold[blue]%} %#%{$reset_color%} '
-
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[green]%}["
-ZSH_THEME_GIT_PROMPT_SUFFIX="]%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg[red]%}*%{$fg[green]%}"
-ZSH_THEME_GIT_PROMPT_CLEAN=""
+ZSH_THEME="candy"
 
 HISTSIZE=10000
 SAVEHIST=10000
