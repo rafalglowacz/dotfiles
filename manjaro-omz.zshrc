@@ -205,4 +205,4 @@ forward-word-dir () {
 zle -N forward-word-dir
 bindkey "^[[1;3C" forward-word-dir
 
-[ -f $0 ] && [ -f $(dirname $0)/.zshrc-custom ] && source $(dirname $0)/.zshrc-custom
+[ -f ~/.zshrc-custom ] && source ~/.zshrc-custom
