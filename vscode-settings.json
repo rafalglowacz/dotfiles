@@ -6,7 +6,7 @@
         120
     ],
     "window.openFoldersInNewWindow": "on",
-    "workbench.colorTheme": "Monokai",
+    "workbench.colorTheme": "Default Light+",
     "window.menuBarVisibility": "toggle",
     "window.newWindowDimensions": "inherit",
     "workbench.startupEditor": "none",
