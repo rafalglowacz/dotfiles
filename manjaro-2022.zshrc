@@ -277,6 +277,7 @@ alias ls='ls $LS_OPTIONS'
 }
 
 WORDCHARS='*?_-[]~=;.!@#$%^&(){}<>/\|'
+ZLE_REMOVE_SUFFIX_CHARS=""
 
 bindkey \^U backward-kill-line
 
