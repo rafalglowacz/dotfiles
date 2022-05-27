@@ -104,6 +104,10 @@ alias jq='jq -C'
 alias art='php artisan'
 alias c='clear'
 
+if [ -f ~/.zsh_aliases ]; then
+    source ~/.zsh_aliases
+fi
+
 # Theming section
 autoload -U compinit colors zcalc
 compinit -d
