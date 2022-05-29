@@ -103,6 +103,7 @@ alias asno='apt search --names-only'
 alias jq='jq -C'
 alias art='php artisan'
 alias c='clear'
+alias -- -='cd -'
 
 if [ -f ~/.zsh_aliases ]; then
     source ~/.zsh_aliases
