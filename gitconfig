@@ -16,3 +16,5 @@
     showStat = 0
 [init]
 	defaultBranch = main
+[credential]
+	helper = cache --timeout=3600
