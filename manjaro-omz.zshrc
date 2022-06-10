@@ -148,6 +148,10 @@ alias art='php artisan'
 ! which bat >> /dev/null && alias bat='batcat -p'
 alias c='clear'
 
+if [ -f ~/.zsh_aliases ]; then
+    source ~/.zsh_aliases
+fi
+
 WORDCHARS='*?_-[]~=;.!@#$%^&(){}<>/\|'
 ZLE_REMOVE_SUFFIX_CHARS=""
 
