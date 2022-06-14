@@ -128,7 +128,7 @@ alias grhh='git reset --hard HEAD'
 alias gcav='git commit -av; if [[ $(git remote -v | wc -l) > 0 ]]; then git push; fi'
 alias gcava='git commit -av --amend'
 alias gpuoh='git push -u origin HEAD'
-alias gmnn='git merge --no-commit --no-ff'
+alias gmnn='git merge --no-commit --no-ff && git stash && git stash apply'
 alias good='git bisect good'
 alias bad='git bisect bad'
 
