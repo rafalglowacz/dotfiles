@@ -149,6 +149,7 @@ alias jq='jq -C'
 alias art='php artisan'
 ! which bat >> /dev/null && alias bat='batcat -p'
 alias c='clear'
+alias m='mutagen'
 
 if [ -f ~/.zsh_aliases ]; then
     source ~/.zsh_aliases
