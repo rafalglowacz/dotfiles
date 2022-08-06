@@ -166,6 +166,7 @@ ZLE_REMOVE_SUFFIX_CHARS=""
 ZSH_AUTOSUGGEST_IGNORE_WIDGETS+=(backward-kill-word backward-kill-dir)
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=244"
 
 bindkey \^U backward-kill-line
 
