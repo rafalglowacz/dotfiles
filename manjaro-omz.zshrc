@@ -186,7 +186,7 @@ fi
 
 export LESS='XRi'
 
-PATH="$HOME/.config/composer/vendor/bin:$HOME/bin:$HOME/.cargo/bin:$PATH"
+PATH="$HOME/.composer/vendor/bin:$HOME/.config/composer/vendor/bin:$HOME/bin:$HOME/.cargo/bin:$PATH"
 [ -d "$HOME/bin2" ] && PATH="$HOME/bin2:$PATH"
 export PATH
 
