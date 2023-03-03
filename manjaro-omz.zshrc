@@ -147,9 +147,12 @@ alias diff='diff --color=always'
 alias asno='apt search --names-only'
 alias jq='jq -C'
 alias art='php artisan'
+alias migrate='php artisan migrate'
+alias rollback='php artisan migrate:rollback'
 ! which bat >> /dev/null && alias bat='batcat -p'
 alias c='clear'
 alias m='mutagen'
+alias phpv='php --version'
 
 if [ -f ~/.zsh_aliases ]; then
     source ~/.zsh_aliases
