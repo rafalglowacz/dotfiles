@@ -10,4 +10,6 @@
     "window.menuBarVisibility": "toggle",
     "window.newWindowDimensions": "inherit",
     "workbench.startupEditor": "none",
+    "editor.unicodeHighlight.nonBasicASCII": false,
+    "git.openRepositoryInParentFolders": "never",
 }
