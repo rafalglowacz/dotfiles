@@ -1,4 +1,4 @@
 local M = {}
-M.ui = {theme = 'oceanic-light'}
+M.ui = {theme = 'github_light'}
 M.plugins = 'custom.plugins'
 return M
