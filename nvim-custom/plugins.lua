@@ -10,7 +10,8 @@ local plugins = {
     "nvim-tree/nvim-tree.lua",
     opts = {
       view = {
-        side = "right"
+        side = "right",
+        width = 50,
       }
     }
   }
