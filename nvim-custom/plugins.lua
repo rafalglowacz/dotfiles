@@ -12,9 +12,13 @@ local plugins = {
       view = {
         side = "right",
         width = 50,
+        hide_root_folder = false,
       }
-    }
-  }
+    },
+  },
+  -- {
+  --   "rmagatti/auto-session",
+  -- },
 }
 
 return plugins
