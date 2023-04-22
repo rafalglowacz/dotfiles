@@ -38,6 +38,8 @@ vim.opt.clipboard = 'unnamedplus' -- Use system clipboard
 
 vim.opt.confirm = true
 
+vim.opt.signcolumn = 'yes:1'
+
 vim.opt.undofile = true
 vim.opt.backup = true
 vim.opt.backupdir:remove('.')

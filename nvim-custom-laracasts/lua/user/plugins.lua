@@ -146,6 +146,11 @@ use({
   end
 })
 
+use({
+  'tpope/vim-fugitive',
+  requires = 'tpope/vim-rhubarb',
+})
+
 if packer_bootstrap then
   require('packer').sync()
 end
