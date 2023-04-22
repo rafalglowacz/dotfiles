@@ -89,6 +89,19 @@ use({
   end,
 })
 
+use({
+  'nvim-telescope/telescope.nvim',
+  requires = {
+    'nvim-lua/plenary.nvim',
+    'kyazdani42/nvim-web-devicons',
+    'nvim-telescope/telescope-live-grep-args.nvim',
+    { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
+  },
+  config = function()
+    require('user/plugins/telescope')
+  end
+})
+
 if packer_bootstrap then
   require('packer').sync()
 end
