@@ -31,7 +31,7 @@ use('tpope/vim-eunuch')
 use('tpope/vim-unimpaired')
 use('tpope/vim-sleuth')
 use('tpope/vim-repeat')
-use('sheerun/vim-polyglot')
+-- use('sheerun/vim-polyglot')
 use('christoomey/vim-tmux-navigator')
 use('farmergreg/vim-lastplace')
 use('nelstrom/vim-visual-star-search')
@@ -52,12 +52,12 @@ use({
   end,
 })
 
--- use({
---   'windwp/nvim-autopairs',
---   config = function()
---     require('nvim-autopairs').setup()
---   end,
--- })
+use({
+  'windwp/nvim-autopairs',
+  config = function()
+    require('nvim-autopairs').setup({})
+  end,
+})
 
 use({
   'karb94/neoscroll.nvim',
