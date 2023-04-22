@@ -110,6 +110,14 @@ use({
   end,
 })
 
+use({
+  'nvim-lualine/lualine.nvim',
+  requires = 'kyazdani42/nvim-web-devicons',
+  config = function()
+    require('lualine').setup()
+  end,
+})
+
 if packer_bootstrap then
   require('packer').sync()
 end
