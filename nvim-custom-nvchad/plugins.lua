@@ -13,6 +13,9 @@ local plugins = {
         side = "right",
         width = 50,
         hide_root_folder = false,
+      },
+      update_focused_file = {
+        enable = false,
       }
     },
   },
