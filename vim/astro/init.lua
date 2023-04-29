@@ -1,3 +1,3 @@
 return {
-  colorscheme = 'shine',
+  colorscheme = 'astrolight',
 }
