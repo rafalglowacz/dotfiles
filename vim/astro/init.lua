@@ -1,3 +1,3 @@
 return {
-  colorscheme = 'astrolight',
+  colorscheme = 'github_light',
 }
