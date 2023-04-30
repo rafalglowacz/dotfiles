@@ -134,7 +134,7 @@ alias good='git bisect good'
 alias bad='git bisect bad'
 
 ## Docker aliases
-alias dc='docker-compose'
+alias dc='docker compose'
 alias mc='mutagen-compose'
 alias sail='bash vendor/bin/sail'
 
