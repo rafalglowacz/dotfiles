@@ -6,4 +6,11 @@ return {
       require('github-theme').setup()
     end
   },
+  {
+    'nvim-neo-tree/neo-tree.nvim',
+    opts = function(_, opts)
+      opts.window.position = 'right'
+      opts.window.width = 50
+    end
+  }
 }
