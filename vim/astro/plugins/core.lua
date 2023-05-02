@@ -12,5 +12,9 @@ return {
       opts.window.position = 'right'
       opts.window.width = 50
     end
-  }
+  },
+  {
+    'rcarriga/nvim-notify',
+    enabled = false,
+  },
 }
