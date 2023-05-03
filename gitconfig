@@ -9,6 +9,7 @@
 	rebase = false
 [core]
 	editor = vim
+	pager = delta
 [include]
 	path = ~/.gitconfig.local
 [stash]
@@ -18,3 +19,12 @@
 	defaultBranch = main
 [credential]
 	helper = cache --timeout=3600
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+	light = true
+[merge]
+	conflictstyle = diff3
+[diff]
+	colorMoved = default
