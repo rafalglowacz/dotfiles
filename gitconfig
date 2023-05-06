@@ -8,7 +8,7 @@
 [pull]
 	rebase = false
 [core]
-	editor = vim
+	editor = nvim
 	pager = delta
 [include]
 	path = ~/.gitconfig.local
