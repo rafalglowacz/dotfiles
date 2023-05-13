@@ -84,6 +84,7 @@ plugins=(
 	extract
 	git
 	zsh-autosuggestions
+	command-time
 )
 
 source $ZSH/oh-my-zsh.sh
