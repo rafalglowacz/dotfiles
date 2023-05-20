@@ -1,12 +1,18 @@
 return {
   n = {
     ['<Tab>'] = { 
-      function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end, 
-      desc = "Next buffer" 
+      desc = "Next buffer",
+      function() 
+        require("astronvim.utils.buffer")
+        .nav(vim.v.count > 0 and vim.v.count or 1) 
+      end, 
     },
     ['<S-Tab>'] = {
-      function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
       desc = "Previous buffer",
+      function() 
+        require("astronvim.utils.buffer")
+        .nav(-(vim.v.count > 0 and vim.v.count or 1))
+      end,
     }
   },
   i = {
