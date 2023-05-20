@@ -6,6 +6,13 @@ return {
       require('github-theme').setup()
     end
   },
+  { 
+    'catppuccin/nvim', 
+    name = 'catppuccin',
+    config = function()
+      require('catppuccin').setup({ flavour = 'latte' })
+    end
+  },
   {
     'nvim-neo-tree/neo-tree.nvim',
     opts = function(_, opts)
