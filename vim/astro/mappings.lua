@@ -18,8 +18,11 @@ return {
     ['<A-Up>'] = '<Esc>:move .-2<CR>==',
   },
   i = {
-    ['<C-;>'] = '<Esc>A;',
-    ['<C-,>'] = '<Esc>A,',
+    -- Vim cannot capture these and ",," and ";;" that i had here before have
+    -- a weird behavior, sometimes the character disappears and reappears or
+    -- doesn't depending on what gets pressed next.
+    -- ['<C-;>'] = '<Esc>A;',
+    -- ['<C-,>'] = '<Esc>A,',
     ['<A-Down>'] = '<Esc>:move .+1<CR>==gi',
     ['<A-Up>'] = '<Esc>:move .-2<CR>==gi',
   },
