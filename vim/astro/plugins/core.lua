@@ -7,6 +7,28 @@ return {
     end
   },
   {
+    'nvim-telescope/telescope.nvim',
+    config = function()
+      require('telescope').setup({
+        pickers = {
+          find_files = {
+            mappings = {
+              n = {
+                ['cd'] = function(prompt_bufnr)
+                  local actions = require('telescope.actions');
+                  local state = require('telescope.actions.state');
+                  local selection = state.get_selected_entry()
+                  actions.close(prompt_bufnr);
+                  vim.cmd('Neotree reveal_file=' .. selection.path)
+                end
+              }
+            }
+          }
+        }
+      })
+    end
+  },
+  {
     'princejoogie/dir-telescope.nvim',
     config = function()
       require('dir-telescope').setup()
