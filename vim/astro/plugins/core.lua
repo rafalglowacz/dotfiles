@@ -24,4 +24,10 @@ return {
     'rcarriga/nvim-notify',
     enabled = false,
   },
+  {
+    'princejoogie/dir-telescope.nvim',
+    config = function()
+      require('dir-telescope').setup()
+    end
+  },
 }

@@ -16,6 +16,11 @@ return {
     },
     ['<A-Down>'] = '<Esc>:move .+1<CR>==',
     ['<A-Up>'] = '<Esc>:move .-2<CR>==',
+    ['<leader>fd'] =  {
+      '<cmd>Telescope dir find_files<CR>',
+      noremap = true,
+      silent = true,
+    }
   },
   i = {
     -- Vim cannot capture these and ",," and ";;" that i had here before have
