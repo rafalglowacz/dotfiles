@@ -46,7 +46,10 @@ return {
     'catppuccin/nvim', 
     name = 'catppuccin',
     config = function()
-      require('catppuccin').setup({ flavour = 'latte' })
+      require('catppuccin').setup({ 
+        flavour = 'latte',
+        transparent_background = true,
+      })
     end
   },
   -- Disabled plugins
