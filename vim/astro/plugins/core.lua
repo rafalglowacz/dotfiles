@@ -58,6 +58,12 @@ return {
       })
     end
   },
+  {
+    'neanias/everforest-nvim',
+    config = function()
+      require('everforest').setup({ transparent_background_level = 2 });
+    end
+  },
   -- Disabled plugins
   {
     'rcarriga/nvim-notify',
