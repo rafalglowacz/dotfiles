@@ -140,6 +140,11 @@ alias dc='docker compose'
 alias mc='mutagen-compose'
 alias sail='bash vendor/bin/sail'
 
+## Vim aliases
+alias     vi='XDG_CONFIG_HOME=~/.config/nvim-basic  XDG_CACHE_HOME=~/.cache/nvim-basic  XDG_DATA_HOME=~/.local/share/nvim-basic  XDG_STATE_HOME=~/.local/state/nvim-basic nvim'
+alias    vim='XDG_CONFIG_HOME=~/.config/nvim-astro  XDG_CACHE_HOME=~/.cache/nvim-astro  XDG_DATA_HOME=~/.local/share/nvim-astro  XDG_STATE_HOME=~/.local/state/nvim-astro nvim'
+alias nvchad='XDG_CONFIG_HOME=~/.config/nvim-nvchad XDG_CACHE_HOME=~/.cache/nvim-nvchad XDG_DATA_HOME=~/.local/share/nvim-nvchad XDG_STATE_HOME=~/.local/state/nvim-nvchad nvim'
+
 ## Misc aliases
 alias clip='xclip -sel clip'
 alias k='kubectl'
@@ -155,7 +160,6 @@ alias rollback='php artisan migrate:rollback'
 alias c='clear'
 alias m='mutagen'
 alias phpv='php --version'
-alias vim='nvim'
 
 if [ -f ~/.zsh_aliases ]; then
     source ~/.zsh_aliases
