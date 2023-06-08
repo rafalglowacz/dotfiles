@@ -24,6 +24,9 @@
 [delta]
 	navigate = true
 	light = true
+	diff-highlight = false
+	diff-so-fancy = false
+	line-numbers = true
 [merge]
 	conflictstyle = diff3
 [diff]
