@@ -115,10 +115,13 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+## DNF aliases
+alias i='sudo dnf install -y'
+alias s='sudo dnf search'
+
 ## Laradock aliases
 alias workspace="cd $LARADOCK_DIR; docker-compose exec --user laradock workspace $LARADOCK_SHELL"
 alias wsr="cd $LARADOCK_DIR; docker-compose exec workspace $LARADOCK_SHELL"
-
 alias ws='workspace'
 
 ## Git aliases
