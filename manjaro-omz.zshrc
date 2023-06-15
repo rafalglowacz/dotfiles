@@ -164,7 +164,6 @@ alias rollback='php artisan migrate:rollback'
 alias c='clear'
 alias m='mutagen'
 alias phpv='php --version'
-alias tail='tail -n 20'
 
 if [ -f ~/.zsh_aliases ]; then
     source ~/.zsh_aliases
