@@ -1,5 +1,11 @@
 return {
   {
+    'fladson/vim-kitty',
+    config = function()
+      require('vim-kitty').setup()
+    end
+  },
+  {
     'nvim-neo-tree/neo-tree.nvim',
     opts = function(_, opts)
       opts.window.position = 'right'
