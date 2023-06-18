@@ -1,0 +1,24 @@
+# vim:ft=kitty-session
+
+cd ~/Dev/laravel
+launch --title Laravel zsh
+
+new_tab Laradock
+cd ~/Dev/laradock
+launch zsh
+
+new_tab Dotfiles
+cd ~/Dev/dotfiles
+launch zsh
+
+new_tab Bin public
+cd ~/bin
+launch zsh
+
+new_tab Bin private
+cd ~/bin2
+launch zsh
+
+new_tab QMK
+cd ~/Dev/qmk-firmware
+launch zsh
