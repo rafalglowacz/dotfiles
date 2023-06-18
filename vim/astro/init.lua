@@ -1,3 +1,3 @@
 return {
-  colorscheme = 'catppuccin',
+  colorscheme = 'everforest',
 }

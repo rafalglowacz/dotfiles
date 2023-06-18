@@ -53,15 +53,21 @@ return {
     name = 'catppuccin',
     config = function()
       require('catppuccin').setup({ 
-        flavour = 'latte',
-        transparent_background = true,
-        dim_inactive = {
-          enabled = true,
-          shade = dark,
-          percentage = 0.15,
-        },
+        flavour = 'macchiato',
+        -- transparent_background = true,
+        -- dim_inactive = {
+        --   enabled = true,
+        --   shade = dark,
+        --   percentage = 0.15,
+        -- },
         -- no_italic = true,
       })
+    end
+  },
+  {
+    'neanias/everforest-nvim',
+    config = function()
+      require('everforest').setup({ transparent_background_level = 2 });
     end
   },
   -- Disabled plugins
