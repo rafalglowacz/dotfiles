@@ -16,6 +16,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # Some nice informative ones are: amuse candy aussiegeek
 ZSH_THEME="candy"
+export ZSH_COMMAND_TIME_COLOR=grey
 
 HISTSIZE=10000
 SAVEHIST=10000
