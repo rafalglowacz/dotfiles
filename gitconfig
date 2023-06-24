@@ -23,7 +23,7 @@
 	diffFilter = delta --color-only
 [delta]
 	navigate = true
-	light = true
+	light = false
 	diff-highlight = false
 	diff-so-fancy = false
 	line-numbers = true
