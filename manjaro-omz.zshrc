@@ -186,6 +186,11 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=244"
 bindkey \^U backward-kill-line
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_CTRL_R_OPTS="
+  --preview 'echo {}' --preview-window up:10:hidden:wrap
+  --bind 'ctrl-/:toggle-preview'
+  --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort'"
+
 command -v fasd > /dev/null && eval "$(fasd --init auto)"
 
 [[ -f /etc/bash_completion.d/docker-machine-prompt.bash ]] && source /etc/bash_completion.d/docker-machine-prompt.bash
