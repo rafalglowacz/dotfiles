@@ -35,6 +35,12 @@ return {
     end
   },
   {
+    'm00qek/baleia.nvim',
+    config = function()
+      require('baleia').setup({})
+    end
+  },
+  {
     'princejoogie/dir-telescope.nvim',
     config = function()
       require('dir-telescope').setup()
