@@ -37,6 +37,11 @@ return {
     ['y'] = 'myy`y',
     ['Y'] = 'myY`y',
     ['p'] = '"_dP',
+    ['v'] = function() 
+      vim.api.nvim_input(
+        vim.api.nvim_get_mode()['mode'] == 'v' and '<C-v>' or 'v'
+      )
+    end
   },
   x = {
     ['<A-Down>'] = ":move '>+1<CR>gv-gv",
