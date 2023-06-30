@@ -151,6 +151,7 @@ alias    vim='XDG_CONFIG_HOME=~/.config/nvim-astro  XDG_CACHE_HOME=~/.cache/nvim
 alias nvchad='XDG_CONFIG_HOME=~/.config/nvim-nvchad XDG_CACHE_HOME=~/.cache/nvim-nvchad XDG_DATA_HOME=~/.local/share/nvim-nvchad XDG_STATE_HOME=~/.local/state/nvim-nvchad nvim'
 
 ## Misc aliases
+alias clearall="printf '\033[2J\033[3J\033[1;1H'"
 alias clip='xclip -sel clip'
 alias k='kubectl'
 alias lh='exa -lh'
