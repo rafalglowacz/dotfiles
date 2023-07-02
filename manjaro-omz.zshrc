@@ -240,7 +240,7 @@ bindkey "^[[1;3C" forward-word-dir
 [ -f ~/.zshrc-custom ] && source ~/.zshrc-custom
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 export GOPATH=~/.local/bin/go
