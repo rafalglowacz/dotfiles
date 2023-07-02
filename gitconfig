@@ -1,3 +1,6 @@
+[include]
+	path = ~/.gitconfig.local
+  path = ~/Dev/delta/themes.gitconfig
 [alias]
 	co = checkout
 	ci = commit
@@ -10,8 +13,6 @@
 [core]
 	editor = nvim
 	pager = delta
-[include]
-	path = ~/.gitconfig.local
 [stash]
     showPatch = 1
     showStat = 0
@@ -22,6 +23,9 @@
 [interactive]
 	diffFilter = delta --color-only
 [delta]
+	features = tangara-chilensis 
+	#features = mantis-shrimp
+	side-by-side = false
 	navigate = true
 	light = false
 	diff-highlight = false
