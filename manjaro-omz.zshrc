@@ -211,6 +211,8 @@ PATH="$HOME/.composer/vendor/bin:$HOME/.config/composer/vendor/bin:$HOME/bin:$HO
 [ -d "$HOME/bin2" ] && PATH="$HOME/bin2:$PATH"
 export PATH
 
+export BAT_THEME='gruvbox-dark'
+
 TERM=xterm-256color
 
 # Alt+Backspace
