@@ -20,7 +20,8 @@ return {
       '<cmd>Telescope dir find_files<CR>',
       noremap = true,
       silent = true,
-    }
+    },
+    ['C'] = '"_Da',
   },
   i = {
     -- Vim cannot capture these and ",," and ";;" that i had here before have
