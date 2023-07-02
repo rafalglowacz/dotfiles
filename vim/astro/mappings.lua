@@ -38,6 +38,7 @@ return {
     ['y'] = 'myy`y',
     ['Y'] = 'myY`y',
     ['p'] = '"_dP',
+    ['c'] = '"_di',
     ['v'] = function() 
       vim.api.nvim_input(
         vim.api.nvim_get_mode()['mode'] == 'v' and '<C-v>' or 'v'
