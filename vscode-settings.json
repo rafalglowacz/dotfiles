@@ -12,7 +12,7 @@
     "workbench.startupEditor": "none",
     "editor.unicodeHighlight.nonBasicASCII": false,
     "git.openRepositoryInParentFolders": "never",
-    "window.restoreWindows": "none",
+    "window.restoreWindows": "one",
     "diffEditor.renderSideBySide": false,
     // "editor.cursorSurroundingLines": 10, // Doesn't work well with the Ctrl+Up/Down custom binding.
     "editor.find.cursorMoveOnType": false,
