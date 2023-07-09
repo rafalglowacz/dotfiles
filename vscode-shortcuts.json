@@ -1,0 +1,25 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "ctrl+up",
+        "when": "editorTextFocus",
+        "command": "editorScroll",
+        "args": {
+            "to": "up", // 'up', 'down'
+            "by": "line", // 'line', 'wrappedLine', 'page', 'halfPage'
+            "value": 1, // number of units to move
+            "revealCursor": true
+        }
+    },
+    {
+        "key": "ctrl+down",
+        "when": "editorTextFocus",
+        "command": "editorScroll",
+        "args": {
+            "to": "down", // 'up', 'down'
+            "by": "line", // 'line', 'wrappedLine', 'page', 'halfPage'
+            "value": 1, // number of units to move
+            "revealCursor": true
+        }
+    }
+]
