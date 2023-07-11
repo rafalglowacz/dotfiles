@@ -191,6 +191,7 @@ export FZF_CTRL_R_OPTS="
   --preview 'echo {}' --preview-window up:10:hidden:wrap
   --bind 'ctrl-/:toggle-preview'
   --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort'"
+export FZF_DEFAULT_OPTS=--algo=v1
 
 command -v fasd > /dev/null && eval "$(fasd --init auto)"
 
