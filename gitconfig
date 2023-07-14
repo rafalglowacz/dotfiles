@@ -5,6 +5,7 @@
 	co = checkout
 	ci = commit
 	d = diff -w
+	dt = difftool
 	b = branch
 	st = status
 	r = reflog --date iso
@@ -25,6 +26,7 @@
 [delta]
 	features = tangara-chilensis 
 	#features = mantis-shrimp
+	syntax-theme = Nord
 	side-by-side = false
 	navigate = true
 	light = false
