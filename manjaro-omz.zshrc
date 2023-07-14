@@ -147,9 +147,7 @@ alias mc='mutagen-compose'
 alias sail='bash vendor/bin/sail'
 
 ## Vim aliases
-alias     vi='XDG_CONFIG_HOME=~/.config/nvim-basic  XDG_CACHE_HOME=~/.cache/nvim-basic  XDG_DATA_HOME=~/.local/share/nvim-basic  XDG_STATE_HOME=~/.local/state/nvim-basic nvim'
-alias    vim='XDG_CONFIG_HOME=~/.config/nvim-astro  XDG_CACHE_HOME=~/.cache/nvim-astro  XDG_DATA_HOME=~/.local/share/nvim-astro  XDG_STATE_HOME=~/.local/state/nvim-astro nvim'
-alias nvchad='XDG_CONFIG_HOME=~/.config/nvim-nvchad XDG_CACHE_HOME=~/.cache/nvim-nvchad XDG_DATA_HOME=~/.local/share/nvim-nvchad XDG_STATE_HOME=~/.local/state/nvim-nvchad nvim'
+alias vim='nvim'
 
 ## Misc aliases
 alias clearall="printf '\033[2J\033[3J\033[1;1H'"
