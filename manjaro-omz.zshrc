@@ -128,7 +128,7 @@ alias ws='workspace'
 
 ## Git aliases
 alias gs='git status'
-alias gd='clear && git diff -w HEAD'
+alias gd='git diff -w HEAD'
 alias gpf='git push --force'
 alias grh='git reset --hard'
 alias grhh='git reset --hard HEAD'
