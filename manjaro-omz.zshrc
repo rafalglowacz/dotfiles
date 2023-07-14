@@ -85,6 +85,7 @@ plugins=(
 	extract
 	git
 	zsh-autosuggestions
+	zsh-syntax-highlighting
 	command-time
 )
 
@@ -173,11 +174,6 @@ fi
 
 WORDCHARS='*?_-[]~=;.!@#$%^&(){}<>/\|'
 ZLE_REMOVE_SUFFIX_CHARS=""
-
-# This apparently conflicts with concatenating killed text for yanking and requires zsh 5.9 (not yet released as of 2020-09-04) to work correctly.
-# See https://github.com/zsh-users/zsh-syntax-highlighting/issues/150
-# [ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-# [ -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 ZSH_AUTOSUGGEST_IGNORE_WIDGETS+=(backward-kill-word backward-kill-dir)
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
