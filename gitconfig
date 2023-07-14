@@ -37,3 +37,12 @@
 	conflictstyle = diff3
 [diff]
 	colorMoved = default
+  tool = vscode
+[merge]
+  tool = vscode
+[difftool "nvim"]
+  cmd = nvim -d $LOCAL $REMOTE
+[difftool "vscode"]
+  cmd = code --wait --diff $LOCAL $REMOTE
+[mergetool "vscode"]
+  cmd = code --wait $MERGED
