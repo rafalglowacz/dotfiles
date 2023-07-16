@@ -22,6 +22,7 @@ return {
       silent = true,
     },
     ['C'] = '"_Da',
+    ['<leader>W'] = '<cmd>w | confirm q <CR>'
   },
   i = {
     -- Vim cannot capture these and ",," and ";;" that i had here before have
