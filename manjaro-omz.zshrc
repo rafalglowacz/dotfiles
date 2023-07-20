@@ -127,6 +127,7 @@ alias wsr="cd $LARADOCK_DIR; docker-compose exec workspace $LARADOCK_SHELL"
 alias ws='workspace'
 
 ## Git aliases
+alias g='git'
 alias gs='git status'
 alias gd='git diff -w HEAD'
 alias gpf='git push --force'
