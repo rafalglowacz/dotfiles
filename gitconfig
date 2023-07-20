@@ -7,6 +7,7 @@
 	d = diff -w
 	dt = difftool
 	b = branch
+	mnn = merge --no-commit --no-ff
 	st = status
 	r = reflog --date iso
 [pull]
