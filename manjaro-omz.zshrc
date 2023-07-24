@@ -243,4 +243,5 @@ export GOPATH=~/.local/bin/go
 
 if [ -d /opt/homebrew ]; then
     export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
+    export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 fi
