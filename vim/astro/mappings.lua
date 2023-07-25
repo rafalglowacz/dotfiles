@@ -44,7 +44,8 @@ return {
       vim.api.nvim_input(
         vim.api.nvim_get_mode()['mode'] == 'v' and '<C-v>' or 'v'
       )
-    end
+    end,
+    ['d'] = '"_d',
   },
   x = {
     ['<A-Down>'] = ":move '>+1<CR>gv-gv",
