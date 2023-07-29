@@ -26,10 +26,10 @@
 	diffFilter = delta --color-only
 [delta]
 	#features = tangara-chilensis 
-	#syntax-theme = Nord
+	syntax-theme = Solarized
 	side-by-side = false
 	navigate = true
-	light = false
+	light = true
 	diff-highlight = false
 	diff-so-fancy = false
 	line-numbers = true
