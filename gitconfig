@@ -10,6 +10,8 @@
 	mnn = merge --no-commit --no-ff
 	st = status
 	r = reflog --date iso
+	hs = log --pretty='%C(yellow)%h %C(cyan)%cd%C(auto)%d %Creset%s' --graph --date=short
+	hsl = log --pretty='%C(yellow)%h %C(cyan)%cd %Cblue%aN%C(auto)%d %Creset%s' --graph --date=short
 [pull]
 	rebase = false
 [core]
