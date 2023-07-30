@@ -28,7 +28,7 @@
 	diffFilter = delta --color-only
 [delta]
 	#features = tangara-chilensis 
-	syntax-theme = Solarized
+	syntax-theme = Solarized (light)
 	side-by-side = false
 	navigate = true
 	light = true
