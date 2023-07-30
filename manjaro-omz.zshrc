@@ -18,10 +18,6 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="candy"
 export ZSH_COMMAND_TIME_COLOR=grey
 
-HISTSIZE=10000
-SAVEHIST=10000
-setopt appendhistory
-
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -90,6 +86,11 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+
+HISTSIZE=11000
+SAVEHIST=10000
+setopt APPEND_HISTORY
+unsetopt SHARE_HISTORY
 
 # User configuration
 
