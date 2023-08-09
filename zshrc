@@ -25,6 +25,7 @@ alias k='kubectl'
 alias lh='ls -lh'
 alias watch='watch '
 export LESS='XRi'
+export RIPGREP_CONFIG_PATH="$HOME/Dev/dotfiles/ripgreprc"
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/rafal/.oh-my-zsh"
