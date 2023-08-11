@@ -203,6 +203,7 @@ if [[ $IGNORE_SSH_AGENT_FINDER_IF_NOT_EXISTS != true ]] || [ -f $HOME/bin/ssh-fi
 fi
 
 export LESS='XRi'
+export RIPGREP_CONFIG_PATH="$HOME/Dev/dotfiles/ripgreprc"
 
 PATH="$HOME/.composer/vendor/bin:$HOME/.config/composer/vendor/bin:$HOME/bin:$HOME/.cargo/bin:$PATH:$HOME/.local/bin:$HOME/.local/bin/go/bin"
 [ -d "$HOME/bin2" ] && PATH="$HOME/bin2:$PATH"
