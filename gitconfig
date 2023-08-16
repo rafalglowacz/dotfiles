@@ -10,8 +10,8 @@
 	mnn = merge --no-commit --no-ff
 	st = status
 	r = reflog --date iso
-	hs  = log --pretty='%C(yellow)%h %C(cyan)%cd %C(black)%s%C(auto)%d %C(reset)' --graph --date=human
-	hsl = log --pretty='%C(yellow)%h %C(cyan)%cd %C(black)%s • %C(blue)%aN%C(auto)%d %C(reset)' --graph --date=human
+	hs  = log --pretty='%C(yellow)%h %C(cyan)%cd %C(auto)%s%C(auto)%d %C(reset)' --graph --date=human
+	hsl = log --pretty='%C(yellow)%h %C(cyan)%cd %C(auto)%s • %C(blue)%aN%C(auto)%d %C(reset)' --graph --date=human
 [pull]
 	rebase = false
 [core]
