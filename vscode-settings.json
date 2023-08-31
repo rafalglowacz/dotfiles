@@ -16,4 +16,5 @@
     // "editor.cursorSurroundingLines": 10, // Doesn't work well with the Ctrl+Up/Down custom binding.
     "editor.find.cursorMoveOnType": false,
     "security.workspace.trust.untrustedFiles": "open",
+    "editor.minimap.showSlider": "always",
 }
