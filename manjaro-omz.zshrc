@@ -167,6 +167,7 @@ alias rollback='php artisan migrate:rollback'
 alias c='clear'
 alias m='mutagen'
 alias phpv='php --version'
+alias fgn='jobs | read _jobs; fg; notify-command-done "$_jobs"'
 
 if [ -f ~/.zsh_aliases ]; then
     source ~/.zsh_aliases
