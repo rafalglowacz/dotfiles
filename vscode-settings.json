@@ -17,4 +17,5 @@
     "editor.find.cursorMoveOnType": false,
     "security.workspace.trust.untrustedFiles": "open",
     "editor.minimap.showSlider": "always",
+    "explorer.confirmDelete": false,
 }
