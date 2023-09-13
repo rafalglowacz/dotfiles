@@ -156,7 +156,7 @@ alias clearall="printf '\033[2J\033[3J\033[1;1H'"
 alias clip='xclip -sel clip'
 alias k='kubectl'
 alias ls='exa --icons --group-directories-first -a --hyperlink'
-alias lh='ls -lh'
+alias lh='ls -lh --time-style relative'
 alias watch='watch '
 alias diff='diff --color=always'
 alias asno='apt search --names-only'
