@@ -10,6 +10,7 @@ launch zsh
 new_tab Dotfiles
 cd ~/Dev/dotfiles
 launch zsh
+focus
 
 new_tab Bin public
 cd ~/bin
@@ -18,4 +19,3 @@ launch zsh
 new_tab QMK
 cd ~/Dev/qmk-firmware
 launch zsh
-
