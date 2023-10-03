@@ -169,6 +169,7 @@ alias c='clear'
 alias m='mutagen'
 alias phpv='php --version'
 alias fgn='jobs | read _jobs; fg; notify-command-done "$_jobs"'
+alias rgp='rg --engine pcre2'
 
 if [ -f ~/.zsh_aliases ]; then
     source ~/.zsh_aliases
