@@ -30,7 +30,6 @@
 	#features = tangara-chilensis 
 	syntax-theme = Solarized (light)
 	side-by-side = false
-	navigate = true
 	light = true
 	diff-highlight = false
 	diff-so-fancy = false
