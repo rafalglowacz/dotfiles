@@ -253,3 +253,5 @@ if [ -d /opt/homebrew ]; then
     export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
     export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 fi
+
+[ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env"
