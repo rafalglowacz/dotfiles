@@ -1,6 +1,6 @@
 [include]
 	path = ~/.gitconfig.local
-  path = ~/Dev/delta/themes.gitconfig
+	path = ~/Dev/delta/themes.gitconfig
 [alias]
 	co = checkout
 	ci = commit
@@ -18,8 +18,8 @@
 	editor = nvim
 	pager = delta
 [stash]
-    showPatch = 1
-    showStat = 0
+	showPatch = 1
+	showStat = 0
 [init]
 	defaultBranch = main
 [credential]
@@ -38,12 +38,12 @@
 	conflictstyle = diff3
 [diff]
 	colorMoved = default
-  tool = vscode
+	tool = vscode
 [merge]
-  tool = vscode
+	tool = vscode
 [difftool "nvim"]
-  cmd = nvim -d $LOCAL $REMOTE
+	cmd = nvim -d $LOCAL $REMOTE
 [difftool "vscode"]
-  cmd = code --wait --diff $LOCAL $REMOTE
+	cmd = code --wait --diff $LOCAL $REMOTE
 [mergetool "vscode"]
-  cmd = code --wait $MERGED
+	cmd = code --wait $MERGED
