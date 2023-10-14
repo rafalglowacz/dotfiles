@@ -18,4 +18,8 @@
     "security.workspace.trust.untrustedFiles": "open",
     "editor.minimap.showSlider": "always",
     "explorer.confirmDelete": false,
+    "haskell.manageHLS": "GHCup",
+    "haskell.ghcupExecutablePath": "/home/rafal/.ghcup/bin/ghcup",
+    "workbench.editor.enablePreview": false,
+    "editor.renderWhitespace": "none",
 }
