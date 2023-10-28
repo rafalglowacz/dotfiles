@@ -153,7 +153,7 @@ alias vim='nvim'
 
 ## Misc aliases
 alias clearall="printf '\033[2J\033[3J\033[1;1H'"
-alias clip='xclip -sel clip'
+alias clip=$copyCmd
 alias k='kubectl'
 alias ls='eza --icons --group-directories-first -a --hyperlink'
 alias lh='ls -lh --time-style relative'
