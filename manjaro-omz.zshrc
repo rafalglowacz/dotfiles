@@ -157,6 +157,8 @@ alias clip=$copyCmd
 alias k='kubectl'
 alias ls='eza --icons --group-directories-first -a --hyperlink'
 alias lh='ls -lh --time-style relative'
+alias lhiso='lh --time-style long-iso'
+alias l1='ls -1'
 alias watch='watch '
 alias diff='diff --color=always'
 alias asno='apt search --names-only'
