@@ -67,5 +67,13 @@
         "key": "cmd+down",
         "command": "-explorer.openAndPassFocus",
         "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsFolder && !inputFocus"
+    },
+    {
+        "key": "ctrl+shift+alt+cmd+p",
+        "command": "projectManager.listProjects"
+    },
+    {
+        "key": "alt+cmd+p",
+        "command": "-projectManager.listProjects"
     }
 ]
