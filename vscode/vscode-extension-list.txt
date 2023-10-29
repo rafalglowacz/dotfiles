@@ -19,7 +19,11 @@ DotJoshJohnson.xml
 eamodio.gitlens
 EditorConfig.EditorConfig
 GrapeCity.gc-excelviewer
+haskell.haskell
 iliazeus.vscode-ansi
+ionutvmi.vscode-commands-executor
+justusadam.language-haskell
+mads-hartmann.bash-ide-vscode
 ms-python.python
 ms-python.vscode-pylance
 ms-vscode.cmake-tools
@@ -27,7 +31,7 @@ ms-vscode.cpptools
 ms-vscode.cpptools-extension-pack
 ms-vscode.cpptools-themes
 scala-lang.scala
-tickleforce.scrolloff
+Tobias-Faller.vt100-syntax-highlighting
 twxs.cmake
 v4run.transpose
 xaver.clang-format
