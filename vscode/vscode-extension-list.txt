@@ -31,6 +31,7 @@ ms-vscode.cpptools
 ms-vscode.cpptools-extension-pack
 ms-vscode.cpptools-themes
 scala-lang.scala
+tickleforce.scrolloff
 Tobias-Faller.vt100-syntax-highlighting
 twxs.cmake
 v4run.transpose
