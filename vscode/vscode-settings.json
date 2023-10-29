@@ -25,4 +25,5 @@
     "workbench.editor.wrapTabs": true,
     "workbench.editor.limit.enabled": true,
     "workbench.editor.limit.excludeDirty": true,
+    "editor.smoothScrolling": true,
 }
