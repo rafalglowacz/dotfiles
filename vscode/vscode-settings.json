@@ -26,4 +26,5 @@
     "workbench.editor.limit.enabled": true,
     "workbench.editor.limit.excludeDirty": true,
     "editor.smoothScrolling": true,
+    "search.useIgnoreFiles": false,
 }
