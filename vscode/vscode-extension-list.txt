@@ -24,6 +24,7 @@ iliazeus.vscode-ansi
 ionutvmi.vscode-commands-executor
 justusadam.language-haskell
 mads-hartmann.bash-ide-vscode
+mikestead.dotenv
 ms-python.python
 ms-python.vscode-pylance
 ms-vscode.cmake-tools
