@@ -3,6 +3,7 @@
     "git.enableSmartCommit": true,
     "editor.fontSize": 17,
     "editor.rulers": [
+        80,
         120
     ],
     "window.openFoldersInNewWindow": "off",
