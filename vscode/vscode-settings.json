@@ -28,4 +28,5 @@
     "workbench.editor.limit.excludeDirty": true,
     "editor.smoothScrolling": true,
     "search.useIgnoreFiles": false,
+    "gitlens.currentLine.enabled": false,
 }
