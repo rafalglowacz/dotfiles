@@ -31,4 +31,5 @@
     "gitlens.currentLine.enabled": false,
     "diffEditor.hideUnchangedRegions.enabled": true,
     "git.confirmSync": false,
+    "git.inputValidation": "off",
 }
