@@ -29,4 +29,6 @@
     "editor.smoothScrolling": true,
     "search.useIgnoreFiles": false,
     "gitlens.currentLine.enabled": false,
+    "diffEditor.hideUnchangedRegions.enabled": true,
+    "git.confirmSync": false,
 }
