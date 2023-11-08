@@ -1,9 +1,9 @@
 import:
-  - ~/.local/share/alacritty/alacritty-theme/themes/ayu_light.yaml
+  - ~/.local/share/alacritty/alacritty-theme/themes/night_owlish_light.yaml
 font:
-  size: 17
+  size: 21
   normal:
-    family: Hack Nerd Font Mono
+    family: Monofur Nerd Font Mono
 cursor:
   style:
     blinking: Always
