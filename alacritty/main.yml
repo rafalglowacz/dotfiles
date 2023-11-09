@@ -1,0 +1,15 @@
+import: 
+  - ~/.local/share/alacritty/alacritty-theme/themes/night_owlish_light.yaml
+font:
+  size: 15
+  normal:
+    family: Monofur Nerd Font Mono
+cursor:
+  style:
+    blinking: Always
+  blink_interval: 500
+  blink_timeout: 0
+window:
+  padding:
+    x: 10
+    y: 10
