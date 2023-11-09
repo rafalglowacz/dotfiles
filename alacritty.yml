@@ -1,7 +1,7 @@
 import:
-  - ~/.local/share/alacritty/alacritty-theme/themes/night_owlish_light.yaml
+  - ~/Dev/dotfiles/alacritty/local.yml
 font:
-  size: 22
+  size: 15
   normal:
     family: Monofur Nerd Font Mono
 cursor:
@@ -10,7 +10,6 @@ cursor:
   blink_interval: 500
   blink_timeout: 0
 window:
-  decorations: buttonless
   padding:
     x: 10
     y: 10
