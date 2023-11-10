@@ -80,5 +80,10 @@
         "key": "cmd+n", 
         "command": "explorer.newFile", 
         "when": "explorerViewletFocus" 
+    },
+    { 
+        "key": "ctrl+n", 
+        "command": "explorer.newFile", 
+        "when": "explorerViewletFocus" 
     }
 ]
