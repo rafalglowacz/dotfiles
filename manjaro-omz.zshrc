@@ -221,7 +221,7 @@ export BAT_THEME='gruvbox-dark'
 
 export ZSH_THEME_TERM_TITLE_IDLE="%~"
 
-PROMPT=$'%{$fg_bold[green]%}%D{%X} %{$reset_color%}%{$fg[white]%}%~%{$reset_color%} $(git_prompt_info)\
+PROMPT=$'%{$fg_bold[green]%}%D{%X} %{$reset_color%}%~%{$reset_color%} $(git_prompt_info)\
 %{$fg[blue]%}➜ '
 
 TERM=xterm-256color
