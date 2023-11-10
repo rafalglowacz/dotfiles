@@ -219,6 +219,8 @@ export PATH
 
 export BAT_THEME='gruvbox-dark'
 
+export ZSH_THEME_TERM_TITLE_IDLE="%~"
+
 TERM=xterm-256color
 
 # Alt+Backspace
@@ -257,3 +259,8 @@ if [ -d /opt/homebrew ]; then
 fi
 
 [ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env"
+
+function omz_termsupport_preexec {
+  [[ "${DISABLE_AUTO_TITLE:-}" != true ]] || return
+  title "$ZSH_THEME_TERM_TAB_TITLE_IDLE" "$ZSH_THEME_TERM_TITLE_IDLE"
+}
