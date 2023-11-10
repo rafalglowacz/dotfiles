@@ -32,4 +32,5 @@
     "diffEditor.hideUnchangedRegions.enabled": true,
     "git.confirmSync": false,
     "git.inputValidation": "off",
+    "editor.accessibilitySupport": "off",
 }
