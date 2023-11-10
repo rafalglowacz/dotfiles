@@ -75,5 +75,10 @@
     {
         "key": "alt+cmd+p",
         "command": "-projectManager.listProjects"
+    },
+    { 
+        "key": "cmd+n", 
+        "command": "explorer.newFile", 
+        "when": "explorerViewletFocus" 
     }
 ]
