@@ -1,3 +1,4 @@
 import:
   - ~/Dev/dotfiles/alacritty/main.yml
   - ~/Dev/dotfiles/alacritty/local.yml
+  - ~/Dev/dotfiles/alacritty/shortcuts.yml
