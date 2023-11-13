@@ -33,4 +33,5 @@
     "git.confirmSync": false,
     "git.inputValidation": "off",
     "editor.accessibilitySupport": "off",
+    "files.insertFinalNewline": true,
 }
