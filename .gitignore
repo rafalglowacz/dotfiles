@@ -1,5 +1,6 @@
 /.DS_Store
 /.idea
+/alacritty/alacritty.example.yml
 /alacritty/local.yml
 /kitty/overrides.conf
 
