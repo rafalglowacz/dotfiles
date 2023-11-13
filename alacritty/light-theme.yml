@@ -1,0 +1,34 @@
+# This file inverts the gray-scale colors to avoid issues with applications
+# assuming dark background.
+# It's not included by default, you have to include it from alacritty/local.yml.
+colors:
+  normal:
+    white: '0x212121'
+    black: '0xe0e0e0'
+indexed_colors:
+  - { index: 16,  color: '#ffffff' }
+  - { index: 232, color: '#eeeeee' }
+  - { index: 233, color: '#e4e4e4' }
+  - { index: 234, color: '#dadada' }
+  - { index: 235, color: '#d0d0d0' }
+  - { index: 236, color: '#c6c6c6' }
+  - { index: 237, color: '#bcbcbc' }
+  - { index: 238, color: '#b2b2b2' }
+  - { index: 239, color: '#a8a8a8' }
+  - { index: 240, color: '#9e9e9e' }
+  - { index: 241, color: '#949494' }
+  - { index: 242, color: '#8a8a8a' }
+  - { index: 243, color: '#808080' }
+  - { index: 244, color: '#767676' }
+  - { index: 245, color: '#6c6c6c' }
+  - { index: 246, color: '#626262' }
+  - { index: 247, color: '#585858' }
+  - { index: 248, color: '#4e4e4e' }
+  - { index: 249, color: '#444444' }
+  - { index: 250, color: '#3a3a3a' }
+  - { index: 251, color: '#303030' }
+  - { index: 252, color: '#262626' }
+  - { index: 253, color: '#1c1c1c' }
+  - { index: 254, color: '#121212' }
+  - { index: 255, color: '#080808' }
+  - { index: 231, color: '#000000' }
