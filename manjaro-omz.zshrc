@@ -223,8 +223,19 @@ export ZSH_THEME_TERM_TITLE_IDLE="%~"
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[green]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}" 
 
-PROMPT=$'%{$fg[green]%}%{$bg[green]%}%{$fg_bold[black]%}%D{%X} %{$reset_color%}%{$fg[black]%}%{$bg[white]%}%{$bg[green]%}%{$fg[white]%}%{$fg[black]%}%{$bg[white]%}%~%{$reset_color%}%{$fg[white]%}%{$reset_color%} $(git_prompt_info)\
-%{$fg[blue]%}➜ '
+promptParts=(
+  $'%{$fg[green]%}%'
+  $'{$bg[green]%}%{$fg_bold[black]%}%D{%X} %{$reset_color%}'
+  $'%{$bg[green]%}%{$fg[white]%}'
+  $'%{$bg[white]%}%{$fg[black]%}%~%{$reset_color%}'
+  $'%{$fg[white]%}%{$reset_color%} '
+  $'$(git_prompt_info)'
+  $'\n'
+  $'%{$fg[blue]%}➜ '
+)
+IFS=''
+PROMPT=$(printf '%s\n' "${promptParts[*]}")
+IFS=' '
 
 TERM=xterm-256color
 
