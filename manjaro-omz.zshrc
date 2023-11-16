@@ -323,3 +323,10 @@ function omz_termsupport_preexec {
 
   title "$ZSH_THEME_TERM_TAB_TITLE_IDLE ➜ $CMD"
 }
+
+# This prints new line before prompt, except for the first one after starting shell.
+precmd() {
+  precmd() {
+    echo
+  }
+}
