@@ -34,4 +34,5 @@
     "git.inputValidation": "off",
     "editor.accessibilitySupport": "off",
     "files.insertFinalNewline": true,
+    "redhat.telemetry.enabled": false,
 }
