@@ -2,6 +2,7 @@
 /.idea
 /alacritty/alacritty.example.yml
 /alacritty/local.yml
+/git/local
 /kitty/overrides.conf
 /tmux/local.conf
 

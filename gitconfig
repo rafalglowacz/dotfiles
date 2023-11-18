@@ -1,6 +1,6 @@
 [include]
 	path = ~/.gitconfig.local
-	path = ~/Dev/delta/themes.gitconfig
+	# path = ~/Dev/lib/delta/themes.gitconfig
 [alias]
 	co = checkout
 	ci = commit
@@ -27,10 +27,9 @@
 [interactive]
 	diffFilter = delta --color-only
 [delta]
-	#features = tangara-chilensis 
-	syntax-theme = Solarized (light)
+	# features = tangara-chilensis 
+	# syntax-theme = Solarized (light)
 	side-by-side = false
-	light = true
 	diff-highlight = false
 	diff-so-fancy = false
 	line-numbers = true
