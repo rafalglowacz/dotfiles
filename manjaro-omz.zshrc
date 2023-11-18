@@ -91,6 +91,7 @@ HISTSIZE=11000
 SAVEHIST=10000
 setopt APPEND_HISTORY
 unsetopt SHARE_HISTORY
+setopt GLOB_DOTS
 
 # User configuration
 
