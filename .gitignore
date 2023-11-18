@@ -3,4 +3,5 @@
 /alacritty/alacritty.example.yml
 /alacritty/local.yml
 /kitty/overrides.conf
+/tmux/local.conf
 
