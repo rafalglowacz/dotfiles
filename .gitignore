@@ -5,4 +5,4 @@
 /git/local
 /kitty/overrides.conf
 /tmux/local.conf
-
+/wezterm/local.lua

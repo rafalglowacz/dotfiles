@@ -26,4 +26,11 @@ config.cursor_blink_rate = 550
 config.hide_tab_bar_if_only_one_tab = true
 config.window_decorations = 'NONE'
 
+local fh = io.open(os.getenv( "HOME" ) .. '/.config/wezterm/local.lua', 'r')
+if fh ~= nil then
+    io.close(fh)
+    local custom = require 'local'
+    custom.localConfig(config)
+end
+
 return config
