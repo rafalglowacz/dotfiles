@@ -25,6 +25,24 @@ config.cursor_blink_rate = 550
 
 config.hide_tab_bar_if_only_one_tab = true
 config.window_decorations = 'NONE'
+config.adjust_window_size_when_changing_font_size = false
+
+-- Shortcuts
+
+config.keys = {
+    {
+        key = '\\',
+        mods = 'CMD|SHIFT',
+        action = wezterm.action.SplitHorizontal
+    },
+    {
+        key = '=',
+        mods = 'CMD|SHIFT',
+        action = wezterm.action.SplitVertical
+    },
+}
+
+-- Include local
 
 local fh = io.open(os.getenv( "HOME" ) .. '/.config/wezterm/local.lua', 'r')
 if fh ~= nil then
