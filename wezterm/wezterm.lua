@@ -6,8 +6,8 @@ local config = wezterm.config_builder()
 config.font = wezterm.font 'Monofur Nerd Font'
 config.font_size = 16
 -- Monofur is very condensed, let's stretch it a little
-config.line_height = 1.1
-config.cell_width = 1.05
+config.line_height = 1.2
+config.cell_width = 1.1
 
 -- Color scheme
 
