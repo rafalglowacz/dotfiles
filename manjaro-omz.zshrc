@@ -221,13 +221,12 @@ export PATH
 export BAT_THEME='gruvbox-dark'
 
 export ZSH_THEME_TERM_TITLE_IDLE="%~"
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[green]%}"
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[white]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}" 
 
 promptParts=(
-  $'%{$fg[green]%}%'
-  $'{$bg[green]%}%{$fg_bold[black]%}%D{%X} %{$reset_color%}'
-  $'%{$bg[green]%}%{$fg[white]%}'
+  $'%{$fg[white]%}%'
+  $'{$bg[white]%}%{$fg_bold[black]%}%D{%X} │ %{$reset_color%}'
   $'%{$bg[white]%}%{$fg[black]%}%~%{$reset_color%}'
   $'%{$fg[white]%}%{$reset_color%} '
   $'$(git_prompt_info)'
