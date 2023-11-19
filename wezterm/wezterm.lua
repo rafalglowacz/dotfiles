@@ -30,16 +30,10 @@ config.adjust_window_size_when_changing_font_size = false
 -- Shortcuts
 
 config.keys = {
-    {
-        key = '\\',
-        mods = 'CMD|SHIFT',
-        action = wezterm.action.SplitHorizontal
-    },
-    {
-        key = '=',
-        mods = 'CMD|SHIFT',
-        action = wezterm.action.SplitVertical
-    },
+    { key = '"', mods = 'CMD|SHIFT',  action = wezterm.action.SplitHorizontal },
+    { key = '"', mods = 'CTRL|SHIFT', action = wezterm.action.SplitHorizontal },
+    { key = '+', mods = 'CMD|SHIFT',  action = wezterm.action.SplitVertical },
+    { key = '+', mods = 'CTRL|SHIFT', action = wezterm.action.SplitVertical },
 }
 
 -- Include local

@@ -85,5 +85,9 @@
         "key": "ctrl+n", 
         "command": "explorer.newFile", 
         "when": "explorerViewletFocus" 
+    },
+    {
+        "key": "alt+j",
+        "command": "editor.action.joinLines"
     }
 ]
