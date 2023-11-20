@@ -35,4 +35,6 @@
     "editor.accessibilitySupport": "off",
     "files.insertFinalNewline": true,
     "redhat.telemetry.enabled": false,
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 120,
 }
