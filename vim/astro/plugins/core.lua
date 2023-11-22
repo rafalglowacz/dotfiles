@@ -59,7 +59,7 @@ return {
     name = 'catppuccin',
     config = function()
       require('catppuccin').setup({ 
-        flavour = 'latte',
+        -- flavour = 'latte',
         -- transparent_background = true,
         -- dim_inactive = {
         --   enabled = true,
