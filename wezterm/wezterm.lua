@@ -1,5 +1,6 @@
 local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
+local act = wezterm.action
 
 -- Font
 
@@ -35,6 +36,11 @@ config.keys = {
     { key = '"', mods = 'CTRL|SHIFT', action = wezterm.action.SplitHorizontal },
     { key = '+', mods = 'CMD|SHIFT',  action = wezterm.action.SplitVertical },
     { key = '+', mods = 'CTRL|SHIFT', action = wezterm.action.SplitVertical },
+    {
+        key = 'p',
+        mods = 'CTRL|ALT',
+        action = act.PaneSelect { mode = 'SwapWithActive' },
+    },
 }
 
 -- Include local
