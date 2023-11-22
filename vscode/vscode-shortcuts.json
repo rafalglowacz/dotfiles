@@ -89,5 +89,13 @@
     {
         "key": "alt+j",
         "command": "editor.action.joinLines"
+    },
+    {
+        "key": "alt+z",
+        "command": "-editor.action.toggleWordWrap"
+    },
+    {
+        "key": "alt+w",
+        "command": "editor.action.toggleWordWrap"
     }
 ]
