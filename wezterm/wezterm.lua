@@ -41,6 +41,11 @@ config.keys = {
         mods = 'CTRL|ALT',
         action = act.PaneSelect { mode = 'SwapWithActive' },
     },
+    {
+        key = "T", 
+        mods = 'CMD|SHIFT', 
+        action = act.SpawnTab 'CurrentPaneDomain'
+    },
 }
 
 -- Include local
