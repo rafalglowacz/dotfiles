@@ -15,7 +15,7 @@
 [pull]
 	rebase = false
 [core]
-	editor = helix
+	editor = hx
 	pager = delta
 [stash]
 	showPatch = 1
