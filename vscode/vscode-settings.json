@@ -38,4 +38,6 @@
     "editor.wordWrap": "wordWrapColumn",
     "editor.wordWrapColumn": 120,
     "editor.tabCompletion": "onlySnippets",
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.fontSize": 16,
 }
