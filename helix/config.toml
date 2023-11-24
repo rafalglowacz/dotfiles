@@ -1,1 +1,4 @@
 theme = "monokai_aqua"
+
+[editor.cursor-shape]
+insert = "bar"
