@@ -37,4 +37,5 @@
     "redhat.telemetry.enabled": false,
     "editor.wordWrap": "wordWrapColumn",
     "editor.wordWrapColumn": 120,
+    "editor.tabCompletion": "onlySnippets",
 }
