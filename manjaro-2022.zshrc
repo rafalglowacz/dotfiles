@@ -300,8 +300,7 @@ fi
 
 export LESS='XRi'
 
-PATH="$HOME/bin:$PATH"
-[ -d "$HOME/bin2" ] && PATH="$HOME/bin2:$PATH"
+PATH="$HOME/bin:$HOME/bin2:$HOME/.local/bin:$PATH"
 export PATH
 
 # Alt+Backspace
