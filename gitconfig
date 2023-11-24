@@ -15,7 +15,7 @@
 [pull]
 	rebase = false
 [core]
-	editor = nvim
+	editor = helix
 	pager = delta
 [stash]
 	showPatch = 1
