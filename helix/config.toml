@@ -10,3 +10,12 @@ insert = "bar"
 enable = true
 wrap-at-text-width = true
 wrap-indicator = ""
+
+[keys.normal]
+i = "move_visual_line_up"
+j = "move_char_left"
+k = "move_visual_line_down"
+l = "move_char_right"
+
+h = "insert_mode"
+H = "insert_at_line_start"
