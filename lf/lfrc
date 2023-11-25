@@ -1,1 +1,2 @@
 set incsearch true
+set promptfmt "\033[32;1m%u@%h\033[0m:\033[34;1m%w\033[0m"
