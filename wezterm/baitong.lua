@@ -32,6 +32,10 @@ function module.configure(config)
       '#68FDFE',
       '#dbdbd9',
     },
+    quick_select_label_bg = { AnsiColor = 'Black' },
+    quick_select_label_fg = { AnsiColor = 'Yellow' },
+    quick_select_match_bg = { Color = '#ffffff' },
+    quick_select_match_fg = { Color = '#000000' },
   }
 end
 

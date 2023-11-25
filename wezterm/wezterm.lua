@@ -29,6 +29,13 @@ config.window_decorations = 'NONE'
 config.adjust_window_size_when_changing_font_size = false
 config.enable_scroll_bar = true
 
+-- Quick select
+
+config.disable_default_quick_select_patterns = true
+config.quick_select_patterns = {
+    '[\\w./-]{5,}+'
+}
+
 -- Shortcuts
 
 config.keys = {
