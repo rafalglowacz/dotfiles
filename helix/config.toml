@@ -19,3 +19,9 @@ l = "move_char_right"
 
 h = "insert_mode"
 H = "insert_at_line_start"
+
+[keys.select]
+i = "extend_visual_line_up"
+j = "extend_char_left"
+k = "extend_visual_line_down"
+l = "extend_char_right"
