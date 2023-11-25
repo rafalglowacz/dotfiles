@@ -36,6 +36,10 @@ config.quick_select_patterns = {
     '[\\w./-]{5,}+'
 }
 
+-- Startup
+
+config.default_prog = { 'lf' };
+
 -- Shortcuts
 
 config.keys = {
