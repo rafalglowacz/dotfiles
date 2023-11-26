@@ -2,6 +2,7 @@ theme = "noctis"
 
 [editor]
 text-width = 120
+mouse = false
 
 [editor.cursor-shape]
 insert = "bar"
