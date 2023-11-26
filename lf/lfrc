@@ -6,6 +6,10 @@ cmd open ${{
     esac
 }}
 
+cmd dev ${{
+    $EDITOR $f
+}}
+
 set incsearch true
 set icons true
 
@@ -17,4 +21,6 @@ map i up
 map j updir
 map k down
 map l open
+
+map h dev
 
