@@ -69,14 +69,14 @@ config.keys = {
     },
 }
 
--- config.key_tables = {
---     copy_mode = {
---         { key = 'i', mods = 'NONE', action = act.CopyMode 'MoveUp' },
---         { key = 'j', mods = 'NONE', action = act.CopyMode 'MoveLeft' },
---         { key = 'k', mods = 'NONE', action = act.CopyMode 'MoveDown' },
---         { key = 'l', mods = 'NONE', action = act.CopyMode 'MoveRight' },
---     }
--- }
+if wezterm.gui then
+    copy_mode = wezterm.gui.default_key_tables().copy_mode
+    table.insert(copy_mode, { key = 'i', mods = 'NONE', action = act.CopyMode 'MoveUp' })
+    table.insert(copy_mode, { key = 'j', mods = 'NONE', action = act.CopyMode 'MoveLeft' })
+    table.insert(copy_mode, { key = 'k', mods = 'NONE', action = act.CopyMode 'MoveDown' })
+    table.insert(copy_mode, { key = 'l', mods = 'NONE', action = act.CopyMode 'MoveRight' })
+    config.key_tables = { copy_mode = copy_mode }
+end
 
 -- Include local. 
 -- IMPORTANT: note that we're looking at a file -- outside of ~/Dev/dotfiles, 
