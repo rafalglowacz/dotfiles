@@ -50,14 +50,33 @@ config.keys = {
     {
         key = 'p',
         mods = 'CTRL|ALT',
-        action = act.PaneSelect { mode = 'SwapWithActive' },
+        action = act.PaneSelect { mode = 'SwapWithActive' }
     },
     {
-        key = "T", 
-        mods = 'CMD|SHIFT', 
+        key = "T",
+        mods = 'CMD|SHIFT',
         action = act.SpawnTab 'CurrentPaneDomain'
     },
+    {
+        key = "Space",
+        mods = 'CMD|SHIFT',
+        action = act.QuickSelect
+    },
+    {
+        key = "X",
+        mods = 'CMD|SHIFT',
+        action = act.ActivateCopyMode
+    },
 }
+
+-- config.key_tables = {
+--     copy_mode = {
+--         { key = 'i', mods = 'NONE', action = act.CopyMode 'MoveUp' },
+--         { key = 'j', mods = 'NONE', action = act.CopyMode 'MoveLeft' },
+--         { key = 'k', mods = 'NONE', action = act.CopyMode 'MoveDown' },
+--         { key = 'l', mods = 'NONE', action = act.CopyMode 'MoveRight' },
+--     }
+-- }
 
 -- Include local. 
 -- IMPORTANT: note that we're looking at a file -- outside of ~/Dev/dotfiles, 
