@@ -38,7 +38,7 @@ config.quick_select_patterns = {
 
 -- Startup
 
-config.default_prog = { 'zsh', '-ic', 'lf' };
+config.default_prog = { 'zsh', '-ilc', 'lf ~/Dev' };
 
 -- Shortcuts
 
