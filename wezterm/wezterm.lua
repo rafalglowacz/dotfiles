@@ -28,6 +28,10 @@ config.hide_tab_bar_if_only_one_tab = true
 config.window_decorations = 'NONE'
 config.adjust_window_size_when_changing_font_size = false
 config.enable_scroll_bar = true
+config.inactive_pane_hsb = {
+  saturation = 0.5,
+  brightness = 0.5,
+}
 
 -- Quick select
 
@@ -66,6 +70,11 @@ config.keys = {
         key = "X",
         mods = 'CMD|SHIFT',
         action = act.ActivateCopyMode
+    },
+    {
+        key = "F",
+        mods = 'CMD|SHIFT',
+        action = act.Search { CaseSensitiveString = "" }
     },
 }
 
