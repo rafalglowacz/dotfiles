@@ -42,7 +42,7 @@ config.quick_select_patterns = {
 
 -- Startup
 
-config.default_prog = { 'zsh', '-lic', 'nnn -n' };
+config.default_prog = { 'zsh', '-lic', 'nnn -nA' };
 
 -- Shortcuts
 
