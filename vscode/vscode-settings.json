@@ -40,4 +40,5 @@
     "editor.tabCompletion": "onlySnippets",
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.fontSize": 16,
+    "workbench.editor.showTabs": "single",
 }
