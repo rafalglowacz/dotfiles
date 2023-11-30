@@ -57,6 +57,11 @@ config.keys = {
         action = act.PaneSelect { mode = 'SwapWithActive' }
     },
     {
+        key = 'p',
+        mods = 'CMD|ALT',
+        action = act.PaneSelect { mode = 'SwapWithActive' }
+    },
+    {
         key = "T",
         mods = 'CMD|SHIFT',
         action = act.SpawnTab 'CurrentPaneDomain'
