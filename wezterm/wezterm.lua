@@ -22,6 +22,10 @@ config.cursor_blink_ease_in = 'EaseInOut'
 config.cursor_blink_ease_out = 'Constant'
 config.cursor_blink_rate = 550
 
+-- Scrollback
+
+config.scrollback_lines = 30000
+
 -- Window
 
 config.hide_tab_bar_if_only_one_tab = true
@@ -94,7 +98,7 @@ config.keys = {
         key = "Enter",
         mods = 'ALT',
         action = act.DisableDefaultAssignment
-    }
+    },
 }
 
 if wezterm.gui then
