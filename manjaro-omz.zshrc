@@ -1,5 +1,8 @@
+# This config's real path, even if symlink.
+here=$(dirname $(realpath ${funcsourcetrace[1]%:*}))
+
 # Initialize environment-dependent variables
-[ -f $0 ] && [ -f $(dirname $0)/.zshrc-env ] && source $(dirname $0)/.zshrc-env
+[ -f $here/zshrc-env ] && source $here/zshrc-env
 [ -f ~/.zshrc-env ] && source ~/.zshrc-env
 if [ -z $LARADOCK_DIR ]; then LARADOCK_DIR=$HOME/Dev/laradock; fi
 if [ -z $LARADOCK_SHELL ]; then LARADOCK_SHELL=zsh; fi
@@ -326,3 +329,5 @@ precmd() {
     echo
   }
 }
+
+[ -f $here/zsh/bew-clear-but-keep-scrollback ] && source $here/zsh/bew-clear-but-keep-scrollback
