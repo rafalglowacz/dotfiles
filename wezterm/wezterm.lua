@@ -42,7 +42,7 @@ config.quick_select_patterns = {
 
 -- Startup
 
-config.default_prog = { 'zsh', '-lic', 'nnn -nA' };
+config.default_prog = { 'sh', '-ic', '(ps | grep "[n]nn" | grep -qv "sh -ic") && zsh -li || zsh -lic "nnn -nA"' };
 
 -- Shortcuts
 
@@ -51,6 +51,10 @@ config.keys = {
     { key = '"', mods = 'CTRL|SHIFT', action = wezterm.action.SplitHorizontal },
     { key = '+', mods = 'CMD|SHIFT',  action = wezterm.action.SplitVertical },
     { key = '+', mods = 'CTRL|SHIFT', action = wezterm.action.SplitVertical },
+    { key = 'LeftArrow',  mods = 'CMD|SHIFT',  action = wezterm.action.ActivatePaneDirection 'Left' },
+    { key = 'RightArrow', mods = 'CMD|SHIFT',  action = wezterm.action.ActivatePaneDirection 'Right' },
+    { key = 'UpArrow',    mods = 'CMD|SHIFT',  action = wezterm.action.ActivatePaneDirection 'Up' },
+    { key = 'DownArrow',  mods = 'CMD|SHIFT',  action = wezterm.action.ActivatePaneDirection 'Down' },
     {
         key = 'p',
         mods = 'CTRL|ALT',
@@ -81,10 +85,20 @@ config.keys = {
         mods = 'CMD|SHIFT',
         action = act.Search { CaseSensitiveString = "" }
     },
+    {
+        key = "Z",
+        mods = 'CMD|SHIFT',
+        action = act.TogglePaneZoomState
+    },
+    {
+        key = "Enter",
+        mods = 'ALT',
+        action = act.DisableDefaultAssignment
+    }
 }
 
 if wezterm.gui then
-    copy_mode = wezterm.gui.default_key_tables().copy_mode
+    local copy_mode = wezterm.gui.default_key_tables().copy_mode
     table.insert(copy_mode, { key = 'i', mods = 'NONE', action = act.CopyMode 'MoveUp' })
     table.insert(copy_mode, { key = 'j', mods = 'NONE', action = act.CopyMode 'MoveLeft' })
     table.insert(copy_mode, { key = 'k', mods = 'NONE', action = act.CopyMode 'MoveDown' })
