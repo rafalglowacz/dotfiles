@@ -1,2 +1,3 @@
 [delta]
-	light = true # light theme
+syntax-theme = Solarized (light)
+light = true 
