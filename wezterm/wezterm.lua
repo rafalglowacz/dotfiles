@@ -86,8 +86,13 @@ config.keys = {
     },
     {
         key = "F",
+        mods = 'CTRL|SHIFT',
+        action = act.Search { Regex = "" }
+    },
+    {
+        key = "F",
         mods = 'CMD|SHIFT',
-        action = act.Search { CaseSensitiveString = "" }
+        action = act.Search { Regex = "" }
     },
     {
         key = "Z",
