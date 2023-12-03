@@ -2,6 +2,15 @@ local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 local act = wezterm.action
 
+-- Custom actions
+
+local activateCopyModeClearSearch = wezterm.action_callback(
+    function (window, pane)
+        window:perform_action(act.ActivateCopyMode, pane)
+        window:perform_action(act.CopyMode 'ClearPattern', pane)
+    end
+)
+
 -- Font
 
 config.font = wezterm.font 'Monofur Nerd Font'
@@ -81,13 +90,23 @@ config.keys = {
     },
     {
         key = "X",
+        mods = 'CTRL|SHIFT',
+        action = activateCopyModeClearSearch,
+    },
+    {
+        key = "X",
         mods = 'CMD|SHIFT',
-        action = act.ActivateCopyMode
+        action = activateCopyModeClearSearch,
+    },
+    {
+        key = "F",
+        mods = 'CTRL|SHIFT',
+        action = act.Search { Regex = "" }
     },
     {
         key = "F",
         mods = 'CMD|SHIFT',
-        action = act.Search { CaseSensitiveString = "" }
+        action = act.Search { Regex = "" }
     },
     {
         key = "Z",
