@@ -55,7 +55,7 @@ config.quick_select_patterns = {
 
 -- Startup
 
-config.default_prog = { 'sh', '-ic', '(ps a | grep "[n]nn" | grep -qv "sh -ic") && zsh -li || zsh -lic "nnn -nA"' };
+-- config.default_prog = { 'sh', '-ic', '(ps a | grep "[n]nn" | grep -qv "sh -ic") && zsh -li || zsh -lic "nnn -nA"' };
 
 -- Shortcuts
 
