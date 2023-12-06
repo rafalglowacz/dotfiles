@@ -195,7 +195,9 @@ export FZF_CTRL_R_OPTS="
   --preview 'echo {}' --preview-window up:10:hidden:wrap
   --bind 'ctrl-/:toggle-preview'
   --bind 'ctrl-y:execute-silent(echo -n {2..} | $copyCmd)+abort'"
-export FZF_DEFAULT_OPTS="--algo=v1 --color=light"
+export FZF_DEFAULT_OPTS="--color=light"
+export FZF_ALT_C_COMMAND="fd --min-depth 1 --max-depth 3"
+export FZF_ALT_C_OPTS="--preview 'eza --icons --group-directories-first -a --hyperlink -lh --time-style relative --color always {}'"
 
 command -v fasd > /dev/null && eval "$(fasd --init auto)"
 
