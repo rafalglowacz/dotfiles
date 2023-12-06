@@ -190,30 +190,12 @@ bindkey \^U backward-kill-line
 
 which pbcopy > /dev/null && copyCmd=pbcopy || copyCmd=wl-copy
 
-fuzzy-cd() {
-  dir=$(
-    sk --height 15 --cmd-prompt '> ' --color light --no-clear-start --reverse \
-      -i  -c 'fd -t d -d 3 "{}"'
-  )
-  echo -e "\033[2K\033[1A\033[2K\n"
-  cd "$dir"
-  zle reset-prompt
-}
-zle -N fuzzy-cd
-bindkey '^t' fuzzy-cd
-
-fuzzy-history() {
-  cmd=$(
-    fc -nrl 1 |
-    awk '!x[$0]++' |
-    sk --height 15 --cmd-prompt '> ' --color light --no-clear-start --reverse
-  )
-  echo -e "\033[2K\033[1A\033[2K\n"
-  zle reset-prompt
-  RBUFFER="${cmd}${RBUFFER}"
-}
-zle -N fuzzy-history
-bindkey '^r' fuzzy-history
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_CTRL_R_OPTS="
+  --preview 'echo {}' --preview-window up:10:hidden:wrap
+  --bind 'ctrl-/:toggle-preview'
+  --bind 'ctrl-y:execute-silent(echo -n {2..} | $copyCmd)+abort'"
+export FZF_DEFAULT_OPTS="--algo=v1 --color=light"
 
 command -v fasd > /dev/null && eval "$(fasd --init auto)"
 
