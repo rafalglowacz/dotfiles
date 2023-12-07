@@ -130,7 +130,7 @@ if wezterm.gui then
 end
 
 -- Include local. 
--- IMPORTANT: note that we're looking at a file -- outside of ~/Dev/dotfiles, 
+-- IMPORTANT: note that we're looking at a file outside of ~/Dev/dotfiles, 
 -- so an extra symlink is necessary.
 
 local fh = io.open(os.getenv( "HOME" ) .. '/.config/wezterm/local.lua', 'r')
