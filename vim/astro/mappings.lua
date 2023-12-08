@@ -22,7 +22,11 @@ return {
       silent = true,
     },
     ['C'] = '"_Da',
-    ['<leader>W'] = '<cmd>w | confirm q <CR>'
+    ['<leader>W'] = '<cmd>w | confirm q <CR>',
+    ['h'] = { 'i' },
+    ['i'] = { 'k' },
+    ['j'] = { 'h' },
+    ['k'] = { 'j' },
   },
   i = {
     -- Vim cannot capture these and ",," and ";;" that i had here before have
@@ -46,6 +50,10 @@ return {
       )
     end,
     ['d'] = '"_d',
+    ['h'] = { 'i' },
+    ['i'] = { 'k' },
+    ['j'] = { 'h' },
+    ['k'] = { 'j' },
   },
   x = {
     ['<A-Down>'] = ":move '>+1<CR>gv-gv",
