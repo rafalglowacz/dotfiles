@@ -1,8 +1,7 @@
 /.DS_Store
 /.idea
-/alacritty/alacritty.example.yml
-/alacritty/local.yml
-/git/local
-/kitty/overrides.conf
-/tmux/local.conf
-/wezterm/local.lua
+*.example.yml
+local.yml
+local
+local.conf
+local.lua
