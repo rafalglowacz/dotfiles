@@ -354,11 +354,12 @@ fzf-history-widget() {
   fi
   zle reset-prompt
 
-  # For some reason adding `head` after `fc` causes ret to be non-zero. Let's
-  # just ignore any errors for now and potentially try to fix it later if it
-  # causes issues.
-  # return $ret
-  return 0
+  # Using `head` results in SIGPIPE
+  if [ $ret -eq 141 ]; then
+    return 0
+  else 
+    return $ret
+  fi
 }
 zle     -N            fzf-history-widget
 bindkey -M emacs '^R' fzf-history-widget
