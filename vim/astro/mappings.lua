@@ -24,9 +24,9 @@ return {
     ['C'] = '"_Da',
     ['<leader>W'] = '<cmd>w | confirm q <CR>',
     ['h'] = { 'i' },
-    ['i'] = { 'k' },
+    ['i'] = { 'gk' },
     ['j'] = { 'h' },
-    ['k'] = { 'j' },
+    ['k'] = { 'gj' },
   },
   i = {
     -- Vim cannot capture these and ",," and ";;" that i had here before have
