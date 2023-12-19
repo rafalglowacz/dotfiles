@@ -1,0 +1,8 @@
+font_family Monofur Nerd Font
+font_size 24.0
+
+# Catppuccin-Latte
+# light theme
+include current-light-theme.conf
+# light theme
+include light-theme-fixes.conf
