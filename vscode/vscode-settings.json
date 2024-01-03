@@ -42,4 +42,5 @@
     "terminal.integrated.fontSize": 16,
     "workbench.editor.showTabs": "single",
     "gitlens.plusFeatures.enabled": false,
+    "cmake.showOptionsMovedNotification": false
 }
