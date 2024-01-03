@@ -244,7 +244,7 @@ IFS=''
 PROMPT=$(printf '%s\n' "${promptParts[*]}")
 IFS=' '
 
-TERM=xterm-256color
+# TERM=xterm-256color
 
 # Alt+Backspace
 backward-kill-dir () {
