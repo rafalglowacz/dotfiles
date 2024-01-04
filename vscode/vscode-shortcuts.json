@@ -86,6 +86,16 @@
         "command": "explorer.newFile", 
         "when": "explorerViewletFocus" 
     },
+    { 
+        "key": "cmd+shift+n", 
+        "command": "explorer.newFolder", 
+        "when": "explorerViewletFocus" 
+    },
+    { 
+        "key": "ctrl+shift+n", 
+        "command": "explorer.newFolder", 
+        "when": "explorerViewletFocus" 
+    },
     {
         "key": "alt+j",
         "command": "editor.action.joinLines"
