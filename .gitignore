@@ -1,7 +1,8 @@
 /.DS_Store
 /.idea
 *.example.yml
-local.yml
 local
 local.conf
 local.lua
+local.yml
+local.zshrc
