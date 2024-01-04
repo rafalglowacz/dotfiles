@@ -183,6 +183,11 @@ if [ -f ~/.zsh_aliases ]; then
     source ~/.zsh_aliases
 fi
 
+if which thefuck > /dev/null; then
+  eval $(thefuck --alias)
+  alias wat=fuck
+fi
+
 WORDCHARS='*?_-[]~=;.!@#$%^&(){}<>/\|'
 ZLE_REMOVE_SUFFIX_CHARS=""
 
