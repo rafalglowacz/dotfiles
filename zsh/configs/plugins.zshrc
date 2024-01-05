@@ -1,4 +1,4 @@
-TIMER_THRESHOLD=5
+TIMER_THRESHOLD=1
 TIMER_FORMAT='⏲ %d'
 
 ZSH_AUTOSUGGEST_IGNORE_WIDGETS+=(backward-kill-word backward-kill-dir)
