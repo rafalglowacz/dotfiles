@@ -21,5 +21,11 @@ alias l1='ls -1'
 
 alias phpv='php --version'
 alias rgp='rg --engine pcre2'
+
+if which thefuck > /dev/null; then
+  eval $(thefuck --alias)
+  alias wat=fuck
+fi
+
 alias watch='watch '
 alias vim='nvim'
