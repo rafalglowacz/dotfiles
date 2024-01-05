@@ -44,12 +44,12 @@ export ZSH="$HOME/.oh-my-zsh"
 
 plugins=(
 	colored-man-pages
+	command-time
 	copybuffer
 	extract
 	git
 	zsh-autosuggestions
 	zsh-syntax-highlighting
-	command-time
 )
 
 source $ZSH/oh-my-zsh.sh
