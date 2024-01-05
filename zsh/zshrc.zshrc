@@ -44,6 +44,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 plugins=(
 	colored-man-pages
+	copybuffer
 	extract
 	git
 	zsh-autosuggestions
