@@ -13,6 +13,7 @@ alias fgn='jobs | read _jobs; fg; notify-command-done "$_jobs"'
     
 alias jq='jq -C'
 alias k='kubectl'
+alias kssh='kitten ssh'
 
 alias ls='eza --icons --group-directories-first -a --hyperlink'
 alias lh='ls -lh --time-style relative'
