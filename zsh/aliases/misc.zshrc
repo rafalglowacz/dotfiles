@@ -10,7 +10,8 @@ alias fgn='jobs | read _jobs; fg; notify-command-done "$_jobs"'
 
 ! which hx >> /dev/null && 
     alias hx='helix'
-    
+
+alias icat='kitten icat'    
 alias jq='jq -C'
 alias k='kubectl'
 alias kssh='kitten ssh'
