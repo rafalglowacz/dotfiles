@@ -42,5 +42,7 @@
     "terminal.integrated.fontSize": 16,
     "workbench.editor.showTabs": "single",
     "gitlens.plusFeatures.enabled": false,
-    "cmake.showOptionsMovedNotification": false
+    "cmake.showOptionsMovedNotification": false,
+    "workbench.tree.indent": 15,
+    "workbench.tree.renderIndentGuides": "always"
 }
