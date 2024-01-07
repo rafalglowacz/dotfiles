@@ -49,7 +49,7 @@ return {
         vim.api.nvim_get_mode()['mode'] == 'v' and '<C-v>' or 'v'
       )
     end,
-    ['d'] = '"_d',
+    ['<A-d>'] = '"_d',
     ['h'] = { 'i' },
     ['i'] = { 'k' },
     ['j'] = { 'h' },
