@@ -1,17 +1,39 @@
 # This config's real directory path, even if symlinked.
 ZSHRC_DIR=$(dirname $(realpath ${funcsourcetrace[1]%:*}))
 
+##############
+# Oh My ZSH #
+############
+
+plugins=(
+	colored-man-pages
+	copybuffer
+	extract
+	git
+	timer
+	zsh-autosuggestions
+	zsh-syntax-highlighting
+)
+
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="candy"
+source $ZSH/oh-my-zsh.sh
+source $ZSHRC_DIR/configs/omz-termsupport-preexec.zshrc
+
 ############
 # General #
 ##########
 
 WORDCHARS='*?_-[]~=;.!@#$%^&(){}<>/\|'
 ZLE_REMOVE_SUFFIX_CHARS=""
-ZSH_THEME="candy"
 # See also omz-termsupport-preexec-custom.zshrc
 ZSH_THEME_TERM_TITLE_IDLE="%~"
 setopt GLOB_DOTS
+
 source $ZSHRC_DIR/configs/precmd.zshrc
+source $ZSHRC_DIR/configs/plugins.zshrc
+source $ZSHRC_DIR/configs/prompt.zshrc
+source $ZSHRC_DIR/shortcuts.zshrc
 
 ############
 # History #
@@ -35,32 +57,6 @@ if [ -d /opt/homebrew ]; then
     MY_PATH="$MY_PATH:/opt/homebrew/opt/mysql-client/bin:/opt/homebrew/opt/ruby/bin"
 fi
 export PATH="$MY_PATH:$PATH"
-
-##############
-# Oh My ZSH #
-############
-
-export ZSH="$HOME/.oh-my-zsh"
-
-plugins=(
-	colored-man-pages
-	copybuffer
-	extract
-	git
-	timer
-	zsh-autosuggestions
-	zsh-syntax-highlighting
-)
-
-source $ZSH/oh-my-zsh.sh
-source $ZSHRC_DIR/configs/plugins.zshrc
-source $ZSHRC_DIR/configs/omz-termsupport-preexec.zshrc
-
-########################
-# Oh My ZSH overrides #
-######################
-
-source $ZSHRC_DIR/configs/prompt.zshrc
 
 #########
 # Apps #
