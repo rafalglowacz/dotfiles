@@ -41,6 +41,7 @@ source $ZSHRC_DIR/shortcuts.zshrc
 
 HISTSIZE=11000
 SAVEHIST=10000
+setopt HIST_IGNORE_SPACE
 setopt APPEND_HISTORY
 unsetopt SHARE_HISTORY
 
