@@ -3,7 +3,7 @@
 	# path = ~/Dev/lib/delta/themes.gitconfig
 [alias]
 	co = checkout
-	ci = commit
+	ci = commit -av
 	d = diff -w
 	dt = difftool
 	b = branch
