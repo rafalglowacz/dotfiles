@@ -2,16 +2,16 @@
 	path = ~/.gitconfig.local
 	# path = ~/Dev/lib/delta/themes.gitconfig
 [alias]
-	co = checkout
-	ci = commit -av
-	d = diff -w
-	dt = difftool
-	b = branch
-	mnn = merge --no-commit --no-ff
-	st = status
-	r = reflog --date iso
+	b   = branch
+	co  = checkout
+	ci  = commit -av
+	d   = diff -w
+	dt  = difftool
 	hs  = log --pretty='%C(yellow)%h %C(cyan)%cd %C(auto)%s%C(auto)%d %C(reset)' --graph --date=human
 	hsl = log --pretty='%C(yellow)%h %C(cyan)%cd %C(auto)%s • %C(blue)%aN%C(auto)%d %C(reset)' --graph --date=human
+	mnn = merge --no-commit --no-ff
+	r   = reflog --date iso
+	st  = status
 [pull]
 	rebase = false
 [core]
