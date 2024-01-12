@@ -44,5 +44,8 @@
     "gitlens.plusFeatures.enabled": false,
     "cmake.showOptionsMovedNotification": false,
     "workbench.tree.indent": 15,
-    "workbench.tree.renderIndentGuides": "always"
+    "workbench.tree.renderIndentGuides": "always",
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    }
 }
