@@ -1,4 +1,4 @@
-bindkey \^U backward-kill-line
+bindkey '^U' backward-kill-line
 
 # Alt+Backspace
 backward-kill-dir () {
@@ -7,6 +7,14 @@ backward-kill-dir () {
 }
 zle -N backward-kill-dir
 bindkey '^[^?' backward-kill-dir
+
+# Ctrl+Backspace
+forward-kill-dir () {
+    zle kill-word
+    zle -f kill
+}
+zle -N forward-kill-dir
+bindkey '^\b' forward-kill-dir
 
 # Alt+Left
 backward-word-dir () {
