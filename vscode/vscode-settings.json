@@ -47,5 +47,6 @@
     "workbench.tree.renderIndentGuides": "always",
     "[javascript]": {
         "editor.defaultFormatter": "vscode.typescript-language-features"
-    }
+    },
+    "editor.lineHeight": 1.3
 }
