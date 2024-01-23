@@ -3,7 +3,7 @@
 export FZF_CTRL_R_OPTS="
   --preview 'echo {}' --preview-window up:10:hidden:wrap
   --bind 'ctrl-/:toggle-preview'
-  --bind 'ctrl-y:execute-silent(echo -n {2..} | $copyCmd)+abort'"
+  --bind 'ctrl-y:execute-silent(echo -n {2..} | $COPY_CMD)+abort'"
 export FZF_DEFAULT_OPTS="--color=bw --prompt '  ' --pointer '➜'"
 export FZF_ALT_C_COMMAND="fd --min-depth 1 --max-depth 3"
 export FZF_ALT_C_OPTS="--preview 'eza --icons --group-directories-first -a --hyperlink -lh --time-style relative --color always {}'"

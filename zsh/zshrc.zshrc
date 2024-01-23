@@ -35,6 +35,12 @@ source $ZSHRC_DIR/configs/plugins.zshrc
 source $ZSHRC_DIR/configs/prompt.zshrc
 source $ZSHRC_DIR/shortcuts.zshrc
 
+##################
+# Custom config #
+################
+
+which pbcopy > /dev/null && COPY_CMD=pbcopy || COPY_CMD=wl-copy
+
 ############
 # History #
 ##########
@@ -73,12 +79,6 @@ source $ZSHRC_DIR/configs/nvm.zshrc
 
 # Haskell
 [ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env"
-
-##################
-# Custom config #
-################
-
-which pbcopy > /dev/null && COPY_CMD=pbcopy || COPY_CMD=wl-copy
 
 ############
 # Aliases #
