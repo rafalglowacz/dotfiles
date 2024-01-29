@@ -107,5 +107,13 @@
     {
         "key": "alt+w",
         "command": "editor.action.toggleWordWrap"
+    },
+    {
+        "key": "alt+cmd+e",
+        "command": "workbench.files.action.collapseExplorerFolders"
+    },
+    {
+        "key": "alt+ctrl+e",
+        "command": "workbench.files.action.collapseExplorerFolders"
     }
 ]
