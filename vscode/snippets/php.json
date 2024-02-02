@@ -19,4 +19,17 @@
 		],
 		"description": "Dump array and exit."
 	},
+	"test": {
+		"prefix": "test",
+		"body": [
+            "/**",
+            " * @test",
+            " * @covers${2:Nothing}",
+            " */",
+            "public function $1(): void",
+            "{",
+            "    $0",
+            "}",
+		],
+	},
 }
