@@ -29,6 +29,7 @@ ZLE_REMOVE_SUFFIX_CHARS=""
 # See also omz-termsupport-preexec-custom.zshrc
 ZSH_THEME_TERM_TITLE_IDLE="%~"
 setopt GLOB_DOTS
+zstyle ':completion:*' ignored-patterns '(.|..)'
 
 source $ZSHRC_DIR/configs/precmd.zshrc
 source $ZSHRC_DIR/configs/plugins.zshrc
