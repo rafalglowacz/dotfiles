@@ -115,5 +115,13 @@
     {
         "key": "alt+ctrl+e",
         "command": "workbench.files.action.collapseExplorerFolders"
+    },
+    {
+        "key": "shift+alt+e",
+        "command": "workbench.files.action.showActiveFileInExplorer"
+    },
+    {
+        "key": "shift+opt+e",
+        "command": "workbench.files.action.showActiveFileInExplorer"
     }
 ]
