@@ -30,4 +30,3 @@ if which thefuck > /dev/null; then
 fi
 
 alias watch='watch '
-alias vim='nvim'
