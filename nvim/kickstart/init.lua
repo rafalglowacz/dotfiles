@@ -159,6 +159,10 @@ vim.keymap.set({ 'n', 'v' }, 'i', 'gk')
 vim.keymap.set({ 'n', 'v' }, 'j', 'h')
 vim.keymap.set({ 'n', 'v' }, 'k', 'gj')
 
+vim.keymap.set('v', 'v', function()
+  vim.api.nvim_input(vim.api.nvim_get_mode()['mode'] == 'v' and '<C-v>' or 'v')
+end)
+
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
