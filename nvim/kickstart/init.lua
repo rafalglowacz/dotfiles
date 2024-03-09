@@ -154,10 +154,10 @@ vim.opt.scrolloff = 10
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
-vim.keymap.set('n', 'h', 'i')
-vim.keymap.set('n', 'i', 'gk')
-vim.keymap.set('n', 'j', 'h')
-vim.keymap.set('n', 'k', 'gj')
+vim.keymap.set({ 'n', 'v' }, 'h', 'i')
+vim.keymap.set({ 'n', 'v' }, 'i', 'gk')
+vim.keymap.set({ 'n', 'v' }, 'j', 'h')
+vim.keymap.set({ 'n', 'v' }, 'k', 'gj')
 
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
@@ -290,6 +290,11 @@ require('lazy').setup({
         ['<leader>w'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
       }
     end,
+    opts = {
+      triggers_blacklist = {
+        v = { 'i' },
+      },
+    },
   },
 
   -- NOTE: Plugins can specify dependencies.
