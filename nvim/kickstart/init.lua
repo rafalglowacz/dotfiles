@@ -568,7 +568,7 @@ require('lazy').setup({
             plugins = {
               {
                 name = '@vue/typescript-plugin',
-                location = vim.fn.expand '$HOME/.local/share/nvim/mason/packages/node_modules/@vue/typescript-plugin',
+                location = vim.fn.expand '$HOME/.local/share/nvim/mason/packages/vue-language-server/node_modules/@vue/language-server/node_modules/@vue/typescript-plugin',
                 languages = { 'javascript', 'typescript', 'vue' },
               },
             },
