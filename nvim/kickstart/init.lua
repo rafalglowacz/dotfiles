@@ -564,7 +564,12 @@ require('lazy').setup({
         --
         -- But for many setups, the LSP (`tsserver`) will work just fine
         tsserver = {
+          -- To debug issues, log more information and save to file:
+          -- cmd = { 'sh', '-c', vim.fn.expand '$HOME/.local/share/nvim/mason/bin/typescript-language-server --stdio --log-level 4 | tee /tmp/lsp-out.txt' },
           init_options = {
+            tsserver = {
+              path = vim.fn.expand '$HOME/.local/share/nvim/mason/packages/typescript-language-server/node_modules/typescript/lib',
+            },
             plugins = {
               {
                 name = '@vue/typescript-plugin',
@@ -580,7 +585,16 @@ require('lazy').setup({
           },
         },
         --
-        volar = {},
+        volar = {
+          init_options = {
+            typescript = {
+              -- TODO: check if actually needed. The problem with Vue 2 
+              -- in work project was solved by setting tsserver.path 
+              -- in the TS language server's config.
+              tsdk = vim.fn.expand '$HOME/.local/share/nvim/mason/packages/typescript-language-server/node_modules/typescript/lib',
+            }
+          },
+        },
         --
         phpactor = {},
         --
