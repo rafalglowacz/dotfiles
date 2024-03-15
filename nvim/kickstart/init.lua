@@ -264,6 +264,16 @@ require('lazy').setup({
   { 'NvChad/nvim-colorizer.lua', opts = {
     user_default_options = { names = false }
   } },
+  {
+    'Wansmer/treesj',
+    keys = {
+      { 'gJ', function() require('treesj').join() end, desc = 'Join lines' },
+      { 'gS', function() require('treesj').split() end, desc = 'Split into lines' },
+    },
+    opts = { use_default_keymaps = false },
+    dependencies = { 'nvim-treesitter/nvim-treesitter' },
+  },
+  'sickill/vim-pasta',
 
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
