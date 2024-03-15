@@ -154,7 +154,7 @@ vim.opt.scrolloff = 15
 vim.opt.colorcolumn = '80,120'
 vim.opt.wrap = true
 vim.opt.wildmode = 'longest:full,full'
-vim.opt.cmdheight = 0
+vim.opt.cmdheight = 1
 -- vim.opt.spell = true
 vim.opt.confirm = true
 
@@ -306,6 +306,13 @@ require('lazy').setup({
         changedelete = { text = '~' },
       },
     },
+    keys = {
+      { '<leader>gP', function() require'gitsigns'.preview_hunk() end, desc = '[P]review hunk' },
+      { '<leader>gh', function() require'gitsigns'.reset_hunk() end, desc = 'Reset [h]unk' },
+      { ']g',         function() require'gitsigns'.next_hunk()  end, desc = 'Next Git hunk' },
+      { '[g',         function() require'gitsigns'.prev_hunk()  end, desc = 'Previous Git hunk' },
+      { '<leader>gb', function() require'gitsigns'.blame_line() end, desc = '[B]lame line' },
+    }
   },
 
   -- NOTE: Plugins can also be configured to run lua code when they are loaded.
@@ -333,6 +340,7 @@ require('lazy').setup({
       require('which-key').register {
         ['<leader>c'] = { name = '[C]ode', _ = 'which_key_ignore' },
         ['<leader>d'] = { name = '[D]ocument', _ = 'which_key_ignore' },
+        ['<leader>g'] = { name = '[G]it', _ = 'which_key_ignore' },
         ['<leader>r'] = { name = '[R]ename', _ = 'which_key_ignore' },
         ['<leader>s'] = { name = '[S]earch', _ = 'which_key_ignore' },
         ['<leader>w'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
