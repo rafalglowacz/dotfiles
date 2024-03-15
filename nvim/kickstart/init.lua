@@ -154,6 +154,9 @@ vim.opt.scrolloff = 15
 vim.opt.colorcolumn = '80,120'
 vim.opt.wrap = true
 vim.opt.wildmode = 'longest:full,full'
+vim.opt.cmdheight = 0
+-- vim.opt.spell = true
+vim.opt.confirm = true
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
@@ -199,6 +202,22 @@ vim.keymap.set('n', '<C-j>', '<C-w><C-h>', { desc = 'Move focus to the left wind
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-i>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+
+-- Maintain selection when indenting
+vim.keymap.set('v', '<', '<gv')
+vim.keymap.set('v', '>', '>gv')
+
+-- Maintain the cursor position when yanking a visual selection.
+-- http://ddrscott.github.io/blog/2016/yank-without-jank/
+vim.keymap.set('v', 'y', 'myy`y')
+vim.keymap.set('v', 'Y', 'myY`y')
+
+-- Paste replace visual selection without copying it.
+vim.keymap.set('v', 'p', '"_dP')
+
+-- Easy insertion of a trailing ; or , from insert mode.
+vim.keymap.set('i', '<C-;>', '<Esc>A;<Esc>')
+vim.keymap.set('i', '<C-,>', '<Esc>A,<Esc>')
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
