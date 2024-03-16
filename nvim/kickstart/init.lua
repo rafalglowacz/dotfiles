@@ -299,27 +299,27 @@ require('lazy').setup({
     keys = {
       {
         '<leader>tn',
-        ':TestNearest<CR>',
+        function() vim.cmd('silent TestNearest') end,
         desc = 'Test [n]earest',
       },
       {
         '<leader>tf',
-        ':TestFile<CR>',
+        function() vim.cmd('silent TestFile') end,
         desc = 'Test [f]ile',
       },
       {
         '<leader>ts',
-        ':TestSuite<CR>',
+        function() vim.cmd('silent TestSuite') end,
         desc = 'Test [s]uite',
       },
       {
         '<leader>tl',
-        ':TestLast<CR>',
+        function() vim.cmd('silent TestLast') end,
         desc = 'Test [l]ast',
       },
       {
         '<leader>tv',
-        ':TestVisit<CR>',
+        function() vim.cmd('silent TestVisit') end,
         desc = 'Test [v]isit',
       },
     },
