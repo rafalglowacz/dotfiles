@@ -297,11 +297,31 @@ require('lazy').setup({
 
   { 'vim-test/vim-test',
     keys = {
-      { '<leader>tn', ':TestNearest<CR>', desc = 'Test [n]earest' },
-      { '<leader>tf', ':TestFile<CR>', desc = 'Test [f]ile' },
-      { '<leader>ts', ':TestSuite<CR>', desc = 'Test [s]uite' },
-      { '<leader>tl', ':TestLast<CR>', desc = 'Test [l]ast' },
-      { '<leader>tv', ':TestVisit<CR>', desc = 'Test [v]isit' },
+      {
+        '<leader>tn',
+        ':TestNearest<CR>',
+        desc = 'Test [n]earest',
+      },
+      {
+        '<leader>tf',
+        ':TestFile<CR>',
+        desc = 'Test [f]ile',
+      },
+      {
+        '<leader>ts',
+        ':TestSuite<CR>',
+        desc = 'Test [s]uite',
+      },
+      {
+        '<leader>tl',
+        ':TestLast<CR>',
+        desc = 'Test [l]ast',
+      },
+      {
+        '<leader>tv',
+        ':TestVisit<CR>',
+        desc = 'Test [v]isit',
+      },
     },
     config = function()
       vim.cmd[[
