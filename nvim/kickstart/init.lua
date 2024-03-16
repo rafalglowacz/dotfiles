@@ -315,11 +315,11 @@ require('lazy').setup({
 
   { 'vim-test/vim-test',
     keys = {
-      { '<leader>tn', ':TestNearest<CR>', desc = '[T]est [N]earest' },
-      { '<leader>tf', ':TestFile<CR>', desc = '[T]est [F]ile' },
-      { '<leader>ts', ':TestSuite<CR>', desc = '[T]est [S]uite' },
-      { '<leader>tl', ':TestLast<CR>', desc = '[T]est [L]ast' },
-      { '<leader>tv', ':TestVisit<CR>', desc = '[T]est [V]isit' },
+      { '<leader>tn', ':TestNearest<CR>', desc = 'Test [n]earest' },
+      { '<leader>tf', ':TestFile<CR>', desc = 'Test [f]ile' },
+      { '<leader>ts', ':TestSuite<CR>', desc = 'Test [s]uite' },
+      { '<leader>tl', ':TestLast<CR>', desc = 'Test [l]ast' },
+      { '<leader>tv', ':TestVisit<CR>', desc = 'Test [v]isit' },
     },
     config = function()
       vim.cmd[[
@@ -411,6 +411,7 @@ require('lazy').setup({
         ['<leader>g'] = { name = '[G]it', _ = 'which_key_ignore' },
         ['<leader>r'] = { name = '[R]ename', _ = 'which_key_ignore' },
         ['<leader>s'] = { name = '[S]earch', _ = 'which_key_ignore' },
+        ['<leader>t'] = { name = '[T]esting', _ = 'which_key_ignore' },
         ['<leader>w'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
       }
     end,
@@ -499,15 +500,15 @@ require('lazy').setup({
 
       -- See `:help telescope.builtin`
       local builtin = require 'telescope.builtin'
-      vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
-      vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = '[S]earch [K]eymaps' })
-      vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = '[S]earch [F]iles' })
-      vim.keymap.set('n', '<leader>ss', builtin.builtin, { desc = '[S]earch [S]elect Telescope' })
-      vim.keymap.set('n', '<leader>sw', builtin.grep_string, { desc = '[S]earch current [W]ord' })
-      vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = '[S]earch by [G]rep' })
-      vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = '[S]earch [D]iagnostics' })
-      vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = '[S]earch [R]esume' })
-      vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
+      vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = 'Search [h]elp' })
+      vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = 'Search [k]eymaps' })
+      vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = 'Search [f]iles' })
+      vim.keymap.set('n', '<leader>ss', builtin.builtin, { desc = 'Search [s]elect Telescope' })
+      vim.keymap.set('n', '<leader>sw', builtin.grep_string, { desc = 'Search current [w]ord' })
+      vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = 'Search by [g]rep' })
+      vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = 'Search [d]iagnostics' })
+      vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = 'Search [r]esume' })
+      vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = 'Search Recent Files ("." for repeat)' })
       vim.keymap.set(
         'n',
         '<leader><leader>',
@@ -531,12 +532,12 @@ require('lazy').setup({
           grep_open_files = true,
           prompt_title = 'Live Grep in Open Files',
         }
-      end, { desc = '[S]earch [/] in Open Files' })
+      end, { desc = 'Search [/] in Open Files' })
 
       -- Shortcut for searching your neovim configuration files
       vim.keymap.set('n', '<leader>sn', function()
         builtin.find_files { cwd = vim.fn.stdpath 'config' }
-      end, { desc = '[S]earch [N]eovim files' })
+      end, { desc = 'Search [N]eovim files' })
     end,
   },
 
