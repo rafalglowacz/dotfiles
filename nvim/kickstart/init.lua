@@ -322,12 +322,24 @@ require('lazy').setup({
       },
     },
     keys = {
-      { '<leader>gP', function() require'gitsigns'.preview_hunk() end, desc = '[P]review hunk' },
-      { '<leader>gh', function() require'gitsigns'.reset_hunk() end, desc = 'Reset [h]unk' },
-      { ']g',         function() require'gitsigns'.next_hunk()  end, desc = 'Next Git hunk' },
-      { '[g',         function() require'gitsigns'.prev_hunk()  end, desc = 'Previous Git hunk' },
-      { '<leader>gb', function() require'gitsigns'.blame_line() end, desc = '[B]lame line' },
-    }
+      { '<leader>gS', function() require'gitsigns'.undo_stage_hunk() end,
+        desc = 'Un[s]tage hunk' },
+
+      { '<leader>gs', function() require'gitsigns'.stage_hunk() end,
+        desc = '[S]tage hunk' },
+
+      { '<leader>gP', function() require'gitsigns'.preview_hunk() end,
+        desc = '[P]review hunk' },
+
+      { '<leader>gh', function() require'gitsigns'.reset_hunk() end,
+        desc = 'Reset [h]unk' },
+
+      { '<leader>gb', function() require'gitsigns'.blame_line() end,
+        desc = '[B]lame line' },
+
+      { ']g', function() require'gitsigns'.next_hunk() end, desc = 'Next Git hunk' },
+      { '[g', function() require'gitsigns'.prev_hunk() end, desc = 'Previous Git hunk' },
+    },
   },
 
   -- NOTE: Plugins can also be configured to run lua code when they are loaded.
