@@ -284,7 +284,9 @@ require('lazy').setup({
     },
     config = function()
       vim.cmd[[
-        let test#php#phpunit#executable='de php vendor/bin/phpunit'
+        let test#strategy = 'kitty'
+        " let test#neovim#term_position = 'vert botright 80'
+        let test#php#phpunit#executable = 'de php vendor/bin/phpunit'
       ]]
     end
   },

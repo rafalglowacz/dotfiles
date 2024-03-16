@@ -74,6 +74,9 @@ export LESS='XRi'
 export RIPGREP_CONFIG_PATH=$ZSHRC_DIR/../ripgreprc
 export GIT_OPTIONAL_LOCKS=0
 export GOPATH=~/.local/bin/go
+if [ -z $KITTY_LISTEN_ON ]; then
+	export KITTY_LISTEN_ON=unix:/tmp/kitty-remote-control-$PPID
+fi
 
 source $ZSHRC_DIR/configs/fzf.zshrc
 source $ZSHRC_DIR/configs/nvm.zshrc
