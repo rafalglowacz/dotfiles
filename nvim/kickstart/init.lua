@@ -174,7 +174,10 @@ end)
 
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
-vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+vim.keymap.set('n', '<Esc>', function()
+  vim.cmd('NvimTreeClose');
+  vim.cmd('nohlsearch');
+end)
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
@@ -299,7 +302,6 @@ require('lazy').setup({
     },
     keys = {
       { '<leader>e', ':NvimTreeToggle<CR>', desc = 'File [e]xplorer', silent = true },
-      { '<Esc>', ':NvimTreeClose<CR>', silent = true },
     }
   },
 
