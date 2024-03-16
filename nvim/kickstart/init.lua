@@ -157,6 +157,8 @@ vim.opt.wildmode = 'longest:full,full'
 vim.opt.cmdheight = 1
 -- vim.opt.spell = true
 vim.opt.confirm = true
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
@@ -259,10 +261,47 @@ vim.opt.rtp:prepend(lazypath)
 --    :Lazy update
 --
 -- NOTE: Here is where you install your plugins.
+local treeHeightRatio = 0.8 -- You can change this
+local treeWidthRatio = 0.5  -- You can change this too
+
 require('lazy').setup({
   { 'm00qek/baleia.nvim', opts = {} },
   { 'NvChad/nvim-colorizer.lua', opts = { user_default_options = { names = false } } },
   'sickill/vim-pasta',
+
+  { 'nvim-tree/nvim-tree.lua',
+    opts = {
+      hijack_cursor = true,
+      hijack_unnamed_buffer_when_opening = true,
+      view = {
+        float = {
+          enable = true,
+          open_win_config = function()
+            local screenW = vim.opt.columns:get()
+            local screenH = vim.opt.lines:get() - vim.opt.cmdheight:get()
+            local windowW = screenW * treeWidthRatio
+            local windowH = screenH * treeHeightRatio
+            local centerX = (screenW - windowW) / 2
+            local centerY = ((vim.opt.lines:get() - windowH) / 2) - vim.opt.cmdheight:get()
+
+            return {
+              border = 'rounded',
+              relative = 'editor',
+              row = centerY, col = centerX,
+              width = math.floor(windowW), height = math.floor(windowH),
+            }
+            end,
+        },
+        width = function()
+          return math.floor(vim.opt.columns:get() * treeWidthRatio)
+        end,
+      }
+    },
+    keys = {
+      { '<leader>e', ':NvimTreeToggle<CR>', desc = 'File [e]xplorer', silent = true },
+      { '<Esc>', ':NvimTreeClose<CR>', silent = true },
+    }
+  },
 
   {
     'Wansmer/treesj',
