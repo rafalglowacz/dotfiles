@@ -274,6 +274,21 @@ require('lazy').setup({
     dependencies = { 'nvim-treesitter/nvim-treesitter' },
   },
 
+  { 'vim-test/vim-test',
+    keys = {
+      { '<leader>tn', ':TestNearest<CR>', desc = '[T]est [N]earest' },
+      { '<leader>tf', ':TestFile<CR>', desc = '[T]est [F]ile' },
+      { '<leader>ts', ':TestSuite<CR>', desc = '[T]est [S]uite' },
+      { '<leader>tl', ':TestLast<CR>', desc = '[T]est [L]ast' },
+      { '<leader>tv', ':TestVisit<CR>', desc = '[T]est [V]isit' },
+    },
+    config = function()
+      vim.cmd[[
+        let test#php#phpunit#executable='de php vendor/bin/phpunit'
+      ]]
+    end
+  },
+
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
 
