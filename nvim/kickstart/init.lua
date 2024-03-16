@@ -261,9 +261,9 @@ vim.opt.rtp:prepend(lazypath)
 -- NOTE: Here is where you install your plugins.
 require('lazy').setup({
   { 'm00qek/baleia.nvim', opts = {} },
-  { 'NvChad/nvim-colorizer.lua', opts = {
-    user_default_options = { names = false }
-  } },
+  { 'NvChad/nvim-colorizer.lua', opts = { user_default_options = { names = false } } },
+  'sickill/vim-pasta',
+
   {
     'Wansmer/treesj',
     keys = {
@@ -273,7 +273,6 @@ require('lazy').setup({
     opts = { use_default_keymaps = false },
     dependencies = { 'nvim-treesitter/nvim-treesitter' },
   },
-  'sickill/vim-pasta',
 
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
@@ -297,6 +296,7 @@ require('lazy').setup({
   -- See `:help gitsigns` to understand what the configuration keys do
   { -- Adds git related signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
+    lazy = false,
     opts = {
       signs = {
         add = { text = '+' },
