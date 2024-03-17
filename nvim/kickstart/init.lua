@@ -655,7 +655,7 @@ require('lazy').setup({
       vim.keymap.set(
         'n',
         '<leader>s.',
-        builtin.oldfiles,
+        function() builtin.oldfiles({ cwd_only = true }) end,
         { desc = 'Search Recent Files ("." for repeat)' }
       )
       vim.keymap.set(
