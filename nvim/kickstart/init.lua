@@ -353,6 +353,9 @@ require('lazy').setup({
     opts = {
       hijack_cursor = true,
       hijack_unnamed_buffer_when_opening = true,
+      filters = {
+        git_ignored = false,
+      },
       view = {
         float = {
           enable = true,
@@ -601,7 +604,18 @@ require('lazy').setup({
       local builtin = require 'telescope.builtin'
       vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = 'Search [h]elp' })
       vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = 'Search [k]eymaps' })
-      vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = 'Search [f]iles' })
+      vim.keymap.set(
+        'n',
+        '<leader>sf',
+        function()
+          builtin.find_files({
+            hidden = true,
+            no_ignore = true,
+            no_ignore_parent = true,
+          })
+        end,
+        { desc = 'Search [f]iles' }
+      )
       vim.keymap.set('n', '<leader>ss', builtin.builtin, { desc = 'Search [s]elect Telescope' })
       vim.keymap.set('n', '<leader>sw', builtin.grep_string, { desc = 'Search current [w]ord' })
       vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = 'Search by [g]rep' })
