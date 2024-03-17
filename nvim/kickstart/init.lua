@@ -589,7 +589,16 @@ require('lazy').setup({
         --
         defaults = {
           layout_strategy = 'vertical',
-          path_display = { 'smart' },
+          path_display = function(opts, path)
+            local tail = require("telescope.utils").path_tail(path)
+            path = path:gsub(vim.loop.cwd() .. '/', '')
+            path = path:sub(0, - string.len(tail) - 2)
+            if string.len(path) == 0 then
+              return tail
+            else
+              return string.format("%s (%s)", tail, path)
+            end
+          end,
           -- mappings = {
           --   i = { ['<c-enter>'] = 'to_fuzzy_refine' },
           -- },
