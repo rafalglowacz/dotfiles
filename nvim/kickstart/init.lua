@@ -148,9 +148,7 @@ vim.keymap.set({ 'n', 'v' }, 'i', 'gk')
 vim.keymap.set({ 'n', 'v' }, 'j', 'h')
 vim.keymap.set({ 'n', 'v' }, 'k', 'gj')
 
-vim.keymap.set('v', 'v', function()
-  vim.api.nvim_input(vim.api.nvim_get_mode()['mode'] == 'v' and '<C-v>' or 'v')
-end)
+vim.keymap.set('n', '<A-v>', '<C-v>')
 
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
@@ -250,7 +248,106 @@ local treeWidthRatio = 0.5  -- You can change this too
 require('lazy').setup({
   { 'm00qek/baleia.nvim', opts = {} },
   { 'NvChad/nvim-colorizer.lua', opts = { user_default_options = { names = false } } },
-  'sickill/vim-pasta',
+  { 'sickill/vim-pasta' },
+
+  { 'mfussenegger/nvim-dap', config = function()
+      local dap = require'dap'
+      dap.adapters.php = {
+        type = 'executable',
+        command = 'node',
+        args = { vim.fn.expand'$HOME/Dev/lib/vscode-php-debug/out/phpDebug.js' },
+      }
+      dap.configurations.php = {
+        {
+          type = 'php',
+          request = 'launch',
+          name = 'Listen for Xdebug',
+          port = '9003',
+          pathMappings = {
+              ['/var/www/laravel'] = '${workspaceFolder}',
+          },
+        },
+      }
+      vim.keymap.set(
+        'n',
+        '<leader>dc',
+        function() require('dap').continue() end,
+        { desc = '[C]ontinue' }
+      )
+      vim.keymap.set(
+        'n',
+        '<F9>',
+        function() require('dap').step_over() end,
+        { desc = 'Step [o]ver' }
+      )
+      vim.keymap.set(
+        'n',
+        '<F8>',
+        function() require('dap').step_into() end,
+        { desc = 'Step [i]nto' }
+      )
+      vim.keymap.set(
+        'n',
+        '<F7>',
+        function() require('dap').step_out() end,
+        { desc = 'Step o[u]t' }
+      )
+      vim.keymap.set(
+        'n',
+        '<F5>',
+        function() require('dap').run_to_cursor() end,
+        { desc = 'Run to cursor' }
+      )
+      vim.keymap.set(
+        'n',
+        '<leader>db',
+        function() require('dap').toggle_breakpoint() end,
+        { desc = 'Toggle [b]reakpoint' }
+      )
+      -- vim.keymap.set('n', '<leader>lp', function() require('dap').set_breakpoint(nil, nil, vim.fn.input('Log point message: ')) end)
+      vim.keymap.set(
+        'n',
+        '<leader>dr',
+        function() require('dap').repl.open() end,
+        { desc = 'Open [R]EPL' }
+      )
+      vim.keymap.set(
+        'n',
+        '<leader>dl',
+        function() require('dap').run_last() end,
+        { desc = 'Run [l]ast' }
+      )
+      vim.keymap.set(
+        {'n', 'v'},
+        '<leader>dh',
+        function() require('dap.ui.widgets').hover() end,
+        { desc = 'Ho[v]er' }
+      )
+      vim.keymap.set(
+        {'n', 'v'},
+        '<leader>dp',
+        function() require('dap.ui.widgets').preview() end
+      )
+      vim.keymap.set(
+        'n',
+        '<leader>df',
+        function()
+          local widgets = require('dap.ui.widgets')
+          widgets.centered_float(widgets.frames)
+        end,
+        { desc = '[F]rames' }
+      )
+      -- vim.keymap.set(
+      --   'n',
+      --   '<leader>ds',
+      --   function()
+      --     local widgets = require('dap.ui.widgets')
+      --     widgets.centered_float(widgets.scopes)
+      --   end,
+      --   { desc = 'Scopes' }
+      -- )
+    end,
+  },
 
   { 'nvim-tree/nvim-tree.lua',
     opts = {
@@ -409,7 +506,7 @@ require('lazy').setup({
       -- Document existing key chains
       require('which-key').register {
         ['<leader>c'] = { name = '[C]ode', _ = 'which_key_ignore' },
-        ['<leader>d'] = { name = '[D]ocument', _ = 'which_key_ignore' },
+        ['<leader>d'] = { name = '[D]ebug', _ = 'which_key_ignore' },
         ['<leader>g'] = { name = '[G]it', _ = 'which_key_ignore' },
         ['<leader>r'] = { name = '[R]ename', _ = 'which_key_ignore' },
         ['<leader>s'] = { name = '[S]earch', _ = 'which_key_ignore' },
