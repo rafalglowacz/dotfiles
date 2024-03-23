@@ -466,22 +466,22 @@ require('lazy').setup({
     },
     keys = {
       { '<leader>gS', function() require'gitsigns'.undo_stage_hunk() end,
-        desc = 'Un[s]tage hunk' },
+        desc = 'Git: un[s]tage hunk' },
 
       { '<leader>gs', function() require'gitsigns'.stage_hunk() end,
-        desc = '[S]tage hunk' },
+        desc = 'Git: [s]tage hunk' },
 
       { '<leader>gP', function() require'gitsigns'.preview_hunk() end,
-        desc = '[P]review hunk' },
+        desc = 'Git: [p]review hunk' },
 
       { '<leader>gh', function() require'gitsigns'.reset_hunk() end,
-        desc = 'Reset [h]unk' },
+        desc = 'Git: reset [h]unk' },
 
       { '<leader>gb', function() require'gitsigns'.blame_line() end,
-        desc = '[B]lame line' },
+        desc = 'Git: [b]lame line' },
 
-      { ']g', function() require'gitsigns'.next_hunk() end, desc = 'Next Git hunk' },
-      { '[g', function() require'gitsigns'.prev_hunk() end, desc = 'Previous Git hunk' },
+      { ']g', function() require'gitsigns'.next_hunk() end, desc = 'Git: next hunk' },
+      { '[g', function() require'gitsigns'.prev_hunk() end, desc = 'Git: previous hunk' },
     },
   },
 
