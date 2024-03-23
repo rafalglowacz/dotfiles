@@ -865,6 +865,7 @@ require('lazy').setup({
         },
         --
         volar = {
+          -- cmd = { 'sh', '-c', 'node --inspect-brk '..vim.fn.expand'$HOME/.local/share/nvim/mason/bin/vue-language-server'..' --stdio' },
           init_options = {
             typescript = {
               -- TODO: check if actually needed. The problem with Vue 2 
