@@ -430,7 +430,21 @@ require('lazy').setup({
         width = function()
           return math.floor(vim.opt.columns:get() * treeWidthRatio)
         end,
-      }
+      },
+      on_attach = function (bufnr)
+        local api = require "nvim-tree.api"
+
+        local function opts(desc)
+          return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+        end
+
+        -- default mappings
+        api.config.mappings.default_on_attach(bufnr)
+
+        -- custom mappings
+        vim.keymap.set('n', 'j', api.node.navigate.parent_close, opts('Close directory'))
+        vim.keymap.set('n', 'l', api.node.open.edit,             opts('Open'))
+      end,
     },
     keys = {
       { '<leader>e', ':NvimTreeToggle<CR>', desc = 'File [e]xplorer', silent = true },
