@@ -500,35 +500,35 @@ require('lazy').setup({
   -- after the plugin has been loaded:
   --  config = function() ... end
 
-  { -- Useful plugin to show you pending keybinds.
-    'folke/which-key.nvim',
-    event = 'VimEnter', -- Sets the loading event to 'VimEnter'
-    config = function() -- This is the function that runs, AFTER loading
-      require('which-key').setup({
-        plugins = {
-          -- Pressing "i" in visual mode triggers which-key despite specifying
-          -- it in triggers_blacklist. This prevents that issue. It also 
-          -- prevents which-key from triggering when starting a visual mode 
-          -- altogether, but it'll have to do for now. Note: a previous version 
-          -- of this config had triggers_blacklist specified in the wrong 
-          -- place, but event after moving it to the setup method it 
-          -- didn't work.
-          presets = { operators = false },
-        },
-      })
-
-      -- Document existing key chains
-      require('which-key').register {
-        ['<leader>c'] = { name = '[C]ode', _ = 'which_key_ignore' },
-        ['<leader>d'] = { name = '[D]ebug', _ = 'which_key_ignore' },
-        ['<leader>g'] = { name = '[G]it', _ = 'which_key_ignore' },
-        ['<leader>r'] = { name = '[R]ename', _ = 'which_key_ignore' },
-        ['<leader>s'] = { name = '[S]earch', _ = 'which_key_ignore' },
-        ['<leader>t'] = { name = '[T]esting', _ = 'which_key_ignore' },
-        ['<leader>w'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
-      }
-    end,
-  },
+  -- { -- Useful plugin to show you pending keybinds.
+  --   'folke/which-key.nvim',
+  --   event = 'VimEnter', -- Sets the loading event to 'VimEnter'
+  --   config = function() -- This is the function that runs, AFTER loading
+  --     require('which-key').setup({
+  --       plugins = {
+  --         -- Pressing "i" in visual mode triggers which-key despite specifying
+  --         -- it in triggers_blacklist. This prevents that issue. It also 
+  --         -- prevents which-key from triggering when starting a visual mode 
+  --         -- altogether, but it'll have to do for now. Note: a previous version 
+  --         -- of this config had triggers_blacklist specified in the wrong 
+  --         -- place, but event after moving it to the setup method it 
+  --         -- didn't work.
+  --         presets = { operators = false },
+  --       },
+  --     })
+  --
+  --     -- Document existing key chains
+  --     require('which-key').register {
+  --       ['<leader>c'] = { name = '[C]ode', _ = 'which_key_ignore' },
+  --       ['<leader>d'] = { name = '[D]ebug', _ = 'which_key_ignore' },
+  --       ['<leader>g'] = { name = '[G]it', _ = 'which_key_ignore' },
+  --       ['<leader>r'] = { name = '[R]ename', _ = 'which_key_ignore' },
+  --       ['<leader>s'] = { name = '[S]earch', _ = 'which_key_ignore' },
+  --       ['<leader>t'] = { name = '[T]esting', _ = 'which_key_ignore' },
+  --       ['<leader>w'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
+  --     }
+  --   end,
+  -- },
 
   -- NOTE: Plugins can specify dependencies.
   --
