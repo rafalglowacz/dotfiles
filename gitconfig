@@ -2,10 +2,13 @@
 	path = ~/.gitconfig.local
 	# path = ~/Dev/lib/delta/themes.gitconfig
 [alias]
+	a   = add
 	b   = branch
+	ca  = ci -a
 	co  = checkout
-	ci  = commit -av
+	ci  = commit -v
 	d   = diff -w
+	ds  = d --staged
 	dt  = difftool
 	hs  = log --pretty='%C(yellow)%h %C(cyan)%cd %C(auto)%s%C(auto)%d %C(reset)' --graph --date=human
 	hsl = log --pretty='%C(yellow)%h %C(cyan)%cd %C(auto)%s • %C(blue)%aN%C(auto)%d %C(reset)' --graph --date=human
