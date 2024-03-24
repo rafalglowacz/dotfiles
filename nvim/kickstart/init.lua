@@ -137,6 +137,7 @@ vim.opt.wildmode = 'longest:full,full'
 vim.opt.cmdheight = 1
 -- vim.opt.spell = true
 vim.opt.confirm = true
+vim.opt.incsearch = false
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
