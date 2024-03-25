@@ -16,6 +16,7 @@
 	pl  = pull
 	ps  = push
 	r   = reflog --date iso
+	sh  = show
 	st  = status
 [pull]
 	rebase = false
