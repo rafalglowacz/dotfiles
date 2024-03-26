@@ -154,7 +154,7 @@ vim.keymap.set('n', '<A-v>', '<C-v>')
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
 vim.keymap.set('n', '<Esc>', function()
-  vim.cmd('NvimTreeClose');
+  -- vim.cmd('NvimTreeClose');
   vim.cmd('nohlsearch');
 end)
 
@@ -243,8 +243,8 @@ vim.opt.rtp:prepend(lazypath)
 --    :Lazy update
 --
 -- NOTE: Here is where you install your plugins.
-local treeHeightRatio = 0.8 -- You can change this
-local treeWidthRatio = 0.5  -- You can change this too
+-- local treeHeightRatio = 0.8 -- You can change this
+-- local treeWidthRatio = 0.5  -- You can change this too
 
 require('lazy').setup({
   { 'm00qek/baleia.nvim', opts = {} },
@@ -402,56 +402,71 @@ require('lazy').setup({
     end,
   },
 
-  { 'nvim-tree/nvim-tree.lua',
-    opts = {
-      hijack_cursor = true,
-      hijack_unnamed_buffer_when_opening = true,
-      filters = {
-        git_ignored = false,
-      },
-      view = {
-        float = {
-          enable = true,
-          open_win_config = function()
-            local screenW = vim.opt.columns:get()
-            local screenH = vim.opt.lines:get() - vim.opt.cmdheight:get()
-            local windowW = screenW * treeWidthRatio
-            local windowH = screenH * treeHeightRatio
-            local centerX = (screenW - windowW) / 2
-            local centerY = ((vim.opt.lines:get() - windowH) / 2) - vim.opt.cmdheight:get()
-
-            return {
-              border = 'rounded',
-              relative = 'editor',
-              row = centerY, col = centerX,
-              width = math.floor(windowW), height = math.floor(windowH),
-            }
-            end,
-        },
-        width = function()
-          return math.floor(vim.opt.columns:get() * treeWidthRatio)
-        end,
-      },
-      on_attach = function (bufnr)
-        local api = require "nvim-tree.api"
-
-        local function opts(desc)
-          return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
-        end
-
-        -- default mappings
-        api.config.mappings.default_on_attach(bufnr)
-
-        -- custom mappings
-        vim.keymap.set('n', 'j', api.node.navigate.parent_close, opts('Close directory'))
-        vim.keymap.set('n', 'l', api.node.open.edit,             opts('Open'))
-      end,
+  -- { 'nvim-tree/nvim-tree.lua',
+  --   opts = {
+  --     hijack_cursor = true,
+  --     hijack_unnamed_buffer_when_opening = true,
+  --     filters = {
+  --       git_ignored = false,
+  --     },
+  --     view = {
+  --       float = {
+  --         enable = true,
+  --         open_win_config = function()
+  --           local screenW = vim.opt.columns:get()
+  --           local screenH = vim.opt.lines:get() - vim.opt.cmdheight:get()
+  --           local windowW = screenW * treeWidthRatio
+  --           local windowH = screenH * treeHeightRatio
+  --           local centerX = (screenW - windowW) / 2
+  --           local centerY = ((vim.opt.lines:get() - windowH) / 2) - vim.opt.cmdheight:get()
+  --
+  --           return {
+  --             border = 'rounded',
+  --             relative = 'editor',
+  --             row = centerY, col = centerX,
+  --             width = math.floor(windowW), height = math.floor(windowH),
+  --           }
+  --           end,
+  --       },
+  --       width = function()
+  --         return math.floor(vim.opt.columns:get() * treeWidthRatio)
+  --       end,
+  --     },
+  --     on_attach = function (bufnr)
+  --       local api = require "nvim-tree.api"
+  --
+  --       local function opts(desc)
+  --         return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+  --       end
+  --
+  --       -- default mappings
+  --       api.config.mappings.default_on_attach(bufnr)
+  --
+  --       -- custom mappings
+  --       vim.keymap.set('n', 'j', api.node.navigate.parent_close, opts('Close directory'))
+  --       vim.keymap.set('n', 'l', api.node.open.edit,             opts('Open'))
+  --     end,
+  --   },
+  --   keys = {
+  --     { '<leader>e', ':NvimTreeToggle<CR>', desc = 'File [e]xplorer', silent = true },
+  --   }
+  -- },
+  {
+    'ms-jpq/chadtree',
+    keys = { 
+      { '<Leader>e', '<Cmd>:CHADopen<CR>' },
     },
-    keys = {
-      { '<leader>e', ':NvimTreeToggle<CR>', desc = 'File [e]xplorer', silent = true },
-    }
+    config = function()
+      vim.api.nvim_set_var("chadtree_settings", {
+        keymap = { 
+          toggle_version_control = { 'g' },
+        },
+        view = {
+          open_direction = 'right',
+        },
+      })
+    end
   },
-
   {
     'Wansmer/treesj',
     keys = {
