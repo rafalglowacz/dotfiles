@@ -135,6 +135,14 @@ vim.opt.colorcolumn = '80,120'
 vim.opt.wrap = true
 vim.opt.wildmode = 'longest:full,full'
 vim.opt.cmdheight = 1
+vim.opt.whichwrap:append {
+  ['<'] = true,
+  ['>'] = true,
+  ['['] = true,
+  [']'] = true,
+  h = true,
+  l = true,
+}
 -- vim.opt.spell = true
 vim.opt.confirm = true
 vim.opt.incsearch = false
