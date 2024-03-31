@@ -204,9 +204,11 @@ vim.keymap.set('v', '>', '>gv')
 vim.keymap.set('v', 'y', 'myy`y')
 vim.keymap.set('v', 'Y', 'myY`y')
 
--- Paste replace visual selection without copying it.
+-- Disable unwanted copying where only pasting/deletion is indended.
 vim.keymap.set('v', 'p', '"_dP')
+vim.keymap.set('n', 'x', '"_x')
 
+-- Add alternative bindings for deletion where copying isn't always intended.
 vim.keymap.set('n', '<A-d><A-d>', '"_dd')
 vim.keymap.set('v', '<A-d>', '"_d')
 
