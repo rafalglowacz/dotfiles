@@ -12,11 +12,13 @@
 	dt  = difftool
 	hs  = log --pretty='%C(yellow)%h %C(cyan)%cd %C(auto)%s%C(auto)%d %C(reset)' --graph --date=human
 	hsl = log --pretty='%C(yellow)%h %C(cyan)%cd %C(auto)%s • %C(blue)%aN%C(auto)%d %C(reset)' --graph --date=human
+	m   = merge
 	mnn = merge --no-commit --no-ff
 	pl  = pull
 	ps  = push
 	r   = reflog --date iso
 	sh  = show
+	ss  = stash
 	st  = status
 [pull]
 	rebase = false
