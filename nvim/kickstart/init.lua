@@ -286,7 +286,13 @@ require('lazy').setup({
       sections = {
         lualine_a = { { 'mode', fmt = function(str) return str:sub(1,1) end } },
         lualine_b = {'diagnostics'},
-        lualine_c = {},
+        lualine_c = {
+          {
+            function()
+              return vim.api.nvim_call_function('fnamemodify', { vim.fn.getcwd(), ':~' })
+            end,
+          },
+        },
         lualine_x = {'filetype'},
         lualine_y = {
           function ()
