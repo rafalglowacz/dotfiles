@@ -225,8 +225,11 @@ vim.keymap.set('i', '<C-,>', '<Esc>A,<Esc>')
 
 vim.keymap.set('n', '<C-i>', '<C-i>')
 
-vim.keymap.set('n', '<C-u>', '<C-u>zz');
-vim.keymap.set('n', '<C-d>', '<C-d>zz');
+vim.keymap.set('n', '<C-u>', '<C-u>zz')
+vim.keymap.set('n', '<C-d>', '<C-d>zz')
+
+vim.keymap.set({'n', 'v'}, 'gg', 'gg0')
+vim.keymap.set({'n', 'v'}, 'G', 'G$')
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
