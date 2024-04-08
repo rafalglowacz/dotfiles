@@ -704,6 +704,8 @@ require('lazy').setup({
 
       -- [[ Configure Telescope ]]
       -- See `:help telescope` and `:help telescope.setup()`
+      local actions = require('telescope.actions')
+
       require('telescope').setup {
         -- You can put your default mappings / updates / etc. in here
         --  All the info you're looking for is in `:help telescope.setup()`
@@ -721,9 +723,14 @@ require('lazy').setup({
             end
           end,
           scroll_strategy = 'limit',
-          -- mappings = {
-          --   i = { ['<c-enter>'] = 'to_fuzzy_refine' },
-          -- },
+          mappings = {
+            i = {
+              ['<C-Enter>'] = 'to_fuzzy_refine',
+              ['<Esc>'] = actions.close,
+              ['<A-p>'] = actions.cycle_history_prev,
+              ['<A-n>'] = actions.cycle_history_next,
+            }
+          },
         },
         -- pickers = {}
         extensions = {
