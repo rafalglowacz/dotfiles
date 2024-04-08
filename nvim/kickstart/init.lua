@@ -1014,6 +1014,13 @@ require('lazy').setup({
           end,
         },
       }
+
+      local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
+      function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
+        opts = opts or {}
+        opts.border = 'solid'
+        return orig_util_open_floating_preview(contents, syntax, opts, ...)
+      end
     end,
   },
 
@@ -1077,6 +1084,10 @@ require('lazy').setup({
           end,
         },
         completion = { completeopt = 'menu,menuone,noinsert' },
+        window = {
+          completion = cmp.config.window.bordered({border = 'solid'}),
+          documentation = cmp.config.window.bordered({border = 'solid'}),
+        },
 
         -- For an understanding of why these mappings were
         -- chosen, you will need to read `:help ins-completion`
