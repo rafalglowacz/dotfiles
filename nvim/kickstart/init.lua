@@ -229,7 +229,7 @@ vim.keymap.set('n', '<C-u>', '<C-u>zz')
 vim.keymap.set('n', '<C-d>', '<C-d>zz')
 
 vim.keymap.set({'n', 'v'}, 'gg', 'gg0')
-vim.keymap.set({'n', 'v'}, 'G', 'G$')
+vim.keymap.set({'n', 'v'}, 'G', 'G$zz')
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
