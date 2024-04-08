@@ -1254,6 +1254,7 @@ require('lazy').setup({
         ignore_install = { 'gitcommit' },
         highlight = { enable = true },
         indent = { enable = true },
+        incremental_selection = { enable = true },
       }
 
       -- There are additional nvim-treesitter modules that you can use to interact
