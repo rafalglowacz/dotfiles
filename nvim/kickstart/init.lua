@@ -232,6 +232,19 @@ vim.keymap.set('n', '<C-d>', '<C-d>zz')
 vim.keymap.set({'n', 'v'}, 'gg', 'gg0')
 vim.keymap.set({'n', 'v'}, 'G', 'G$zz')
 
+-- Add a convenience binding for keyword completion, similar to Alt-/ from 
+-- PHPStorm, but with Alt changed to Ctrl - it's more convenient to have
+-- the same modifier as Ctrl-N and Ctrl-P
+vim.keymap.set('i', '<C-/>', function()
+    if vim.fn.pumvisible() == 1 then
+        -- If the popup menu is visible, cycle through suggestions.
+        return '<C-p>'
+    else
+        -- If the popup menu is not visible, start keyword completion.
+        return '<C-x><C-p>'
+    end
+end, { expr = true })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
