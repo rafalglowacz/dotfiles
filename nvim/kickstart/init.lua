@@ -232,6 +232,8 @@ vim.keymap.set('n', '<C-d>', '<C-d>zz')
 vim.keymap.set({'n', 'v'}, 'gg', 'gg0')
 vim.keymap.set({'n', 'v'}, 'G', 'G$zz')
 
+vim.keymap.set('n', '/', '/\\v')
+
 -- Add a convenience binding for keyword completion, similar to Alt-/ from 
 -- PHPStorm, but with Alt changed to Ctrl - it's more convenient to have
 -- the same modifier as Ctrl-N and Ctrl-P
@@ -364,6 +366,11 @@ require('lazy').setup({
     config = function(_, opts)
       require('telescope').setup(opts)
       require('telescope').load_extension('undo')
+    end,
+  },
+  {
+    'rcarriga/nvim-notify', config = function()
+      -- vim.notify = require('notify')
     end,
   },
 
@@ -804,6 +811,14 @@ require('lazy').setup({
       -- Useful status updates for LSP.
       -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
       { 'j-hui/fidget.nvim', opts = {} },
+      -- {
+      --   'mrded/nvim-lsp-notify',
+      --   config = function()
+      --     require('lsp-notify').setup({
+      --       notify = require('notify').instance({ top_down = false })
+      --     })
+      --   end
+      -- },
     },
     config = function()
       -- Brief Aside: **What is LSP?**
