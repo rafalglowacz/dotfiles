@@ -232,8 +232,6 @@ vim.keymap.set('n', '<C-d>', '<C-d>zz')
 vim.keymap.set({'n', 'v'}, 'gg', 'gg0')
 vim.keymap.set({'n', 'v'}, 'G', 'G$zz')
 
-vim.keymap.set('n', '/', '/\\v')
-
 -- Add a convenience binding for keyword completion, similar to Alt-/ from 
 -- PHPStorm, but with Alt changed to Ctrl - it's more convenient to have
 -- the same modifier as Ctrl-N and Ctrl-P
