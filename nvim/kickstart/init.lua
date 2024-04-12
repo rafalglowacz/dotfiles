@@ -245,6 +245,9 @@ vim.keymap.set('i', '<C-/>', function()
     end
 end, { expr = true })
 
+local ok, localopts = pcall(require, 'local.opts')
+if not ok then localopts = {} end
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
@@ -950,8 +953,7 @@ require('lazy').setup({
         --
         -- But for many setups, the LSP (`tsserver`) will work just fine
         tsserver = {
-          -- To debug issues, log more information and save to file:
-          -- cmd = { 'sh', '-c', vim.fn.expand '$HOME/.local/share/nvim/mason/bin/typescript-language-server --stdio --log-level 4 | tee /tmp/lsp-out.txt' },
+          cmd = localopts['tsserver.cmd'], -- If nil, default cmd will be used.
           init_options = {
             tsserver = {
               path = vim.fn.expand '$HOME/.local/share/nvim/mason/packages/typescript-language-server/node_modules/typescript/lib',
@@ -972,7 +974,7 @@ require('lazy').setup({
         },
         --
         volar = {
-          -- cmd = { 'sh', '-c', 'node --inspect-brk '..vim.fn.expand'$HOME/.local/share/nvim/mason/bin/vue-language-server'..' --stdio' },
+          cmd = localopts['volar.cmd'], -- If nil, default cmd will be used.
           init_options = {
             typescript = {
               -- TODO: check if actually needed. The problem with Vue 2 

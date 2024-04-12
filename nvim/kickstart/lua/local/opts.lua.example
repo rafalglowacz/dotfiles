@@ -1,0 +1,17 @@
+return {
+  ['tsserver.cmd'] = {
+    'sh',
+    '-c',
+    'TSS_DEBUG_BRK=9229 node '..
+      vim.fn.expand('$HOME/.local/share/nvim/mason/bin/typescript-language-server')..
+      ' --stdio --log-level 4 2>&1 | tee /tmp/tsserver-out.txt',
+  },
+  ['volar.cmd'] = {
+    'sh',
+    '-c',
+    'node '..
+      -- '--inspect=localhost:9229 '..
+      vim.fn.expand('$HOME/.local/share/nvim/mason/bin/vue-language-server')..
+      ' --stdio | tee /tmp/volar-out.txt'
+  },
+}
