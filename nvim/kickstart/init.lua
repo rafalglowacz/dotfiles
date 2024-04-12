@@ -962,27 +962,23 @@ require('lazy').setup({
               {
                 name = '@vue/typescript-plugin',
                 location = vim.fn.expand '$HOME/.local/share/nvim/mason/packages/vue-language-server/node_modules/@vue/language-server/node_modules/@vue/typescript-plugin',
-                languages = { 'javascript', 'typescript', 'vue' },
+                languages = { 'vue' },
               },
             },
           },
-          filetypes = {
-            'javascript',
-            'typescript',
-            'vue',
-          },
+          filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
         },
         --
         volar = {
           cmd = localopts['volar.cmd'], -- If nil, default cmd will be used.
-          init_options = {
-            typescript = {
-              -- TODO: check if actually needed. The problem with Vue 2 
-              -- in work project was solved by setting tsserver.path 
-              -- in the TS language server's config.
-              tsdk = vim.fn.expand '$HOME/.local/share/nvim/mason/packages/typescript-language-server/node_modules/typescript/lib',
-            }
-          },
+          -- init_options = {
+          --   typescript = {
+          --     -- TODO: check if actually needed. The problem with Vue 2 
+          --     -- in work project was solved by setting tsserver.path 
+          --     -- in the TS language server's config.
+          --     tsdk = vim.fn.expand '$HOME/.local/share/nvim/mason/packages/typescript-language-server/node_modules/typescript/lib',
+          --   }
+          -- },
         },
         --
         phpactor = {},
