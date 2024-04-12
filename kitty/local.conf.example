@@ -1,5 +1,8 @@
 font_family Monofur Nerd Font
 font_size 24.0
+# When testing a new font it's best to start with the default composition strategy, 
+# otherwise the font might look off.
+text_composition_strategy platform
 
 # Catppuccin-Latte
 # light theme
