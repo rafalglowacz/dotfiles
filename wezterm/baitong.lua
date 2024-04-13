@@ -1,3 +1,4 @@
+-- Baitong theme, ported from https://github.com/cyphbt/baitong-theme
 local module = {}
 
 function module.configure(config)

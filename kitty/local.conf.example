@@ -9,3 +9,5 @@ text_composition_strategy platform
 include current-light-theme.conf
 # light theme
 include light-theme-fixes.conf
+# dark theme
+include baitong.conf
