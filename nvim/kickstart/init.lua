@@ -221,6 +221,7 @@ vim.keymap.set('v', 'Y', 'myY`y')
 -- Disable unwanted copying where only pasting/deletion is indended.
 vim.keymap.set('v', 'p', '"_dP')
 vim.keymap.set('n', 'x', '"_x')
+vim.keymap.set('n', 'C', '"_Da')
 
 -- Add alternative bindings for deletion where copying isn't always intended.
 vim.keymap.set('n', '<A-d><A-d>', '"_dd')
