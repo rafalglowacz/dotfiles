@@ -154,12 +154,25 @@ vim.g.loaded_netrwPlugin = 1
 --  See `:help vim.keymap.set()`
 
 vim.keymap.set({ 'n', 'v' }, 'h', 'i')
+
 vim.keymap.set({ 'n', 'v' }, 'i', 'gk')
 vim.keymap.set({ 'n', 'v' }, 'j', 'h')
 vim.keymap.set({ 'n', 'v' }, 'k', 'gj')
+vim.keymap.set({ 'n', 'v' }, 'l', 'l')
+
+-- Add bindings for moving around and showing position in file on every step.
+vim.keymap.set('n', '<C-A-i>', 'gkg<C-G>')
+vim.keymap.set('n', '<C-A-j>', 'hg<C-G>')
+vim.keymap.set('n', '<C-A-k>', 'gjg<C-G>')
+vim.keymap.set('n', '<C-A-l>', 'lg<C-G>')
+
+vim.keymap.set('n', '<A-i>', '<C-w><C-k>', { desc = 'Move focus up' })
+vim.keymap.set('n', '<A-j>', '<C-w><C-h>', { desc = 'Move focus left' })
+vim.keymap.set('n', '<A-k>', '<C-w><C-j>', { desc = 'Move focus down' })
+vim.keymap.set('n', '<A-l>', '<C-w><C-l>', { desc = 'Move focus right' })
 
 -- In visual mode, 'v' will toggle between charwise and blockwise mode.
-vim.keymap.set('v', 'v', function() 
+vim.keymap.set('v', 'v', function()
   if vim.api.nvim_get_mode()['mode'] == 'v' then
     vim.api.nvim_input('<C-v>')
   else
@@ -194,14 +207,7 @@ vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!"<CR>')
 vim.keymap.set('n', '<up>', '<cmd>echo "Use i to move!"<CR>')
 vim.keymap.set('n', '<down>', '<cmd>echo "Use k to move!"<CR>')
 
--- Keybinds to make split navigation easier.
---  Use CTRL+<hjkl> to switch between windows
---
 --  See `:help wincmd` for a list of all window commands
-vim.keymap.set('n', '<A-j>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
-vim.keymap.set('n', '<A-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
-vim.keymap.set('n', '<A-k>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
-vim.keymap.set('n', '<A-i>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 -- Maintain selection when indenting
 vim.keymap.set('v', '<', '<gv')
