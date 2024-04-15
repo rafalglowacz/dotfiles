@@ -1,4 +1,4 @@
-theme = "emacs"
+theme = "catppuccin_macchiato"
 
 [editor]
 text-width = 120
