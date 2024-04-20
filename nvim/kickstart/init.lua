@@ -202,10 +202,10 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
 -- TIP: Disable arrow keys in normal mode
-vim.keymap.set('n', '<left>', '<cmd>echo "Use j to move!"<CR>')
-vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!"<CR>')
-vim.keymap.set('n', '<up>', '<cmd>echo "Use i to move!"<CR>')
-vim.keymap.set('n', '<down>', '<cmd>echo "Use k to move!"<CR>')
+vim.keymap.set('n', '<left>', '<cmd>echo "Use j to move left"<CR>')
+vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move right"<CR>')
+vim.keymap.set('n', '<up>', '<cmd>echo "Use i to move up"<CR>')
+vim.keymap.set('n', '<down>', '<cmd>echo "Use k to move down"<CR>')
 
 --  See `:help wincmd` for a list of all window commands
 
