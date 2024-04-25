@@ -54,5 +54,6 @@
     "phpunit.showAfterExecution": "never",
     "rust-analyzer.inlayHints.renderColons": false,
     "rust-analyzer.inlayHints.typeHints.enable": false,
-    "explorer.autoReveal": false
+    "explorer.autoReveal": false,
+    "scrolloff.scrolloff": 3
 }
