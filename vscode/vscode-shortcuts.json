@@ -123,5 +123,18 @@
     {
         "key": "shift+opt+e",
         "command": "workbench.files.action.showActiveFileInExplorer"
+    },
+    {
+        "key": "cmd+k cmd+r",
+        "command": "-workbench.action.keybindingsReference"
+    },
+    {
+        "key": "cmd+k cmd+r",
+        "command": "git.revertSelectedRanges"
+    },
+    {
+        "key": "cmd+k cmd+r",
+        "command": "-git.revertSelectedRanges",
+        "when": "isInDiffEditor && !operationInProgress"
     }
 ]
