@@ -46,8 +46,8 @@ which pbcopy > /dev/null && COPY_CMD=pbcopy || COPY_CMD=wl-copy
 # History #
 ##########
 
-HISTSIZE=11000
-SAVEHIST=10000
+HISTSIZE=100100
+SAVEHIST=100000
 setopt HIST_IGNORE_SPACE
 setopt APPEND_HISTORY
 unsetopt SHARE_HISTORY
