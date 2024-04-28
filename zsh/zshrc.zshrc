@@ -25,6 +25,8 @@ source $ZSHRC_DIR/configs/omz-termsupport-preexec.zshrc
 ##########
 
 WORDCHARS='*?_-[]~=;.!@#$%^&(){}<>/\|'
+# Disable removal of space character after using tab completion and entering 
+# the next character. See https://superuser.com/q/613685
 ZLE_REMOVE_SUFFIX_CHARS=""
 # See also omz-termsupport-preexec-custom.zshrc
 ZSH_THEME_TERM_TITLE_IDLE="%~"
