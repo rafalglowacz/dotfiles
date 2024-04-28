@@ -153,22 +153,12 @@ vim.g.loaded_netrwPlugin = 1
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
-vim.keymap.set({ 'n', 'v' }, 'h', 'i')
+vim.keymap.set({ 'n', 'v' }, 'k', 'gk')
+vim.keymap.set({ 'n', 'v' }, 'j', 'gj')
 
-vim.keymap.set({ 'n', 'v' }, 'i', 'gk')
-vim.keymap.set({ 'n', 'v' }, 'j', 'h')
-vim.keymap.set({ 'n', 'v' }, 'k', 'gj')
-vim.keymap.set({ 'n', 'v' }, 'l', 'l')
-
--- Add bindings for moving around and showing position in file on every step.
-vim.keymap.set('n', '<C-A-i>', 'gkg<C-G>')
-vim.keymap.set('n', '<C-A-j>', 'hg<C-G>')
-vim.keymap.set('n', '<C-A-k>', 'gjg<C-G>')
-vim.keymap.set('n', '<C-A-l>', 'lg<C-G>')
-
-vim.keymap.set('n', '<A-i>', '<C-w><C-k>', { desc = 'Move focus up' })
-vim.keymap.set('n', '<A-j>', '<C-w><C-h>', { desc = 'Move focus left' })
-vim.keymap.set('n', '<A-k>', '<C-w><C-j>', { desc = 'Move focus down' })
+vim.keymap.set('n', '<A-h>', '<C-w><C-h>', { desc = 'Move focus left' })
+vim.keymap.set('n', '<A-j>', '<C-w><C-j>', { desc = 'Move focus down' })
+vim.keymap.set('n', '<A-k>', '<C-w><C-k>', { desc = 'Move focus up' })
 vim.keymap.set('n', '<A-l>', '<C-w><C-l>', { desc = 'Move focus right' })
 
 -- In visual mode, 'v' will toggle between charwise and blockwise mode.
@@ -202,10 +192,12 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
 -- TIP: Disable arrow keys in normal mode
-vim.keymap.set('n', '<left>', '<cmd>echo "Use j to move left"<CR>')
+vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move left"<CR>')
 vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move right"<CR>')
-vim.keymap.set('n', '<up>', '<cmd>echo "Use i to move up"<CR>')
-vim.keymap.set('n', '<down>', '<cmd>echo "Use k to move down"<CR>')
+vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move up"<CR>')
+vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move down"<CR>')
+
+-- require 'ijkl'
 
 --  See `:help wincmd` for a list of all window commands
 
@@ -628,7 +620,8 @@ require('lazy').setup({
   --  config = function() ... end
 
   { -- Useful plugin to show you pending keybinds.
-    'rafalglowacz/which-key.nvim',
+    'folke/which-key.nvim',
+    -- 'rafalglowacz/which-key.nvim',
     event = 'VimEnter', -- Sets the loading event to 'VimEnter'
     config = function() -- This is the function that runs, AFTER loading
       require('which-key').setup()
