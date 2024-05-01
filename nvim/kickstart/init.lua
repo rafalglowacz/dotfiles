@@ -197,7 +197,7 @@ vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move right"<CR>')
 vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move up"<CR>')
 vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move down"<CR>')
 
--- require 'ijkl'
+require 'ijkl'
 
 --  See `:help wincmd` for a list of all window commands
 
@@ -620,8 +620,8 @@ require('lazy').setup({
   --  config = function() ... end
 
   { -- Useful plugin to show you pending keybinds.
-    'folke/which-key.nvim',
-    -- 'rafalglowacz/which-key.nvim',
+    -- 'folke/which-key.nvim',
+    'rafalglowacz/which-key.nvim',
     event = 'VimEnter', -- Sets the loading event to 'VimEnter'
     config = function() -- This is the function that runs, AFTER loading
       require('which-key').setup()
