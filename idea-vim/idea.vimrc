@@ -32,12 +32,22 @@ vnoremap l l
 
 #
 
-vnoremap < <gv
 vnoremap > >gv
+vnoremap < <gv
 
 nnoremap <Esc> :nohlsearch<CR><Esc>
 nnoremap U <C-r>
 
-:map <leader>tn <Action>(Run)
+:map <leader>,  :source ~/.ideavimrc<CR>
 
+:map <leader><leader> <Action>(RecentFiles)
+:map <leader>p  <Action>(ManageRecentProjects)
+
+:map <leader>sc <Action>(GotoClass)
 :map <leader>sf <Action>(GotoFile)
+:map <leader>ws <Action>(GotoSymbol)
+
+:map <leader>g <Action>(Git.Menu)
+
+:map <leader>td <Action>(Debug)
+:map <leader>tn <Action>(Run)
