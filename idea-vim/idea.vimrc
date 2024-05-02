@@ -3,8 +3,16 @@ let mapleader = " "
 set which-key
 set notimeout
 
+set number
+set relativenumber
+
 set clipboard+=unnamed
-set scrolloff=5
+
+set noincsearch
+set hlsearch
+set scrolloff=8
+set ignorecase
+set smartcase
 
 # IJKL
 nnoremap h i
@@ -24,6 +32,14 @@ vnoremap l l
 
 #
 
-nnoremap U C-R
+vnoremap < <gv
+vnoremap > >gv
+
+nnoremap <lt> <lt>gv
+nnoremap <gt> <gt>gv
+
+nnoremap <Esc> :nohlsearch<CR><Esc>
 
 :map <leader>tn <Action>(Run)
+
+:map <leader>sf <Action>(GotoFile)
