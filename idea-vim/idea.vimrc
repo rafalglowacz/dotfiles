@@ -39,6 +39,7 @@ nnoremap <lt> <lt>gv
 nnoremap <gt> <gt>gv
 
 nnoremap <Esc> :nohlsearch<CR><Esc>
+nnoremap U <C-r>
 
 :map <leader>tn <Action>(Run)
 
