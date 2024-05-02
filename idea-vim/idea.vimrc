@@ -35,9 +35,6 @@ vnoremap l l
 vnoremap < <gv
 vnoremap > >gv
 
-nnoremap <lt> <lt>gv
-nnoremap <gt> <gt>gv
-
 nnoremap <Esc> :nohlsearch<CR><Esc>
 nnoremap U <C-r>
 
