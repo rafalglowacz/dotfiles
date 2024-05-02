@@ -1,3 +1,8 @@
+let mapleader = " "
+
+set which-key
+set notimeout
+
 set clipboard+=unnamed
 set scrolloff=5
 
@@ -20,3 +25,5 @@ vnoremap l l
 #
 
 nnoremap U C-R
+
+:map <leader>tn <Action>(Run)
