@@ -38,16 +38,31 @@ vnoremap < <gv
 nnoremap <Esc> :nohlsearch<CR><Esc>
 nnoremap U <C-r>
 
+:map <C-Up>   <Action>(EditorScrollUpAndMove)
+:map <C-Down> <Action>(EditorScrollDownAndMove)
+
 :map <leader>,  :source ~/.ideavimrc<CR>
 
 :map <leader><leader> <Action>(RecentFiles)
 :map <leader>p  <Action>(ManageRecentProjects)
 
 :map <leader>sc <Action>(GotoClass)
+:map <leader>c  <Action>(GotoClass)
 :map <leader>sf <Action>(GotoFile)
+:map <leader>f  <Action>(GotoFile)
 :map <leader>ws <Action>(GotoSymbol)
 
-:map <leader>g <Action>(Git.Menu)
+:map <leader>gg <Action>(Git.Menu)
+:map <leader>gh <Action>(Vcs.RollbackChangedLines)
+
+:map <leader>p  <Action>(ManageRecentProjects)
 
 :map <leader>td <Action>(Debug)
-:map <leader>tn <Action>(Run)
+:map <leader>tn <Action>(RunClass)
+
+:map <leader>1  <Action>(ActivateProjectToolWindow)
+:map <leader>3  <Action>(ActivateFindToolWindow)
+:map <leader>4  <Action>(ActivateRunToolWindow)
+:map <leader>5  <Action>(ActivateDebugToolWindow)
+:map <leader>9  <Action>(ActivateVersionControlToolWindow)
+:map <leader>0  <Action>(ActivateCommitToolWindow)
