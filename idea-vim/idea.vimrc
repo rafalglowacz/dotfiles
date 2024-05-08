@@ -10,7 +10,7 @@ set clipboard+=unnamed
 
 set noincsearch
 set hlsearch
-set scrolloff=8
+set scrolloff=15
 set ignorecase
 set smartcase
 
