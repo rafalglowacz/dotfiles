@@ -6,7 +6,7 @@ set notimeout
 set number
 set relativenumber
 
-set clipboard+=unnamed
+set clipboard^=unnamedplus
 
 set noincsearch
 set hlsearch
@@ -38,13 +38,22 @@ vnoremap < <gv
 nnoremap <Esc> :nohlsearch<CR><Esc>
 nnoremap U <C-r>
 
+" Disable unwanted copying where only pasting/deletion is intended.
+vnoremap p "_dP
+nnoremap x "_x
+nnoremap C "_Da
+
+" Add alternative bindings for deletion where copying isn't always intended.
+nnoremap <A-d><A-d> "_dd
+vnoremap <A-d> "_d
+
 :map <C-Up>   <Action>(EditorScrollUpAndMove)
 :map <C-Down> <Action>(EditorScrollDownAndMove)
 
 :map <leader>,  :source ~/.ideavimrc<CR>
 
 :map <leader><leader> <Action>(RecentFiles)
-:map <leader>p  <Action>(ManageRecentProjects)
+:map <leader>P  <Action>(ManageRecentProjects)
 
 :map <leader>sc <Action>(GotoClass)
 :map <leader>c  <Action>(GotoClass)
@@ -54,8 +63,6 @@ nnoremap U <C-r>
 
 :map <leader>gg <Action>(Git.Menu)
 :map <leader>gh <Action>(Vcs.RollbackChangedLines)
-
-:map <leader>p  <Action>(ManageRecentProjects)
 
 :map <leader>td <Action>(Debug)
 :map <leader>tn <Action>(RunClass)
