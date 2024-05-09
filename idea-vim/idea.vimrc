@@ -66,6 +66,7 @@ vnoremap <A-d> "_d
 
 :map <leader>td <Action>(Debug)
 :map <leader>tn <Action>(RunClass)
+:map <leader>tl <Action>(Run)
 
 :map <leader>1  <Action>(ActivateProjectToolWindow)
 :map <leader>3  <Action>(ActivateFindToolWindow)
