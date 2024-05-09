@@ -24,6 +24,7 @@
 	r   = reflog --date iso
 	sh  = show
 	ss  = stash
+	ssa = stash apply
 	st  = status
 [pull]
 	rebase = false
@@ -40,7 +41,7 @@
 [interactive]
 	diffFilter = delta --color-only
 [delta]
-	# features = tangara-chilensis 
+	# features = tangara-chilensis
 	# syntax-theme = Solarized (light)
 	side-by-side = false
 	diff-highlight = false
