@@ -55,6 +55,8 @@ vnoremap <A-d> "_d
 vnoremap y myy`y
 vnoremap Y myY`y
 
+nnoremap <A-v> <C-v>
+
 map n <Action>(FindNext)
 map N <Action>(FindPrevious)
 
