@@ -50,30 +50,30 @@ nnoremap C "_Da
 nnoremap <A-d><A-d> "_dd
 vnoremap <A-d> "_d
 
-:map <C-Up>   <Action>(EditorScrollUp)
-:map <C-Down> <Action>(EditorScrollDown)
+map <C-Up>   <Action>(EditorScrollUp)
+map <C-Down> <Action>(EditorScrollDown)
 
-:map <leader>,  :source ~/.ideavimrc<CR>
+map <leader>,  :source ~/.ideavimrc<CR>
 
-:map <leader><leader> <Action>(RecentFiles)
-:map <leader>P  <Action>(ManageRecentProjects)
+map <leader><leader> <Action>(RecentFiles)
+map <leader>P  <Action>(ManageRecentProjects)
 
-:map <leader>sc <Action>(GotoClass)
-:map <leader>c  <Action>(GotoClass)
-:map <leader>sf <Action>(GotoFile)
-:map <leader>f  <Action>(GotoFile)
-:map <leader>ws <Action>(GotoSymbol)
+map <leader>sc <Action>(GotoClass)
+map <leader>c  <Action>(GotoClass)
+map <leader>sf <Action>(GotoFile)
+map <leader>f  <Action>(GotoFile)
+map <leader>ws <Action>(GotoSymbol)
 
-:map <leader>gg <Action>(Git.Menu)
-:map <leader>gh <Action>(Vcs.RollbackChangedLines)
+map <leader>gg <Action>(Git.Menu)
+map <leader>gh <Action>(Vcs.RollbackChangedLines)
 
-:map <leader>td <Action>(Debug)
-:map <leader>tn <Action>(RunClass)
-:map <leader>tl <Action>(Run)
+map <leader>td <Action>(Debug)
+map <leader>tn <Action>(RunClass)
+map <leader>tl <Action>(Run)
 
-:map <leader>1  <Action>(ActivateProjectToolWindow)
-:map <leader>3  <Action>(ActivateFindToolWindow)
-:map <leader>4  <Action>(ActivateRunToolWindow)
-:map <leader>5  <Action>(ActivateDebugToolWindow)
-:map <leader>9  <Action>(ActivateVersionControlToolWindow)
-:map <leader>0  <Action>(ActivateCommitToolWindow)
+map <leader>1  <Action>(ActivateProjectToolWindow)
+map <leader>3  <Action>(ActivateFindToolWindow)
+map <leader>4  <Action>(ActivateRunToolWindow)
+map <leader>5  <Action>(ActivateDebugToolWindow)
+map <leader>9  <Action>(ActivateVersionControlToolWindow)
+map <leader>0  <Action>(ActivateCommitToolWindow)
