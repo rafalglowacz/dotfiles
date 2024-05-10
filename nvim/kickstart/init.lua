@@ -375,19 +375,19 @@ require('lazy').setup({
       -- vim.notify = require('notify')
     end,
   },
-  {
-    'gelguy/wilder.nvim', config = function()
-      local wilder = require('wilder')
-      wilder.setup({modes = {':', '/', '?'}})
-      wilder.set_option('renderer', wilder.renderer_mux({
-        [':'] = wilder.popupmenu_renderer(wilder.popupmenu_border_theme({
-          pumblend = 10,
-          border = 'rounded',
-        })),
-        ['/'] = wilder.wildmenu_renderer(),
-      }))
-    end,
-  },
+  --{
+  --  'gelguy/wilder.nvim', config = function()
+  --    local wilder = require('wilder')
+  --    wilder.setup({modes = {':', '/', '?'}})
+  --    wilder.set_option('renderer', wilder.renderer_mux({
+  --      [':'] = wilder.popupmenu_renderer(wilder.popupmenu_border_theme({
+  --        pumblend = 10,
+  --        border = 'rounded',
+  --      })),
+  --      ['/'] = wilder.wildmenu_renderer(),
+  --    }))
+  --  end,
+  --},
 
   { 'mfussenegger/nvim-dap', config = function()
       local dap = require'dap'
