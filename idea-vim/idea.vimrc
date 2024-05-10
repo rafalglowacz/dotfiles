@@ -50,6 +50,14 @@ nnoremap C "_Da
 nnoremap <A-d><A-d> "_dd
 vnoremap <A-d> "_d
 
+" Maintain the cursor position when copying a visual selection.
+" http://ddrscott.github.io/blog/2016/yank-without-jank/
+vnoremap y myy`y
+vnoremap Y myY`y
+
+map n <Action>(FindNext)
+map N <Action>(FindPrevious)
+
 map <C-Up>   <Action>(EditorScrollUp)
 map <C-Down> <Action>(EditorScrollDown)
 
@@ -64,8 +72,13 @@ map <leader>sf <Action>(GotoFile)
 map <leader>f  <Action>(GotoFile)
 map <leader>ws <Action>(GotoSymbol)
 
+map <leader>db <Action>(ToggleLineBreakpoint)
+map <leader>de <Action>(EvaluateExpression)
+
 map <leader>gg <Action>(Git.Menu)
 map <leader>gh <Action>(Vcs.RollbackChangedLines)
+nmap ]g <Action>(VcsShowNextChangeMarker)
+nmap [g <Action>(VcsShowPrevChangeMarker)
 
 map <leader>td <Action>(Debug)
 map <leader>tn <Action>(RunClass)
