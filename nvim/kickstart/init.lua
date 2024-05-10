@@ -230,6 +230,7 @@ vim.keymap.set('n', '<C-d>', '<C-d>zz')
 
 vim.keymap.set({'n', 'v'}, 'gg', 'gg0')
 vim.keymap.set({'n', 'v'}, 'G', 'G$zz')
+vim.keymap.set({'n', 'v'}, 'ge', 'G$zz')
 
 vim.keymap.set({'', '!'}, '<C-q>', ':qa<CR>')
 
