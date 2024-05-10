@@ -36,7 +36,10 @@ vnoremap > >gv
 vnoremap < <gv
 
 nnoremap <Esc> :nohlsearch<CR><Esc>
+map / <Action>(Find)
+
 nnoremap U <C-r>
+nnoremap ge G
 
 " Disable unwanted copying where only pasting/deletion is intended.
 vnoremap p "_dP
