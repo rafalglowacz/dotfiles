@@ -47,8 +47,8 @@ nnoremap C "_Da
 nnoremap <A-d><A-d> "_dd
 vnoremap <A-d> "_d
 
-:map <C-Up>   <Action>(EditorScrollUpAndMove)
-:map <C-Down> <Action>(EditorScrollDownAndMove)
+:map <C-Up>   <Action>(EditorScrollUp)
+:map <C-Down> <Action>(EditorScrollDown)
 
 :map <leader>,  :source ~/.ideavimrc<CR>
 
