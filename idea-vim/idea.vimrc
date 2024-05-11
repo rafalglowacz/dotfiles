@@ -63,6 +63,7 @@ map N <Action>(FindPrevious)
 map <C-Up>   <Action>(EditorScrollUp)
 map <C-Down> <Action>(EditorScrollDown)
 
+map <leader>?  <Action>(GotoAction)
 map <leader>,  :source ~/.ideavimrc<CR>
 
 map <leader><leader> <Action>(RecentFiles)
