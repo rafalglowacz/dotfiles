@@ -1135,11 +1135,14 @@ require('lazy').setup({
         formatting = {
           format = require('lspkind').cmp_format({
             mode = 'symbol_text',
-            maxwidth = 30,
+            maxwidth = 25,
             ellipsis_char = '⋯',
-
             before = function(_, vim_item)
-              vim_item.menu = string.sub(vim_item.menu or '', 0, 50) .. '⋯'
+              vim_item.menu = string.gsub(vim_item.menu or '', '%s+', '')
+              local limit = 25
+              if string.len(vim_item.menu) > limit then
+                vim_item.menu = string.sub(vim_item.menu, 0, limit) .. '⋯'
+              end
               return vim_item
             end
           }),
