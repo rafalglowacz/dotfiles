@@ -1084,6 +1084,7 @@ require('lazy').setup({
     },
   },
 
+  { 'onsails/lspkind.nvim' },
   { -- Autocompletion
     'hrsh7th/nvim-cmp',
     event = 'InsertEnter',
@@ -1128,6 +1129,20 @@ require('lazy').setup({
           end,
         },
         completion = { completeopt = 'menu,menuone,noinsert' },
+
+        formatting = {
+          format = require('lspkind').cmp_format({
+            mode = 'symbol_text',
+            maxwidth = 30,
+            ellipsis_char = '⋯',
+
+            before = function(_, vim_item)
+              vim_item.menu = string.sub(vim_item.menu or '', 0, 50) .. '⋯'
+              return vim_item
+            end
+          }),
+        },
+
         window = {
           completion = cmp.config.window.bordered({border = 'solid'}),
           documentation = cmp.config.window.bordered({border = 'solid'}),
@@ -1166,11 +1181,18 @@ require('lazy').setup({
               luasnip.expand_or_jump()
             end
           end, { 'i', 's' }),
-          ['<C-h>'] = cmp.mapping(function()
+          ['<C-j>'] = cmp.mapping(function()
             if luasnip.locally_jumpable(-1) then
               luasnip.jump(-1)
             end
           end, { 'i', 's' }),
+          -- ['<C-k>'] = cmp.mapping(function()
+          --   if cmp.visible_docs() then
+          --     cmp.close_docs()
+          --   else
+          --     cmp.open_docs()
+          --   end
+          -- end),
         },
         sources = {
           { name = 'nvim_lsp' },
