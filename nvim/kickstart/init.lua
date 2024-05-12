@@ -232,6 +232,9 @@ vim.keymap.set({'n', 'v'}, 'gg', 'gg0')
 vim.keymap.set({'n', 'v'}, 'G', 'G$zz')
 vim.keymap.set({'n', 'v'}, 'ge', 'G$zz')
 
+-- More convenient redo (same as in Helix).
+vim.keymap.set({'n', 'v'}, 'U', '<C-r>')
+
 vim.keymap.set({'', '!'}, '<C-q>', ':qa<CR>')
 
 -- Add a convenience binding for keyword completion, similar to Alt-/ from 
