@@ -251,6 +251,7 @@ vim.keymap.set('i', '<C-/>', function()
 end, { expr = true })
 
 vim.keymap.set('i', '<S-Enter>', '<Esc>ko')
+vim.keymap.set('i', '<Esc>', '<Esc>:w<CR>')
 
 local ok, localopts = pcall(require, 'local.opts')
 if not ok then localopts = {} end
