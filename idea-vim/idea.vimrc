@@ -41,6 +41,9 @@ nnoremap di <Nop>
 
 #
 
+nmap <C-o> <Action>(Back)
+nmap <C-i> <Action>(Forward)
+
 vnoremap > >gv
 vnoremap < <gv
 
