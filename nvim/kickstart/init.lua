@@ -741,18 +741,22 @@ require('lazy').setup({
 
       -- See `:help telescope.builtin`
       local builtin = require 'telescope.builtin'
+      local find_files = function()
+        builtin.find_files({ hidden = true, no_ignore = true, no_ignore_parent = true })
+      end
+
       vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = 'Search [h]elp' })
       vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = 'Search [k]eymaps' })
       vim.keymap.set(
         'n',
         '<leader>sf',
-        function()
-          builtin.find_files({
-            hidden = true,
-            no_ignore = true,
-            no_ignore_parent = true,
-          })
-        end,
+        find_files,
+        { desc = 'Search [f]iles' }
+      )
+      vim.keymap.set(
+        'n',
+        '<leader>f',
+        find_files,
         { desc = 'Search [f]iles' }
       )
       vim.keymap.set(
