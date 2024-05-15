@@ -30,7 +30,9 @@ nnoremap l l
 vnoremap l l
 
 nnoremap H I
+vnoremap H I
 nnoremap I H
+vnoremap I H
 
 nnoremap yh yi
 nnoremap ch ci
