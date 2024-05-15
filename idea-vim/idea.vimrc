@@ -44,16 +44,17 @@ nnoremap di <Nop>
 
 " Editor - moving around
 
-nnoremap ge       G
-map      n        <Action>(FindNext)
-map      N        <Action>(FindPrevious)
-nmap     /        <Action>(Find)
-nnoremap <A-v>    <C-v>
-nmap     <C-o>    <Action>(Back)
-nmap     <C-i>    <Action>(Forward)
-map      <C-Up>   <Action>(EditorScrollUp)
-map      <C-Down> <Action>(EditorScrollDown)
-nnoremap <Esc> :nohlsearch<CR><Esc>
+nmap     ge        G
+nmap     n         <Action>(FindNext)
+nmap     N         <Action>(FindPrevious)
+nmap     /         <Action>(Find)
+nmap     <A-v>     <C-v>
+nmap     <leader>v <C-v>
+nmap     <C-o>     <Action>(Back)
+nmap     <C-i>     <Action>(Forward)
+map      <C-Up>    <Action>(EditorScrollUp)
+map      <C-Down>  <Action>(EditorScrollDown)
+nnoremap <Esc>     :nohlsearch<CR><Esc>
 
 " Global navigation
 map <leader><leader> <Action>(RecentFiles)
