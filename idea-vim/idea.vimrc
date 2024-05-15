@@ -31,6 +31,9 @@ vnoremap k gj
 nnoremap l l
 vnoremap l l
 
+nnoremap H I
+nnoremap I H
+
 nnoremap yh yi
 nnoremap ch ci
 nnoremap dh di
