@@ -17,3 +17,10 @@ vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move right"<CR>')
 vim.keymap.set('n', '<up>', '<cmd>echo "Use i to move up"<CR>')
 vim.keymap.set('n', '<down>', '<cmd>echo "Use k to move down"<CR>')
 
+vim.keymap.set('n', 'yh', 'yi')
+vim.keymap.set('n', 'ch', 'ci')
+vim.keymap.set('n', 'dh', 'di')
+
+vim.keymap.set('n', 'yi', '<Nop>')
+vim.keymap.set('n', 'ci', '<Nop>')
+vim.keymap.set('n', 'di', '<Nop>')

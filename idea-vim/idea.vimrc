@@ -31,6 +31,14 @@ vnoremap k gj
 nnoremap l l
 vnoremap l l
 
+nnoremap yh yi
+nnoremap ch ci
+nnoremap dh di
+
+nnoremap yi <Nop>
+nnoremap ci <Nop>
+nnoremap di <Nop>
+
 #
 
 vnoremap > >gv
