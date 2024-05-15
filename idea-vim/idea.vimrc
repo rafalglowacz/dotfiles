@@ -2,6 +2,7 @@ let mapleader = " "
 
 set which-key
 set notimeout
+set ideajoin
 
 set number
 set relativenumber
@@ -79,6 +80,7 @@ map <leader>db <Action>(ToggleLineBreakpoint)
 map <leader>de <Action>(EvaluateExpression)
 
 map <leader>gg <Action>(Git.Menu)
+map <leader>gb <Action>(GitToolBox.BlameDetails)
 map <leader>gh <Action>(Vcs.RollbackChangedLines)
 nmap ]g <Action>(VcsShowNextChangeMarker)
 nmap [g <Action>(VcsShowPrevChangeMarker)
