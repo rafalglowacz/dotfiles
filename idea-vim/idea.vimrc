@@ -75,6 +75,7 @@ map <leader>sc <Action>(GotoClass)
 map <leader>c  <Action>(GotoClass)
 map <leader>sf <Action>(GotoFile)
 map <leader>f  <Action>(GotoFile)
+map <leader>F  <Action>(SelectInProjectView)
 map <leader>ws <Action>(GotoSymbol)
 
 map <leader>db <Action>(ToggleLineBreakpoint)
