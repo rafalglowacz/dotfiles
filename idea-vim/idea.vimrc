@@ -69,6 +69,7 @@ map <leader>,  :source ~/.ideavimrc<CR>
 
 map <leader><leader> <Action>(RecentFiles)
 map <leader>P  <Action>(ManageRecentProjects)
+map <leader>q  :q<CR>
 
 map <leader>sc <Action>(GotoClass)
 map <leader>c  <Action>(GotoClass)
