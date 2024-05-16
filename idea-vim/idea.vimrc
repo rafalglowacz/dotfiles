@@ -35,7 +35,7 @@ nnoremap I H
 vnoremap I H
 
 nnoremap yh yi
-nnoremap ch ci
+nnoremap ch "_ci
 nnoremap dh di
 
 nnoremap yi <Nop>
@@ -75,8 +75,10 @@ nnoremap U <C-r>
 
 ". Disable unwanted copying where only pasting/deletion is intended.
 vnoremap p "_dP
+vnoremap c "_c
 nnoremap x "_x
-nnoremap C "_Da
+nnoremap C "_C
+nnoremap cG "_cG
 
 ". Add alternative bindings for deletion where copying isn't always intended.
 nnoremap <A-d><A-d> "_dd
