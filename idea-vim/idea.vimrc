@@ -55,6 +55,7 @@ nmap     <C-i>     <Action>(Forward)
 map      <C-Up>    <Action>(EditorScrollUp)
 map      <C-Down>  <Action>(EditorScrollDown)
 nnoremap <Esc>     :nohlsearch<CR><Esc>
+inoremap <Esc>     <Esc>:w<CR>
 
 " Global navigation
 map <leader><leader> <Action>(RecentFiles)
@@ -109,6 +110,7 @@ map <leader>,  :source ~/.ideavimrc<CR>
 map <leader>td <Action>(Debug)
 map <leader>tn <Action>(RunClass)
 map <leader>tl <Action>(Run)
+map <leader>tc <Action>(Coverage)
 
 " Tool windows
 map <leader>1  <Action>(ActivateProjectToolWindow)
