@@ -48,13 +48,17 @@ nmap     ge        G
 nmap     n         <Action>(FindNext)
 nmap     N         <Action>(FindPrevious)
 nmap     /         <Action>(Find)
+": Start rectangular selection with something else than Ctrl+V.
 nmap     <A-v>     <C-v>
+": One more way:
 nmap     <leader>v <C-v>
 nmap     <C-o>     <Action>(Back)
 nmap     <C-i>     <Action>(Forward)
 map      <C-Up>    <Action>(EditorScrollUp)
 map      <C-Down>  <Action>(EditorScrollDown)
+": Clear search highlight on Esc
 nnoremap <Esc>     :nohlsearch<CR><Esc>
+": Save on Esc
 inoremap <Esc>     <Esc>:w<CR>
 
 " Global navigation
@@ -70,6 +74,7 @@ map <leader>ws <Action>(GotoSymbol)
 
 " Editing
 
+". Keep selection when indenting
 vnoremap > >gv
 vnoremap < <gv
 nnoremap U <C-r>
