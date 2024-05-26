@@ -205,6 +205,10 @@ require 'ijkl'
 vim.keymap.set('v', '<', '<gv')
 vim.keymap.set('v', '>', '>gv')
 
+-- Make db/dc also include current character.
+vim.keymap.set('n', 'db', 'vbd')
+vim.keymap.set('n', 'cb', 'vbc')
+
 -- Maintain the cursor position when yanking a visual selection.
 -- http://ddrscott.github.io/blog/2016/yank-without-jank/
 vim.keymap.set('v', 'y', 'myy`y')

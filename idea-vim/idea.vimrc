@@ -73,6 +73,9 @@ map <leader>ws <Action>(GotoSymbol)
 vnoremap > >gv
 vnoremap < <gv
 nnoremap U <C-r>
+". Make db/cb also include current character.
+nnoremap db vbd
+nnoremap cb vbc
 
 ". Disable unwanted copying where only pasting/deletion is intended.
 vnoremap p "_dP
