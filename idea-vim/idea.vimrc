@@ -4,6 +4,8 @@ set which-key
 set notimeout
 set ideajoin
 
+Plug 'tpope/vim-surround'
+
 set hlsearch
 set ignorecase
 set number
@@ -45,9 +47,12 @@ nnoremap di <Nop>
 " Editor - moving around
 
 nmap     ge        G
-nmap     n         <Action>(FindNext)
-nmap     N         <Action>(FindPrevious)
+ map     n         <Action>(FindNext)
+ map     N         <Action>(FindPrevious)
 nmap     /         <Action>(Find)
+nmap     <leader>bb <Action>(ToggleBookmark)
+nmap     <leader>bp <Action>(GotoPreviousBookmark)
+nmap     <leader>bn <Action>(GotoNextBookmark)
 ": Start rectangular selection with something else than Ctrl+V.
 nmap     <A-v>     <C-v>
 ": One more way:
