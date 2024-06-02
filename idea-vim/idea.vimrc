@@ -31,6 +31,11 @@ vnoremap k gj
 nnoremap l l
 vnoremap l l
 
+nnoremap gj 0
+vnoremap gj 0
+nnoremap gl $
+vnoremap gl $
+
 nnoremap H I
 vnoremap H I
 nnoremap I H

@@ -5,6 +5,13 @@ vim.keymap.set({ 'n', 'v' }, 'j', 'h')
 vim.keymap.set({ 'n', 'v' }, 'k', 'gj')
 vim.keymap.set({ 'n', 'v' }, 'l', 'l')
 
+-- Alternative to Home/End
+vim.keymap.set({ 'n', 'v' }, 'gj', '0');
+vim.keymap.set({ 'n', 'v' }, 'gl', '$');
+
+vim.keymap.set({ 'n', 'v' }, 'H', 'I')
+vim.keymap.set({ 'n', 'v' }, 'I', 'H')
+
 -- Add bindings for moving around and showing position in file on every step.
 vim.keymap.set('n', '<C-A-i>', 'gkg<C-G>')
 vim.keymap.set('n', '<C-A-j>', 'hg<C-G>')
