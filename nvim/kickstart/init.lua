@@ -308,7 +308,8 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
   { 'm00qek/baleia.nvim', opts = {} },
   { 'NvChad/nvim-colorizer.lua', opts = { user_default_options = { names = false } } },
-  { 'sickill/vim-pasta' },
+  -- Breaks p in visual mode (unwanted copying gets restored).
+  -- { 'sickill/vim-pasta' },
   { 'stevearc/aerial.nvim', opts = {} },
   {
     'nvim-lualine/lualine.nvim',
