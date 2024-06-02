@@ -18,12 +18,6 @@ vim.keymap.set('n', '<C-A-j>', 'hg<C-G>')
 vim.keymap.set('n', '<C-A-k>', 'gjg<C-G>')
 vim.keymap.set('n', '<C-A-l>', 'lg<C-G>')
 
--- TIP: Disable arrow keys in normal mode
-vim.keymap.set('n', '<left>', '<cmd>echo "Use j to move left"<CR>')
-vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move right"<CR>')
-vim.keymap.set('n', '<up>', '<cmd>echo "Use i to move up"<CR>')
-vim.keymap.set('n', '<down>', '<cmd>echo "Use k to move down"<CR>')
-
 vim.keymap.set('n', 'yh', 'yi')
 vim.keymap.set('n', 'ch', 'ci')
 vim.keymap.set('n', 'dh', 'di')
