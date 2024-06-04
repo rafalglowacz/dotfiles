@@ -31,10 +31,8 @@ vnoremap k gj
 nnoremap l l
 vnoremap l l
 
-nnoremap gj 0
-vnoremap gj 0
-nnoremap gl $
-vnoremap gl $
+map gj <Action>(EditorLineStart)
+map gl <Action>(EditorLineEnd)
 
 nnoremap H I
 vnoremap H I
@@ -58,14 +56,22 @@ nmap     /         <Action>(Find)
 nmap     <leader>bb <Action>(ToggleBookmark)
 nmap     <leader>bp <Action>(GotoPreviousBookmark)
 nmap     <leader>bn <Action>(GotoNextBookmark)
+
 ": Start rectangular selection with something else than Ctrl+V.
 nmap     <A-v>     <C-v>
 ": One more way:
 nmap     <leader>v <C-v>
+
 nmap     <C-o>     <Action>(Back)
 nmap     <C-i>     <Action>(Forward)
 map      <C-Up>    <Action>(EditorScrollUp)
 map      <C-Down>  <Action>(EditorScrollDown)
+
+map      <Home>    <Action>(EditorLineStart)
+imap     <Home>    <Action>(EditorLineStart)
+map      <End>     <Action>(EditorLineEnd)
+imap     <End>     <Action>(EditorLineEnd)
+
 ": Clear search highlight on Esc
 nnoremap <Esc>     :nohlsearch<CR><Esc>
 ": Save on Esc
