@@ -135,6 +135,7 @@ map <leader>td <Action>(Debug)
 map <leader>tn <Action>(RunClass)
 map <leader>tl <Action>(Run)
 map <leader>tc <Action>(Coverage)
+map <leader>tr <Action>(RerunFailedTests)
 
 " Tool windows
 map <leader>1  <Action>(ActivateProjectToolWindow)
