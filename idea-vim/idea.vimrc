@@ -1,10 +1,12 @@
+" General
 let mapleader = " "
 
+": Overlay with key binding tips:
 set which-key
 set notimeout
-set ideajoin
 
-Plug 'tpope/vim-surround'
+": Joining lines with editor's native joining instead off Vim's:
+set ideajoin
 
 set hlsearch
 set ignorecase
@@ -14,6 +16,8 @@ set scrolloff=15
 set smartcase
 
 set clipboard^=unnamedplus
+
+Plug 'tpope/vim-surround'
 
 " IJKL
 nnoremap h i
@@ -50,6 +54,8 @@ nnoremap di <Nop>
 " Editor - moving around
 
 nmap     ge        G
+nmap     gt        <Action>(GotoTest)
+nmap     A         <Action>(EditorLineEnd)a
  map     n         <Action>(FindNext)
  map     N         <Action>(FindPrevious)
 nmap     /         <Action>(Find)
@@ -72,6 +78,8 @@ imap     <Home>    <Action>(EditorLineStart)
 map      <End>     <Action>(EditorLineEnd)
 imap     <End>     <Action>(EditorLineEnd)
 
+nmap     <leader>h <Action>(HighlightUsagesInFile)
+
 ": Clear search highlight on Esc
 nnoremap <Esc>     :nohlsearch<CR><Esc>
 ": Save on Esc
@@ -93,7 +101,9 @@ map <leader>ws <Action>(GotoSymbol)
 ". Keep selection when indenting
 vnoremap > >gv
 vnoremap < <gv
+
 nnoremap U <C-r>
+
 ". Make db/cb also include current character.
 nnoremap db vbd
 nnoremap cb vbc
@@ -132,8 +142,13 @@ map <leader>,  :source ~/.ideavimrc<CR>
 
 " Testing
 map <leader>td <Action>(Debug)
+
+": Run nearest test:
 map <leader>tn <Action>(RunClass)
+
+": Run last test:
 map <leader>tl <Action>(Run)
+
 map <leader>tc <Action>(Coverage)
 map <leader>tr <Action>(RerunFailedTests)
 
