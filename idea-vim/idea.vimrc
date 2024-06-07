@@ -17,7 +17,12 @@ set smartcase
 
 set clipboard^=unnamedplus
 
+": make left/right movements wrap across lines
+set whichwrap+=h,l
+
 Plug 'tpope/vim-surround'
+Plug 'machakann/vim-highlightedyank'
+let g:highlightedyank_highlight_duration = 1000
 
 " IJKL
 nnoremap h i
@@ -59,9 +64,11 @@ nmap     A         <Action>(EditorLineEnd)a
  map     n         <Action>(FindNext)
  map     N         <Action>(FindPrevious)
 nmap     /         <Action>(Find)
+vmap     /         <Action>(Find)
 nmap     <leader>bb <Action>(ToggleBookmark)
 nmap     <leader>bp <Action>(GotoPreviousBookmark)
 nmap     <leader>bn <Action>(GotoNextBookmark)
+nmap     zz         zz<Action>(EditorScrollDown)<Action>(EditorScrollDown)<Action>(EditorScrollDown)<Action>(EditorScrollDown)<Action>(EditorScrollDown)
 
 ": Start rectangular selection with something else than Ctrl+V.
 nmap     <A-v>     <C-v>
@@ -79,6 +86,7 @@ map      <End>     <Action>(EditorLineEnd)
 imap     <End>     <Action>(EditorLineEnd)
 
 nmap     <leader>h <Action>(HighlightUsagesInFile)
+vmap     <leader>h <Action>(HighlightUsagesInFile)<Esc>
 
 ": Clear search highlight on Esc
 nnoremap <Esc>     :nohlsearch<CR><Esc>
@@ -90,7 +98,7 @@ map <leader><leader> <Action>(RecentFiles)
 map <leader>q  :q<CR>
 
 map <leader>sc <Action>(GotoClass)
-map <leader>c  <Action>(GotoClass)
+map <leader>;  <Action>(GotoClass)
 map <leader>sf <Action>(GotoFile)
 map <leader>f  <Action>(GotoFile)
 map <leader>F  <Action>(SelectInProjectView)
@@ -124,14 +132,24 @@ vnoremap <A-d> "_d
 vnoremap y myy`y
 vnoremap Y myY`y
 
+vmap gc <Action>(CommentByLineComment)
+nmap gcc <Action>(CommentByLineComment)
+
+" Context-aware editing
+map <leader>cr <Action>(RenameElement)
+
 " Debugging
 map <leader>db <Action>(ToggleLineBreakpoint)
 map <leader>de <Action>(EvaluateExpression)
 
 " Git
-map <leader>gg <Action>(Git.Menu)
-map <leader>gb <Action>(GitToolBox.BlameDetails)
-map <leader>gh <Action>(Vcs.RollbackChangedLines)
+map  <leader>gg <Action>(Git.Menu)
+map  <leader>gb <Action>(GitToolBox.BlameDetails)
+map  <leader>gh <Action>(Vcs.RollbackChangedLines)
+
+": Preview diff under cursor:
+nmap <leader>gP <Action>(VcsShowCurrentChangeMarker)
+
 nmap ]g <Action>(VcsShowNextChangeMarker)
 nmap [g <Action>(VcsShowPrevChangeMarker)
 
