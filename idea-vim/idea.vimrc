@@ -40,8 +40,10 @@ vnoremap k gj
 nnoremap l l
 vnoremap l l
 
-map gj <Action>(EditorLineStart)
-map gl <Action>(EditorLineEnd)
+nmap gj <Action>(EditorLineStart)
+nmap gl <Action>(EditorLineEnd)
+vmap gj _
+vmap gl $
 
 nnoremap H I
 vnoremap H I
@@ -141,6 +143,9 @@ map <leader>cr <Action>(RenameElement)
 " Debugging
 map <leader>db <Action>(ToggleLineBreakpoint)
 map <leader>de <Action>(EvaluateExpression)
+map <leader>dl <Action>(PhpListenDebugAction)
+map <leader>ds <Action>(Stop)
+map <leader>dr <Action>(RunToCursor)
 
 " Git
 map  <leader>gg <Action>(Git.Menu)
