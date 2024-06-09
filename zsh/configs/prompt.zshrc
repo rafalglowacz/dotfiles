@@ -8,9 +8,10 @@ promptParts=(
   $'%{$fg[white]%}%{$reset_color%} '
   $'$(git_prompt_info)'
   $'\n'
-  $'%{$fg[blue]%}➜  '
+  $'%{$fg[blue]%}➜  %{$reset_color%}'
 )
 
 IFS=''
 PROMPT=$(printf '%s\n' "${promptParts[*]}")
 IFS=' '
+
