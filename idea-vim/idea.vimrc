@@ -68,8 +68,8 @@ nmap     A         <Action>(EditorLineEnd)a
 nmap     /         <Action>(Replace)
 vmap     /         <Action>(Replace)
 nmap     <leader>bb <Action>(ToggleBookmark)
-nmap     <leader>bp <Action>(GotoPreviousBookmark)
-nmap     <leader>bn <Action>(GotoNextBookmark)
+nmap     <leader>bp <Action>(GotoPreviousBookmarkInEditor)
+nmap     <leader>bn <Action>(GotoNextBookmarkInEditor)
 nmap     zz         zz<Action>(EditorScrollDown)<Action>(EditorScrollDown)<Action>(EditorScrollDown)<Action>(EditorScrollDown)<Action>(EditorScrollDown)
 
 ": Start rectangular selection with something else than Ctrl+V.
@@ -160,7 +160,7 @@ nmap [g <Action>(VcsShowPrevChangeMarker)
 
 " PhpStorm
 map <leader>P  <Action>(ManageRecentProjects)
-map <leader>?  <Action>(GotoAction)
+map <leader>/  <Action>(GotoAction)
 map <leader>,  :source ~/.ideavimrc<CR>
 
 " Testing
@@ -177,6 +177,7 @@ map <leader>tr <Action>(RerunFailedTests)
 
 " Tool windows
 map <leader>1  <Action>(ActivateProjectToolWindow)
+map <leader>2  <Action>(ActivateBookmarksToolWindow)
 map <leader>3  <Action>(ActivateFindToolWindow)
 map <leader>4  <Action>(ActivateRunToolWindow)
 map <leader>5  <Action>(ActivateDebugToolWindow)
