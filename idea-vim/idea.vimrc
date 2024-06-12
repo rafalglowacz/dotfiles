@@ -182,4 +182,6 @@ map <leader>3  <Action>(ActivateFindToolWindow)
 map <leader>4  <Action>(ActivateRunToolWindow)
 map <leader>5  <Action>(ActivateDebugToolWindow)
 map <leader>9  <Action>(ActivateVersionControlToolWindow)
-map <leader>0  <Action>(ActivateCommitToolWindow)
+": Using CheckinProject instead of ActivateCommitToolWindow to make all files
+": automatically selected
+map <leader>0  <Action>(CheckinProject)
