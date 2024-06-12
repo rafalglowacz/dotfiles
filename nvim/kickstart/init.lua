@@ -242,9 +242,9 @@ vim.keymap.set({'n', 'v'}, 'ge', 'G$zz')
 -- More convenient redo (same as in Helix).
 vim.keymap.set({'n', 'v'}, 'U', '<C-r>')
 
-vim.keymap.set({'', '!'}, '<C-q>', ':qa<CR>')
+vim.keymap.set({'', '!'}, '<C-q>', '<Esc>:qa<CR>')
 
--- Add a convenience binding for keyword completion, similar to Alt-/ from 
+-- Add a convenience binding for keyword completion, similar to Alt-/ from
 -- PHPStorm, but with Alt changed to Ctrl - it's more convenient to have
 -- the same modifier as Ctrl-N and Ctrl-P
 vim.keymap.set('i', '<C-/>', function()
@@ -1007,8 +1007,8 @@ require('lazy').setup({
           cmd = localopts['volar.cmd'], -- If nil, default cmd will be used.
           -- init_options = {
           --   typescript = {
-          --     -- TODO: check if actually needed. The problem with Vue 2 
-          --     -- in work project was solved by setting tsserver.path 
+          --     -- TODO: check if actually needed. The problem with Vue 2
+          --     -- in work project was solved by setting tsserver.path
           --     -- in the TS language server's config.
           --     tsdk = vim.fn.expand '$HOME/.local/share/nvim/mason/packages/typescript-language-server/node_modules/typescript/lib',
           --   }
