@@ -150,6 +150,7 @@ vim.opt.incsearch = false
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.opt.guicursor:append 'a:blinkon100'
+vim.opt.iskeyword:append '-'
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`

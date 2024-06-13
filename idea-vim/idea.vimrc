@@ -14,6 +14,7 @@ set number
 set relativenumber
 set scrolloff=15
 set smartcase
+set iskeyword+=-
 
 set clipboard^=unnamedplus
 
