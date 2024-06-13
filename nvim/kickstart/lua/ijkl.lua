@@ -19,7 +19,7 @@ vim.keymap.set('n', '<C-A-k>', 'gjg<C-G>')
 vim.keymap.set('n', '<C-A-l>', 'lg<C-G>')
 
 vim.keymap.set('n', 'yh', 'yi')
-vim.keymap.set('n', 'ch', 'ci')
+vim.keymap.set('n', 'ch', 'ci', { remap = true })
 vim.keymap.set('n', 'dh', 'di')
 
 vim.keymap.set('n', 'yi', '<Nop>')

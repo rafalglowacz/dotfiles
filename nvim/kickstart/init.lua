@@ -214,6 +214,7 @@ vim.keymap.set('v', 'p', '"_dP')
 vim.keymap.set('v', 'c', '"_c')
 vim.keymap.set('n', 'x', '"_x')
 vim.keymap.set('n', 'C', '"_C')
+vim.keymap.set('n', 'ci', '"_ci')
 vim.keymap.set('n', 'cG', '"_cG')
 
 -- Add alternative bindings for deletion where copying isn't always intended.
