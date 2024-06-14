@@ -152,6 +152,8 @@ map <leader>dr <Action>(RunToCursor)
 map  <leader>gg <Action>(Git.Menu)
 map  <leader>gb <Action>(GitToolBox.BlameDetails)
 map  <leader>gh <Action>(Vcs.RollbackChangedLines)
+map  <leader>gH <Action>(Vcs.ShowTabbedFileHistory)
+map  <leader>gS <Action>(Vcs.ShowHistoryForBlock)
 
 ": Preview diff under cursor:
 nmap <leader>gP <Action>(VcsShowCurrentChangeMarker)
@@ -186,3 +188,7 @@ map <leader>9  <Action>(ActivateVersionControlToolWindow)
 ": Using CheckinProject instead of ActivateCommitToolWindow to make all files
 ": automatically selected
 map <leader>0  <Action>(CheckinProject)
+
+map <leader>E  <Action>(ShowErrorDescription)
+map <leader>q  <Action>(ShowIntentionActions)
+map <leader>l  <Action>(LocalHistory)
