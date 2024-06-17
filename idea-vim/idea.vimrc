@@ -80,8 +80,11 @@ nmap     <leader>v <C-v>
 
 nmap     <C-o>     <Action>(Back)
 nmap     <C-i>     <Action>(Forward)
+
 map      <C-Up>    <Action>(EditorScrollUp)
+imap     <C-Up>    <Action>(EditorScrollUp)
 map      <C-Down>  <Action>(EditorScrollDown)
+imap     <C-Down>  <Action>(EditorScrollDown)
 
 map      <Home>    <Action>(EditorLineStart)
 imap     <Home>    <Action>(EditorLineStart)
@@ -143,6 +146,7 @@ map <leader>cr <Action>(RenameElement)
 
 " Debugging
 map <leader>db <Action>(ToggleLineBreakpoint)
+map <leader>dB <Action>(EditBreakpoint)
 map <leader>de <Action>(EvaluateExpression)
 map <leader>dl <Action>(PhpListenDebugAction)
 map <leader>ds <Action>(Stop)
@@ -169,14 +173,17 @@ map <leader>,  :source ~/.ideavimrc<CR>
 " Testing
 map <leader>td <Action>(Debug)
 
-": Run nearest test:
+": Run nearest test
 map <leader>tn <Action>(RunClass)
 
-": Run last test:
+": Run last test
 map <leader>tl <Action>(Run)
 
 map <leader>tc <Action>(Coverage)
 map <leader>tr <Action>(RerunFailedTests)
+
+": Running
+map <leader>rr <Action>(ChooseRunConfiguration)
 
 " Tool windows
 map <leader>1  <Action>(ActivateProjectToolWindow)
