@@ -1,4 +1,9 @@
 bindkey '^U' backward-kill-line
+# By default Ctrl+P/N cycles through previous commands, even if some text 
+# is already typed in. This makes it act like the up/down arrows, which take
+# the typed-in text into consideration.
+bindkey '^P' history-search-backward
+bindkey '^N' history-search-forward
 
 # Alt+Backspace
 backward-kill-dir () {
