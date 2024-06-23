@@ -164,6 +164,8 @@ nmap <leader>gP <Action>(VcsShowCurrentChangeMarker)
 
 nmap ]g <Action>(VcsShowNextChangeMarker)
 nmap [g <Action>(VcsShowPrevChangeMarker)
+nmap <leader>n <Action>(VcsShowNextChangeMarker)
+nmap <leader>p <Action>(VcsShowPrevChangeMarker)
 
 " PhpStorm
 map <leader>P  <Action>(ManageRecentProjects)
