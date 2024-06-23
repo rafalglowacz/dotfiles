@@ -13,6 +13,7 @@ plugins=(
 	timer
 	zsh-autosuggestions
 	zsh-syntax-highlighting
+	z
 )
 
 export ZSH="$HOME/.oh-my-zsh"
