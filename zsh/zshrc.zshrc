@@ -81,6 +81,7 @@ if [ -z $KITTY_LISTEN_ON ]; then
 	export KITTY_LISTEN_ON=unix:/tmp/kitty-remote-control-$PPID
 fi
 
+source $ZSHRC_DIR/configs/fnm.zshrc
 source $ZSHRC_DIR/configs/fzf.zshrc
 source $ZSHRC_DIR/configs/nvm.zshrc
 
@@ -103,3 +104,4 @@ source $ZSHRC_DIR/aliases/system.zshrc
 ###########################
 
 [ -f $ZSHRC_DIR/configs/local.zshrc ] && source $ZSHRC_DIR/configs/local.zshrc
+
