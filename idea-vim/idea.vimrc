@@ -144,11 +144,14 @@ nmap gcc <Action>(CommentByLineComment)
 " Context-aware editing
 map <leader>cr <Action>(RenameElement)
 
+map -rr <Action>(Refactorings.QuickListPopupAction)
+
 " Debugging
 map <leader>db <Action>(ToggleLineBreakpoint)
 map <leader>dB <Action>(EditBreakpoint)
 map <leader>de <Action>(EvaluateExpression)
 map <leader>dl <Action>(PhpListenDebugAction)
+map <leader>dd <Action>(Resume)
 map <leader>ds <Action>(Stop)
 map <leader>dr <Action>(RunToCursor)
 
