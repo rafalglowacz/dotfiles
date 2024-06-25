@@ -155,6 +155,10 @@ map <leader>dd <Action>(Resume)
 map <leader>ds <Action>(Stop)
 map <leader>dr <Action>(RunToCursor)
 
+map -i <Action>(StepInto)
+map -o <Action>(StepOver)
+map -u <Action>(StepOut)
+
 " Git
 map  <leader>gg <Action>(Git.Menu)
 map  <leader>gb <Action>(GitToolBox.BlameDetails)
