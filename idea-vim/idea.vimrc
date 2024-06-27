@@ -152,7 +152,6 @@ map <leader>dB <Action>(EditBreakpoint)
 map <leader>de <Action>(EvaluateExpression)
 map <leader>dl <Action>(PhpListenDebugAction)
 map <leader>dd <Action>(Resume)
-map <leader>ds <Action>(Stop)
 map <leader>dr <Action>(RunToCursor)
 
 map -i <Action>(StepInto)
@@ -193,6 +192,7 @@ map <leader>tr <Action>(RerunFailedTests)
 
 ": Running
 map <leader>rr <Action>(ChooseRunConfiguration)
+map <leader>rs <Action>(Stop)
 
 " Tool windows
 map <leader>1  <Action>(ActivateProjectToolWindow)
