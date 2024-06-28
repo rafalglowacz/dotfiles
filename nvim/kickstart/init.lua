@@ -239,6 +239,7 @@ vim.keymap.set({'n', 'v'}, 'ge', 'G$zz')
 vim.keymap.set({'n', 'v'}, 'U', '<C-r>')
 
 vim.keymap.set({'', '!'}, '<C-q>', '<Esc>:qa<CR>')
+vim.keymap.set({'', '!'}, '<C-s>', '<Esc>:w<CR>')
 
 -- Add a convenience binding for keyword completion, similar to Alt-/ from
 -- PHPStorm, but with Alt changed to Ctrl - it's more convenient to have
