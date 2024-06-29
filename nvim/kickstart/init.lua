@@ -311,6 +311,24 @@ vim.opt.rtp:prepend(lazypath)
 -- NOTE: Here is where you install your plugins.
 -- local treeHeightRatio = 0.8 -- You can change this
 -- local treeWidthRatio = 0.5  -- You can change this too
+local winbar = {
+  lualine_a = {},
+  lualine_b = {},
+  lualine_c = { { 'aerial', draw_empty = true, fmt = function(output)
+    if string.len(output) > 0 then
+      return output
+    end
+    local ok, devicons = pcall(require, 'nvim-web-devicons')
+    if ok == false then
+      return ''
+    end
+    local icon = devicons.get_icon(vim.fn.expand('%:t'))
+    return icon == nil and '' or icon
+  end} },
+  lualine_x = {},
+  lualine_y = {},
+  lualine_z = {},
+};
 
 require('lazy').setup({
   { 'm00qek/baleia.nvim', opts = {} },
@@ -355,24 +373,8 @@ require('lazy').setup({
         lualine_y = {},
         lualine_z = {},
       },
-      winbar = {
-        lualine_a = {},
-        lualine_b = {},
-        lualine_c = { { 'aerial', draw_empty = true, fmt = function(output)
-          if string.len(output) > 0 then
-            return output
-          end
-          local ok, devicons = pcall(require, 'nvim-web-devicons')
-          if ok == false then
-            return ''
-          end
-          icon = devicons.get_icon(vim.fn.expand('%:t'))
-          return icon == nil and '' or icon
-        end} },
-        lualine_x = {},
-        lualine_y = {},
-        lualine_z = {},
-      },
+      winbar = winbar,
+      inactive_winbar = winbar,
     },
   },
   {
