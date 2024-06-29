@@ -567,7 +567,7 @@ require('lazy').setup({
       vim.cmd[[
         function! MyKitty(cmd)
           let confDir = fnamemodify(stdpath('config'), ':p')
-          let cmd = join(['cd ' . shellescape(getcwd()), a:cmd], '; ')
+          let cmd = join(['cd ' . shellescape(getcwd()), a:cmd], ' &&\n')
           execute 'silent !'.join([
             \ shellescape(confDir . '/bin/kitty-runner'), 
             \ shellescape(cmd)

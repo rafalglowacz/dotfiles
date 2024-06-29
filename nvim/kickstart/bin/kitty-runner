@@ -2,7 +2,9 @@
 
 if [ "$(kitty @ ls | grep -c '            "title": "vim-test-output')" -eq 0 ]; then
   kitty @ --to "$KITTY_LISTEN_ON" launch --location=hsplit --keep-focus --title "vim-test-output" "$SHELL"
+  kitty @ --to "$KITTY_LISTEN_ON" resize-window -m title:"vim-test-output" -a reset
+  kitty @ --to "$KITTY_LISTEN_ON" resize-window -m title:"vim-test-output" -a vertical -i -5
 fi
 
-kitty @ --to "$KITTY_LISTEN_ON" send-text --match title:"vim-test-output" "$1\x0d"
+kitty @ --to "$KITTY_LISTEN_ON" send-text -m title:"vim-test-output" "$1\x0d"
 
