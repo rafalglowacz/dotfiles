@@ -620,8 +620,10 @@ require('lazy').setup({
       { '<leader>gb', function() require'gitsigns'.blame_line() end,
         desc = 'Git: [b]lame line' },
 
-      { ']g', function() require'gitsigns'.next_hunk() end, desc = 'Git: next hunk' },
-      { '[g', function() require'gitsigns'.prev_hunk() end, desc = 'Git: previous hunk' },
+      { ']g',        function() require'gitsigns'.next_hunk() end, desc = 'Git: next hunk' },
+      { '<leader>n', function() require'gitsigns'.next_hunk() end, desc = 'Git: next hunk' },
+      { '[g',        function() require'gitsigns'.prev_hunk() end, desc = 'Git: previous hunk' },
+      { '<leader>p', function() require'gitsigns'.prev_hunk() end, desc = 'Git: previous hunk' },
     },
   },
 
