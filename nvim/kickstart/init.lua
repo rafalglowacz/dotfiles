@@ -249,10 +249,9 @@ vim.keymap.set({'', '!'}, '<C-q>', '<Esc>:qa<CR>')
 vim.keymap.set('!', '<C-s>', '<Esc>:w<CR>a')
 vim.keymap.set('', '<C-s>', ':w<CR>')
 
--- Add a convenience binding for keyword completion, similar to Alt-/ from
--- PHPStorm, but with Alt changed to Ctrl - it's more convenient to have
--- the same modifier as Ctrl-N and Ctrl-P
-vim.keymap.set('i', '<C-/>', function()
+-- Add convenience bindings for keyword completion,
+-- just like Alt-; and Alt-/ in PHPStorm.
+vim.keymap.set('i', '<A-;>', function()
     if vim.fn.pumvisible() == 1 then
         -- If the popup menu is visible, cycle through suggestions.
         return '<C-p>'
@@ -260,6 +259,11 @@ vim.keymap.set('i', '<C-/>', function()
         -- If the popup menu is not visible, start keyword completion.
         return '<C-x><C-p>'
     end
+end, { expr = true })
+
+-- See above
+vim.keymap.set('i', '<A-/>', function()
+    if vim.fn.pumvisible() == 1 then return '<C-n>' else return '<C-x><C-n>' end
 end, { expr = true })
 
 vim.keymap.set('i', '<S-Enter>', '<Esc>ko')
