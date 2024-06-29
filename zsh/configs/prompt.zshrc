@@ -12,10 +12,13 @@ promptParts=(
 promptParts+=(
   $'%(1j.%{$fg[yellow]%}%{$bg[yellow]%}%{$fg[black]%}%j%{$reset_color%}%{$fg[yellow]%}%{$reset_color%} .)'
 )
+if [ -z "$PROMPT_PADDING" ]; then
+  PROMPT_PADDING=' '
+fi
 promptParts+=(
   $'$(git_prompt_info)'
   $'\n'
-  $'%{$fg[blue]%}➜  %{$reset_color%}'
+  $'%{$fg[blue]%}➜$PROMPT_PADDING%{$reset_color%}'
 )
 
 IFS=''

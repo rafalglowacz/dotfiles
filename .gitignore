@@ -6,6 +6,7 @@ local.conf
 local.lua
 local.yml
 local.zshrc
+local-init.zshrc
 
 !/nvim/kickstart/lua/local
 /nvim/kickstart/lua/local/*

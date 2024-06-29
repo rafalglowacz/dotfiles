@@ -16,6 +16,9 @@ plugins=(
 	z
 )
 
+# Local config that needs to be included early.
+[ -f $ZSHRC_DIR/configs/local-init.zshrc ] && source $ZSHRC_DIR/configs/local-init.zshrc
+
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="candy"
 source $ZSH/oh-my-zsh.sh
