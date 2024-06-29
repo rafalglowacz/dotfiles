@@ -565,7 +565,17 @@ require('lazy').setup({
     },
     config = function()
       vim.cmd[[
-        let test#strategy = 'kitty'
+        function! MyKitty(cmd)
+          let confDir = fnamemodify(stdpath('config'), ':p')
+          let cmd = join(['cd ' . shellescape(getcwd()), a:cmd], '; ')
+          execute 'silent !'.join([
+            \ shellescape(confDir . '/bin/kitty-runner'), 
+            \ shellescape(cmd)
+          \ ])
+        endfunction
+        let g:test#custom_strategies = {'mykitty': function('MyKitty')}
+        let g:test#strategy = 'mykitty'
+
         " let test#neovim#term_position = 'vert botright 80'
         let test#php#phpunit#executable = 'de php vendor/bin/phpunit'
       ]]
