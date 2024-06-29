@@ -6,8 +6,7 @@ vim.keymap.set({ 'n', 'v' }, 'k', 'gj')
 vim.keymap.set({ 'n', 'v' }, 'l', 'l')
 
 -- Alternative to Home/End
-vim.keymap.set({ 'n', 'v' }, 'gj', '0');
-vim.keymap.set({ 'n', 'v' }, 'gl', '$');
+vim.keymap.set({ 'n', 'v' }, 'gj', 'gh', { remap = true });
 
 vim.keymap.set({ 'n', 'v' }, 'H', 'I')
 vim.keymap.set({ 'n', 'v' }, 'I', 'H')
@@ -17,6 +16,11 @@ vim.keymap.set('n', '<C-A-i>', 'gkg<C-G>')
 vim.keymap.set('n', '<C-A-j>', 'hg<C-G>')
 vim.keymap.set('n', '<C-A-k>', 'gjg<C-G>')
 vim.keymap.set('n', '<C-A-l>', 'lg<C-G>')
+
+vim.keymap.set('n', '<A-i>', '<C-w><C-k>', { desc = 'Move focus up' })
+vim.keymap.set('n', '<A-j>', '<C-w><C-h>', { desc = 'Move focus left' })
+vim.keymap.set('n', '<A-k>', '<C-w><C-j>', { desc = 'Move focus down' })
+vim.keymap.set('n', '<A-l>', '<C-w><C-l>', { desc = 'Move focus right' })
 
 vim.keymap.set('n', 'yh', 'yi')
 vim.keymap.set('n', 'ch', 'ci', { remap = true })

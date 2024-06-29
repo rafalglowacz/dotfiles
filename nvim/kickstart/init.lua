@@ -179,6 +179,9 @@ vim.keymap.set('n', '<Esc>', function()
   vim.cmd('nohlsearch');
 end)
 
+-- Close bottom panel. This assumes we don't have any top/bottom splits.
+vim.keymap.set('n', '<S-Esc>', '<C-w><C-j>:q<CR>')
+
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnostic message' })
@@ -235,11 +238,16 @@ vim.keymap.set({'n', 'v'}, 'gg', 'gg0')
 vim.keymap.set({'n', 'v'}, 'G', 'G$zz')
 vim.keymap.set({'n', 'v'}, 'ge', 'G$zz')
 
+-- Alternative to Home/End
+vim.keymap.set({ 'n', 'v' }, 'gh', '^');
+vim.keymap.set({ 'n', 'v' }, 'gl', '$');
+
 -- More convenient redo (same as in Helix).
 vim.keymap.set({'n', 'v'}, 'U', '<C-r>')
 
 vim.keymap.set({'', '!'}, '<C-q>', '<Esc>:qa<CR>')
-vim.keymap.set({'', '!'}, '<C-s>', '<Esc>:w<CR>')
+vim.keymap.set('!', '<C-s>', '<Esc>:w<CR>a')
+vim.keymap.set('', '<C-s>', ':w<CR>')
 
 -- Add a convenience binding for keyword completion, similar to Alt-/ from
 -- PHPStorm, but with Alt changed to Ctrl - it's more convenient to have
@@ -255,6 +263,7 @@ vim.keymap.set('i', '<C-/>', function()
 end, { expr = true })
 
 vim.keymap.set('i', '<S-Enter>', '<Esc>ko')
+vim.keymap.set('i', '<C-Enter>', '<Esc>o')
 vim.keymap.set('i', '<Esc>', '<Esc>:w<CR>')
 
 local ok, localopts = pcall(require, 'local.opts')
