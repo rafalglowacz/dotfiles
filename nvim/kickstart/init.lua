@@ -317,20 +317,32 @@ vim.opt.rtp:prepend(lazypath)
 -- local treeWidthRatio = 0.5  -- You can change this too
 local winbar = {
   lualine_a = {},
-  lualine_b = {},
-  lualine_c = { { 'aerial', draw_empty = true, fmt = function(output)
-    if string.len(output) > 0 then
-      return output
-    end
-    local ok, devicons = pcall(require, 'nvim-web-devicons')
-    if ok == false then
-      return ''
-    end
-    local icon = devicons.get_icon(vim.fn.expand('%:t'))
-    return icon == nil and '' or icon
-  end} },
-  lualine_x = {},
-  lualine_y = {},
+  lualine_b = {
+    {
+      'aerial',
+      draw_empty = true,
+      fmt = function(output)
+        if string.len(output) > 0 then
+          return output
+        end
+        local ok, devicons = pcall(require, 'nvim-web-devicons')
+        if ok == false then
+          return ''
+        end
+        local icon = devicons.get_icon(vim.fn.expand('%:t'))
+        return icon == nil and '' or icon
+      end
+    },
+  },
+  lualine_c = {},
+  lualine_x = {
+    function ()
+      return '󰅭 ' .. vim.pesc(tostring(#vim.tbl_keys(vim.lsp.get_clients())) or '')
+    end,
+  },
+  lualine_y = {
+    { 'filename', path = 1 },
+  },
   lualine_z = {},
 };
 
@@ -362,20 +374,13 @@ require('lazy').setup({
         },
         lualine_x = {'filetype'},
         lualine_y = {
-          function ()
-            return '󰅭 ' .. vim.pesc(tostring(#vim.tbl_keys(vim.lsp.buf_get_clients())) or '')
-          end,
-          'progress',
+          'branch',
+          'diff',
         },
-        lualine_z = {'location'}
-      },
-      tabline = {
-        lualine_a = {'branch', 'diff'},
-        lualine_b = {},
-        lualine_c = { { 'filename', path = 1} },
-        lualine_x = {},
-        lualine_y = {},
-        lualine_z = {},
+        lualine_z = {
+          'progress',
+          'location',
+        },
       },
       winbar = winbar,
       inactive_winbar = winbar,
