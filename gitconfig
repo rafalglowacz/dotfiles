@@ -12,6 +12,7 @@
 	# Diff in unified view
 	du  = diff -w
 	ds  = d --staged
+	dsu = diff -w --staged
 	dt  = difftool
 	# History
 	hs  = log --pretty='%C(yellow)%h %C(cyan)%cd %C(auto)%s%C(auto)%d %C(reset)' --graph --date=human
