@@ -421,8 +421,11 @@ require('lazy').setup({
   --  end,
   --},
 
-  { 'mfussenegger/nvim-dap', config = function()
+  {
+    'mfussenegger/nvim-dap',
+    config = function()
       local dap = require'dap'
+      -- PHP
       dap.adapters.php = {
         type = 'executable',
         command = 'node',
