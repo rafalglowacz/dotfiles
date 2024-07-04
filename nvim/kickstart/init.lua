@@ -407,6 +407,15 @@ require('lazy').setup({
       -- vim.notify = require('notify')
     end,
   },
+  {
+    "rcarriga/nvim-dap-ui",
+    dependencies = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"},
+    config = function()
+      local dapUi = require('dapui')
+      dapUi.setup()
+      vim.keymap.set('n', '<leader>dU', dapUi.toggle)
+    end
+  },
   --{
   --  'gelguy/wilder.nvim', config = function()
   --    local wilder = require('wilder')
@@ -425,6 +434,7 @@ require('lazy').setup({
     'mfussenegger/nvim-dap',
     config = function()
       local dap = require'dap'
+
       -- PHP
       dap.adapters.php = {
         type = 'executable',
@@ -442,66 +452,57 @@ require('lazy').setup({
           },
         },
       }
+
+      -- Rust
+      dap.adapters.lldb = {
+        type = 'executable',
+        command = '/usr/bin/lldb-vscode',
+        name = 'lldb',
+      }
+      dap.configurations.rust = {
+        {
+          name = 'Launch',
+          type = 'lldb',
+          request = 'launch',
+          program = function()
+            return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+          end,
+          cwd = '${workspaceFolder}',
+          stopOnEntry = false,
+          args = {},
+        },
+      }
+
+      -- Key bindings
       vim.keymap.set(
         'n',
         '<leader>dc',
-        function() require('dap').continue() end,
+        function() dap.continue() end,
         { desc = '[C]ontinue' }
       )
-      vim.keymap.set(
-        'n',
-        '<F9>',
-        function() require('dap').step_over() end,
-        { desc = 'Step [o]ver' }
-      )
-      vim.keymap.set(
-        'n',
-        '<F8>',
-        function() require('dap').step_into() end,
-        { desc = 'Step [i]nto' }
-      )
-      vim.keymap.set(
-        'n',
-        '<F7>',
-        function() require('dap').step_out() end,
-        { desc = 'Step o[u]t' }
-      )
-      vim.keymap.set(
-        'n',
-        '<F5>',
-        function() require('dap').run_to_cursor() end,
-        { desc = 'Run to cursor' }
-      )
+      for _, key in ipairs({ '<F9>', '-o' }) do
+        vim.keymap.set('n', key, dap.step_over, { desc = 'Step [o]ver' })
+      end
+      for _, key in ipairs({ '<F8>', '-i' }) do
+        vim.keymap.set('n', key, dap.step_into, { desc = 'Step [i]nto' })
+      end
+      for _, key in ipairs({ '<F7>', '-u' }) do
+        vim.keymap.set('n', key, dap.step_out, { desc = 'Step o[u]t' })
+      end
+      for _, key in ipairs({ '<F5>', 'dr' }) do
+        vim.keymap.set('n', key, dap.run_to_cursor, { desc = 'Run to cursor' })
+      end
       vim.keymap.set(
         'n',
         '<leader>db',
-        function() require('dap').toggle_breakpoint() end,
+        function() dap.toggle_breakpoint() end,
         { desc = 'Toggle [b]reakpoint' }
       )
-      -- vim.keymap.set('n', '<leader>lp', function() require('dap').set_breakpoint(nil, nil, vim.fn.input('Log point message: ')) end)
-      vim.keymap.set(
-        'n',
-        '<leader>dr',
-        function() require('dap').repl.open() end,
-        { desc = 'Open [R]EPL' }
-      )
-      vim.keymap.set(
-        'n',
-        '<leader>dl',
-        function() require('dap').run_last() end,
-        { desc = 'Run [l]ast' }
-      )
-      vim.keymap.set(
-        {'n', 'v'},
-        '<leader>dh',
-        function() require('dap.ui.widgets').hover() end,
-        { desc = 'Ho[v]er' }
-      )
-      vim.keymap.set(
-        {'n', 'v'},
-        '<leader>dp',
-        function() require('dap.ui.widgets').preview() end
-      )
+      -- vim.keymap.set('n', '<leader>lp', function() dap.set_breakpoint(nil, nil, vim.fn.input('Log point message: ')) end)
+      vim.keymap.set('n', '<leader>dr', dap.repl.open, { desc = 'Open [R]EPL' })
+      vim.keymap.set('n', '<leader>dl', dap.run_last, { desc = 'Run [l]ast' })
+      vim.keymap.set({ 'n', 'v' }, '<leader>dh', require('dap.ui.widgets').hover, { desc = '[H]over' })
+      vim.keymap.set({ 'n', 'v' }, '<leader>dp', require('dap.ui.widgets').preview)
       vim.keymap.set(
         'n',
         '<leader>df',
@@ -511,6 +512,7 @@ require('lazy').setup({
         end,
         { desc = '[F]rames' }
       )
+      vim.keymap.set('n', '<leader>rs', dap.terminate, { desc = '[S]top' })
       -- vim.keymap.set(
       --   'n',
       --   '<leader>ds',
@@ -548,52 +550,30 @@ require('lazy').setup({
     opts = { use_default_keymaps = false },
     dependencies = { 'nvim-treesitter/nvim-treesitter' },
   },
-
-  { 'vim-test/vim-test',
-    keys = {
-      {
-        '<leader>tn',
-        function() vim.cmd('silent TestNearest') end,
-        desc = 'Test [n]earest',
-      },
-      {
-        '<leader>tf',
-        function() vim.cmd('silent TestFile') end,
-        desc = 'Test [f]ile',
-      },
-      {
-        '<leader>ts',
-        function() vim.cmd('silent TestSuite') end,
-        desc = 'Test [s]uite',
-      },
-      {
-        '<leader>tl',
-        function() vim.cmd('silent TestLast') end,
-        desc = 'Test [l]ast',
-      },
-      {
-        '<leader>tv',
-        function() vim.cmd('silent TestVisit') end,
-        desc = 'Test [v]isit',
-      },
+  {
+    'mrcjkb/rustaceanvim',
+    version = '^4', -- Recommended
+    lazy = false, -- This plugin is already lazy
+  },
+  {
+    'nvim-neotest/neotest',
+    dependencies = {
+      "nvim-neotest/nvim-nio",
+      "nvim-lua/plenary.nvim",
+      "antoinemadec/FixCursorHold.nvim",
+      "nvim-treesitter/nvim-treesitter"
     },
     config = function()
-      vim.cmd[[
-        function! MyKitty(cmd)
-          let confDir = fnamemodify(stdpath('config'), ':p')
-          let cmd = join(['cd ' . shellescape(getcwd()), a:cmd], ' &&\n')
-          execute 'silent !'.join([
-            \ shellescape(confDir . '/bin/kitty-runner'), 
-            \ shellescape(cmd)
-          \ ])
-        endfunction
-        let g:test#custom_strategies = {'mykitty': function('MyKitty')}
-        let g:test#strategy = 'mykitty'
+      require('neotest').setup({
+        adapters = { require('rustaceanvim.neotest') }
+      })
 
-        " let test#neovim#term_position = 'vert botright 80'
-        let test#php#phpunit#executable = 'de php vendor/bin/phpunit'
-      ]]
-    end
+      vim.keymap.set(
+        'n',
+        '<leader>td',
+        function() require('neotest').run.run({ strategy = 'dap' }) end
+      )
+    end,
   },
 
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
@@ -678,10 +658,11 @@ require('lazy').setup({
         ['<leader>c'] = { name = '[C]ode', _ = 'which_key_ignore' },
         ['<leader>d'] = { name = '[D]ebug', _ = 'which_key_ignore' },
         ['<leader>g'] = { name = '[G]it', _ = 'which_key_ignore' },
-        ['<leader>r'] = { name = '[R]ename', _ = 'which_key_ignore' },
+        ['<leader>r'] = { name = '[R]un', _ = 'which_key_ignore' },
         ['<leader>s'] = { name = '[S]earch', _ = 'which_key_ignore' },
         ['<leader>t'] = { name = '[T]esting', _ = 'which_key_ignore' },
         ['<leader>w'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
+        ['-r'] = { name = '[R]ename', _ = 'which_key_ignore' },
       }
     end,
   },
@@ -957,7 +938,7 @@ require('lazy').setup({
 
           -- Rename the variable under your cursor
           --  Most Language Servers support renaming across files, etc.
-          map('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
+          map('-rn', vim.lsp.buf.rename, 'Re[n]ame')
 
           -- Execute a code action, usually your cursor needs to be on top of an error
           -- or a suggestion from your LSP for this to activate.
@@ -1093,7 +1074,9 @@ require('lazy').setup({
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
-      require('mason-lspconfig').setup {
+      local mason_lsp = require('mason-lspconfig')
+
+      mason_lsp.setup {
         handlers = {
           function(server_name)
             local server = servers[server_name] or {}
@@ -1103,6 +1086,7 @@ require('lazy').setup({
             server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
             require('lspconfig')[server_name].setup(server)
           end,
+          ['rust_analyzer'] = function() end
         },
       }
 
