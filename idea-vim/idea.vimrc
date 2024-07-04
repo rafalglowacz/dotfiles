@@ -200,10 +200,9 @@ map <leader>2  <Action>(ActivateBookmarksToolWindow)
 map <leader>3  <Action>(ActivateFindToolWindow)
 map <leader>4  <Action>(ActivateRunToolWindow)
 map <leader>5  <Action>(ActivateDebugToolWindow)
+map <leader>6  <Action>(ActivateProblemsViewToolWindow)
 map <leader>9  <Action>(ActivateVersionControlToolWindow)
-": Using CheckinProject instead of ActivateCommitToolWindow to make all files
-": automatically selected
-map <leader>0  <Action>(CheckinProject)
+map <leader>0  <Action>(ActivateCommitToolWindow)
 
 map <leader>E  <Action>(ShowErrorDescription)
 map <leader>q  <Action>(ShowIntentionActions)
