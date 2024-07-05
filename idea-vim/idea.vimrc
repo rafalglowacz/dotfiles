@@ -142,9 +142,8 @@ vmap gc <Action>(CommentByLineComment)
 nmap gcc <Action>(CommentByLineComment)
 
 " Context-aware editing
-map <leader>cr <Action>(RenameElement)
-
 map -rr <Action>(Refactorings.QuickListPopupAction)
+map -rn <Action>(RenameElement)
 
 " Debugging
 map <leader>db <Action>(ToggleLineBreakpoint)
