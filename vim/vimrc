@@ -1,0 +1,7 @@
+let mapleader = " "
+
+let s:cfgDir = '~/.config/vim'
+
+exec 'source' s:cfgDir . '/options.vim'
+exec 'source' s:cfgDir . '/keymap.vim'
+exec 'source' s:cfgDir . '/ijkl.vim'
