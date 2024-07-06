@@ -11,8 +11,8 @@ Plug 'tpope/vim-surround'
 Plug 'machakann/vim-highlightedyank'
 let g:highlightedyank_highlight_duration = 1000
 
-" IJKL
-nmap gj <Action>(EditorLineStart)
+" Alternative to Home/End
+nmap gh <Action>(EditorLineStart)
 nmap gl <Action>(EditorLineEnd)
 
 " Editor - moving around

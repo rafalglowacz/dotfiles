@@ -8,11 +8,32 @@ nmap ge G
 
 " Start rectangular selection with something else than Ctrl+V.
 nmap <A-v> <C-v>
-" One more way:
+" One more way.
 nmap <leader>v <C-v>
 
-" Clear search highlight on Esc
+" Clear search highlight on Esc.
 nnoremap <Esc> :nohlsearch<CR><Esc>
+
+nnoremap gg gg0
+vnoremap gg gg0
+
+" Alternative to Home/End
+nmap gh _
+nmap gl $
+vmap gh _
+vmap gl $
+
+" Center view after certain movements.
+nnoremap <C-u> <C-u>zz
+nnoremap <C-d> <C-d>zz
+nnoremap G G$zz
+vnoremap G G$zz
+nnoremap ge G$zz
+
+nmap <A-h> <C-w><C-h>
+nmap <A-j> <C-w><C-j>
+nmap <A-k> <C-w><C-k>
+nmap <A-l> <C-w><C-l>
 
 "-----------
 " Editing -
@@ -22,6 +43,7 @@ nnoremap <Esc> :nohlsearch<CR><Esc>
 vnoremap > >gv
 vnoremap < <gv
 
+" More convenient redo, taken from Helix
 nnoremap U <C-r>
 
 " Make db/cb also include current character.
@@ -33,6 +55,7 @@ vnoremap p "_dP
 vnoremap c "_c
 nnoremap x "_x
 nnoremap C "_C
+nnoremap ci "_ci
 nnoremap cG "_cG
 
 " Add alternative bindings for deletion where copying isn't always intended.
@@ -44,5 +67,19 @@ vnoremap <A-d> "_d
 vnoremap y myy`y
 vnoremap Y myY`y
 
-" Save on Esc
-inoremap <Esc> <Esc>:w<CR>
+noremap! <S-Enter> <Esc>ko
+noremap! <C-Enter> <Esc>o
+noremap! <Esc>     <Esc>:w<CR>
+
+"------------------
+" Saving/exiting -
+"----------------
+
+map      <C-q> <Esc>:qa<CR>
+map!     <C-s> <Esc>:w<CR>a
+map      <C-s> :w<CR>
+noremap! <Esc> <Esc>:w<CR>
+
+" Close bottom panel. This doesn't check if there actually is more than 1 panel
+" and also assumes we don't have any top/bottom splits.
+nmap <S-Esc> <C-w><C-j>:q<CR>
