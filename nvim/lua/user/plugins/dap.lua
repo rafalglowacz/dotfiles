@@ -45,7 +45,13 @@ return {
         vim.keymap.set(
             'n',
             '<leader>dc',
-            function() dap.continue() end,
+            function()
+                if vim.bo.filetype == 'rust' then
+                    vim.cmd.RustLsp('debug')
+                else
+                    dap.continue()
+                end
+            end,
             { desc = '[C]ontinue' }
         )
         for _, key in ipairs({ '<F9>', '-o' }) do
