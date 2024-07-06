@@ -5,6 +5,7 @@ let mapleader = " "
 "------------------------
 
 nmap ge G
+vmap ge G
 
 " Start rectangular selection with something else than Ctrl+V.
 nmap <A-v> <C-v>
@@ -28,7 +29,6 @@ nnoremap <C-u> <C-u>zz
 nnoremap <C-d> <C-d>zz
 nnoremap G G$zz
 vnoremap G G$zz
-nnoremap ge G$zz
 
 nmap <A-h> <C-w><C-h>
 nmap <A-j> <C-w><C-j>
