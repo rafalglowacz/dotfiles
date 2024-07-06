@@ -59,8 +59,8 @@ vmap gc <Action>(CommentByLineComment)
 nmap gcc <Action>(CommentByLineComment)
 
 " Context-aware editing
-map -rr <Action>(Refactorings.QuickListPopupAction)
-map -rn <Action>(RenameElement)
+map <leader>cr <Action>(Refactorings.QuickListPopupAction)
+map <leader>cn <Action>(RenameElement)
 
 " Debugging
 map <leader>db <Action>(ToggleLineBreakpoint)
@@ -68,11 +68,11 @@ map <leader>dB <Action>(EditBreakpoint)
 map <leader>de <Action>(EvaluateExpression)
 map <leader>dl <Action>(PhpListenDebugAction)
 map <leader>dd <Action>(Resume)
-map <leader>dr <Action>(RunToCursor)
 
 map -i <Action>(StepInto)
 map -o <Action>(StepOver)
 map -u <Action>(StepOut)
+map -c <Action>(RunToCursor)
 
 " Git
 map  <leader>gg <Action>(Git.Menu)

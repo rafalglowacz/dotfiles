@@ -57,7 +57,7 @@ return {
         for _, key in ipairs({ '<F7>', '-u' }) do
             vim.keymap.set('n', key, dap.step_out, { desc = 'Step o[u]t' })
         end
-        for _, key in ipairs({ '<F5>', 'dr' }) do
+        for _, key in ipairs({ '<F5>', '-c' }) do
             vim.keymap.set('n', key, dap.run_to_cursor, { desc = 'Run to cursor' })
         end
         vim.keymap.set(

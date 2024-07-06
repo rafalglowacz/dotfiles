@@ -7,14 +7,25 @@ return {
         "nvim-treesitter/nvim-treesitter"
     },
     config = function()
-        require('neotest').setup({
-            adapters = { require('rustaceanvim.neotest') }
+        local neotest = require('neotest')
+        neotest.setup({
+            adapters = {
+                require('rustaceanvim.neotest'),
+            }
         })
 
         vim.keymap.set(
             'n',
             '<leader>td',
-            function() require('neotest').run.run({ strategy = 'dap' }) end
+            function() neotest.run.run({ strategy = 'dap' }) end,
+            { desc = 'Debug test' }
         )
+        vim.keymap.set(
+            'n',
+            '<leader>tf',
+            function() neotest.run.run(vim.fn.expand("%")) end,
+            { desc = 'Run file' }
+        )
+        vim.keymap.set('n', '<leader>tn', neotest.run.run, { desc = 'Run nearest' })
     end,
 }
