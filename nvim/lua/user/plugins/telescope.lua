@@ -105,13 +105,13 @@ return {
             'n',
             '<leader>s.',
             function() builtin.oldfiles({ cwd_only = true }) end,
-            { desc = 'Search Recent Files ("." for repeat)' }
+            { desc = 'Recent files' }
         )
         vim.keymap.set(
             'n',
             '<leader><leader>',
             function() builtin.buffers{ sort_lastused = true } end,
-            { desc = '[ ] Find existing buffers' }
+            { desc = 'List open files' }
         )
 
         vim.keymap.set('n', '<leader>/', function()
@@ -119,7 +119,7 @@ return {
                 winblend = 10,
                 previewer = false,
             })
-        end, { desc = '[/] Fuzzily search in current buffer' })
+        end, { desc = 'Search current file' })
 
         vim.keymap.set('n', '<leader>s/', function()
             builtin.live_grep {

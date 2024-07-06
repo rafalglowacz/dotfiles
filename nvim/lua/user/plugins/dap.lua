@@ -70,7 +70,7 @@ return {
         vim.keymap.set('n', '<leader>dr', dap.repl.open, { desc = 'Open [R]EPL' })
         vim.keymap.set('n', '<leader>dl', dap.run_last, { desc = 'Run [l]ast' })
         vim.keymap.set({ 'n', 'v' }, '<leader>dh', require('dap.ui.widgets').hover, { desc = '[H]over' })
-        vim.keymap.set({ 'n', 'v' }, '<leader>dp', require('dap.ui.widgets').preview)
+        vim.keymap.set({ 'n', 'v' }, '<leader>dp', require('dap.ui.widgets').preview, { desc = '[P]review' })
         vim.keymap.set(
             'n',
             '<leader>df',
