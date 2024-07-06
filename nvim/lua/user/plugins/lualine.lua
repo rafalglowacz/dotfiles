@@ -24,7 +24,14 @@ local winbar = {
         end,
     },
     lualine_y = {
-        { 'filename', path = 1 },
+        {
+            function()
+                return vim.api.nvim_call_function(
+                    'fnamemodify',
+                    { vim.fn.getcwd(), ':~' }
+                )
+            end,
+        },
     },
     lualine_z = {},
 }
@@ -47,14 +54,7 @@ return {
                 'diagnostics',
             },
             lualine_c = {
-                {
-                    function()
-                        return vim.api.nvim_call_function(
-                            'fnamemodify',
-                            { vim.fn.getcwd(), ':~' }
-                        )
-                    end,
-                },
+                { 'filename', path = 1 },
             },
             lualine_x = { 'filetype' },
             lualine_y = {
