@@ -1,3 +1,17 @@
+vim.keymap.set(
+  '!',
+  '<Esc>',
+  function()
+    -- Default behavior:
+    vim.cmd.stopinsert()
+    -- Save file, but not if it's a Neovim config file, as that results
+    -- in Neovim showing notifications about reloading the config all the time.
+    if string.find(vim.api.nvim_buf_get_name(0), '/dotfiles/nvim/') == nil then
+      vim.api.nvim_input(':w<CR>')
+    end
+  end
+)
+
 -- In visual mode, 'v' will toggle between char-wise and block-wise mode.
 vim.keymap.set('v', 'v', function()
   if vim.api.nvim_get_mode()['mode'] == 'v' then
