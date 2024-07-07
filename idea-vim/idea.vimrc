@@ -57,6 +57,8 @@ map <leader>ws <Action>(GotoSymbol)
 " Editing
 vmap gc <Action>(CommentByLineComment)
 nmap gcc <Action>(CommentByLineComment)
+nnoremap <A-a> <C-a>
+nnoremap <A-x> <C-x>
 
 " Context-aware editing
 map <leader>cr <Action>(Refactorings.QuickListPopupAction)
@@ -127,3 +129,21 @@ map <leader>0  <Action>(ActivateCommitToolWindow)
 map <leader>E  <Action>(ShowErrorDescription)
 map <leader>q  <Action>(ShowIntentionActions)
 map <leader>l  <Action>(LocalHistory)
+
+" Handlers
+sethandler <C-a> a:ide
+sethandler <C-b> a:vim
+sethandler <C-d> a:vim
+sethandler <C-f> a:vim
+sethandler <C-h> n:ide i:vim
+sethandler <C-i> n:ide i:vim
+sethandler <C-j> a:vim
+sethandler <C-n> a:vim
+sethandler <C-o> a:vim
+sethandler <C-r> n:ide i:vim
+sethandler <C-s> n:ide i:vim
+sethandler <C-u> n:ide i:vim
+sethandler <C-v> a:ide
+sethandler <C-w> n:ide i:vim
+sethandler <C-x> a:ide
+sethandler <C-y> a:ide
