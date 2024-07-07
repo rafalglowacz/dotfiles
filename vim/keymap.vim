@@ -13,7 +13,7 @@ nmap <A-v> <C-v>
 nmap <leader>v <C-v>
 
 " Clear search highlight on Esc.
-nnoremap <Esc> :nohlsearch<CR><Esc>
+nnoremap <silent><Esc> :nohlsearch<CR><Esc>
 
 nnoremap gg gg0
 vnoremap gg gg0
@@ -69,7 +69,6 @@ vnoremap Y myY`y
 
 noremap! <S-Enter> <Esc>ko
 noremap! <C-Enter> <Esc>o
-noremap! <Esc>     <Esc>:w<CR>
 
 "------------------
 " Saving/exiting -

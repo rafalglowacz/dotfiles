@@ -4,6 +4,6 @@ return {
     config = function()
         local dapUi = require('dapui')
         dapUi.setup()
-        vim.keymap.set('n', '<leader>dU', dapUi.toggle)
+        vim.keymap.set('n', '<leader>dU', dapUi.toggle, { desc = 'Debugger [U]I' })
     end
 }

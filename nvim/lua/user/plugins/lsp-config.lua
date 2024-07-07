@@ -20,16 +20,16 @@ return {
                 local client = vim.lsp.get_client_by_id(event.data.client_id)
 
                 map('gd',         builtin.lsp_definitions,      '[G]oto [D]efinition')
+                map('gD',         vim.lsp.buf.declaration,      '[G]oto [D]eclaration')
                 map('gr',         builtin.lsp_references,       '[G]oto [R]eferences')
                 map('gI',         builtin.lsp_implementations,  '[G]oto [I]mplementation')
                 map('<leader>D',  builtin.lsp_type_definitions, 'Type [D]efinition')
-                map('<leader>ds', builtin.lsp_document_symbols, '[D]ocument [S]ymbols')
-                map('<leader>ws', builtin.lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
+                map('K',          vim.lsp.buf.hover,            'Hover Documentation')
 
+                map('<leader>cs', builtin.lsp_document_symbols,          '[S]ymbols in file')
+                map('<leader>cS', builtin.lsp_dynamic_workspace_symbols, '[S]ymbols in workspace')
                 map('<leader>cn', vim.lsp.buf.rename,      'Re[n]ame')
                 map('<leader>cr', vim.lsp.buf.code_action, '[R]efactor')
-                map('K',          vim.lsp.buf.hover,       'Hover Documentation')
-                map('gD',         vim.lsp.buf.declaration, '[G]oto [D]eclaration')
 
                 if client and client.server_capabilities.documentHighlightProvider then
                     vim.api.nvim_create_autocmd({ 'CursorHold', 'CursorHoldI' }, {
