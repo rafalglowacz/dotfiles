@@ -42,28 +42,34 @@ return {
         }
 
         -- Key bindings
-        vim.keymap.set(
-            'n',
-            '<leader>dc',
-            function()
-                if vim.bo.filetype == 'rust' then
-                    vim.cmd.RustLsp('debug')
-                else
-                    dap.continue()
-                end
-            end,
-            { desc = '[C]ontinue' }
-        )
-        for _, key in ipairs({ '<F9>', '-o' }) do
+
+        -- This is incomplete. "td" is only consistent with IdeaVim for starting
+        -- Rust tests and it can't debug tests for other languages yet.
+        for _, key in ipairs({ '<leader>dc', '<leader>td' }) do
+            vim.keymap.set(
+                'n',
+                key,
+                function()
+                    if vim.bo.filetype == 'rust' and dap.session() == nil then
+                        vim.cmd.RustLsp('debug')
+                    else
+                        dap.continue()
+                    end
+                end,
+                { desc = '[C]ontinue' }
+            )
+        end
+
+        for _, key in ipairs({ '<F9>', '-o', '<leader>do' }) do
             vim.keymap.set('n', key, dap.step_over, { desc = 'Step [o]ver' })
         end
-        for _, key in ipairs({ '<F8>', '-i' }) do
+        for _, key in ipairs({ '<F8>', '-i', '<leader>di' }) do
             vim.keymap.set('n', key, dap.step_into, { desc = 'Step [i]nto' })
         end
-        for _, key in ipairs({ '<F7>', '-u' }) do
+        for _, key in ipairs({ '<F7>', '-u', '<leader>du' }) do
             vim.keymap.set('n', key, dap.step_out, { desc = 'Step o[u]t' })
         end
-        for _, key in ipairs({ '<F5>', '-c' }) do
+        for _, key in ipairs({ '<F5>', '-r', '<leader>dr' }) do
             vim.keymap.set('n', key, dap.run_to_cursor, { desc = 'Run to cursor' })
         end
         vim.keymap.set(
@@ -73,8 +79,8 @@ return {
             { desc = 'Toggle [b]reakpoint' }
         )
         -- vim.keymap.set('n', '<leader>lp', function() dap.set_breakpoint(nil, nil, vim.fn.input('Log point message: ')) end)
-        vim.keymap.set('n', '<leader>dr', dap.repl.open, { desc = 'Open [R]EPL' })
-        vim.keymap.set('n', '<leader>dl', dap.run_last, { desc = 'Run [l]ast' })
+        vim.keymap.set('n', '<leader>de', dap.repl.open, { desc = 'Open R[E]PL' })
+        vim.keymap.set('n', '<leader>dd', dap.run_last, { desc = 'Run [l]ast' })
         vim.keymap.set({ 'n', 'v' }, '<leader>dh', require('dap.ui.widgets').hover, { desc = '[H]over' })
         vim.keymap.set({ 'n', 'v' }, '<leader>dp', require('dap.ui.widgets').preview, { desc = '[P]review' })
         vim.keymap.set(
