@@ -74,11 +74,13 @@ noremap! <C-Enter> <Esc>o
 " Saving/exiting -
 "----------------
 
-map      <C-q> <Esc>:qa<CR>
-map!     <C-s> <Esc>:w<CR>a
-map      <C-s> :w<CR>
 noremap! <Esc> <Esc>:w<CR>
 
-" Close bottom panel. This doesn't check if there actually is more than 1 panel
-" and also assumes we don't have any top/bottom splits.
-nmap <S-Esc> <C-w><C-j>:q<CR>
+if !has('ide')
+    map  <C-q> <Esc>:qa<CR>
+    map! <C-s> <Esc>:w<CR>a
+    map  <C-s> :w<CR>
+    " Close bottom panel. This doesn't check if there actually is more than 1 panel
+    " and also assumes we don't have any top/bottom splits.
+    nmap <S-Esc> <C-w><C-j>:q<CR>
+endif

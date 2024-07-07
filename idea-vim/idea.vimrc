@@ -4,7 +4,7 @@ source ~/.config/vim/vimrc
 set which-key
 set notimeout
 
-" Joining lines with editor's native joining instead off Vim's:
+" Joining lines with editor's native joining instead of Vim's:
 set ideajoin
 
 Plug 'tpope/vim-surround'
@@ -135,15 +135,16 @@ sethandler <C-a> a:ide
 sethandler <C-b> a:vim
 sethandler <C-d> a:vim
 sethandler <C-f> a:vim
-sethandler <C-h> n:ide i:vim
-sethandler <C-i> n:ide i:vim
-sethandler <C-j> a:vim
+sethandler <C-h> n:ide
+sethandler <C-i> n:ide
+sethandler <C-j> n:ide
 sethandler <C-n> a:vim
 sethandler <C-o> a:vim
-sethandler <C-r> n:ide i:vim
-sethandler <C-s> n:ide i:vim
-sethandler <C-u> n:ide i:vim
+sethandler <C-q> a:ide
+sethandler <C-r> n:ide
+sethandler <C-s> n:ide
+sethandler <C-u> n:ide
 sethandler <C-v> a:ide
-sethandler <C-w> n:ide i:vim
+sethandler <C-w> n:ide
 sethandler <C-x> a:ide
 sethandler <C-y> a:ide
