@@ -1,4 +1,5 @@
 set clipboard^=unnamedplus
+set foldopen=
 set hlsearch
 set ignorecase
 set iskeyword+=-
