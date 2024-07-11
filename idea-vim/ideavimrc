@@ -16,6 +16,8 @@ nmap gh <Action>(EditorLineStart)
 nmap gl <Action>(EditorLineEnd)
 
 " Editor - moving around
+source ~/.config/ideavim/ijkl.vimrc
+
 nmap     gt        <Action>(GotoTest)
 nmap     A         <Action>(EditorLineEnd)a
  map     n         <Action>(FindNext)
