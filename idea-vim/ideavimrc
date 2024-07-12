@@ -1,5 +1,7 @@
 source ~/.config/vim/vimrc
 
+set norelativenumber
+
 " Overlay with key binding tips:
 set which-key
 set notimeout
