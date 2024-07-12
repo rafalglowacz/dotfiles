@@ -45,6 +45,9 @@ imap     <End>     <Action>(EditorLineEnd)
 nmap     <leader>h <Action>(HighlightUsagesInFile)
 vmap     <leader>h <Action>(HighlightUsagesInFile)<Esc>
 
+map <C-u> <Action>(EditorUp)<Action>(EditorUp)<Action>(EditorUp)<Action>(EditorUp)<Action>(EditorUp)<Action>(EditorUp)<Action>(EditorUp)<Action>(EditorUp)<Action>(EditorUp)<Action>(EditorUp)<Action>(EditorScrollToCenter)
+map <C-d> <Action>(EditorDown)<Action>(EditorDown)<Action>(EditorDown)<Action>(EditorDown)<Action>(EditorDown)<Action>(EditorDown)<Action>(EditorDown)<Action>(EditorDown)<Action>(EditorDown)<Action>(EditorDown)<Action>(EditorScrollToCenter)
+
 " Global navigation
 map <leader><leader> <Action>(RecentFiles)
 map <leader>q  :q<CR>
@@ -136,7 +139,7 @@ map <leader>l  <Action>(LocalHistory)
 " Handlers
 sethandler <C-a> i:ide
 sethandler <C-b> a:vim
-sethandler <C-d> a:vim
+sethandler <C-d> i:ide
 sethandler <C-f> a:vim
 sethandler <C-h> n:ide
 sethandler <C-i> a:vim
@@ -146,7 +149,7 @@ sethandler <C-o> a:vim
 sethandler <C-q> a:ide
 sethandler <C-r> n:ide
 sethandler <C-s> n:ide
-sethandler <C-u> n:ide
+sethandler <C-u> i:ide
 sethandler <C-v> a:ide
 sethandler <C-w> n:ide
 sethandler <C-x> i:ide
