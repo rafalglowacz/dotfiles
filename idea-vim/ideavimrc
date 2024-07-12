@@ -134,7 +134,7 @@ map <leader>q  <Action>(ShowIntentionActions)
 map <leader>l  <Action>(LocalHistory)
 
 " Handlers
-sethandler <C-a> a:ide
+sethandler <C-a> i:ide
 sethandler <C-b> a:vim
 sethandler <C-d> a:vim
 sethandler <C-f> a:vim
@@ -149,5 +149,5 @@ sethandler <C-s> n:ide
 sethandler <C-u> n:ide
 sethandler <C-v> a:ide
 sethandler <C-w> n:ide
-sethandler <C-x> a:ide
+sethandler <C-x> i:ide
 sethandler <C-y> a:ide
