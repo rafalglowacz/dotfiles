@@ -145,7 +145,7 @@ sethandler <C-d> i:ide
 sethandler <C-f> a:vim
 sethandler <C-h> n:ide
 sethandler <C-i> a:vim
-sethandler <C-j> n:ide
+sethandler <C-j> a:ide
 sethandler <C-n> a:vim
 sethandler <C-o> a:vim
 sethandler <C-q> a:ide
