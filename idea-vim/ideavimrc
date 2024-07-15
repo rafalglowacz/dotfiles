@@ -113,8 +113,8 @@ map <leader>rs <Action>(Stop)
 
 " Testing
 map <leader>td <Action>(Debug)
-map <leader>tn <Action>(RunClass) " Nearest
-map <leader>tl <Action>(Run)      " Last
+map <leader>tn <Action>(RunClass)
+map <leader>tl <Action>(Run)
 map <leader>tc <Action>(Coverage)
 map <leader>tr <Action>(RerunFailedTests)
 
