@@ -66,6 +66,7 @@ vmap gc <Action>(CommentByLineComment)
 nmap gcc <Action>(CommentByLineComment)
 nnoremap <A-a> <C-a>
 nnoremap <A-x> <C-x>
+nmap <leader>cA <Action>(StringManipulation.AlignCarets)
 
 " Context-aware editing
 map <leader>cr <Action>(Refactorings.QuickListPopupAction)
