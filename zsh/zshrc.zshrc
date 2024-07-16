@@ -86,6 +86,7 @@ fi
 
 source $ZSHRC_DIR/configs/fnm.zshrc
 source $ZSHRC_DIR/configs/fzf.zshrc
+source $ZSHRC_DIR/configs/atuin.zshrc
 
 # Haskell
 [ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env"
