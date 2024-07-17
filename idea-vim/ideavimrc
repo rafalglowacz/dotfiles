@@ -130,7 +130,7 @@ map <leader>8  <Action>(ActivateBuildToolWindow)
 map <leader>9  <Action>(ActivateVersionControlToolWindow)
 map <leader>0  <Action>(ActivateCommitToolWindow)
 
-map <leader>E  <Action>(ShowErrorDescription)
+map <leader>e  <Action>(ShowErrorDescription)
 map <leader>q  <Action>(ShowIntentionActions)
 map <leader>l  <Action>(LocalHistory)
 
