@@ -1,6 +1,13 @@
 source ~/.config/vim/vimrc
 
+" Relative numbers aren't useful here, as I bound movement keys to native IDE
+" actions which doesn't work with count. So let's have absolute numbers instead.
 set norelativenumber
+
+" Also a consequence of using native movements. Scrolloff doesn't
+" work with them but some commands still use it (e.g. high/low jumps)
+" so let disable it for consistency.
+set scrolloff=0
 
 " Overlay with key binding tips:
 set which-key
@@ -87,6 +94,7 @@ map -i <Action>(StepInto)
 map -o <Action>(StepOver)
 map -u <Action>(StepOut)
 map -r <Action>(RunToCursor)
+map -- <Action>(Resume)
 
 " Git
 map  <leader>gg <Action>(Git.Menu)
@@ -106,7 +114,7 @@ nmap <leader>p <Action>(VcsShowPrevChangeMarker)
 " PhpStorm
 map <leader>P  <Action>(ManageRecentProjects)
 map <leader>/  <Action>(GotoAction)
-map <leader>,  :source ~/.ideavimrc<CR>
+map <leader>,  :source ~/.config/ideavim/ideavimrc<CR>
 
 ": Running
 map <leader>rr <Action>(ChooseRunConfiguration)
