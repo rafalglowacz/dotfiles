@@ -1,3 +1,6 @@
+[core]
+	editor = helix
+	pager = delta
 [include]
 	path = ~/.gitconfig.local
 	# path = ~/Dev/lib/delta/themes.gitconfig
@@ -31,9 +34,6 @@
 	st  = status
 [pull]
 	rebase = false
-[core]
-	editor = nvim
-	pager = delta
 [stash]
 	showPatch = 1
 	showStat = 0
