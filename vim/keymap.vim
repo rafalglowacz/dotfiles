@@ -35,6 +35,22 @@ nmap <A-j> <C-w><C-j>
 nmap <A-k> <C-w><C-k>
 nmap <A-l> <C-w><C-l>
 
+" Rant: Vim doesn't allow remapping Esc in insert mode and its default behavior
+" is weird - even if you didn't do anything since entering this mode, the caret 
+" won't be on the same character as before, it'll be the one to the left.
+" Somehow it's considered correct behavior and no built-in option to change
+" it is provided. But press <Esc>i a few times and you'll see why it's ridiculous.
+" One thing that's suggested to get around it, or even as something worth
+" doing in general, is to take a sequence that doesn't usually occur in typed
+" text and mapping it to Esc and whatever you want to get the desired outcome.
+" Here's an example that achieves keeping the caret in one place. It works,
+" but it makes the typing experience unpleasant. When typing a word with a
+" "j", for example "just", you'll get what you want, but the caret will behave
+" differently for a split second. It'll look like it goes back and highlights
+" a character. If you linger for a moment and Which Key's popup shows, the "j"
+" will disappear. So eventually I decided to abandon this attempt.
+"imap jj <Esc>`^
+
 "-----------
 " Editing -
 "---------
