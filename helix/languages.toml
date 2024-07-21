@@ -1,6 +1,29 @@
+########
+# PHP #
+######
+
 [language-server.phpactor]
 command = "phpactor"
 args = [ "language-server" ]
+
 [[language]]
 name = "php"
 language-servers = [ "phpactor" ]
+
+########
+# Vue #
+######
+
+# npm install -g typescript typescript-language-server
+# npm i -g @vue/language-server
+
+[[language-server.typescript-language-server.config.plugins]]
+name = "@vue/typescript-plugin"
+location = "/home/rafal/.local/share/fnm/node-versions/v20.15.0/installation/lib/node_modules/@vue/language-server"
+languages = ["vue"]
+
+[[language]]
+name = "vue"
+auto-format = true
+# formatter = { command = "prettier", args = ["--parser", "vue"] }
+language-servers = ["typescript-language-server"]
