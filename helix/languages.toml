@@ -17,13 +17,22 @@ language-servers = [ "phpactor" ]
 # npm install -g typescript typescript-language-server
 # npm i -g @vue/language-server
 
-[[language-server.typescript-language-server.config.plugins]]
-name = "@vue/typescript-plugin"
-location = "/home/rafal/.local/share/fnm/node-versions/v20.15.1/installation/lib/node_modules/@vue/language-server"
-languages = ["vue"]
+# [[language-server.typescript-language-server.config.plugins]]
+# name = "@vue/typescript-plugin"
+# location = "/home/rafal/.local/share/fnm/node-versions/v20.15.1/installation/lib/node_modules/@vue/language-server"
+# languages = ["vue"]
+
+# Make sure you install an older VLS version.
+# `npm -g i @vue/language-server@^1`
+[language-server.vue-language-server-v1]
+command = "vue-language-server"
+args = ["--stdio"]
+config = {typescript = {tsdk = "/home/rafal/.local/share/fnm/aliases/default/lib/node_modules/typescript/lib"}}
 
 [[language]]
 name = "vue"
-auto-format = true
+# auto-format = true
 # formatter = { command = "prettier", args = ["--parser", "vue"] }
-language-servers = ["typescript-language-server"]
+# language-servers = ["typescript-language-server"]
+language-servers = ["vue-language-server-v1"]
+
