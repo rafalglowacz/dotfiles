@@ -18,6 +18,8 @@ j = "move_char_left"
 k = "move_visual_line_down"
 l = "move_char_right"
 
+g = { j = "goto_line_start" }
+
 h = "insert_mode"
 H = "insert_at_line_start"
 
