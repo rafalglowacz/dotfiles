@@ -19,7 +19,7 @@ language-servers = [ "phpactor" ]
 
 [[language-server.typescript-language-server.config.plugins]]
 name = "@vue/typescript-plugin"
-location = "/home/rafal/.local/share/fnm/node-versions/v20.15.0/installation/lib/node_modules/@vue/language-server"
+location = "/home/rafal/.local/share/fnm/node-versions/v20.15.1/installation/lib/node_modules/@vue/language-server"
 languages = ["vue"]
 
 [[language]]
