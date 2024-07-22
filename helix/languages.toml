@@ -4,11 +4,11 @@
 
 [language-server.phpactor]
 command = "phpactor"
-args = [ "language-server" ]
+args = ["language-server"]
 
 [[language]]
 name = "php"
-language-servers = [ "phpactor" ]
+language-servers = ["phpactor"]
 
 ########
 # Vue #
@@ -16,7 +16,7 @@ language-servers = [ "phpactor" ]
 
 [[language-server.typescript-language-server.config.plugins]]
 name = "@vue/typescript-plugin"
-location = "/home/rafal/.local/share/fnm/node-versions/v20.15.1/installation/lib/node_modules/@vue/language-server"
+location = "/home/rafal/.local/share/fnm/aliases/default/lib/node_modules/@vue/language-server"
 languages = ["vue"]
 
 # Make sure you install an older VLS version.
@@ -30,6 +30,7 @@ config = {typescript = {tsdk = "/home/rafal/.local/share/fnm/aliases/default/lib
 name = "vue"
 # auto-format = true
 # formatter = { command = "prettier", args = ["--parser", "vue"] }
+
 # language-servers = ["typescript-language-server"]
 language-servers = ["vue-language-server-v1"]
 
