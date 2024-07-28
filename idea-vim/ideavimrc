@@ -117,7 +117,8 @@ map <leader>/  <Action>(GotoAction)
 map <leader>,  :source ~/.config/ideavim/ideavimrc<CR>
 
 ": Running
-map <leader>rr <Action>(ChooseRunConfiguration)
+map <leader>rr <Action>(Run)
+map <leader>rR <Action>(ChooseRunConfiguration)
 map <leader>rs <Action>(Stop)
 
 " Testing
