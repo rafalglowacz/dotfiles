@@ -24,6 +24,7 @@ alias l1='ls -1'
 
 alias phpv='php --version'
 alias rgp='rg --engine pcre2'
+alias rover="$HOME/.local/share/JetBrains/Toolbox/apps/rustrover/bin/rustrover.sh"
 alias storm="$HOME/.local/share/JetBrains/Toolbox/apps/phpstorm/bin/phpstorm.sh"
 alias astro='XDG_CONFIG_HOME=~/.config/nvim-astro XDG_CACHE_HOME=~/.cache/nvim-astro XDG_DATA_HOME=~/.local/share/nvim-astro XDG_STATE_HOME=~/.local/state/nvim-astro nvim'
 
