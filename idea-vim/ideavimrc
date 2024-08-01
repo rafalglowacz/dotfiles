@@ -1,0 +1,6 @@
+" When our config is in ~/.config/ideavim/, it's expected NOT to have
+" an extension, but then we lose syntax highlighting. Let's have a dummy
+" file without extension (this one) that just sources the real config.
+
+source ~/.config/ideavim/ideavimrc.vimrc
+
