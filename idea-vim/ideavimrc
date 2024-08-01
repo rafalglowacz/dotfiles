@@ -75,6 +75,9 @@ nnoremap <A-a> <C-a>
 nnoremap <A-x> <C-x>
 nmap <leader>cA <Action>(StringManipulation.AlignCarets)
 
+" Code intelligence
+nmap <C-k> <Action>(ParameterInfo)
+
 " Context-aware editing
 map <leader>cr <Action>(Refactorings.QuickListPopupAction)
 map <leader>cn <Action>(RenameElement)
@@ -117,7 +120,7 @@ map <leader>P  <Action>(ManageRecentProjects)
 map <leader>/  <Action>(GotoAction)
 map <leader>,  :source ~/.config/ideavim/ideavimrc<CR>
 
-": Running
+" Running
 map <leader>rr <Action>(Run)
 map <leader>rR <Action>(ChooseRunConfiguration)
 map <leader>rs <Action>(Stop)
