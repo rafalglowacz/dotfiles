@@ -37,6 +37,7 @@ nmap     <leader>bb <Action>(ToggleBookmark)
 nmap     <leader>bp <Action>(GotoPreviousBookmarkInEditor)
 nmap     <leader>bn <Action>(GotoNextBookmarkInEditor)
 nmap     zz         zz<Action>(EditorScrollDown)<Action>(EditorScrollDown)<Action>(EditorScrollDown)<Action>(EditorScrollDown)<Action>(EditorScrollDown)
+nmap     zt         zt<Action>(EditorScrollUp)<Action>(EditorScrollUp)<Action>(EditorScrollUp)<Action>(EditorScrollUp)<Action>(EditorScrollUp)
 
 nmap     <C-o>     <Action>(Back)
 nmap     <C-i>     <Action>(Forward)
