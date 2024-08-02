@@ -83,24 +83,6 @@ nmap <C-k> <Action>(ParameterInfo)
 map <leader>cr <Action>(Refactorings.QuickListPopupAction)
 map <leader>cn <Action>(RenameElement)
 
-" Debugging
-map <leader>db <Action>(ToggleLineBreakpoint)
-map <leader>dB <Action>(EditBreakpoint)
-map <leader>de <Action>(EvaluateExpression)
-map <leader>dL <Action>(PhpListenDebugAction)
-map <leader>dc <Action>(Resume)
-map <leader>dd <Action>(Debug)
-map <leader>di <Action>(StepInto)
-map <leader>do <Action>(StepOver)
-map <leader>du <Action>(StepOut)
-map <leader>dr <Action>(RunToCursor)
-
-map -i <Action>(StepInto)
-map -o <Action>(StepOver)
-map -u <Action>(StepOut)
-map -r <Action>(RunToCursor)
-map -- <Action>(Resume)
-
 " Git
 map  <leader>gg <Action>(Git.Menu)
 map  <leader>gb <Action>(GitToolBox.BlameDetails)
@@ -122,16 +104,30 @@ map <leader>/  <Action>(GotoAction)
 map <leader>,  :source ~/.config/ideavim/ideavimrc<CR>
 
 " Running
+": Run (last)
 map <leader>rr <Action>(Run)
+": Run nearest
+map <leader>rn <Action>(RunClass)
 map <leader>rR <Action>(ChooseRunConfiguration)
 map <leader>rs <Action>(Stop)
 
-" Testing
-map <leader>td <Action>(Debug)
-map <leader>tn <Action>(RunClass)
-map <leader>tl <Action>(Run)
+": Running tests
 map <leader>tc <Action>(Coverage)
 map <leader>tr <Action>(RerunFailedTests)
+
+": Running with debugging
+": Debug (last)
+map <leader>dd <Action>(Debug)
+map <leader>db <Action>(ToggleLineBreakpoint)
+map <leader>dB <Action>(EditBreakpoint)
+map <leader>de <Action>(EvaluateExpression)
+map <leader>dL <Action>(PhpListenDebugAction)
+
+map -i <Action>(StepInto)
+map -o <Action>(StepOver)
+map -u <Action>(StepOut)
+map -c <Action>(RunToCursor)
+map -- <Action>(Resume)
 
 " Tool windows
 map <leader>1  <Action>(ActivateProjectToolWindow)
