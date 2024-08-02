@@ -1,12 +1,19 @@
+"-------------
+" BASE CONFIG
+"-----------
 source ~/.config/vim/vimrc
 
+"---------
+" OPTIONS
+"-------
+
 " Relative numbers aren't useful here, as I bound movement keys to native IDE
-" actions which doesn't work with count. So let's have absolute numbers instead.
+" actions which don't work with count. So let's have absolute numbers instead.
 set norelativenumber
 
 " Also a consequence of using native movements. Scrolloff doesn't
 " work with them but some commands still use it (e.g. high/low jumps)
-" so let disable it for consistency.
+" so let's disable it for consistency.
 set scrolloff=0
 
 " Overlay with key binding tips:
@@ -16,15 +23,26 @@ set notimeout
 " Joining lines with editor's native joining instead of Vim's:
 set ideajoin
 
+"---------
+" PLUGINS
+"-------
+
 Plug 'tpope/vim-surround'
 Plug 'machakann/vim-highlightedyank'
 let g:highlightedyank_highlight_duration = 1000
+
+"--------------
+" KEY BINDINGS
+"------------
+
+"------------------------
+" Editor - moving around
+"----------------------
 
 " Alternative to Home/End
 nmap gh <Action>(EditorLineStart)
 nmap gl <Action>(EditorLineEnd)
 
-" Editor - moving around
 source ~/.config/ideavim/ijkl.vimrc
 
 nmap     gt        <Action>(GotoTest)
@@ -55,68 +73,75 @@ imap     <End>     <Action>(EditorLineEnd)
 nmap     <leader>h <Action>(HighlightUsagesInFile)
 vmap     <leader>h <Action>(HighlightUsagesInFile)<Esc>
 
-map <C-u> <Action>(EditorUp)<Action>(EditorUp)<Action>(EditorUp)<Action>(EditorUp)<Action>(EditorUp)<Action>(EditorUp)<Action>(EditorUp)<Action>(EditorUp)<Action>(EditorUp)<Action>(EditorUp)<Action>(EditorScrollToCenter)
-map <C-d> <Action>(EditorDown)<Action>(EditorDown)<Action>(EditorDown)<Action>(EditorDown)<Action>(EditorDown)<Action>(EditorDown)<Action>(EditorDown)<Action>(EditorDown)<Action>(EditorDown)<Action>(EditorDown)<Action>(EditorScrollToCenter)
+map <C-u> <Action>(EditorUp)<Action>(EditorUp)<Action>(EditorUp)<Action>(EditorUp)<Action>(EditorUp)<Action>(EditorUp)<Action>(EditorUp)<Action>(EditorUp)<Action>(EditorUp)<Action>(EditorUp)
+map <C-d> <Action>(EditorDown)<Action>(EditorDown)<Action>(EditorDown)<Action>(EditorDown)<Action>(EditorDown)<Action>(EditorDown)<Action>(EditorDown)<Action>(EditorDown)<Action>(EditorDown)<Action>(EditorDown)
 
+"-------------------
 " Global navigation
-map <leader><leader> <Action>(RecentFiles)
-map <leader>q  :q<CR>
+"-----------------
 
-map <leader>sc <Action>(GotoClass)
+map <leader><leader> <Action>(RecentFiles)
+
 map <leader>;  <Action>(GotoClass)
-map <leader>sf <Action>(GotoFile)
 map <leader>f  <Action>(GotoFile)
 map <leader>F  <Action>(SelectInProjectView)
-map <leader>ws <Action>(GotoSymbol)
 
+"---------
 " Editing
+"-------
+
 vmap gc <Action>(CommentByLineComment)
 nmap gcc <Action>(CommentByLineComment)
-nnoremap <A-a> <C-a>
-nnoremap <A-x> <C-x>
 nmap <leader>cA <Action>(StringManipulation.AlignCarets)
 
+"-------------------
 " Code intelligence
-nmap <C-k> <Action>(ParameterInfo)
+"-----------------
 
-" Context-aware editing
-map <leader>cr <Action>(Refactorings.QuickListPopupAction)
-map <leader>cn <Action>(RenameElement)
+nmap <C-k>      <Action>(ParameterInfo)
+map  <leader>cr <Action>(Refactorings.QuickListPopupAction)
+map  <leader>cn <Action>(RenameElement)
 
+"-----
 " Git
+"---
+
 map  <leader>gg <Action>(Git.Menu)
 map  <leader>gb <Action>(GitToolBox.BlameDetails)
 map  <leader>gh <Action>(Vcs.RollbackChangedLines)
 map  <leader>gH <Action>(Vcs.ShowTabbedFileHistory)
 map  <leader>gS <Action>(Vcs.ShowHistoryForBlock)
-
-": Preview diff under cursor:
+" Preview diff under cursor:
 nmap <leader>gP <Action>(VcsShowCurrentChangeMarker)
 
-nmap ]g <Action>(VcsShowNextChangeMarker)
-nmap [g <Action>(VcsShowPrevChangeMarker)
 nmap <leader>n <Action>(VcsShowNextChangeMarker)
 nmap <leader>p <Action>(VcsShowPrevChangeMarker)
 
-" PhpStorm
+"-----
+" IDE
+"---
+
 map <leader>P  <Action>(ManageRecentProjects)
 map <leader>/  <Action>(GotoAction)
 map <leader>,  :source ~/.config/ideavim/ideavimrc<CR>
 
+"---------
 " Running
-": Run (last)
+"-------
+
+" Run (most recent)
 map <leader>rr <Action>(Run)
-": Run nearest
+" Run nearest
 map <leader>rn <Action>(RunClass)
 map <leader>rR <Action>(ChooseRunConfiguration)
 map <leader>rs <Action>(Stop)
 
-": Running tests
+" Test-specific
 map <leader>tc <Action>(Coverage)
 map <leader>tr <Action>(RerunFailedTests)
 
-": Running with debugging
-": Debug (last)
+" Debugging-specific
+" Debug (most recent)
 map <leader>dd <Action>(Debug)
 map <leader>db <Action>(ToggleLineBreakpoint)
 map <leader>dB <Action>(EditBreakpoint)
@@ -129,7 +154,10 @@ map -u <Action>(StepOut)
 map -c <Action>(RunToCursor)
 map -- <Action>(Resume)
 
+"--------------
 " Tool windows
+"------------
+
 map <leader>1  <Action>(ActivateProjectToolWindow)
 map <leader>2  <Action>(ActivateBookmarksToolWindow)
 map <leader>3  <Action>(ActivateFindToolWindow)
@@ -144,20 +172,28 @@ map <leader>e  <Action>(ShowErrorDescription)
 map <leader>q  <Action>(ShowIntentionActions)
 map <leader>l  <Action>(LocalHistory)
 
+"----------
 " Handlers
+"--------
+
 sethandler <C-a> i:ide
 sethandler <C-b> a:vim
+
+" Let Vim handle Ctrl+D in normal mode, but allow the IDE to create selections
+" from word under cursor in the insert mode. We have to also let the IDE handle
+" the visual mode as creating the first selections automatically switches to it.
 sethandler <C-d> i-v:ide
+
 sethandler <C-f> a:vim
-sethandler <C-h> n:ide
+sethandler <C-h> a:ide
 sethandler <C-i> a:vim
 sethandler <C-j> a:ide
-sethandler <C-n> a:vim
+sethandler <C-n> a:ide
 sethandler <C-o> a:vim
 sethandler <C-q> a:ide
 sethandler <C-r> n:ide
 sethandler <C-s> n:ide
-sethandler <C-u> i-v:ide
+sethandler <C-u> i:ide
 sethandler <C-v> a:ide
 sethandler <C-w> a:ide
 sethandler <C-x> i:ide
