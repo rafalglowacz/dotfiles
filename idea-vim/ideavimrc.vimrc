@@ -150,7 +150,7 @@ map <leader>l  <Action>(LocalHistory)
 " Handlers
 sethandler <C-a> i:ide
 sethandler <C-b> a:vim
-sethandler <C-d> i:ide
+sethandler <C-d> i-v:ide
 sethandler <C-f> a:vim
 sethandler <C-h> n:ide
 sethandler <C-i> a:vim
@@ -160,8 +160,8 @@ sethandler <C-o> a:vim
 sethandler <C-q> a:ide
 sethandler <C-r> n:ide
 sethandler <C-s> n:ide
-sethandler <C-u> i:ide
+sethandler <C-u> i-v:ide
 sethandler <C-v> a:ide
-sethandler <C-w> n:ide
+sethandler <C-w> a:ide
 sethandler <C-x> i:ide
-sethandler <C-y> a:ide
+sethandler <C-y> i:ide
