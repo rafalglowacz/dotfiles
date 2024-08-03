@@ -172,6 +172,12 @@ map <leader>e  <Action>(ShowErrorDescription)
 map <leader>q  <Action>(ShowIntentionActions)
 map <leader>l  <Action>(LocalHistory)
 
+"------
+" View
+"----
+
+map <leader>w <Action>(EditorToggleUseSoftWraps)
+
 "----------
 " Handlers
 "--------
