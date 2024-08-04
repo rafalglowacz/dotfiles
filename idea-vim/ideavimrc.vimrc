@@ -153,6 +153,7 @@ map -o <Action>(StepOver)
 map -u <Action>(StepOut)
 map -c <Action>(RunToCursor)
 map -- <Action>(Resume)
+map -e <Action>(EvaluateExpression)
 
 "--------------
 " Tool windows
