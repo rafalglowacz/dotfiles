@@ -90,9 +90,10 @@ map <leader>F  <Action>(SelectInProjectView)
 " Editing
 "-------
 
-vmap gc <Action>(CommentByLineComment)
-nmap gcc <Action>(CommentByLineComment)
 nmap <leader>cA <Action>(StringManipulation.AlignCarets)
+
+map <S-Space> <Action>(EditorSelectWord)
+map <C-Space> <Action>(EditorUnSelectWord)
 
 "-------------------
 " Code intelligence
