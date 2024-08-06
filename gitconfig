@@ -17,6 +17,7 @@
 	ds  = d --staged
 	dsu = diff -w --staged
 	dt  = difftool
+	f   = fetch
 	# History
 	hs  = log --pretty='%C(yellow)%h %C(cyan)%cd %C(auto)%s%C(auto)%d %C(reset)' --graph --date=human
 	# History long
