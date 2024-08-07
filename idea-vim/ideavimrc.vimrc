@@ -45,33 +45,33 @@ nmap gl <Action>(EditorLineEnd)
 
 source ~/.config/ideavim/ijkl.vimrc
 
-nmap     gt        <Action>(GotoTest)
-nmap     A         <Action>(EditorLineEnd)a
- map     n         <Action>(FindNext)
- map     N         <Action>(FindPrevious)
-nmap     /         <Action>(Replace)
-vmap     /         <Action>(Replace)
-nmap     <leader>bb <Action>(ToggleBookmark)
-nmap     <leader>bp <Action>(GotoPreviousBookmarkInEditor)
-nmap     <leader>bn <Action>(GotoNextBookmarkInEditor)
-nmap     zz         zz<Action>(EditorScrollDown)<Action>(EditorScrollDown)<Action>(EditorScrollDown)<Action>(EditorScrollDown)<Action>(EditorScrollDown)
-nmap     zt         zt<Action>(EditorScrollUp)<Action>(EditorScrollUp)<Action>(EditorScrollUp)<Action>(EditorScrollUp)<Action>(EditorScrollUp)
+nmap gt        <Action>(GotoTest)
+nmap A         <Action>(EditorLineEnd)a
+ map n         <Action>(FindNext)
+ map N         <Action>(FindPrevious)
+nmap /         <Action>(Replace)
+vmap /         <Action>(Replace)
+nmap <leader>bb <Action>(ToggleBookmark)
+nmap <leader>bp <Action>(GotoPreviousBookmarkInEditor)
+nmap <leader>bn <Action>(GotoNextBookmarkInEditor)
+nmap zz         zz<Action>(EditorScrollDown)<Action>(EditorScrollDown)<Action>(EditorScrollDown)<Action>(EditorScrollDown)<Action>(EditorScrollDown)
+nmap zt         zt<Action>(EditorScrollUp)<Action>(EditorScrollUp)<Action>(EditorScrollUp)<Action>(EditorScrollUp)<Action>(EditorScrollUp)
 
-nmap     <C-o>     <Action>(Back)
-nmap     <C-i>     <Action>(Forward)
+nmap <C-o>     <Action>(Back)
+nmap <C-i>     <Action>(Forward)
 
-map      <C-Up>    <Action>(EditorScrollUp)
-imap     <C-Up>    <Action>(EditorScrollUp)
-map      <C-Down>  <Action>(EditorScrollDown)
-imap     <C-Down>  <Action>(EditorScrollDown)
+map  <C-Up>    <Action>(EditorScrollUp)
+imap <C-Up>    <Action>(EditorScrollUp)
+map  <C-Down>  <Action>(EditorScrollDown)
+imap <C-Down>  <Action>(EditorScrollDown)
 
-map      <Home>    <Action>(EditorLineStart)
-imap     <Home>    <Action>(EditorLineStart)
-map      <End>     <Action>(EditorLineEnd)
-imap     <End>     <Action>(EditorLineEnd)
+map  <Home>    <Action>(EditorLineStart)
+imap <Home>    <Action>(EditorLineStart)
+map  <End>     <Action>(EditorLineEnd)
+imap <End>     <Action>(EditorLineEnd)
 
-nmap     <leader>h <Action>(HighlightUsagesInFile)
-vmap     <leader>h <Action>(HighlightUsagesInFile)<Esc>
+nmap <leader>h <Action>(HighlightUsagesInFile)
+vmap <leader>h <Action>(HighlightUsagesInFile)<Esc>
 
 map <C-u> <Action>(EditorUp)<Action>(EditorUp)<Action>(EditorUp)<Action>(EditorUp)<Action>(EditorUp)<Action>(EditorUp)<Action>(EditorUp)<Action>(EditorUp)<Action>(EditorUp)<Action>(EditorUp)
 map <C-d> <Action>(EditorDown)<Action>(EditorDown)<Action>(EditorDown)<Action>(EditorDown)<Action>(EditorDown)<Action>(EditorDown)<Action>(EditorDown)<Action>(EditorDown)<Action>(EditorDown)<Action>(EditorDown)
