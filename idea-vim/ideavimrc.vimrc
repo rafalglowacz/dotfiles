@@ -77,8 +77,9 @@ imap <Home>   <Action>(EditorLineStart)
 map  <End>    <Action>(EditorLineEnd)
 imap <End>    <Action>(EditorLineEnd)
 
-nmap <leader>h <Action>(HighlightUsagesInFile)
+nmap <leader>H <Action>(HighlightUsagesInFile)
 vmap <leader>h <Action>(HighlightUsagesInFile)<Esc>
+nmap <leader>h vhw<Action>(HighlightUsagesInFile)<Esc>
 
 map <C-u> <Action>(EditorUp)<Action>(EditorUp)<Action>(EditorUp)<Action>(EditorUp)<Action>(EditorUp)<Action>(EditorUp)<Action>(EditorUp)<Action>(EditorUp)<Action>(EditorUp)<Action>(EditorUp)
 map <C-d> <Action>(EditorDown)<Action>(EditorDown)<Action>(EditorDown)<Action>(EditorDown)<Action>(EditorDown)<Action>(EditorDown)<Action>(EditorDown)<Action>(EditorDown)<Action>(EditorDown)<Action>(EditorDown)
@@ -171,19 +172,20 @@ map -e <Action>(EvaluateExpression)
 " Tool windows
 "------------
 
-map <leader>1  <Action>(ActivateProjectToolWindow)
-map <leader>2  <Action>(ActivateBookmarksToolWindow)
-map <leader>3  <Action>(ActivateFindToolWindow)
-map <leader>4  <Action>(ActivateRunToolWindow)
-map <leader>5  <Action>(ActivateDebugToolWindow)
-map <leader>6  <Action>(ActivateProblemsViewToolWindow)
-map <leader>8  <Action>(ActivateBuildToolWindow)
-map <leader>9  <Action>(ActivateVersionControlToolWindow)
-map <leader>0  <Action>(ActivateCommitToolWindow)
+map <leader>1 <Action>(ActivateProjectToolWindow)
+map <leader>2 <Action>(ActivateBookmarksToolWindow)
+map <leader>3 <Action>(ActivateFindToolWindow)
+map <leader>4 <Action>(ActivateRunToolWindow)
+map <leader>5 <Action>(ActivateDebugToolWindow)
+map <leader>6 <Action>(ActivateProblemsViewToolWindow)
+map <leader>8 <Action>(ActivateBuildToolWindow)
+map <leader>9 <Action>(ActivateVersionControlToolWindow)
+map <leader>0 <Action>(ActivateCommitToolWindow)
 
-map <leader>e  <Action>(ShowErrorDescription)
-map <leader>q  <Action>(ShowIntentionActions)
-map <leader>l  <Action>(LocalHistory)
+map <leader>a <Action>(ActivateAIAssistantToolWindow)
+map <leader>e <Action>(ShowErrorDescription)
+map <leader>q <Action>(ShowIntentionActions)
+map <leader>l <Action>(LocalHistory)
 
 "------
 " View

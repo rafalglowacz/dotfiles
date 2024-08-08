@@ -36,7 +36,7 @@ nmap <A-k> <C-w><C-k>
 nmap <A-l> <C-w><C-l>
 
 " Rant: Vim doesn't allow remapping Esc in insert mode and its default behavior
-" is weird - even if you didn't do anything since entering this mode, the caret 
+" is weird - even if you didn't do anything since entering this mode, the caret
 " won't be on the same character as before, it'll be the one to the left.
 " Somehow it's considered correct behavior and no built-in option to change
 " it is provided. But press <Esc>i a few times and you'll see why it's ridiculous.
