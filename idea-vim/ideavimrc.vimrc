@@ -89,7 +89,8 @@ map mm <Action>(EditorMatchBrace)
 " Global navigation
 "-----------------
 
-map <leader><leader> <Action>(RecentFiles)
+map <leader><leader> <Action>(Switcher)
+map <leader><S-Space> <Action>(RecentFiles)
 
 map <leader>;  <Action>(GotoClass)
 map <leader>f  <Action>(GotoFile)
