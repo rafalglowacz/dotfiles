@@ -4,12 +4,12 @@ local act = wezterm.action
 
 -- Custom actions
 
-local activateCopyModeClearSearch = wezterm.action_callback(
-    function (window, pane)
-        window:perform_action(act.ActivateCopyMode, pane)
-        window:perform_action(act.CopyMode 'ClearPattern', pane)
-    end
-)
+-- local activateCopyModeClearSearch = wezterm.action_callback(
+--     function (window, pane)
+--         window:perform_action(act.ActivateCopyMode, pane)
+--         window:perform_action(act.CopyMode 'ClearPattern', pane)
+--     end
+-- )
 
 -- Font
 
@@ -38,7 +38,7 @@ config.scrollback_lines = 30000
 -- Window
 
 config.hide_tab_bar_if_only_one_tab = true
-config.window_decorations = 'NONE'
+-- config.window_decorations = 'NONE'
 config.adjust_window_size_when_changing_font_size = false
 config.enable_scroll_bar = true
 config.inactive_pane_hsb = {
@@ -88,16 +88,16 @@ config.keys = {
         mods = 'CMD|SHIFT',
         action = act.QuickSelect
     },
-    {
-        key = "X",
-        mods = 'CTRL|SHIFT',
-        action = activateCopyModeClearSearch,
-    },
-    {
-        key = "X",
-        mods = 'CMD|SHIFT',
-        action = activateCopyModeClearSearch,
-    },
+    -- {
+    --     key = "X",
+    --     mods = 'CTRL|SHIFT',
+    --     action = activateCopyModeClearSearch,
+    -- },
+    -- {
+    --     key = "X",
+    --     mods = 'CMD|SHIFT',
+    --     action = activateCopyModeClearSearch,
+    -- },
     {
         key = "F",
         mods = 'CTRL|SHIFT',
