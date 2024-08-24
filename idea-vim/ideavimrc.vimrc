@@ -105,6 +105,7 @@ nmap <leader>cA <Action>(StringManipulation.AlignCarets)
 
 map <S-Space> <Action>(EditorSelectWord)
 map <C-Space> <Action>(EditorUnSelectWord)
+map <Backspace> <Action>(EditorBackSpace)
 
 "-------------------
 " Code intelligence
