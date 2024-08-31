@@ -1,6 +1,6 @@
 alias g='git'
 alias gs='git status'
-alias gd='git -c core.pager="delta -s" diff -w HEAD'
+alias gd='git d -w HEAD'
 alias gdu='git diff -w HEAD'
 alias gpf='git push --force'
 alias grh='git reset --hard'
