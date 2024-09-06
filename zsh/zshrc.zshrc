@@ -67,6 +67,9 @@ MY_PATH="$MY_PATH:$HOME/bin:$HOME/.cargo/bin:$HOME/.local/bin:$HOME/.local/bin/g
 if [ -d "$HOME/bin2" ]; then 
 	MY_PATH="$MY_PATH:$HOME/bin2"
 fi
+if [ -d "$HOME/dev/flutter" ]; then
+	MY_PATH="$MY_PATH:$HOME/dev/flutter/bin"
+fi
 if [ -d /opt/homebrew ]; then
     MY_PATH="$MY_PATH:/opt/homebrew/opt/mysql-client/bin:/opt/homebrew/opt/ruby/bin"
 fi
@@ -80,9 +83,10 @@ export LESS='XRi'
 export RIPGREP_CONFIG_PATH=$ZSHRC_DIR/../ripgreprc
 export GIT_OPTIONAL_LOCKS=0
 export GOPATH=~/.local/bin/go
-if [ -z $KITTY_LISTEN_ON ]; then
-	export KITTY_LISTEN_ON=unix:/tmp/kitty-remote-control-$PPID
-fi
+[ -z $KITTY_LISTEN_ON ] &&
+    export KITTY_LISTEN_ON=unix:/tmp/kitty-remote-control-$PPID
+which chromium >> /dev/null &&
+    export CHROME_EXECUTABLE=$(which chromium)
 
 source $ZSHRC_DIR/configs/fnm.zshrc
 source $ZSHRC_DIR/configs/fzf.zshrc
