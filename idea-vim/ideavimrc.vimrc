@@ -43,7 +43,7 @@ let g:highlightedyank_highlight_duration = 1000
 nmap gh <Action>(EditorLineStart)
 nmap gl <Action>(EditorLineEnd)
 
-source ~/.config/ideavim/ijkl.vimrc
+"source ~/.config/ideavim/ijkl.vimrc
 
 nmap gt <Action>(GotoTest)
 nmap A  <Action>(EditorLineEnd)a
