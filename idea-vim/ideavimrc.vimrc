@@ -79,7 +79,7 @@ imap <End>    <Action>(EditorLineEnd)
 
 nmap <leader>H <Action>(HighlightUsagesInFile)
 vmap <leader>h <Action>(HighlightUsagesInFile)<Esc>
-nmap <leader>h vhw<Action>(HighlightUsagesInFile)<Esc>
+nmap <leader>h viw<Action>(HighlightUsagesInFile)<Esc>
 
 map <C-u> <Action>(EditorUp)<Action>(EditorUp)<Action>(EditorUp)<Action>(EditorUp)<Action>(EditorUp)<Action>(EditorUp)<Action>(EditorUp)<Action>(EditorUp)<Action>(EditorUp)<Action>(EditorUp)
 map <C-d> <Action>(EditorDown)<Action>(EditorDown)<Action>(EditorDown)<Action>(EditorDown)<Action>(EditorDown)<Action>(EditorDown)<Action>(EditorDown)<Action>(EditorDown)<Action>(EditorDown)<Action>(EditorDown)
