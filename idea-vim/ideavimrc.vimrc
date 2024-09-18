@@ -220,3 +220,4 @@ sethandler <C-v> a:ide
 sethandler <C-w> a:ide
 sethandler <C-x> i:ide
 sethandler <C-y> i:ide
+sethandler <C-t> a:ide
