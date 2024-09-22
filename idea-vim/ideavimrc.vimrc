@@ -23,7 +23,7 @@ set notimeout
 " Joining lines with editor's native joining instead of Vim's:
 set ideajoin
 
-set keymodel=startsel,stopsel
+set keymodel=startsel
 
 "---------
 " PLUGINS
