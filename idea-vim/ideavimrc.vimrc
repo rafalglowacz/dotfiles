@@ -23,7 +23,7 @@ set notimeout
 " Joining lines with editor's native joining instead of Vim's:
 set ideajoin
 
-set keymodel=startsel
+set keymodel=startsel,continueselect
 
 "---------
 " PLUGINS
@@ -74,10 +74,10 @@ imap <C-Up>   <Action>(EditorScrollUp)
 map  <C-Down> <Action>(EditorScrollDown)
 imap <C-Down> <Action>(EditorScrollDown)
 
-map  <Home>   <Action>(EditorLineStart)
+map  <Home>   _
 imap <Home>   <Action>(EditorLineStart)
-map  <End>    <Action>(EditorLineEnd)
-imap <End>    <Action>(EditorLineEnd)
+"map  <End>    <Action>(EditorLineEnd)
+"imap <End>    <Action>(EditorLineEnd)
 
 nmap <leader>H <Action>(HighlightUsagesInFile)
 vmap <leader>h <Action>(HighlightUsagesInFile)<Esc>
@@ -181,7 +181,7 @@ map <leader>3 <Action>(ActivateFindToolWindow)
 map <leader>4 <Action>(ActivateRunToolWindow)
 map <leader>5 <Action>(ActivateDebugToolWindow)
 map <leader>6 <Action>(ActivateProblemsViewToolWindow)
-map <leader>8 <Action>(ActivateBuildToolWindow)
+map <leader>8 <Action>(ActivateDatabaseToolWindow)
 map <leader>9 <Action>(ActivateVersionControlToolWindow)
 map <leader>0 <Action>(ActivateCommitToolWindow)
 
