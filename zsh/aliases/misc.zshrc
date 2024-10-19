@@ -27,6 +27,7 @@ alias rgp='rg --engine pcre2'
 alias rover="$HOME/.local/share/JetBrains/Toolbox/apps/rustrover/bin/rustrover.sh"
 alias storm="$HOME/.local/share/JetBrains/Toolbox/apps/phpstorm/bin/phpstorm.sh"
 alias astro='XDG_CONFIG_HOME=~/.config/nvim-astro XDG_CACHE_HOME=~/.cache/nvim-astro XDG_DATA_HOME=~/.local/share/nvim-astro XDG_STATE_HOME=~/.local/state/nvim-astro nvim'
+alias nvim-pager='XDG_CONFIG_HOME=~/.config/nvim-pager XDG_CACHE_HOME=~/.cache/nvim-pager XDG_DATA_HOME=~/.local/share/nvim-pager XDG_STATE_HOME=~/.local/state/nvim-pager nvim'
 
 if which thefuck > /dev/null; then
   eval $(thefuck --alias)
