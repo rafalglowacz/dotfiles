@@ -116,6 +116,7 @@ map <Backspace> <Action>(EditorBackSpace)
 nmap <C-k>      <Action>(ParameterInfo)
 map  <leader>cr <Action>(Refactorings.QuickListPopupAction)
 map  <leader>cn <Action>(RenameElement)
+map  gt         <Action>(GotoTest)
 
 "-----
 " Git
