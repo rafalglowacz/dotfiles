@@ -165,6 +165,7 @@ map <leader>dB <Action>(EditBreakpoint)
 map <leader>de <Action>(EvaluateExpression)
 map <leader>dl <Action>(ViewBreakpoints)
 map <leader>dL <Action>(PhpListenDebugAction)
+map <leader>dp <Action>(ShowExecutionPoint)
 map <leader>dR <Action>(Debugger.RemoveAllBreakpointsInFile)
 
 map -i <Action>(StepInto)
