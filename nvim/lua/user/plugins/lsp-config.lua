@@ -50,7 +50,7 @@ return {
 
         local servers = {
             rust_analyzer = {},
-            tsserver = {
+            ts_ls = {
                 cmd = local_opts['tsserver.cmd'], -- If nil, default cmd will be used.
                 init_options = {
                     tsserver = {
