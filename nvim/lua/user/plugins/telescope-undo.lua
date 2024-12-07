@@ -4,7 +4,7 @@ return {
     opts = {
         extensions = {
             undo = {
-                diff_context_lines = 3,
+                vim_diff_opts = { ctxlen = 3 },
                 side_by_side = true,
             },
         },
