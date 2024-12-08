@@ -44,7 +44,10 @@ return {
     },
     lazy = false,
     opts = {
-        options = { globalstatus = true },
+        options = { 
+            globalstatus = true,
+            disabled_filetypes = { 'CHADTree' },
+        },
         extensions = { 'aerial' },
         sections = {
             lualine_a = {
