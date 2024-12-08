@@ -44,7 +44,7 @@ return {
     },
     lazy = false,
     opts = {
-        options = { 
+        options = {
             globalstatus = true,
             disabled_filetypes = { 'CHADTree' },
         },
