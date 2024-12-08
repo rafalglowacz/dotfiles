@@ -10,6 +10,7 @@ return {
             },
             view = {
                 open_direction = 'right',
+                width = 30,
             },
         })
     end
