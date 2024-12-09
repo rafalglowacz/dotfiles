@@ -2,30 +2,30 @@ return {
     'vim-test/vim-test',
     keys = {
         {
-            '<leader>tn',
+            '<leader>rn',
             function() vim.cmd('silent TestNearest') end,
             desc = 'Test [n]earest',
         },
         {
-            '<leader>tf',
+            '<leader>rf',
             function() vim.cmd('silent TestFile') end,
             desc = 'Test [f]ile',
         },
+        -- {
+        --     '<leader>ts',
+        --     function() vim.cmd('silent TestSuite') end,
+        --     desc = 'Test [s]uite',
+        -- },
         {
-            '<leader>ts',
-            function() vim.cmd('silent TestSuite') end,
-            desc = 'Test [s]uite',
-        },
-        {
-            '<leader>tl',
+            '<leader>rr',
             function() vim.cmd('silent TestLast') end,
             desc = 'Test [l]ast',
         },
-        {
-            '<leader>tv',
-            function() vim.cmd('silent TestVisit') end,
-            desc = 'Test [v]isit',
-        },
+        -- {
+        --     '<leader>tv',
+        --     function() vim.cmd('silent TestVisit') end,
+        --     desc = 'Test [v]isit',
+        -- },
     },
     config = function()
       vim.cmd[[
