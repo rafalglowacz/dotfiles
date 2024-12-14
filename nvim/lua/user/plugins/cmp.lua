@@ -18,7 +18,14 @@ return {
     config = function()
         local cmp = require 'cmp'
         local luasnip = require 'luasnip'
-        luasnip.config.setup {}
+        luasnip.config.setup{
+            keep_roots = true,
+            link_roots = true,
+            link_children = true,
+            exit_roots = false,
+            update_events = { 'TextChanged', 'TextChangedI' },
+            enable_autosnippets = true,
+        }
 
         cmp.setup {
             snippet = {
@@ -79,5 +86,21 @@ return {
                 { name = 'path' },
             },
         }
+
+        for _, path in ipairs(vim.api.nvim_get_runtime_file('lua/user/snippets/*.lua', true)) do
+            loadfile(path)()
+        end
+
+        vim.keymap.set({ 'i', 's' }, '<c-k>', function()
+            if luasnip.expand_or_locally_jumpable() then
+              luasnip.expand_or_jump()
+            end
+        end, { silent = true })
+
+        vim.keymap.set({ 'i', 's' }, '<c-j>', function()
+            if luasnip.locally_jumpable(-1) then
+              luasnip.jump(-1)
+            end
+        end, { silent = true })
     end,
 }
