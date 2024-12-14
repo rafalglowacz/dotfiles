@@ -86,6 +86,10 @@ vnoremap Y myY`y
 noremap! <S-Enter> <Esc>ko
 noremap! <C-Enter> <Esc>o
 
+" Disable built-in binding for increasing intentation to reserve it for
+" completion.
+noremap! <C-t> <Nop>
+
 "------------------
 " Saving/exiting -
 "----------------
