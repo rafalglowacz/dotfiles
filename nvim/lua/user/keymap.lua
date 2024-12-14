@@ -12,8 +12,8 @@ vim.keymap.set(
   end
 )
 
--- In visual mode, 'v' will toggle between char-wise and block-wise mode.
-vim.keymap.set('v', 'v', function()
+-- Toggle between char-wise and block-wise mode.
+vim.keymap.set('v', '<A-v>', function()
   if vim.api.nvim_get_mode()['mode'] == 'v' then
     vim.api.nvim_input('<C-v>')
   else
