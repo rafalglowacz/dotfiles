@@ -9,26 +9,16 @@ return { -- Adds git related signs to the gutter, as well as utilities for manag
             topdelete = { text = '‾' },
             changedelete = { text = '~' },
         },
-    },
-    keys = {
-        { '<leader>gS', function() require'gitsigns'.undo_stage_hunk() end,
-          desc = 'Git: un[s]tage hunk' },
+        on_attach = function()
+            local gitsigns = require'gitsigns'
 
-        { '<leader>gs', function() require'gitsigns'.stage_hunk() end,
-          desc = 'Git: [s]tage hunk' },
-
-        { '<leader>gP', function() require'gitsigns'.preview_hunk() end,
-          desc = 'Git: [p]review hunk' },
-
-        { '<leader>gh', function() require'gitsigns'.reset_hunk() end,
-          desc = 'Git: reset [h]unk' },
-
-        { '<leader>gb', function() require'gitsigns'.blame_line() end,
-          desc = 'Git: [b]lame line' },
-
-        { ']g',        function() require'gitsigns'.next_hunk() end, desc = 'Git: next hunk' },
-        { '<leader>n', function() require'gitsigns'.next_hunk() end, desc = 'Git: next hunk' },
-        { '[g',        function() require'gitsigns'.prev_hunk() end, desc = 'Git: previous hunk' },
-        { '<leader>p', function() require'gitsigns'.prev_hunk() end, desc = 'Git: previous hunk' },
+            vim.keymap.set('n', '<leader>gs', gitsigns.stage_hunk, { desc = 'Git: [s]tage hunk' })
+            vim.keymap.set('n', '<leader>gS', gitsigns.undo_stage_hunk, { desc = 'Git: un[s]tage hunk' })
+            vim.keymap.set('n', '<leader>gP', gitsigns.preview_hunk, { desc = 'Git: [p]review hunk' })
+            vim.keymap.set('n', '<leader>gh', gitsigns.reset_hunk, { desc = 'Git: reset [h]unk' })
+            vim.keymap.set('n', '<leader>gb', gitsigns.blame_line, { desc = 'Git: [b]lame line' })
+            vim.keymap.set('n', '<leader>n', gitsigns.next_hunk, { desc = 'Git: next hunk' })
+            vim.keymap.set('n', '<leader>p', gitsigns.prev_hunk, { desc = 'Git: previous hunk' })
+        end,
     },
 }
