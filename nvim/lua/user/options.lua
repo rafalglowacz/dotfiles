@@ -18,7 +18,7 @@ vim.opt.incsearch = false
 vim.opt.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 vim.opt.mouse = 'a'
-vim.opt.signcolumn='auto:1-9'
+vim.opt.signcolumn='yes:1'
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.opt.timeoutlen = 300
