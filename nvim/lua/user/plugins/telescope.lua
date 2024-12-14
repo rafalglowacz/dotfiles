@@ -101,7 +101,9 @@ return {
         vim.keymap.set(
             'n',
             '<leader>sg',
-            make_callback(builtin.live_grep),
+            make_callback(function()
+                builtin.live_grep({ additional_args = { '--engine=pcre2' } })
+            end),
             { desc = 'Search by [g]rep' }
         )
         vim.keymap.set(
@@ -141,10 +143,11 @@ return {
         end, { desc = 'Search current file' })
 
         vim.keymap.set('n', '<leader>s/', make_callback(function()
-            builtin.live_grep {
+            builtin.live_grep({
                 grep_open_files = true,
                 prompt_title = 'Live Grep in Open Files',
-            }
+                additional_args = { '--engine=pcre2' },
+            })
         end), { desc = 'Search [/] in Open Files' })
 
         vim.keymap.set('n', '<leader>sn', make_callback(function()
