@@ -18,10 +18,11 @@ return {
                 end
                 local builtin = require('telescope.builtin')
                 local client = vim.lsp.get_client_by_id(event.data.client_id)
+                local lsp_references = function() builtin.lsp_references{include_declaration = false} end
 
                 map('gd',         builtin.lsp_definitions,      '[G]oto [D]efinition')
                 map('gD',         vim.lsp.buf.declaration,      '[G]oto [D]eclaration')
-                map('gr',         builtin.lsp_references,       '[G]oto [R]eferences')
+                map('gr',         lsp_references,               '[G]oto [R]eferences')
                 map('gI',         builtin.lsp_implementations,  '[G]oto [I]mplementation')
                 map('<leader>D',  builtin.lsp_type_definitions, 'Type [D]efinition')
                 map('K',          vim.lsp.buf.hover,            'Hover Documentation')
