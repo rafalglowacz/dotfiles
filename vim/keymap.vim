@@ -1,5 +1,14 @@
 let mapleader = " "
 
+"-------------------------------
+" Disabling built-in bindings -
+" ----------------------------
+
+" Increasing intentation - free up for completion.
+noremap! <C-t> <Nop>
+" Redo - free up for symbol search.
+nnoremap <C-r> <Nop>
+
 "--------------------------
 " Editor - moving around -
 "------------------------
@@ -85,10 +94,6 @@ vnoremap Y myY`y
 
 noremap! <S-Enter> <Esc>ko
 noremap! <C-Enter> <Esc>o
-
-" Disable built-in binding for increasing intentation to reserve it for
-" completion.
-noremap! <C-t> <Nop>
 
 "------------------
 " Saving/exiting -

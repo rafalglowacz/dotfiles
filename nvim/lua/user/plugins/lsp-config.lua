@@ -26,8 +26,8 @@ return {
                 map('<leader>D',  builtin.lsp_type_definitions, 'Type [D]efinition')
                 map('K',          vim.lsp.buf.hover,            'Hover Documentation')
 
-                map('<leader>cs', builtin.lsp_document_symbols,          '[S]ymbols in file')
-                map('<leader>cS', builtin.lsp_dynamic_workspace_symbols, '[S]ymbols in workspace')
+                map('<C-r>',      builtin.lsp_document_symbols,          '[S]ymbols in file')
+                map('<leader>cs', builtin.lsp_dynamic_workspace_symbols, '[S]ymbols in workspace')
                 map('<leader>cn', vim.lsp.buf.rename,      'Re[n]ame')
                 map('<leader>cr', vim.lsp.buf.code_action, '[R]efactor')
 
