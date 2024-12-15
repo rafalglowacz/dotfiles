@@ -16,8 +16,9 @@ return {
         'hrsh7th/cmp-path',
     },
     config = function()
-        local cmp = require 'cmp'
-        local luasnip = require 'luasnip'
+        local cmp = require'cmp'
+        local luasnip = require'luasnip'
+
         luasnip.config.setup{
             keep_roots = true,
             link_roots = true,
@@ -57,28 +58,25 @@ return {
             },
 
             mapping = cmp.mapping.preset.insert {
-                ['<C-n>'] = cmp.mapping.select_next_item(),
-                ['<C-p>'] = cmp.mapping.select_prev_item(),
                 ['<C-t>'] = cmp.mapping.confirm { select = true },
                 -- ['<C-Space>'] = cmp.mapping.complete {},
-
-                ['<C-l>'] = cmp.mapping(function()
+                ['<C-n>'] = cmp.mapping(function()
                     if luasnip.expand_or_locally_jumpable() then
                         luasnip.expand_or_jump()
                     end
                 end, { 'i', 's' }),
-                ['<C-j>'] = cmp.mapping(function()
+                ['<C-p>'] = cmp.mapping(function()
                     if luasnip.locally_jumpable(-1) then
                         luasnip.jump(-1)
                     end
                 end, { 'i', 's' }),
-                -- ['<C-k>'] = cmp.mapping(function()
-                --   if cmp.visible_docs() then
-                --     cmp.close_docs()
-                --   else
-                --     cmp.open_docs()
-                --   end
-                -- end),
+                ['<C-k>'] = cmp.mapping(function()
+                    if cmp.visible_docs() then
+                        cmp.close_docs()
+                    else
+                        cmp.open_docs()
+                    end
+                end),
             },
             sources = {
                 { name = 'nvim_lsp' },
@@ -90,17 +88,5 @@ return {
         for _, path in ipairs(vim.api.nvim_get_runtime_file('lua/user/snippets/*.lua', true)) do
             loadfile(path)()
         end
-
-        vim.keymap.set({ 'i', 's' }, '<c-k>', function()
-            if luasnip.expand_or_locally_jumpable() then
-              luasnip.expand_or_jump()
-            end
-        end, { silent = true })
-
-        vim.keymap.set({ 'i', 's' }, '<c-j>', function()
-            if luasnip.locally_jumpable(-1) then
-              luasnip.jump(-1)
-            end
-        end, { silent = true })
     end,
 }
