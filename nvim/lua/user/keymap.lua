@@ -4,11 +4,17 @@ vim.keymap.set(
   function()
     -- Default behavior:
     vim.cmd.stopinsert()
-    -- Save file, but not if it's a Neovim config file, as that results
-    -- in Neovim showing notifications about reloading the config all the time.
-    if string.find(vim.api.nvim_buf_get_name(0), '/dotfiles/nvim/') == nil then
-      vim.api.nvim_input(':w<CR>')
+    -- Save file, except:
+    -- - Neovim config files - saving them results in Neovim showing
+    --   notifications about reloading the config all the time.
+    -- - Files other than normal files, e.g. debugger UI prompts.
+    if
+      string.find(vim.api.nvim_buf_get_name(0), '/dotfiles/nvim/') ~= nil
+      or vim.api.nvim_get_option_value('buftype', { buf = 0 }) ~= ''
+    then
+      return
     end
+    vim.api.nvim_input(':w<CR>')
   end
 )
 
