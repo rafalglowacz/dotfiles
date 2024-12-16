@@ -44,6 +44,7 @@ return {
             },
             pickers = {
                 find_files = {
+                    find_command = { 'fd', '--type', 'f' },
                     mappings = {
                         i = {
                             ['<C-a>'] = function(prompt_bufnr)
