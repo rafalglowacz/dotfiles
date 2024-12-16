@@ -29,7 +29,7 @@ source $ZSHRC_DIR/configs/omz-termsupport-preexec.zshrc
 ##########
 
 WORDCHARS='*?_-[]~=;.!@#$%^&(){}<>/\|'
-# Disable removal of space character after using tab completion and entering 
+# Disable removal of space character after using tab completion and entering
 # the next character. See https://superuser.com/q/613685
 ZLE_REMOVE_SUFFIX_CHARS=""
 # See also omz-termsupport-preexec-custom.zshrc
@@ -64,14 +64,17 @@ unsetopt SHARE_HISTORY
 
 MY_PATH="$HOME/.composer/vendor/bin:$HOME/.config/composer/vendor/bin"
 MY_PATH="$MY_PATH:$HOME/bin:$HOME/.cargo/bin:$HOME/.local/bin:$HOME/.local/bin/go/bin"
-if [ -d "$HOME/bin2" ]; then 
-	MY_PATH="$MY_PATH:$HOME/bin2"
+if [ -d "$HOME/bin2" ]; then
+    MY_PATH="$MY_PATH:$HOME/bin2"
 fi
 if [ -d "$HOME/dev/flutter" ]; then
-	MY_PATH="$MY_PATH:$HOME/dev/flutter/bin"
+    MY_PATH="$MY_PATH:$HOME/dev/flutter/bin"
 fi
 if [ -d /opt/homebrew ]; then
     MY_PATH="$MY_PATH:/opt/homebrew/opt/mysql-client/bin:/opt/homebrew/opt/ruby/bin"
+fi
+if [ -d "$HOME/.local/share/nvim/mason/bin" ]; then
+    MY_PATH="$MY_PATH:$HOME/.local/share/nvim/mason/bin"
 fi
 export PATH="$MY_PATH:$PATH"
 
@@ -111,4 +114,3 @@ source $ZSHRC_DIR/aliases/system.zshrc
 ###########################
 
 [ -f $ZSHRC_DIR/configs/local.zshrc ] && source $ZSHRC_DIR/configs/local.zshrc
-
