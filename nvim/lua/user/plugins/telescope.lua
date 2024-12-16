@@ -15,12 +15,14 @@ return {
         { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
     },
     config = function()
-        local actions = require('telescope.actions')
+        local actions = require'telescope.actions'
+        local actions_state = require'telescope.actions.state'
+        local builtin = require'telescope.builtin'
 
         require('telescope').setup {
             defaults = {
                 layout_strategy = 'vertical',
-                path_display = function(opts, path)
+                path_display = function(_, path)
                     local tail = require("telescope.utils").path_tail(path)
                     path = path:gsub(vim.loop.cwd() .. '/', '')
                     path = path:sub(0, - string.len(tail) - 2)
@@ -40,7 +42,25 @@ return {
                     }
                 },
             },
-            -- pickers = {}
+            pickers = {
+                find_files = {
+                    mappings = {
+                        i = {
+                            ['<C-a>'] = function(prompt_bufnr)
+                                local current_picker = actions_state.get_current_picker(prompt_bufnr)
+                                local search_term = current_picker:_get_prompt()
+                                actions.close(prompt_bufnr)
+                                builtin.find_files({
+                                    default_text = search_term,
+                                    hidden = true,
+                                    no_ignore = true,
+                                    no_ignore_parent = true,
+                                })
+                            end
+                        }
+                    }
+                }
+            },
             extensions = {
                 ['ui-select'] = {
                     require('telescope.themes').get_dropdown(),
@@ -51,8 +71,6 @@ return {
         -- Enable telescope extensions, if they are installed.
         pcall(require('telescope').load_extension, 'fzf')
         pcall(require('telescope').load_extension, 'ui-select')
-
-        local builtin = require 'telescope.builtin'
 
         local make_callback = function(callback)
             return function()
@@ -69,7 +87,7 @@ return {
         end
 
         local find_files = make_callback(function()
-            builtin.find_files({ hidden = true, no_ignore = true, no_ignore_parent = true })
+            builtin.find_files()
         end)
 
         vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = 'Search [h]elp' })
