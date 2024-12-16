@@ -7,7 +7,7 @@ return {
         dap.adapters.php = {
             type = 'executable',
             command = 'node',
-            args = { vim.fn.expand'$HOME/Dev/lib/vscode-php-debug/out/phpDebug.js' },
+            args = { vim.fn.expand'$HOME/dev/lib/vscode-php-debug/out/phpDebug.js' },
         }
         dap.configurations.php = {
             {
