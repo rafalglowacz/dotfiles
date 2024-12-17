@@ -44,6 +44,8 @@ nmap <A-j> <C-w><C-j>
 nmap <A-k> <C-w><C-k>
 nmap <A-l> <C-w><C-l>
 
+nnoremap <leader>w :set wrap!<CR>
+
 " Rant: Vim doesn't allow remapping Esc in insert mode and its default behavior
 " is weird - even if you didn't do anything since entering this mode, the caret
 " won't be on the same character as before, it'll be the one to the left.

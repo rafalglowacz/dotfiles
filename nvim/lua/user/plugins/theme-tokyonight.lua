@@ -3,6 +3,9 @@ return {
     lazy = false,
     priority = 1000, -- make sure to load this before all the other start plugins
     config = function()
+        require('tokyonight').setup{
+            transparent = true,
+        }
         -- Try also 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
         vim.cmd.colorscheme 'tokyonight-night'
 
