@@ -5,6 +5,7 @@ return {
     },
     config = function()
         vim.api.nvim_set_var("chadtree_settings", {
+            options = { session = false },
             keymap = {
                 secondary = { '<right>' },
                 collapse = { '<left>' },
