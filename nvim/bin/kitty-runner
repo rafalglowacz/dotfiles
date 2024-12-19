@@ -7,4 +7,3 @@ if [ "$(kitty @ ls | grep -c '            "title": "vim-test-output')" -eq 0 ]; 
 fi
 
 kitty @ --to "$KITTY_LISTEN_ON" send-text -m title:"vim-test-output" "$1\x0d"
-
