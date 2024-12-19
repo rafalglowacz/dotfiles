@@ -24,7 +24,16 @@ return {
                 layout_strategy = 'vertical',
                 path_display = function(_, path)
                     local tail = require("telescope.utils").path_tail(path)
-                    path = path:gsub(vim.loop.cwd() .. '/', '')
+
+                    -- There's a weird bug on my work Mac where the paths in the go-to-reference picker contain
+                    -- the full absolute path because cwd isn't removed. I was able to determine that it has
+                    -- something to do with the path containing a dash. I couldn't find a real fix, so I'm
+                    -- working around it by using sub instead of gsub if the path is absolute. By using
+                    -- the length of cwd's path, it has the intended effect.
+                    path = path:sub(1, 1) == '/'
+                        and path:sub(string.len(vim.loop.cwd() or '') + 2)
+                        or  path:gsub(vim.loop.cwd() .. '/', '')
+
                     path = path:sub(0, - string.len(tail) - 2)
                     if string.len(path) == 0 then
                         return tail
