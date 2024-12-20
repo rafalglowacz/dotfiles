@@ -1,7 +1,7 @@
 return {
     'ms-jpq/chadtree',
     keys = {
-        { '<leader>1', '<Cmd>:CHADopen --always-focus<CR>', desc = 'File explorer' },
+        { '<A-0>', '<Cmd>:CHADopen --always-focus<CR>', desc = 'File explorer' },
         { '<leader>F', '<Cmd>:CHADopen --always-focus<CR>', desc = 'File explorer' },
     },
     config = function()
