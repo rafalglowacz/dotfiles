@@ -1,7 +1,8 @@
 return {
     'ms-jpq/chadtree',
     keys = {
-        { '<Leader>e', '<Cmd>:CHADopen --always-focus<CR>', desc = 'File [e]xplorer' },
+        { '<leader>1', '<Cmd>:CHADopen --always-focus<CR>', desc = 'File explorer' },
+        { '<leader>F', '<Cmd>:CHADopen --always-focus<CR>', desc = 'File explorer' },
     },
     config = function()
         vim.api.nvim_set_var("chadtree_settings", {
