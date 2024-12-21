@@ -17,7 +17,20 @@ return {
                 end
 
                 api.config.mappings.default_on_attach(bufNr)
-                vim.keymap.set('n', '<right>', api.node.open.preview, opts('Open'))
+                vim.keymap.set('n', '<right>', function()
+                    local node = api.tree.get_node_under_cursor()
+                    if node.name == '..' then
+                        -- Avoid changing directory on the root node.
+                        return
+                    end
+
+                    api.node.open.preview()
+
+                    if node.type == 'directory' and next(node.nodes) ~= nil then
+                        -- Move to first item in a non-empty directory.
+                        vim.api.nvim_input('<down>')
+                    end
+                end, opts('Open'))
                 vim.keymap.set('n', '<left>', api.node.navigate.parent_close, opts('Close'))
             end
         })
