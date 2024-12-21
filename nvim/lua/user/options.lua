@@ -26,6 +26,7 @@ vim.opt.undofile = true
 vim.opt.updatetime = 250
 vim.opt.wrap = false
 vim.opt.wildmode = 'longest:full,full'
+vim.opt.sessionoptions='blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions'
 
 -- Highlight on copy
 vim.api.nvim_create_autocmd('TextYankPost', {
@@ -34,11 +35,4 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     callback = function()
         vim.highlight.on_yank()
     end,
-})
-
-vim.api.nvim_create_autocmd('BufWinEnter', {
-    desc = 'Return cursor to where it was last time closing the file',
-    group = vim.api.nvim_create_augroup('restore-cursor-position', { clear = true }),
-    pattern = '*',
-    command = 'silent! normal! g`"zv',
 })
