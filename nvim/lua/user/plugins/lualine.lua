@@ -23,16 +23,7 @@ local winbar = {
             return '󰅭 ' .. vim.pesc(tostring(#vim.tbl_keys(vim.lsp.get_clients())) or '')
         end,
     },
-    lualine_y = {
-        {
-            function()
-                return vim.api.nvim_call_function(
-                    'fnamemodify',
-                    { vim.fn.getcwd(), ':~' }
-                )
-            end,
-        },
-    },
+    lualine_y = {},
     lualine_z = {},
 }
 
