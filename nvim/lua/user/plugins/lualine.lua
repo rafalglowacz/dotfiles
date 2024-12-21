@@ -37,7 +37,7 @@ return {
     opts = {
         options = {
             globalstatus = true,
-            disabled_filetypes = { 'CHADTree', 'NvimTree' },
+            disabled_filetypes = { 'CHADTree', 'NvimTree', 'help' },
         },
         extensions = { 'aerial' },
         sections = {
