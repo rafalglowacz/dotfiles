@@ -20,7 +20,8 @@ return {
                 vim.keymap.set('n', '<right>', function()
                     local node = api.tree.get_node_under_cursor()
                     if node.name == '..' then
-                        -- Avoid changing directory on the root node.
+                        -- Just move to the first child.
+                        vim.api.nvim_input('<down>')
                         return
                     end
 
