@@ -26,7 +26,7 @@ vim.opt.undofile = true
 vim.opt.updatetime = 250
 vim.opt.wrap = false
 vim.opt.wildmode = 'longest:full,full'
-vim.opt.sessionoptions='blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions'
+vim.opt.sessionoptions='blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal'
 
 -- Highlight on copy
 vim.api.nvim_create_autocmd('TextYankPost', {
