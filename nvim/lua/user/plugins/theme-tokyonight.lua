@@ -7,7 +7,6 @@ return {
             transparent = true,
             on_highlights = function (hl)
                 if vim.o.background == 'light' then
-                    print('on_highlights')
                     hl.ColorColumn.bg = '#eeeeee'
                     hl.CursorLine.bg = '#eeeeee'
                     hl.LspReferenceRead.bg = '#f1f1f1'
