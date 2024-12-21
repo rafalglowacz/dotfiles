@@ -48,6 +48,8 @@ return {
                         ['<Esc>'] = actions.close,
                         ['<A-p>'] = actions.cycle_history_prev,
                         ['<A-n>'] = actions.cycle_history_next,
+                        ['<A-q>'] = actions.send_to_qflist + actions.open_qflist,
+                        ['<C-q>'] = actions.close,
                     }
                 },
             },
