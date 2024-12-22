@@ -28,6 +28,8 @@ vim.opt.wrap = false
 vim.opt.wildmode = 'longest:full,full'
 vim.opt.sessionoptions='blank,buffers,curdir,folds,tabpages,winsize,winpos,terminal'
 
+require('user.options.folds')
+
 -- Highlight on copy
 vim.api.nvim_create_autocmd('TextYankPost', {
     desc = 'Highlight on copy',
