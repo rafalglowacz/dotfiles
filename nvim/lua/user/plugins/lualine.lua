@@ -19,12 +19,16 @@ local winbar = {
     },
     lualine_c = {},
     lualine_x = {
-        function ()
-            return '󰅭 ' .. vim.pesc(tostring(#vim.tbl_keys(vim.lsp.get_clients())) or '')
-        end,
+        'filetype',
     },
-    lualine_y = {},
-    lualine_z = {},
+    lualine_y = {
+        -- function ()
+        --     return '󰅭 ' .. vim.pesc(tostring(#vim.tbl_keys(vim.lsp.get_clients())) or '')
+        -- end,
+    },
+    lualine_z = {
+        'diff',
+    },
 }
 
 return {
@@ -58,18 +62,17 @@ return {
             lualine_c = {
                 { 'filename', path = 1 },
             },
-            lualine_x = { 'filetype' },
+            lualine_x = {},
             lualine_y = {
                 {
                     'branch',
                     fmt = function(branch)
-                        local limit = 20
+                        local limit = 25
                         return string.len(branch) > limit
                             and branch:sub(1, limit - 1)..'…'
                             or branch
                     end
                 },
-                'diff',
             },
             lualine_z = {
                 'progress',
