@@ -60,7 +60,15 @@ return {
             },
             lualine_x = { 'filetype' },
             lualine_y = {
-                'branch',
+                {
+                    'branch',
+                    fmt = function(branch)
+                        local limit = 20
+                        return string.len(branch) > limit
+                            and branch:sub(1, limit - 1)..'…'
+                            or branch
+                    end
+                },
                 'diff',
             },
             lualine_z = {
