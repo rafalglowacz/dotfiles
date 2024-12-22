@@ -1,0 +1,2 @@
+setlocal nobreakindent
+setlocal wrap
