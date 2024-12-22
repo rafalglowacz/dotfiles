@@ -37,7 +37,15 @@ return {
     opts = {
         options = {
             globalstatus = true,
-            disabled_filetypes = { 'CHADTree', 'NvimTree', 'help' },
+            disabled_filetypes = {
+                -- Sidebars
+                'CHADTree',
+                'NvimTree',
+
+                'help',
+                -- Treesitter inspector
+                'query',
+            },
         },
         extensions = { 'aerial' },
         sections = {
