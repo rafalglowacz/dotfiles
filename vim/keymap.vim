@@ -39,10 +39,10 @@ nnoremap <C-d> <C-d>zz
 nnoremap G G$zz
 vnoremap G G$zz
 
-nmap <A-h> <C-w><C-h>
-nmap <A-j> <C-w><C-j>
-nmap <A-k> <C-w><C-k>
-nmap <A-l> <C-w><C-l>
+nmap <C-up>    <C-w><C-k>
+nmap <C-left>  <C-w><C-h>
+nmap <C-down>  <C-w><C-j>
+nmap <C-right> <C-w><C-l>
 
 nnoremap <leader>w :set wrap!<CR>
 
