@@ -102,10 +102,7 @@ source $ZSHRC_DIR/configs/atuin.zshrc
 # Aliases #
 ##########
 
-source $ZSHRC_DIR/aliases/git.zshrc
-source $ZSHRC_DIR/aliases/docker.zshrc
-source $ZSHRC_DIR/aliases/misc.zshrc
-source $ZSHRC_DIR/aliases/system.zshrc
+source $ZSHRC_DIR/aliases.zshrc
 
 [ -f $ZSHRC_DIR/aliases/local.zshrc ] && source $ZSHRC_DIR/aliases/local.zshrc
 
