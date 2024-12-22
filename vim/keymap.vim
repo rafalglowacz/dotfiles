@@ -44,6 +44,9 @@ nmap <C-left>  <C-w><C-h>
 nmap <C-down>  <C-w><C-j>
 nmap <C-right> <C-w><C-l>
 
+nmap <A-up> [[
+nmap <A-down> ]]
+
 nnoremap <leader>w :set wrap!<CR>
 
 " Rant: Vim doesn't allow remapping Esc in insert mode and its default behavior
