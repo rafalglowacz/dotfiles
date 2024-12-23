@@ -1,29 +1,36 @@
-local function setup_folds(filetypePattern, cb)
+local function setup_folds(filetype_pattern, setup_callback)
     vim.api.nvim_create_autocmd('FileType', {
-        pattern = filetypePattern,
-        callback = cb,
+        pattern = filetype_pattern:gsub('*.', ''),
+        callback = function()
+            setup_callback()
+        end
     })
 
     vim.api.nvim_create_autocmd('BufEnter', {
+        pattern = filetype_pattern,
         callback = function()
             -- After automatic folds have been set, allow setting manual ones.
-            vim.wo.foldmethod = 'manual'
+            vim.defer_fn(function()
+                vim.wo.foldmethod = 'manual'
+            end, 0)
         end
     })
 end
 
 setup_folds(
-    'php',
+    '*.php',
     function()
         vim.wo.foldmethod = 'expr'
         vim.wo.foldexpr = 'getline(v:lnum) =~ "^use "'
     end
 )
 
-setup_folds(
-    {'javascript', 'typescript', 'vue' },
-    function()
-        vim.wo.foldmethod = 'expr'
-        vim.wo.foldexpr = 'getline(v:lnum) =~ "^import "'
-    end
-)
+for _, type in ipairs({'*.javascript', '*.typescript', '*.vue' }) do
+    setup_folds(
+        type,
+        function()
+            vim.wo.foldmethod = 'expr'
+            vim.wo.foldexpr = 'getline(v:lnum) =~ "^import "'
+        end
+    )
+end
