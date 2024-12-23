@@ -26,7 +26,17 @@ vim.opt.undofile = true
 vim.opt.updatetime = 250
 vim.opt.wrap = false
 vim.opt.wildmode = 'longest:full,full'
-vim.opt.sessionoptions='blank,buffers,curdir,folds,tabpages,winsize,winpos,terminal'
+
+vim.opt.sessionoptions = {
+    'blank',
+    'buffers',
+    'curdir',
+    'folds',
+    'tabpages',
+    'winsize',
+    'winpos',
+    'terminal',
+}
 
 require('user.options.folds')
 
