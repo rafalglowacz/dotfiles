@@ -84,12 +84,18 @@ export PATH="$MY_PATH:$PATH"
 # Apps #
 #######
 
+which moar >> /dev/null &&
+    export PAGER='moar' &&
+    export MANPAGER='moar'
+
 export LESS='XRi'
 export RIPGREP_CONFIG_PATH=$ZSHRC_DIR/../ripgreprc
 export GIT_OPTIONAL_LOCKS=0
 export GOPATH=~/.local/bin/go
+
 [ -z $KITTY_LISTEN_ON ] &&
     export KITTY_LISTEN_ON=unix:/tmp/kitty-remote-control-$PPID
+
 which chromium >> /dev/null &&
     export CHROME_EXECUTABLE=$(which chromium)
 
