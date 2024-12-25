@@ -107,11 +107,12 @@ noremap! <C-Enter> <Esc>o
 noremap! <Esc> <Esc>:w<CR>
 
 if !has('ide')
-    noremap  <C-q> <Esc>:wqa<CR>
+    noremap! <C-q> <Esc>:wqa<CR>
+    noremap  <C-q> :wqa<CR>
+
     noremap! <C-s> <Esc>:wa<CR>a
-    noremap! <D-s> <Esc>:wa<CR>a
     noremap  <C-s> :wa<CR>
-    noremap  <D-s> :wa<CR>
+
     " Close bottom panel. This doesn't check if there actually is more than 1 panel
     " and also assumes we don't have any top/bottom splits.
     nnoremap <S-Esc> <C-w><C-j>:q<CR>
