@@ -9,7 +9,7 @@ vim.keymap.set(
     --   notifications about reloading the config all the time.
     -- - Files other than normal files, e.g. debugger UI prompts.
     if
-      string.find(vim.api.nvim_buf_get_name(0), '/dotfiles/nvim/') ~= nil
+      string.find(vim.api.nvim_buf_get_name(0), '/dotfiles/vimlike/nvim/') ~= nil
       or vim.api.nvim_get_option_value('buftype', { buf = 0 }) ~= ''
     then
       return
