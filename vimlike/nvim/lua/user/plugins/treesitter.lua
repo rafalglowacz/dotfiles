@@ -45,11 +45,13 @@ return {
             incremental_selection = {
                 enable = true,
                 keymaps = {
-                    node_incremental = "v",
+                    node_incremental = "<C-space>",
                     node_decremental = "V",
                 },
             },
         }
+
+        vim.keymap.set('n', '<C-space>', function() vim.api.nvim_input('v<C-space>') end)
 
         setup_php_var_name_handling()
     end,
