@@ -12,7 +12,7 @@
 -- I happen to use does have it then I most likely want the same behavior.
 --
 -- TODO: also override node_decremental
-local function handle_php_var_names()
+local function setup_php_var_name_handling()
     local inc_sel = require('nvim-treesitter.incremental_selection')
     local utils = require('nvim-treesitter.ts_utils')
     local orig_handler = inc_sel.node_incremental
@@ -51,6 +51,6 @@ return {
             },
         }
 
-        handle_php_var_names()
+        setup_php_var_name_handling()
     end,
 }
