@@ -7,7 +7,10 @@ return {
         'williamboman/mason.nvim',
         'williamboman/mason-lspconfig.nvim',
         'WhoIsSethDaniel/mason-tool-installer.nvim',
-        { 'j-hui/fidget.nvim', opts = {} },
+        {
+            'j-hui/fidget.nvim',
+            opts = { notification = { window = { winblend = 0 } } },
+        },
     },
     config = function()
         vim.api.nvim_create_autocmd('LspAttach', {
