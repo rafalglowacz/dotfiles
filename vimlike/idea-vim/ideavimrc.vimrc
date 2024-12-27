@@ -105,8 +105,8 @@ map <leader>F  <Action>(SelectInProjectView)
 
 nmap <leader>cA <Action>(StringManipulation.AlignCarets)
 
-map <S-Space>   <Action>(EditorSelectWord)
-map <C-Space>   <Action>(EditorUnSelectWord)
+map <C-Space>   <Action>(EditorSelectWord)
+map <A-Space>   <Action>(EditorUnSelectWord)
 map <Backspace> <Action>(EditorBackSpace)
 "map <leader>V   <Action>(EditorPasteSimple)
 

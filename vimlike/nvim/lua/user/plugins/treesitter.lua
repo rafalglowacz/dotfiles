@@ -46,7 +46,7 @@ return {
                 enable = true,
                 keymaps = {
                     node_incremental = "<C-space>",
-                    node_decremental = "V",
+                    node_decremental = "<A-space>",
                 },
             },
         }
