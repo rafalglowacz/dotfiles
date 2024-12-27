@@ -20,6 +20,7 @@ require('lazy').setup({
         require('user.plugins.dap-ui'),
         require('user.plugins.dap'),
         require('user.plugins.gitsigns'),
+        require('user.plugins.laravel'),
         require('user.plugins.lsp-config'),
         require('user.plugins.lspkind'),
         require('user.plugins.lualine'),
