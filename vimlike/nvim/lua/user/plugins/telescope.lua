@@ -22,6 +22,7 @@ return {
         require('telescope').setup {
             defaults = {
                 layout_strategy = 'vertical',
+                layout_config = { preview_cutoff = 15 },
                 path_display = function(_, path)
                     local tail = require("telescope.utils").path_tail(path)
 
