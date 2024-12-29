@@ -11,6 +11,9 @@ return {
                     hl.CursorLine.bg = '#eeeeee'
                     hl.LspReferenceRead.bg = '#f1f1f1'
                     hl.LspReferenceWrite.bg = '#f1f1f1'
+                    hl.MsgArea.bg = '#dee5f3'
+                else
+                    hl.MsgArea.bg = '#1a1a23'
                 end
             end
         }
