@@ -28,20 +28,22 @@ return {
         -- },
     },
     config = function()
-      vim.cmd[[
-        function! MyKitty(cmd)
-          let confDir = fnamemodify(stdpath('config'), ':p')
-          let cmd = join(['echo', 'cd ' . shellescape(getcwd()), a:cmd], ' && ')
-          execute 'silent !'.join([
-            \ shellescape(confDir . '/bin/kitty-runner'),
-            \ shellescape(cmd)
-          \ ])
-        endfunction
-        let g:test#custom_strategies = {'mykitty': function('MyKitty')}
-        let g:test#strategy = 'mykitty'
+        vim.g['test#custom_strategies'] = {
+            my_kitty = function(cmd)
+                ---@diagnostic disable-next-line: param-type-mismatch
+                local conf_path = vim.fn.fnamemodify(vim.fn.stdpath('config'), ':p')
+                local runner_path = vim.fn.shellescape(conf_path..'bin/kitty-runner')
+                local cwd = vim.fn.shellescape(vim.fn.getcwd())
 
-        " let test#neovim#term_position = 'vert botright 80'
-        let test#php#phpunit#executable = 'de php vendor/bin/phpunit'
-      ]]
+                cmd = 'echo && cd '..cwd..' && '..cmd
+
+                vim.fn.execute(
+                    '!'..runner_path..' '..vim.fn.shellescape(cmd),
+                    'silent'
+                )
+            end
+        }
+        vim.g['test#strategy'] = 'my_kitty'
+        vim.g['test#php#phpunit#executable'] = 'de php vendor/bin/phpunit'
     end
 }
