@@ -42,6 +42,12 @@ return {
         options = {
             globalstatus = true,
             disabled_filetypes = {
+                'dap-repl',
+                'dapui_breakpoints',
+                'dapui_console',
+                'dapui_scopes',
+                'dapui_watches',
+                'dapui_stacks',
                 'dbee',
                 'help',
                 -- Sidebars

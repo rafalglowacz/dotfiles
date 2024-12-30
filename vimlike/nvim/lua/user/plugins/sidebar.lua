@@ -50,7 +50,8 @@ return {
         hlCallback()
 
         -- Global bindings
-        vim.keymap.set('n', '<A-1>', '<Cmd>:NvimTreeFocus<CR>')
+        vim.keymap.set('n', '<A-1>',     '<Cmd>:NvimTreeFocus<CR>')
+        vim.keymap.set('n', '<leader>1', '<Cmd>:NvimTreeFocus<CR>')
         vim.keymap.set('n', '<leader>F', '<Cmd>:NvimTreeFindFile<CR>')
 
         -- Activate on startup
