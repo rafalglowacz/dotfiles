@@ -64,7 +64,8 @@ return {
                         local status = require('dap').status()
                         if status == '' then return '' end
 
-                        return '⏵ '..status
+                        local icon = status:sub(1, 7) == 'Stopped' and '⏸' or '⏵ '
+                        return icon..' '..status
                     end,
                     draw_empty = false,
                     color = { fg = 'black', bg = 'orange' },
