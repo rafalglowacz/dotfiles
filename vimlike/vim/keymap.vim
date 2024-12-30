@@ -44,8 +44,8 @@ nmap <C-left>  <C-w><C-h>
 nmap <C-down>  <C-w><C-j>
 nmap <C-right> <C-w><C-l>
 
-nmap <A-up> [[
-nmap <A-down> ]]
+nmap <A-up> [[zt
+nmap <A-down> ]]zt
 
 nnoremap <leader>w :set wrap!<CR>
 
