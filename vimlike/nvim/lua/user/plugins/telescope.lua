@@ -182,7 +182,7 @@ return {
         end), { desc = 'Search [/] in Open Files' })
 
         vim.keymap.set('n', '<leader>sn', make_callback(function()
-            builtin.find_files { cwd = vim.fn.stdpath 'config' }
+            builtin.find_files { cwd = vim.fn.stdpath('config') }
         end), { desc = 'Search [N]eovim files' })
     end,
 }

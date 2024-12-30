@@ -19,6 +19,7 @@ require('lazy').setup({
         require('user.plugins.comment'),
         require('user.plugins.dap-ui'),
         require('user.plugins.dap'),
+        require('user.plugins.db'),
         require('user.plugins.gitsigns'),
         require('user.plugins.laravel'),
         require('user.plugins.lsp-config'),
