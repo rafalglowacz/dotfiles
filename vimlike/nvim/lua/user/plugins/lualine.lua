@@ -57,6 +57,16 @@ return {
                 { 'mode', fmt = function(str) return str:sub(1, 1) end },
             },
             lualine_b = {
+                {
+                    function()
+                        local status = require('dap').status()
+                        if status == '' then return '' end
+
+                        return '⏵ '..status
+                    end,
+                    draw_empty = false,
+                    color = { fg = 'black', bg = 'orange' },
+                },
                 'diagnostics',
             },
             lualine_c = {
