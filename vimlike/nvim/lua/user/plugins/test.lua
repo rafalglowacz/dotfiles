@@ -28,6 +28,8 @@ return {
         -- },
     },
     config = function()
+        local get_env = require('laravel.utils').get_env
+
         vim.g['test#custom_strategies'] = {
             my_kitty = function(cmd)
                 ---@diagnostic disable-next-line: param-type-mismatch
@@ -44,6 +46,6 @@ return {
             end
         }
         vim.g['test#strategy'] = 'my_kitty'
-        vim.g['test#php#phpunit#executable'] = 'de php vendor/bin/phpunit'
+        vim.g['test#php#phpunit#executable'] = get_env('EXE_PHPUNIT') or 'php vendor/bin/phpunit'
     end
 }

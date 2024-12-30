@@ -5,7 +5,6 @@ return {
 
         local path_mappings = nil
         if vim.loop.fs_stat(vim.fn.getcwd()..'/.nvim/path-mappings.lua') then
-            print 'has mappings!'
             path_mappings = dofile(vim.fn.getcwd()..'/.nvim/path-mappings.lua')
         end
 
