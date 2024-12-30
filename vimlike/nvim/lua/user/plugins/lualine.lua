@@ -50,6 +50,8 @@ return {
                 'dapui_stacks',
                 'dbee',
                 'help',
+                -- DAP preview widget uses empty filetype.
+                '',
                 -- Sidebars
                 'CHADTree',
                 'NvimTree',
