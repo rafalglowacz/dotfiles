@@ -50,6 +50,8 @@ return {
                 -- Treesitter inspector
                 'query',
             },
+            section_separators = { left = '', right = '' },
+            component_separators = { left = '', right = '' }
         },
         extensions = { 'aerial' },
         sections = {
@@ -66,6 +68,7 @@ return {
                     end,
                     draw_empty = false,
                     color = { fg = 'black', bg = 'orange' },
+                    separator = { right = '' }
                 },
                 'diagnostics',
             },
