@@ -89,6 +89,7 @@ which moar >> /dev/null &&
     export MANPAGER='moar'
 
 export LESS='XRi'
+export MOAR='--no-clear-on-exit'
 export RIPGREP_CONFIG_PATH=$ZSHRC_DIR/../ripgreprc
 export GIT_OPTIONAL_LOCKS=0
 export GOPATH=~/.local/bin/go
