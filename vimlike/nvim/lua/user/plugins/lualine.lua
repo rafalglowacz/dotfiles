@@ -42,11 +42,11 @@ return {
         options = {
             globalstatus = true,
             disabled_filetypes = {
+                'dbee',
+                'help',
                 -- Sidebars
                 'CHADTree',
                 'NvimTree',
-
-                'help',
                 -- Treesitter inspector
                 'query',
             },
