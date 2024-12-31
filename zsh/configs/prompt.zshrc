@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[white]%}"
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}" 
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 
 promptParts=(
   $'%{$fg[white]%}'
@@ -18,10 +18,9 @@ fi
 promptParts+=(
   $'$(git_prompt_info)'
   $'\n'
-  $'%{$fg[blue]%}➜$PROMPT_PADDING%{$reset_color%}'
+  $'%{$fg[blue]%}➤$PROMPT_PADDING%{$reset_color%}'
 )
 
 IFS=''
 PROMPT=$(printf '%s\n' "${promptParts[*]}")
 IFS=' '
-
