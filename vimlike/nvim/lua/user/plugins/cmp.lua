@@ -11,6 +11,11 @@ return {
                 return 'make install_jsregexp'
             end)(),
         },
+        {
+            'MattiasMTS/cmp-dbee',
+            ft = 'sql',
+            opts = {},
+        },
         'saadparwaiz1/cmp_luasnip',
         'hrsh7th/cmp-nvim-lsp',
         'hrsh7th/cmp-path',
@@ -82,6 +87,7 @@ return {
                 { name = 'nvim_lsp' },
                 { name = 'luasnip' },
                 { name = 'path' },
+                { name = 'cmp-dbee' },
             },
         }
 
