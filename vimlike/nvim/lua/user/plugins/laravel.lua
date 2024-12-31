@@ -35,9 +35,9 @@ return {
         require('laravel').setup {
             environments = { definitions = definitions },
             features = {
-                route_info = { enabled = false },
-                model_info = { enabled = false },
-                override = { enabled = false },
+                route_info = { enable = false },
+                model_info = { enable = false },
+                override = { enable = false },
             },
         }
     end,
