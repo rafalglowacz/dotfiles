@@ -16,6 +16,7 @@ return {
         vim.api.nvim_create_autocmd('LspAttach', {
             group = vim.api.nvim_create_augroup('kickstart-lsp-attach', { clear = true }),
             callback = function(event)
+                local scroll_after = require('user.utils').scroll_after
                 local map = function(keys, func, desc)
                     vim.keymap.set('n', keys, func, { buffer = event.buf, desc = 'LSP: ' .. desc })
                 end
@@ -25,7 +26,7 @@ return {
                     builtin.lsp_references{ include_declaration = false, fname_width = 50 }
                 end
 
-                map('gd',         builtin.lsp_definitions,      '[G]oto [D]efinition')
+                map('gd',         scroll_after(builtin.lsp_definitions), '[G]oto [D]efinition')
                 map('gD',         vim.lsp.buf.declaration,      '[G]oto [D]eclaration')
                 map('gr',         lsp_references,               '[G]oto [R]eferences')
                 map('gI',         builtin.lsp_implementations,  '[G]oto [I]mplementation')

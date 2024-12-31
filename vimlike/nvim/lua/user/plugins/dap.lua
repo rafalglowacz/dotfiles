@@ -2,6 +2,7 @@ return {
     'mfussenegger/nvim-dap',
     config = function()
         local dap = require'dap'
+        local scroll_after = require('user.utils').scroll_after
 
         local path_mappings = nil
         if vim.loop.fs_stat(vim.fn.getcwd()..'/.nvim/path-mappings.lua') then
@@ -69,13 +70,13 @@ return {
             vim.keymap.set('n', key, dap.step_over, { desc = 'Step [o]ver' })
         end
         for _, key in ipairs({ '<F8>', '-i', '<leader>di' }) do
-            vim.keymap.set('n', key, dap.step_into, { desc = 'Step [i]nto' })
+            vim.keymap.set('n', key, scroll_after(dap.step_into), { desc = 'Step [i]nto' })
         end
         for _, key in ipairs({ '<F7>', '-u', '<leader>du' }) do
-            vim.keymap.set('n', key, dap.step_out, { desc = 'Step o[u]t' })
+            vim.keymap.set('n', key, scroll_after(dap.step_out), { desc = 'Step o[u]t' })
         end
         for _, key in ipairs({ '<F5>', '-r', '<leader>dr' }) do
-            vim.keymap.set('n', key, dap.run_to_cursor, { desc = 'Run to cursor' })
+            vim.keymap.set('n', key, scroll_after(dap.run_to_cursor), { desc = 'Run to cursor' })
         end
         vim.keymap.set(
             'n',
