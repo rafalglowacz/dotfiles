@@ -105,6 +105,7 @@ noremap! <C-Enter> <Esc>o
 "----------------
 
 noremap! <Esc> <Esc>:w<CR>
+noremap <leader>x :q<CR>
 
 if !has('ide')
     noremap! <C-q> <Esc>:wqa<CR>
