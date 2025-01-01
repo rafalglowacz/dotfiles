@@ -51,7 +51,7 @@ return {
 
         -- This is incomplete. "td" is only consistent with IdeaVim for starting
         -- Rust tests and it can't debug tests for other languages yet.
-        for _, key in ipairs({ '<leader>dc', '<leader>td' }) do
+        for _, key in ipairs({ '<leader>dc', '<leader>td', '--' }) do
             vim.keymap.set(
                 'n',
                 key,
@@ -60,9 +60,11 @@ return {
                         vim.cmd.RustLsp('debug')
                     else
                         dap.continue()
+                        require('dapui').open()
+                        vim.cmd('NvimTreeClose')
                     end
                 end,
-                { desc = '[C]ontinue' }
+                { desc = 'Continue' }
             )
         end
 
