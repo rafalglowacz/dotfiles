@@ -31,7 +31,8 @@ return {
                 local expr = vim.api.nvim_get_mode().mode == 'v' and utils.eval_expression() or nil
                 dap_ui.float_element('repl')
                 vim.defer_fn(function()
-                    vim.api.nvim_input(expr and 'i'..expr..'<CR>' or 'i')
+                    local ins = 'i<BS>' -- Backspace in case we're in the insert mode already.
+                    vim.api.nvim_input(expr and ins..expr..'<CR>' or ins)
                 end, 250)
             end,
             { desc = 'Open REPL' }
