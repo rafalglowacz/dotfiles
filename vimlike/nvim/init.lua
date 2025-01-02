@@ -1,3 +1,7 @@
+-- Temporary workaround for :Inspect bug: https://github.com/neovim/neovim/issues/31675
+-- FIXME: remove after patched in Neovim
+vim.hl = vim.highlight
+
 -- Aside from Neovim, I also use IdeaVim plugin for JetBrains IDEs, which uses
 -- Vimscript as its configuration language. So I keep common things in the
 -- Vimscript format.
