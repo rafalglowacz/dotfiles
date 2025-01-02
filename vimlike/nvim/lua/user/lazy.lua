@@ -31,6 +31,7 @@ require('lazy').setup({
         require('user.plugins.neotest'),
         require('user.plugins.notify'),
         require('user.plugins.pasta'),
+        require('user.plugins.persistent-breakpoints'),
         require('user.plugins.rustaceanvim'),
         require('user.plugins.session'),
         require('user.plugins.sidebar'),

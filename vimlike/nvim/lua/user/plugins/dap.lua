@@ -86,12 +86,6 @@ return {
         for _, key in ipairs({ '<F5>', '-r', '<leader>dr' }) do
             vim.keymap.set('n', key, scroll_after(dap.run_to_cursor), { desc = 'Run to cursor' })
         end
-        vim.keymap.set(
-            'n',
-            '<leader>db',
-            function() dap.toggle_breakpoint() end,
-            { desc = 'Toggle [b]reakpoint' }
-        )
         -- vim.keymap.set('n', '<leader>lp', function() dap.set_breakpoint(nil, nil, vim.fn.input('Log point message: ')) end)
         vim.keymap.set('n', '<leader>dd', dap.run_last, { desc = 'Run [l]ast' })
         vim.keymap.set({ 'n', 'v' }, '<leader>dh', require('dap.ui.widgets').hover, { desc = '[H]over' })
