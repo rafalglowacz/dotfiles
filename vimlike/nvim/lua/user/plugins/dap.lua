@@ -9,6 +9,12 @@ return {
             path_mappings = dofile(vim.fn.getcwd()..'/.nvim/path-mappings.lua')
         end
 
+        vim.fn.sign_define('DapBreakpoint', { text = '🛑', texthl = '', linehl = '', numhl = '' })
+        -- Remove the arrow sign for currently debugged line. I'm using a more
+        -- noticable color of current line so I prefer to leave space
+        -- in the column available for other signs.
+        vim.fn.sign_define('DapStopped', { text = '' })
+
         -- PHP
         dap.adapters.php = {
             type = 'executable',
