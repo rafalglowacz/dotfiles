@@ -1,3 +1,25 @@
+--
+-- Moving around
+--
+
+-- Make Home toggle between start of non-whitespace characters and the start of line.
+vim.keymap.set(
+  { 'n', 'v' },
+  '<Home>',
+  function()
+    local line = vim.fn.getline('.')
+    local cursor_pos = vim.fn.col('.')
+    local leading_ws = #(line:match('^%s*') or '')
+
+    if cursor_pos == leading_ws + 1 then
+      vim.api.nvim_input('0')
+    else
+      vim.api.nvim_input('_')
+    end
+  end
+)
+
+-- Saving
 vim.keymap.set(
   '!',
   '<Esc>',
