@@ -11,3 +11,4 @@ set smartcase
 ": make left/right movements wrap across lines
 set whichwrap+=h,l
 set breakindentopt=shift:8
+set linebreak
