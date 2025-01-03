@@ -13,6 +13,7 @@ require('lazy').setup({
     spec = {
         require('user.plugins.aerial'),
         require('user.plugins.baleia'),
+        require('user.plugins.bookmarks'),
         require('user.plugins.chad-tree'),
         require('user.plugins.cmp'),
         require('user.plugins.colorizer'),
