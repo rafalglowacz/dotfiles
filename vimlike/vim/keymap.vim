@@ -13,6 +13,9 @@ nnoremap <C-r> <Nop>
 " Editor - moving around -
 "------------------------
 
+map <up> gk
+map <down> gj
+
 nmap ge G
 vmap ge G
 
