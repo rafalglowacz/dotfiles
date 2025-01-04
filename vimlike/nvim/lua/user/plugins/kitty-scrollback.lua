@@ -6,5 +6,8 @@ return {
     event = { 'User KittyScrollbackLaunch' },
     config = function()
         require('kitty-scrollback').setup()
+        if vim.env.KITTY_SCROLLBACK_NVIM == 'true' then
+            vim.opt.signcolumn='no'
+        end
     end,
 }
