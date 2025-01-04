@@ -6,10 +6,12 @@ if not vim.loop.fs_stat(lazy_path) then
 end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazy_path)
 
--- Configure
-require('lazy').setup({
-    -- I'm explicitly specifying the plugins instead of sending 'user.plugins'
-    -- as the first argument to setup(). This way I can bisect issues easily.
+local spec
+if vim.env.KITTY_SCROLLBACK_NVIM == 'true' then
+    spec = {
+        require('user.plugins.kitty-scrollback'),
+    }
+else
     spec = {
         require('user.plugins.aerial'),
         require('user.plugins.baleia'),
@@ -46,7 +48,14 @@ require('lazy').setup({
         require('user.plugins.treesitter'),
         require('user.plugins.treesj'),
         require('user.plugins.whichkey'),
-    },
+    }
+end
+
+-- Configure
+require('lazy').setup({
+    -- I'm explicitly specifying the plugins instead of sending 'user.plugins'
+    -- as the first argument to setup(). This way I can bisect issues easily.
+    spec = spec,
     ui = {
         icons = vim.g.have_nerd_font and {} or {
             cmd = '⌘',
