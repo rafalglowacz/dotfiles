@@ -56,6 +56,7 @@ return {
                 'CHADTree',
                 'NvimTree',
                 -- Treesitter inspector
+                'qf',
                 'query',
             },
             section_separators = { left = '', right = '' },
