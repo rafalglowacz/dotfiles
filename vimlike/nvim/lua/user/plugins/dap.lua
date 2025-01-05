@@ -9,7 +9,7 @@ return {
             path_mappings = dofile(vim.fn.getcwd()..'/.nvim/path-mappings.lua')
         end
 
-        vim.fn.sign_define('DapBreakpoint', { text = '🛑', texthl = '', linehl = '', numhl = '' })
+        vim.fn.sign_define('DapBreakpoint', { text = '⦁', texthl = 'MiniIconsRed', linehl = '', numhl = '' })
         -- Remove the arrow sign for currently debugged line. I'm using a more
         -- noticable color of current line so I prefer to leave space
         -- in the column available for other signs.
