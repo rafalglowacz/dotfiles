@@ -1,3 +1,4 @@
+#!/usr/bin/env zsh
 alias good='git bisect good'
 alias bad='git bisect bad'
 
