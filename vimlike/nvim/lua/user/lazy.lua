@@ -19,6 +19,7 @@ local spec = vim.env.KITTY_SCROLLBACK_NVIM == 'true' and {} or {
     require('user.plugins.dap-virtual-text'),
     require('user.plugins.db'),
     require('user.plugins.gitsigns'),
+    require('user.plugins.intent-guides'),
     require('user.plugins.laravel'),
     require('user.plugins.lsp-config'),
     require('user.plugins.lspkind'),
