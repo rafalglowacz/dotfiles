@@ -231,3 +231,5 @@ sethandler <C-y> i:ide
 sethandler <C-t> a:ide
 sethandler <S-Left> a:ide
 sethandler <S-Right> a:ide
+sethandler <A-Up> a:ide
+sethandler <A-Down> a:ide
