@@ -7,5 +7,6 @@ local.lua
 local.yml
 local.zshrc
 local-init.zshrc
+local-diff.conf
 
 vimlike/nvim/data/dbee-sources.json
