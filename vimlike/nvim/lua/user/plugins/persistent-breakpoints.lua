@@ -12,5 +12,15 @@ return {
             function() require('persistent-breakpoints.api').toggle_breakpoint() end,
             desc = 'Toggle breakpoint',
         },
+        {
+            '<leader>d,',
+            function()
+                require('persistent-breakpoints.api').reload_breakpoints()
+                -- Reopen DAP UI to update breakpoint list (it won't happen automatically)
+                require('dapui').toggle()
+                require('dapui').toggle()
+            end,
+            desc = 'Reload breakpoints',
+        },
     },
 }
