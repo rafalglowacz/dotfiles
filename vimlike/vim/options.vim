@@ -12,3 +12,6 @@ set smartcase
 set whichwrap+=h,l,<,>
 set breakindentopt=shift:8
 set linebreak
+set expandtab
+set shiftwidth=4
+set softtabstop=4
