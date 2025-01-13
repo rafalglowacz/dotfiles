@@ -19,6 +19,14 @@ return {
         local actions_state = require'telescope.actions.state'
         local builtin = require'telescope.builtin'
 
+        -- Close current picker while returning its prompt for the purpose
+        -- of starting a different picker with the same query.
+        local cancel_picker = function(buf_nr)
+            local prompt = actions_state.get_current_picker(buf_nr):_get_prompt()
+            actions.close(buf_nr)
+            return prompt
+        end
+
         require('telescope').setup {
             defaults = {
                 layout_strategy = 'vertical',
@@ -60,14 +68,25 @@ return {
                     mappings = {
                         i = {
                             ['<C-a>'] = function(prompt_bufnr)
-                                local current_picker = actions_state.get_current_picker(prompt_bufnr)
-                                local search_term = current_picker:_get_prompt()
-                                actions.close(prompt_bufnr)
+                                local search_term = cancel_picker(prompt_bufnr)
                                 builtin.find_files({
                                     default_text = search_term,
                                     hidden = true,
                                     no_ignore = true,
                                     no_ignore_parent = true,
+                                })
+                            end
+                        }
+                    }
+                },
+                live_grep = {
+                    mappings = {
+                        i = {
+                            ['<C-a>'] = function(prompt_bufnr)
+                                local search_term = cancel_picker(prompt_bufnr)
+                                builtin.live_grep({
+                                    default_text = search_term,
+                                    additional_args = { '-u', '--engine=pcre2' },
                                 })
                             end
                         }
