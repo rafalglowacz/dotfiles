@@ -13,6 +13,11 @@ return {
             desc = 'Toggle breakpoint',
         },
         {
+            '<leader>dB',
+            function() require('persistent-breakpoints.api').set_conditional_breakpoint() end,
+            desc = 'Set conditional breakpoint',
+        },
+        {
             '<leader>d,',
             function()
                 require('persistent-breakpoints.api').reload_breakpoints()
