@@ -172,7 +172,7 @@ map <leader>dR <Action>(Debugger.RemoveAllBreakpointsInFile)
 map -i <Action>(StepInto)
 map -o <Action>(StepOver)
 map -u <Action>(StepOut)
-map -c <Action>(RunToCursor)
+map -r <Action>(RunToCursor)
 map -- <Action>(Resume)
 map -e <Action>(EvaluateExpression)
 
