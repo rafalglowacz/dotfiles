@@ -2,6 +2,7 @@ return { -- Adds git related signs to the gutter, as well as utilities for manag
     'lewis6991/gitsigns.nvim',
     lazy = false,
     opts = {
+        sign_priority=11,
         signs = {
             add = { text = '+' },
             change = { text = '~' },

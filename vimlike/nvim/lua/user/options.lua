@@ -18,7 +18,7 @@ vim.opt.incsearch = false
 vim.opt.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 vim.opt.mouse = 'a'
-vim.opt.signcolumn='yes:1'
+vim.opt.signcolumn='auto:2-4'
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.opt.timeoutlen = 300
@@ -39,6 +39,10 @@ vim.opt.sessionoptions = {
 }
 
 require('user.options.folds')
+
+vim.diagnostic.config({
+    signs = false,
+})
 
 -- Highlight on copy
 vim.api.nvim_create_autocmd('TextYankPost', {
