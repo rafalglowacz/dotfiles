@@ -13,6 +13,7 @@ wrap-at-text-width = true
 wrap-indicator = ""
 
 [keys.normal]
+C-q = ":wqa"
 # i = "move_visual_line_up"
 # j = "move_char_left"
 # k = "move_visual_line_down"
