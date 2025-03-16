@@ -1,3 +1,3 @@
 alias d='de'
-abbr --force dc='docker compose'
+abbr -g --force --quieter dc='docker compose'
 alias mc='mutagen-compose'
