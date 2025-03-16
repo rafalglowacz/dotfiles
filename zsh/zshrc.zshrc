@@ -12,6 +12,7 @@ plugins=(
 	git
 	timer
 	zsh-autosuggestions
+	zsh-abbr
 	zsh-syntax-highlighting
 	z
 )
