@@ -15,7 +15,7 @@ alias fgn='jobs | read _jobs; fg; notify-command-done "$_jobs"'
 alias h='history'
 alias icat='kitten icat'
 alias jq='jq -C'
-alias k='kubectl'
+abbr -g --force --quieter k='kubectl'
 alias kssh='kitten ssh'
 
 alias ls='eza --icons --group-directories-first -a --hyperlink'
