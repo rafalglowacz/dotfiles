@@ -11,8 +11,8 @@
 	co  = checkout
 	ci  = commit -v
 	# Diff in split view
-	d   = difftool --no-symlinks --dir-diff
-	#d   = -c core.pager='delta -s' diff -w
+	#d   = difftool --no-symlinks --dir-diff
+	d   = -c core.pager='delta -s' diff -w
 	# Diff in unified view
 	du  = diff -w
 	ds  = d --staged
