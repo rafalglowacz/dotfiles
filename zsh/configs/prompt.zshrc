@@ -4,8 +4,17 @@ ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 
 promptParts=(
   $'%{$fg[white]%}'
-  $'%{$bg[white]%}%{$fg_bold[black]%}%D{%X} │ %{$reset_color%}'
-  $'%{$bg[white]%}%{$fg[black]%}%~%{$reset_color%}'
+  $'%{$bg[white]%}%{$fg_bold[black]%}%D{%X} │%{$reset_color%}'
+)
+
+if [[ $(hostname) != 'rafal-endeavour' ]]; then
+  promptParts+=(
+    $'%{$bg[red]%}%{$fg[black]%} '$(hostname)' %{$bg[white]%}|%{$reset_color%}'
+  )
+fi
+
+promptParts+=(
+  $'%{$bg[white]%}%{$fg[black]%} %~%{$reset_color%}'
   $'%{$fg[white]%}%{$reset_color%} '
 )
 # Add job count. Base form is:  %(1j.%j.)
