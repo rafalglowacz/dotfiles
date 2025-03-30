@@ -7,7 +7,7 @@ promptParts=(
   $'%{$bg[white]%}%{$fg_bold[black]%}%D{%X} │%{$reset_color%}'
 )
 
-if [[ $(hostname) != 'rafal-endeavour' ]]; then
+if [[ $(hostname) != 'rafal-home' ]]; then
   promptParts+=(
     $'%{$bg[red]%}%{$fg[black]%} '$(hostname)' %{$bg[white]%}|%{$reset_color%}'
   )
