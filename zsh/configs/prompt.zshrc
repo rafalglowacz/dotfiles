@@ -7,7 +7,8 @@ promptParts=(
   $'%{$bg[white]%}%{$fg_bold[black]%}%D{%X} │%{$reset_color%}'
 )
 
-if [[ $(hostname) != 'rafal-home' ]]; then
+# Show hostname unless current host is a known main host or is marked as one.
+if [[ $(hostname) != 'rafal-home' && "$MAIN_HOST" != 1 ]]; then
   promptParts+=(
     $'%{$bg[red]%}%{$fg[black]%} '$(hostname)' %{$bg[white]%}|%{$reset_color%}'
   )
