@@ -73,17 +73,6 @@ return {
                 filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
             },
             --
-            volar = {
-                cmd = local_opts['volar.cmd'],
-                -- init_options = {
-                --   typescript = {
-                --     -- TODO: check if actually needed. The problem with Vue 2
-                --     -- in work project was solved by setting tsserver.path
-                --     -- in the TS language server's config.
-                --     tsdk = vim.fn.expand '$HOME/.local/share/nvim/mason/packages/typescript-language-server/node_modules/typescript/lib',
-                --   }
-                -- },
-            },
             phpactor = {},
             lua_ls = {
                 settings = {
