@@ -24,6 +24,8 @@ C-q = ":wqa"
 # h = "insert_mode"
 # H = "insert_at_line_start"
 
+C-t = "completion"
+
 [keys.select]
 # i = "extend_visual_line_up"
 # j = "extend_char_left"
