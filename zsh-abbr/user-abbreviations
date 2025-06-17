@@ -1,6 +1,7 @@
 abbr -g "dc"="docker compose"
 abbr -g "g"="git"
 abbr -g "gd"="git dt HEAD"
+abbr -g "git a"="git add"
 abbr -g "git b"="git branch"
 abbr -g "git c"="git config"
 abbr -g "git ca"="git commit -a"
