@@ -38,7 +38,7 @@ ZSH_THEME_TERM_TITLE_IDLE="%~"
 setopt GLOB_DOTS
 # Ask ZSH not to break `rm -f`
 setopt RM_STARSILENT
-zstyle ':completion:*' ignored-patterns '(.|..)'
+zstyle ':completion:*' ignored-patterns '.' '..' '*/.' '*/..'
 
 source $ZSHRC_DIR/configs/commandline-editing.zshrc
 source $ZSHRC_DIR/configs/precmd.zshrc
