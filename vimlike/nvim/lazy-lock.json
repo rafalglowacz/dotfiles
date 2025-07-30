@@ -16,6 +16,7 @@
   "kitty-scrollback.nvim": { "branch": "main", "commit": "6c24f1979afe4c6b0310117b76d59d672224afd7" },
   "laravel.nvim": { "branch": "main", "commit": "d7d10d0da54bf147aa7268329c2772afe4e0f091" },
   "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
+  "leap.nvim": { "branch": "main", "commit": "ebaf38f7fd7193cc918c10eb955afed63301cd76" },
   "lspkind.nvim": { "branch": "master", "commit": "d79a1c3299ad0ef94e255d045bed9fa26025dab6" },
   "lualine-lsp-progress": { "branch": "master", "commit": "56842d097245a08d77912edf5f2a69ba29f275d7" },
   "lualine.nvim": { "branch": "master", "commit": "0c6cca9f2c63dadeb9225c45bc92bb95a151d4af" },
