@@ -55,9 +55,8 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagn
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show [e]rror' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = '[Q]uickfix list' })
 
--- Add convenience bindings for keyword completion,
--- just like Alt-; and Alt-/ in PHPStorm.
-vim.keymap.set('i', '<A-;>', function()
+-- Add convenience bindings for keyword completion, the same as I'm using in JetBrains IDEs.
+vim.keymap.set('i', '<A-/>', function()
   if vim.fn.pumvisible() == 1 then
     -- If the popup menu is visible, cycle through suggestions.
     return '<C-p>'
@@ -68,6 +67,6 @@ vim.keymap.set('i', '<A-;>', function()
 end, { expr = true })
 
 -- See above
-vim.keymap.set('i', '<A-/>', function()
+vim.keymap.set('i', '<A-S-/>', function()
   if vim.fn.pumvisible() == 1 then return '<C-n>' else return '<C-x><C-n>' end
 end, { expr = true })
