@@ -91,6 +91,7 @@ nnoremap C "_C
 nnoremap ci "_ci
 nnoremap cG "_cG
 nnoremap cw "_cw
+nnoremap S "_S
 
 " Add alternative bindings for deletion where copying isn't always intended.
 nnoremap <A-d><A-d> "_dd
