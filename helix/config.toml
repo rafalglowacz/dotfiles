@@ -21,6 +21,7 @@ wrap-indicator = ""
 C-q = ":wqa"
 
 [keys.insert]
+C-space = "completion"
 A-space = "signature_help"
 C-q = ":wqa"
 
