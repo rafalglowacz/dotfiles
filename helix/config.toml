@@ -3,9 +3,14 @@ theme = "base16_custom"
 [editor]
 text-width = 120
 mouse = false
+auto-save.focus-lost = true
+popup-border = "all"
 
 [editor.cursor-shape]
 insert = "bar"
+
+[editor.lsp]
+auto-signature-help = false
 
 [editor.soft-wrap]
 enable = true
@@ -24,7 +29,8 @@ C-q = ":wqa"
 # h = "insert_mode"
 # H = "insert_at_line_start"
 
-C-t = "completion"
+[keys.insert]
+A-space = "signature_help"
 
 [keys.select]
 # i = "extend_visual_line_up"
