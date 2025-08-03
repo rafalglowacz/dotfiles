@@ -19,24 +19,11 @@ wrap-indicator = ""
 
 [keys.normal]
 C-q = ":wqa"
-# i = "move_visual_line_up"
-# j = "move_char_left"
-# k = "move_visual_line_down"
-# l = "move_char_right"
-
-# g = { j = "goto_line_start" }
-
-# h = "insert_mode"
-# H = "insert_at_line_start"
 
 [keys.insert]
 A-space = "signature_help"
 
 [keys.select]
-# i = "extend_visual_line_up"
-# j = "extend_char_left"
-# k = "extend_visual_line_down"
-# l = "extend_char_right"
 
 [keys.normal.space]
 B = "file_picker_in_current_buffer_directory"
