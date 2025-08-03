@@ -22,6 +22,7 @@ C-q = ":wqa"
 
 [keys.insert]
 A-space = "signature_help"
+C-q = ":wqa"
 
 [keys.select]
 
