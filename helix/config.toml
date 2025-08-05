@@ -20,10 +20,20 @@ wrap-indicator = ""
 [keys.normal]
 C-q = ":wqa"
 
+C-left = "jump_view_left"
+C-right = "jump_view_right"
+C-up = "jump_view_up"
+C-down = "jump_view_down"
+
 [keys.insert]
 C-space = "completion"
 A-space = "signature_help"
 C-q = ":wqa"
+
+C-left = "jump_view_left"
+C-right = "jump_view_right"
+C-up = "jump_view_up"
+C-down = "jump_view_down"
 
 [keys.select]
 
