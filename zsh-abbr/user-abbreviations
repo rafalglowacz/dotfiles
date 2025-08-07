@@ -1,4 +1,5 @@
 abbr -g "dc"="docker compose"
+abbr -g "docker compose e"="docker compose exec"
 abbr -g "g"="git"
 abbr -g "gd"="git dt HEAD"
 abbr -g "git a"="git add"
