@@ -2,7 +2,6 @@ theme = "base16_custom"
 
 [editor]
 text-width = 120
-mouse = false
 auto-save.focus-lost = true
 popup-border = "all"
 
