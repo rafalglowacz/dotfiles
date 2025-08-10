@@ -1,3 +1,4 @@
+# Based on base16_transparent from Helix
 # Author: GreasySlug <9619abgoni@gmail.com>
 # This theme is base on base16_theme(Author: NNB <nnbnh@protonmail.com>)
 
@@ -32,7 +33,7 @@
 "ui.virtual.inlay-hint.type" = { fg = "white", bg = "gray"}
 "ui.virtual.wrap" = "gray"
 
-"variable" = "light-red"
+"variable" = "green"
 "constant.numeric" = "yellow"
 "constant" = "yellow"
 "attribute" = "yellow"
