@@ -4,6 +4,7 @@ theme = "base16_custom"
 text-width = 120
 auto-save.focus-lost = true
 popup-border = "all"
+color-modes = true
 
 [editor.cursor-shape]
 insert = "bar"

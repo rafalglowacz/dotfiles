@@ -15,8 +15,8 @@
 "ui.window" = { fg = "gray" }
 "ui.selection" = { bg = "gray" }
 "comment" = "light-gray"
-"ui.statusline" = { fg = "white" }
-"ui.statusline.inactive" = { fg = "gray" }
+"ui.statusline" = { fg = "white", bg = "gray" }
+"ui.statusline.inactive" = { fg = "white", bg = "gray" }
 "ui.statusline.normal" = { fg = "black", bg = "blue" }
 "ui.statusline.insert" = { fg = "black", bg = "green" }
 "ui.statusline.select" = { fg = "black", bg = "magenta" }
