@@ -46,6 +46,7 @@ if status is-interactive
     abbr --command git sss stash show
     abbr --command git st status
 
+    abbr - cd -
     abbr k kubectl
     abbr --command kubectl c config
     abbr t tofu
