@@ -11,6 +11,10 @@ if status is-interactive
     fish_add_path -P /opt/homebrew/opt/mysql-client/bin
     fish_add_path -P /opt/homebrew/opt/ruby/bin
 
+    set -gx LESS XRi
+    set -gx GIT_OPTIONAL_LOCKS 0
+    set -gx GOPATH ~/.local/bin/go
+
     alias ls='eza --icons --group-directories-first -a --hyperlink'
     alias lh='ls -lh --time-style relative'
 
