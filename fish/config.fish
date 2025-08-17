@@ -20,7 +20,8 @@ if status is-interactive
     abbr g git
     abbr gd git dt HEAD
     abbr gs git status
-    abbr gcav git commit -av
+    abbr gcav git-commit -a
+    abbr gcava git commit -av --amend
     abbr gd git d -w HEAD
     abbr gdu git diff -w HEAD
     abbr gsh git-difftool-show
@@ -62,4 +63,3 @@ if status is-interactive
         echo
     end
 end
-
