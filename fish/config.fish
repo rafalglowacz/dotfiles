@@ -55,6 +55,7 @@ if status is-interactive
     end
 
     zoxide init fish | source
+    eval "$(atuin init fish)"
 
     function fish_postexec --on-event fish_postexec
         echo
