@@ -20,7 +20,7 @@ if status is-interactive
     abbr gd git d -w HEAD
     abbr gdu git diff -w HEAD
 
-    # zoxide init fish | source
+    zoxide init fish | source
 end
 
 function fish_postexec --on-event fish_postexec
