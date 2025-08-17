@@ -17,6 +17,9 @@ if status is-interactive
     abbr dc docker compose
     abbr --command docker e exec
 
+    abbr bad git bisect bad
+    abbr good git bisect good
+
     abbr g git
     abbr gd git dt HEAD
     abbr gs git status
@@ -51,6 +54,11 @@ if status is-interactive
     abbr k kubectl
     abbr --command kubectl c config
     abbr t tofu
+
+    abbr yayinstall yay -S
+    abbr yayrm yay -Rs
+    abbr yaylist yay -Q
+    abbr yayinfo yay -Qi
 
     if test -x /opt/homebrew/bin/brew
         eval (/opt/homebrew/bin/brew shellenv)
