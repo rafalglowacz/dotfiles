@@ -21,6 +21,14 @@ function fish_prompt --description 'Informative prompt'
         echo -n (set_color white -b brblack; set_color --bold)(date "+%H:%M:%S")' │ '
         echo -n (set_color normal)(set_color white -b brblack)(prompt_pwd --full-length-dirs 99)
         echo -n (set_color normal)(set_color brblack)''(set_color normal)' '
+
+        # Jobs count pill (yellow) shown only when there are background jobs
+        set -l jobc (count (jobs -p))
+        if test $jobc -gt 0
+            echo -n (set_color yellow)''(set_color black -b yellow)$jobc(set_color normal)(set_color yellow)''(set_color normal)' '
+        end
+
+        # Pipe status, git info
         echo -n $pipestatus_string' '
         echo -n (fish_git_prompt)
         echo
