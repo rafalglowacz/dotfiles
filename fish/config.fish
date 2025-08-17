@@ -14,11 +14,41 @@ if status is-interactive
     alias ls='eza --icons --group-directories-first -a --hyperlink'
     alias lh='ls -lh --time-style relative'
 
+    abbr dc docker compose
+    abbr --command docker e exec
+
     abbr g git
+    abbr gd git dt HEAD
     abbr gs git status
     abbr gcav git commit -av
     abbr gd git d -w HEAD
     abbr gdu git diff -w HEAD
+    abbr gsh git-difftool-show
+    abbr gpuoh git push -u origin HEAD
+    abbr --command git a add
+    abbr --command git b branch
+    abbr --command git c config
+    abbr --command git ca commit -a
+    abbr --command git cav commit -av
+    abbr --command git ci commit
+    abbr --command git civ commit -v
+    abbr --command git co checkout
+    abbr --command git cp cherry-pick
+    abbr --command git f fetch
+    abbr --command git m merge
+    abbr --command git pl pull
+    abbr --command git ps push
+    abbr --command git sh show
+    abbr --command git ss stash
+    abbr --command git ssa stash apply
+    abbr --command git ssl stash list
+    abbr --command git sss stash show
+    abbr --command git sss stash show
+    abbr --command git st status
+
+    abbr k kubectl
+    abbr --command kubectl c config
+    abbr t tofu
 
     zoxide init fish | source
 end
