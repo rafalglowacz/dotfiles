@@ -22,3 +22,7 @@ if status is-interactive
 
     # zoxide init fish | source
 end
+
+function fish_postexec --on-event fish_postexec
+    echo
+end
