@@ -50,9 +50,14 @@ if status is-interactive
     abbr --command kubectl c config
     abbr t tofu
 
+    if test -x /opt/homebrew/bin/brew
+        eval (/opt/homebrew/bin/brew shellenv)
+    end
+
     zoxide init fish | source
+
+    function fish_postexec --on-event fish_postexec
+        echo
+    end
 end
 
-function fish_postexec --on-event fish_postexec
-    echo
-end
