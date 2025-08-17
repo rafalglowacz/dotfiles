@@ -17,14 +17,13 @@ function fish_prompt --description 'Informative prompt'
         set -l statusb_color (set_color --bold $fish_color_status)
         set -l pipestatus_string (__fish_print_pipestatus " [" "]" "|" "$status_color" "$statusb_color" $last_pipestatus)
 
-        printf '%s%s%s | %s%s%s%s%s \n➤  ' \
-            (set_color white) \
-            (set_color black -b white) \
-            (date "+%H:%M:%S") \
-            (prompt_pwd --full-length-dirs 99) \
-            (set_color white -b normal) \
-            $pipestatus_string \
-            (fish_git_prompt) \
-            (set_color normal)
+        echo -n (set_color brblack)''
+        echo -n (set_color white -b brblack; set_color --bold)(date "+%H:%M:%S")' │ '
+        echo -n (set_color normal)(set_color white -b brblack)(prompt_pwd --full-length-dirs 99)
+        echo -n (set_color normal)(set_color brblack)''(set_color normal)' '
+        echo -n $pipestatus_string' '
+        echo -n (fish_git_prompt)
+        echo
+        echo -n (set_color blue)'➤'(set_color normal)'  '
     end
 end
