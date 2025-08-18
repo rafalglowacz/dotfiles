@@ -31,6 +31,7 @@ if status is-interactive
     abbr gcava git commit -av --amend
     abbr gd git d -w HEAD
     abbr gdu git diff -w HEAD
+    abbr grh git reset --hard
     abbr gsh git-difftool-show
     abbr gpuoh git push -u origin HEAD
     abbr --command git a add
