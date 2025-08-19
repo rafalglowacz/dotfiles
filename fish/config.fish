@@ -29,7 +29,6 @@ if status is-interactive
     abbr gs git status
     abbr gcav git-commit -a
     abbr gcava git commit -av --amend
-    abbr gd git d -w HEAD
     abbr gdu git diff -w HEAD
     abbr grh git reset --hard
     abbr gsh git-difftool-show
