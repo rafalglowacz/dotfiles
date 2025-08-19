@@ -18,6 +18,7 @@ if status is-interactive
     alias ls='eza --icons --group-directories-first -a --hyperlink'
     alias lh='ls -lh --time-style relative'
 
+    abbr d docker
     abbr dc docker compose
     abbr --command docker e exec
 
@@ -57,6 +58,7 @@ if status is-interactive
     abbr - cd -
     abbr k kubectl
     abbr --command kubectl c config
+    abbr --command kubectl e exec -it
     abbr t tofu
 
     abbr yayinstall yay -S
