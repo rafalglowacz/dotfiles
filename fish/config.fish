@@ -20,7 +20,7 @@ if status is-interactive
 
     abbr d docker
     abbr dc docker compose
-    abbr --command docker e exec
+    abbr --command docker d_e --regex e exec
 
     abbr bad git bisect bad
     abbr good git bisect good
@@ -37,7 +37,7 @@ if status is-interactive
     abbr gpuoh git push -u origin HEAD
     abbr --command git a add
     abbr --command git b branch
-    abbr --command git c config
+    abbr --command git g_c --regex c config
     abbr --command git ca commit -a
     abbr --command git cav commit -av
     abbr --command git ci commit
@@ -58,8 +58,8 @@ if status is-interactive
 
     abbr - cd -
     abbr k kubectl
-    abbr --command kubectl c config
-    abbr --command kubectl e exec -it
+    abbr --command kubectl k_c --regex c config
+    abbr --command kubectl k_e --regex e exec -it
     abbr t tofu
 
     abbr yayinstall yay -S
