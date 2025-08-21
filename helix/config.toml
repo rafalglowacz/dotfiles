@@ -45,4 +45,5 @@ C-down = "jump_view_down"
 [keys.normal.space]
 B = "file_picker_in_current_buffer_directory"
 e = "file_explorer_in_current_directory"
+f = "file_picker_in_current_directory"
 space = "buffer_picker"
