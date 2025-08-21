@@ -35,26 +35,26 @@ if status is-interactive
     abbr grh git reset --hard
     abbr gsh git-difftool-show
     abbr gpuoh git push -u origin HEAD
-    abbr --command git a add
-    abbr --command git b branch
+    abbr --command git g_a --regex a add
+    abbr --command git g_b --regex b branch
     abbr --command git g_c --regex c config
-    abbr --command git ca commit -a
-    abbr --command git cav commit -av
-    abbr --command git ci commit
-    abbr --command git civ commit -v
-    abbr --command git co checkout
-    abbr --command git cp cherry-pick
-    abbr --command git f fetch
-    abbr --command git m merge
-    abbr --command git pl pull
-    abbr --command git ps push
-    abbr --command git sh show
-    abbr --command git ss stash
-    abbr --command git ssa stash apply
-    abbr --command git ssl stash list
-    abbr --command git sss stash show
-    abbr --command git sss stash show
-    abbr --command git st status
+    abbr --command git g_ca --regex ca commit -a
+    abbr --command git g_cav --regex cav commit -av
+    abbr --command git g_ci --regex ci commit
+    abbr --command git g_civ --regex civ commit -v
+    abbr --command git g_co --regex co checkout
+    abbr --command git g_cp --regex cp cherry-pick
+    abbr --command git g_f --regex f fetch
+    abbr --command git g_m --regex m merge
+    abbr --command git g_pl --regex pl pull
+    abbr --command git g_ps --regex ps push
+    abbr --command git g_sh --regex sh show
+    abbr --command git g_ss --regex ss stash
+    abbr --command git g_ssa --regex ssa stash apply
+    abbr --command git g_ssl --regex ssl stash list
+    abbr --command git g_sss --regex sss stash show
+    abbr --command git g_sss --regex sss stash show
+    abbr --command git g_st --regex st status
 
     abbr - cd -
     abbr k kubectl
