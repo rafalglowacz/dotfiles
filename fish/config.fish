@@ -20,7 +20,9 @@ if status is-interactive
 
     abbr d docker
     abbr dc docker compose
+    abbr --command docker d_d --regex d down
     abbr --command docker d_e --regex e exec
+    abbr --command docker d_u --regex u up -d
 
     abbr bad git bisect bad
     abbr good git bisect good
