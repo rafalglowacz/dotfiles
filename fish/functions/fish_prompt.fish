@@ -17,7 +17,7 @@ function fish_prompt --description 'Informative prompt'
         # Jobs count pill (yellow) shown only when there are background jobs.
         set -l jobc (count (jobs -p))
         if test $jobc -gt 0
-            echo -n ' '(set_color yellow)''(set_color black -b yellow)$jobc(set_color normal)(set_color yellow)''(set_color normal)
+            echo -n ' '(set_color blue)''(set_color black -b blue)$jobc(set_color normal)(set_color blue)''(set_color normal)
         end
 
         echo -n (fish_git_prompt)
