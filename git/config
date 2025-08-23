@@ -1,5 +1,5 @@
 [core]
-	editor = nvim
+	editor = hx
 	pager = delta
 [include]
 	path = ~/.gitconfig.local
