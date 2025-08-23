@@ -5,7 +5,7 @@ function fish_right_prompt
 
     set -l status_color (set_color $fish_color_status)
     set -l statusb_color (set_color black -b $fish_color_status --bold)
-    set -l pipestatus_string (__fish_print_pipestatus " " "" "|" "$status_color" "$statusb_color" $last_pipestatus)
+    set -l pipestatus_string (__fish_print_pipestatus " 🭃" "🭟" "|" "$status_color" "$statusb_color" $last_pipestatus)
 
     echo -n $pipestatus_string
 
