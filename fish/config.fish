@@ -11,9 +11,11 @@ if status is-interactive
     fish_add_path -P /opt/homebrew/opt/mysql-client/bin
     fish_add_path -P /opt/homebrew/opt/ruby/bin
 
+    set -gx EDITOR hx
     set -gx LESS XRi
     set -gx GIT_OPTIONAL_LOCKS 0
     set -gx GOPATH ~/.local/bin/go
+    set -gx RIPGREP_CONFIG_PATH "$HOME/dev/dotfiles/ripgreprc"
 
     alias ls='eza --icons --group-directories-first -a --hyperlink'
     alias lh='ls -lh --time-style relative'
@@ -63,6 +65,7 @@ if status is-interactive
     abbr --command kubectl k_c --regex c config
     abbr --command kubectl k_e --regex e exec -it
     abbr kssh kitten ssh
+    abbr rgp rg --engine pcre2
     abbr t tofu
 
     abbr yayinstall yay -S
