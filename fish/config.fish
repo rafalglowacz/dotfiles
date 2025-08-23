@@ -62,6 +62,7 @@ if status is-interactive
     abbr k kubectl
     abbr --command kubectl k_c --regex c config
     abbr --command kubectl k_e --regex e exec -it
+    abbr kssh kitten ssh
     abbr t tofu
 
     abbr yayinstall yay -S
