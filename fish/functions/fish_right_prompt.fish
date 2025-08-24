@@ -9,7 +9,7 @@ function fish_right_prompt
 
     echo -n $pipestatus_string
 
-    if test $CMD_DURATION != 0
+    if test $CMD_DURATION -gt 500
         # Show duration of the last command in seconds
         set duration (echo "$CMD_DURATION 1000" | awk '{printf "%.2fs", $1 / $2}')
         echo " $duration"
