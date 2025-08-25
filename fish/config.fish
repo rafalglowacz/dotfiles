@@ -15,6 +15,7 @@ if status is-interactive
     set -gx LESS XRi
     set -gx GIT_OPTIONAL_LOCKS 0
     set -gx GOPATH ~/.local/bin/go
+    set -gx NPM_CONFIG_USERCONFIG "$HOME/.config/npm/npmrc"
     set -gx RIPGREP_CONFIG_PATH "$HOME/dev/dotfiles/ripgreprc"
 
     alias ls='eza --icons --group-directories-first -a --hyperlink'
