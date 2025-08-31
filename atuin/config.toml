@@ -2,4 +2,6 @@ filter_mode = "global"
 filter_mode_shell_up_key_binding = "session"
 enter_accept = true
 inline_height = 20
-style = "full"
+style = "compact"
+invert = true
+exit_mode = "return-query"
