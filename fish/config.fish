@@ -79,7 +79,11 @@ if status is-interactive
     end
 
     zoxide init fish | source
-    eval "$(atuin init fish)"
+
+    eval "$(atuin init fish --disable-up-arrow)"
+    # Bind down arrow to open search. I'm using inverted mode
+    # so it makes more sense this way.
+    bind \e\[B _atuin_bind_up
 
     function fish_postexec --on-event fish_postexec
         echo
