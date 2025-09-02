@@ -17,6 +17,11 @@ enable = true
 wrap-at-text-width = true
 wrap-indicator = ""
 
+[editor.indent-guides]
+render = true
+character = "┊" # Some characters that work well: "▏", "┆", "┊", "⸽"
+skip-levels = 2
+
 [keys.normal]
 C-q = ":wqa"
 
