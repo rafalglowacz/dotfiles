@@ -5,6 +5,8 @@ text-width = 120
 auto-save.focus-lost = true
 popup-border = "all"
 color-modes = true
+rulers = [80, 120]
+bufferline = "multiple"
 
 [editor.cursor-shape]
 insert = "bar"
