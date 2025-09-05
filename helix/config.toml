@@ -21,7 +21,7 @@ wrap-indicator = ""
 
 [editor.indent-guides]
 render = true
-character = "┊" # Some characters that work well: "▏", "┆", "┊", "⸽"
+character = "┊"
 skip-levels = 2
 
 [keys.normal]
