@@ -53,6 +53,7 @@ if status is-interactive
     abbr --command git g_m --regex m merge
     abbr --command git g_pl --regex pl pull
     abbr --command git g_ps --regex ps push
+    abbr --command git g_r --regex r reflog
     abbr --command git g_sh --regex sh show
     abbr --command git g_ss --regex ss stash
     abbr --command git g_ssa --regex ssa stash apply
