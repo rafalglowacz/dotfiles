@@ -1,4 +1,11 @@
 if status is-interactive
+    set -gx EDITOR hx
+    set -gx LESS XRi
+    set -gx GIT_OPTIONAL_LOCKS 0
+    set -gx GOPATH ~/.local/bin/go
+    set -gx NPM_CONFIG_USERCONFIG "$HOME/.config/npm/npmrc"
+    set -gx RIPGREP_CONFIG_PATH "$HOME/dev/dotfiles/ripgreprc"
+
     fish_add_path -P ~/.cargo/bin
     fish_add_path -P ~/.composer/vendor/bin
     fish_add_path -P ~/.config/composer/vendor/bin
@@ -10,13 +17,6 @@ if status is-interactive
     fish_add_path -P ~/dev/flutter/bin
     fish_add_path -P /opt/homebrew/opt/mysql-client/bin
     fish_add_path -P /opt/homebrew/opt/ruby/bin
-
-    set -gx EDITOR hx
-    set -gx LESS XRi
-    set -gx GIT_OPTIONAL_LOCKS 0
-    set -gx GOPATH ~/.local/bin/go
-    set -gx NPM_CONFIG_USERCONFIG "$HOME/.config/npm/npmrc"
-    set -gx RIPGREP_CONFIG_PATH "$HOME/dev/dotfiles/ripgreprc"
 
     alias ls='eza --icons --group-directories-first -a --hyperlink'
     alias lh='ls -lh --time-style relative'
