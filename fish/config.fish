@@ -25,7 +25,11 @@ if status is-interactive
     abbr dc docker compose
     abbr --command docker d_d --regex d down
     abbr --command docker d_e --regex e exec
+    abbr --command docker d_i --regex i image
+    abbr --command docker d_l --regex l logs
+    abbr --command docker d_n --regex n network
     abbr --command docker d_u --regex u up -d
+    abbr --command docker d_v --regex v volume
 
     abbr bad git bisect bad
     abbr good git bisect good
