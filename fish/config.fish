@@ -83,6 +83,7 @@ if status is-interactive
         eval (/opt/homebrew/bin/brew shellenv)
     end
 
+    thefuck -a wat | source
     zoxide init fish | source
 
     eval "$(atuin init fish --disable-up-arrow)"
