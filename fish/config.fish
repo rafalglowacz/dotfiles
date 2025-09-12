@@ -28,6 +28,7 @@ if status is-interactive
     abbr --command docker d_i --regex i image
     abbr --command docker d_l --regex l logs
     abbr --command docker d_n --regex n network
+    abbr --command docker d_n --regex r restart
     abbr --command docker d_u --regex u up -d
     abbr --command docker d_v --regex v volume
 
