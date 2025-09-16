@@ -23,6 +23,7 @@ if status is-interactive
 
     abbr d docker
     abbr dc docker compose
+    abbr --command docker d_c --regex c config
     abbr --command docker d_d --regex d down
     abbr --command docker d_e --regex e exec
     abbr --command docker d_i --regex i image
@@ -68,6 +69,7 @@ if status is-interactive
     abbr --command git g_st --regex st status
 
     abbr - cd -
+    abbr fxy fx --yaml
     abbr k kubectl
     abbr --command kubectl k_c --regex c config
     abbr --command kubectl k_e --regex e exec -it
