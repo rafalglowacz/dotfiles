@@ -74,6 +74,8 @@ if status is-interactive
     abbr --command kubectl k_c --regex c config
     abbr --command kubectl k_e --regex e exec -it
     abbr kssh kitten ssh
+    abbr ld lazydocker
+    abbr lg lazygit
     abbr rgp rg --engine pcre2
     abbr t tofu
 
