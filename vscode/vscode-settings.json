@@ -55,6 +55,5 @@
     "rust-analyzer.inlayHints.renderColons": false,
     "rust-analyzer.inlayHints.typeHints.enable": false,
     "explorer.autoReveal": false,
-    "scrolloff.scrolloff": 3,
-    "editor.minimap.autohide": true
+    "scrolloff.scrolloff": 3
 }
