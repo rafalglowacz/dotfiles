@@ -38,6 +38,7 @@ if status is-interactive
 
     abbr g git
     abbr gd git dt HEAD
+    abbr gds git dt --staged
     abbr gs git status
     abbr gcav git-commit -a
     abbr gcava git commit -av --amend
