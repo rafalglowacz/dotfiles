@@ -1,6 +1,5 @@
 function fish_prompt --description 'Informative prompt'
     set -g __fish_git_prompt_showupstream auto
-    set -g __fish_git_prompt_showdirtystate yes
     set -g __fish_git_prompt_showcolorhints yes
 
     if functions -q fish_is_root_user; and fish_is_root_user
