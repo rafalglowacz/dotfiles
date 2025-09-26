@@ -34,6 +34,9 @@
 	ssl = stash list
 	sslb = "!git ssl | grep -i \"on $(git symbolic-ref --short HEAD)\""
 	st  = status
+[bash]
+	showDirtyState = true
+	showUntrackedFiles = true
 [checkout]
 	defaultRemote = origin
 [pull]
