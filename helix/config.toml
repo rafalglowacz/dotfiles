@@ -25,7 +25,7 @@ character = "┊"
 skip-levels = 2
 
 [keys.normal]
-C-q = ":wqa"
+C-q = ":wqa!"
 
 C-left = "jump_view_left"
 C-right = "jump_view_right"
