@@ -7,6 +7,7 @@ popup-border = "all"
 color-modes = true
 rulers = [80, 120]
 bufferline = "multiple"
+end-of-line-diagnostics = "hint"
 
 [editor.cursor-shape]
 insert = "bar"
@@ -23,6 +24,9 @@ wrap-indicator = ""
 render = true
 character = "┊"
 skip-levels = 2
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
 
 [keys.normal]
 C-q = ":wqa!"
