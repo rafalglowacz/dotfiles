@@ -77,6 +77,7 @@ if status is-interactive
     abbr kssh kitten ssh
     abbr ld lazydocker
     abbr lg lazygit
+    abbr --command nest nest_g --regex g generate
     abbr rgp rg --engine pcre2
     abbr t tofu
 
