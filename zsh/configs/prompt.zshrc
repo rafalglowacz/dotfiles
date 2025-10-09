@@ -28,7 +28,7 @@ fi
 promptParts+=(
   $'$(git_prompt_info)'
   $'\n'
-  $'%{$fg[blue]%}➤$PROMPT_PADDING%{$reset_color%}'
+  $'%{$fg[blue]%} ➤$PROMPT_PADDING%{$reset_color%}'
 )
 
 IFS=''

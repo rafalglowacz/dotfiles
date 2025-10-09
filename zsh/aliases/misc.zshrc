@@ -31,8 +31,7 @@ alias astro='XDG_CONFIG_HOME=~/.config/nvim-astro XDG_CACHE_HOME=~/.cache/nvim-a
 alias nvim-pager='XDG_CONFIG_HOME=~/.config/nvim-pager XDG_CACHE_HOME=~/.cache/nvim-pager XDG_DATA_HOME=~/.local/share/nvim-pager XDG_STATE_HOME=~/.local/state/nvim-pager nvim'
 
 if which thefuck > /dev/null; then
-  eval $(thefuck --alias)
-  alias wat=fuck
+  eval $(thefuck --alias wat)
 fi
 
 alias watch='watch '

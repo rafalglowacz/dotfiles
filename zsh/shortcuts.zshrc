@@ -34,3 +34,6 @@ forward-word-dir () {
 }
 zle -N forward-word-dir
 bindkey "^[[1;3C" forward-word-dir
+
+bindkey '^[[B' atuin-up-search
+bindkey '^[OB' atuin-up-search

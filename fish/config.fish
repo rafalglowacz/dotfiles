@@ -68,7 +68,6 @@ if status is-interactive
     abbr --command git g_ssa --regex ssa stash apply
     abbr --command git g_ssl --regex ssl stash list
     abbr --command git g_sss --regex sss stash show
-    abbr --command git g_sss --regex sss stash show
     abbr --command git g_st --regex st status
 
     abbr - cd -
