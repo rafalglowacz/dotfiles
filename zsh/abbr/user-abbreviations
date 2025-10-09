@@ -1,6 +1,6 @@
 abbr -g "d"="docker"
 abbr -g "docker e"="docker exec -it"
-abbr -g "docker i"="docker images"
+abbr -g "docker i"="docker image"
 abbr -g "docker n"="docker network"
 abbr -g "docker v"="docker volume"
 
