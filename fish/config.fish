@@ -27,6 +27,7 @@ if status is-interactive
     abbr --command docker d_d --regex d down
     abbr --command docker d_e --regex e exec
     abbr --command docker d_i --regex i image
+    abbr --command docker d_j --regex j -- --format json
     abbr --command docker d_l --regex l logs
     abbr --command docker d_ll --regex ll logs -n 0 -f
     abbr --command docker d_n --regex n network
