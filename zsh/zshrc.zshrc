@@ -89,10 +89,6 @@ export PATH="$MY_PATH:$PATH"
 # Apps #
 #######
 
-# which moar >> /dev/null &&
-#     export PAGER='moar' &&
-#     export MANPAGER='moar'
-
 export LESS='XRi'
 export MOAR='--no-clear-on-exit --quit-if-one-screen'
 export RIPGREP_CONFIG_PATH=$ZSHRC_DIR/../ripgreprc
