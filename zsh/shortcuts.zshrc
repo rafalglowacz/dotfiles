@@ -8,6 +8,9 @@ bindkey '^[[B' atuin-up-search
 bindkey '^[OB' atuin-up-search
 # Alt+E / Option+E - Edit command line in external editor
 bindkey '^[e' edit-command-line
+# Alt+Left/Right
+bindkey "^[[1;3D" vi-backward-word
+bindkey "^[[1;3C" vi-forward-word
 
 # Alt+Backspace
 backward-kill-dir () {
@@ -24,18 +27,4 @@ forward-kill-dir () {
 }
 zle -N forward-kill-dir
 bindkey '^\b' forward-kill-dir
-
-# Alt+Left
-backward-word-dir () {
-    zle vi-backward-word
-}
-zle -N backward-word-dir
-bindkey "^[[1;3D" backward-word-dir
-
-# Alt+Right
-forward-word-dir () {
-    zle vi-forward-word
-}
-zle -N forward-word-dir
-bindkey "^[[1;3C" forward-word-dir
 
