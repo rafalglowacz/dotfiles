@@ -98,6 +98,7 @@ export MOAR='--no-clear-on-exit --quit-if-one-screen'
 export RIPGREP_CONFIG_PATH=$ZSHRC_DIR/../ripgreprc
 export GIT_OPTIONAL_LOCKS=0
 export GOPATH=~/.local/bin/go
+export NPM_CONFIG_USERCONFIG="$HOME/.config/npm/npmrc"
 
 [ -z $KITTY_LISTEN_ON ] &&
     export KITTY_LISTEN_ON=unix:/tmp/kitty-remote-control-$PPID
