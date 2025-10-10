@@ -40,7 +40,7 @@ setopt GLOB_DOTS
 setopt RM_STARSILENT
 zstyle ':completion:*' ignored-patterns '.' '..' '*/.' '*/..'
 
-source $ZSHRC_DIR/configs/commandline-editing.zshrc
+# source $ZSHRC_DIR/configs/commandline-editing.zshrc
 source $ZSHRC_DIR/configs/precmd.zshrc
 source $ZSHRC_DIR/configs/plugins.zshrc
 source $ZSHRC_DIR/configs/prompt.zshrc
@@ -89,6 +89,8 @@ export PATH="$MY_PATH:$PATH"
 # Apps #
 #######
 
+export EDITOR=hx
+export VISUAL=$EDITOR
 export LESS='XRi'
 export MOAR='--no-clear-on-exit --quit-if-one-screen'
 export RIPGREP_CONFIG_PATH=$ZSHRC_DIR/../ripgreprc

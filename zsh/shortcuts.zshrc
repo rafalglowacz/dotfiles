@@ -4,6 +4,10 @@ bindkey '^U' backward-kill-line
 # the typed-in text into consideration.
 bindkey '^P' history-search-backward
 bindkey '^N' history-search-forward
+bindkey '^[[B' atuin-up-search
+bindkey '^[OB' atuin-up-search
+# Alt+E / Option+E - Edit command line in external editor
+bindkey '^[e' edit-command-line
 
 # Alt+Backspace
 backward-kill-dir () {
@@ -35,5 +39,3 @@ forward-word-dir () {
 zle -N forward-word-dir
 bindkey "^[[1;3C" forward-word-dir
 
-bindkey '^[[B' atuin-up-search
-bindkey '^[OB' atuin-up-search
