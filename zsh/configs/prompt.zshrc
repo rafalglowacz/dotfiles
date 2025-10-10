@@ -2,9 +2,15 @@
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[white]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 
+# Color definitions for prompt
+local dark_gray=$'\e[0;90m'
+local white_on_gray=$'\e[37;100m'
+local bold=$'\e[1m'
+local reset=$'\e[0m'
+
 promptParts=(
-  $'\e[0;90m🭔'
-  $'\e[37;100m\e[1m%D{%X} │\e[0m'
+  "${dark_gray}🭔"
+  "${white_on_gray}${bold}%D{%X} │${reset}"
 )
 
 # Show hostname unless current host is a known main host or is marked as one.
@@ -15,8 +21,8 @@ if [[ $(hostname) != 'rafal-home' && "$MAIN_HOST" != 1 ]]; then
 fi
 
 promptParts+=(
-  $'\e[37;100m %~%{$reset_color%}'
-  $'\e[0;90m🭎\e[0m '
+  "${white_on_gray} %~%{$reset_color%}"
+  "${dark_gray}🭎${reset} "
 )
 # Add job count. Base form is:  %(1j.%j.)
 promptParts+=(
