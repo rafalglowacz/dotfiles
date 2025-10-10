@@ -105,7 +105,7 @@ export GOPATH=~/.local/bin/go
 which chromium >> /dev/null &&
     export CHROME_EXECUTABLE=$(which chromium)
 
-source $ZSHRC_DIR/configs/fnm.zshrc
+# source $ZSHRC_DIR/configs/fnm.zshrc
 source $ZSHRC_DIR/configs/fzf.zshrc
 source $ZSHRC_DIR/configs/atuin.zshrc
 
