@@ -77,9 +77,6 @@ fi
 if [ -d /opt/homebrew ]; then
     MY_PATH="$MY_PATH:/opt/homebrew/opt/mysql-client/bin:/opt/homebrew/opt/ruby/bin"
 fi
-if [ -d "$HOME/.local/share/nvim/mason/bin" ]; then
-    MY_PATH="$MY_PATH:$HOME/.local/share/nvim/mason/bin"
-fi
 if [ -d "$HOME/.atuin" ]; then
     MY_PATH="$MY_PATH:$HOME/.atuin/bin"
 fi
