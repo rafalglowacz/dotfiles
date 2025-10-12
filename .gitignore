@@ -1,5 +1,6 @@
 /.DS_Store
 /.idea
+/helix/runtime
 /helix/themes/theme_link.toml
 *.bak.conf
 local
