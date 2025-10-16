@@ -35,6 +35,7 @@ WORDCHARS='*?_-[]~=;.!@#$%^&(){}<>/\|'
 ZLE_REMOVE_SUFFIX_CHARS=""
 # See also omz-termsupport-preexec-custom.zshrc
 ZSH_THEME_TERM_TITLE_IDLE="%~"
+ABBR_SET_EXPANSION_CURSOR=1
 setopt GLOB_DOTS
 # Ask ZSH not to break `rm -f`
 setopt RM_STARSILENT
