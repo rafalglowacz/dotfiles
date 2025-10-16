@@ -3,3 +3,4 @@
 .idea
 .phpactor.json
 .vim-bookmarks
+patch.patch
