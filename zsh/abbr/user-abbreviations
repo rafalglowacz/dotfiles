@@ -1,3 +1,4 @@
+abbr -g "art"="php artisan"
 abbr -g "c"="composer"
 abbr -g "d"="docker"
 abbr -g "dc"="docker compose"
