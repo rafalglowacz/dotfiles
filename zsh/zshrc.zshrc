@@ -81,6 +81,9 @@ fi
 if [ -d "$HOME/.atuin" ]; then
     MY_PATH="$MY_PATH:$HOME/.atuin/bin"
 fi
+if [ -d "$HOME/dev/lib/phpactor/bin" ]; then
+    MY_PATH="$HOME/dev/lib/phpactor/bin:$MY_PATH"
+fi
 export PATH="$MY_PATH:$PATH"
 
 #########
