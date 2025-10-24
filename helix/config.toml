@@ -41,6 +41,8 @@ A-n = "move_char_left"
 A-e = "move_line_down"
 A-i = "move_char_right"
 
+C-S-c = ":sh echo \"%{buffer_name}:%{cursor_line}\" | wl-copy"
+
 [keys.insert]
 C-space = "completion"
 A-space = "signature_help"
