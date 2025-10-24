@@ -34,3 +34,14 @@ zle     -N            fzf-history-widget
 bindkey -M emacs '^R' fzf-history-widget
 bindkey -M vicmd '^R' fzf-history-widget
 bindkey -M viins '^R' fzf-history-widget
+
+fzf-git-branch() {
+    local branch
+    branch=$(git branch --format='%(refname:short)' | fzf --height=40% --reverse --border)
+    if [ -n "$branch" ]; then
+        LBUFFER="${LBUFFER}${branch}"
+        zle redisplay
+    fi
+}
+zle -N fzf-git-branch
+bindkey '^[-' fzf-git-branch
