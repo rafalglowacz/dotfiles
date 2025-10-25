@@ -4,7 +4,7 @@
 
 [language-server.phpactor]
 command = "phpactor"
-args = ["language-server"]
+args = ["language-server", "--config-extra={\"language_server_completion.trim_leading_dollar\":true}"]
 
 [[language]]
 name = "php"
