@@ -61,6 +61,12 @@ C-down = "jump_view_down"
 
 [keys.select]
 
+[keys.normal."["]
+f = ["goto_prev_function", "collapse_selection"]
+
+[keys.normal."]"]
+f = ["goto_next_function", "flip_selections", "collapse_selection"]
+
 [keys.normal.space]
 B = "file_picker_in_current_buffer_directory"
 e = "file_explorer_in_current_directory"
