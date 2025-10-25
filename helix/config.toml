@@ -2,12 +2,14 @@ theme = "theme_link"
 
 [editor]
 text-width = 120
-auto-save.focus-lost = true
 popup-border = "all"
 color-modes = true
 rulers = [80, 120]
 bufferline = "multiple"
 end-of-line-diagnostics = "hint"
+
+[editor.auto-save]
+focus-lost = true
 
 [editor.cursor-shape]
 insert = "bar"
