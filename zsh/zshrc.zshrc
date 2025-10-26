@@ -13,6 +13,7 @@ plugins=(
 	timer
 	zsh-autosuggestions
 	zsh-abbr
+	zsh-autosuggestions-abbreviations-strategy
 	zsh-syntax-highlighting
 	z
 )
