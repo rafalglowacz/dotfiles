@@ -1,6 +1,6 @@
 [core]
 	editor = hx
-	pager = delta -s
+	pager = LESS=Ri delta -s
 [include]
 	path = ~/.gitconfig.local
 	# path = ~/Dev/lib/delta/themes.gitconfig
