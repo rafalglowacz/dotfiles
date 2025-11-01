@@ -91,6 +91,7 @@ export PATH="$MY_PATH:$PATH"
 # Apps #
 #######
 
+export COMPOSER_HOME="$HOME/.config/composer"
 export EDITOR=hx
 export VISUAL=$EDITOR
 export LESS='XRi'
