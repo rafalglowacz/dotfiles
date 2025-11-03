@@ -5,6 +5,8 @@
 [language-server.phpactor]
 command = "phpactor"
 args = ["language-server", "--config-extra={\"language_server_completion.trim_leading_dollar\":true}"]
+# command = "sh"
+# args = ["-c", "phpactor -vvv language-server --config-extra={\\\"language_server_completion.trim_leading_dollar\\\":true} | tee -a /tmp/phpactor.log"]
 
 [[language]]
 name = "php"
