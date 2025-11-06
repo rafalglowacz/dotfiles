@@ -13,11 +13,8 @@ local act = wezterm.action
 
 -- Font
 
-config.font = wezterm.font 'Monofur Nerd Font'
+config.font = wezterm.font 'Iosevka'
 config.font_size = 16
--- Monofur is very condensed, let's stretch it a little
-config.line_height = 1.2
-config.cell_width = 1.1
 
 -- Color scheme
 
