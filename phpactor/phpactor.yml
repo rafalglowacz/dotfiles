@@ -2,3 +2,4 @@ xdebug_disable: false
 language_server_phpstan.enabled: true
 language_server_phpstan.level: "8"
 language_server_phpstan.bin: ~/.config/composer/vendor/bin/phpstan
+language_server_phpstan.severity: 4
