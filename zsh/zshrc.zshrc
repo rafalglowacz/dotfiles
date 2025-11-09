@@ -85,6 +85,9 @@ fi
 if [ -d "$HOME/dev/lib/phpactor/bin" ]; then
     MY_PATH="$HOME/dev/lib/phpactor/bin:$MY_PATH"
 fi
+if [ -d "$HOME/.local/share/JetBrains/Toolbox/apps/phpstorm/bin" ]; then
+    MY_PATH="$MY_PATH:$HOME/.local/share/JetBrains/Toolbox/apps/phpstorm/bin"
+fi
 export PATH="$MY_PATH:$PATH"
 
 #########

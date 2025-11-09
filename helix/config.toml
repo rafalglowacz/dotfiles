@@ -47,6 +47,9 @@ Cmd-A-S-c = ":sh echo \"%{buffer_name}:%{cursor_line}\" | pbcopy"
   C-A-S-a = ":sh cursor -g \"%{buffer_name}:%{cursor_line}\""
 Cmd-A-S-a = ":sh cursor -g \"%{buffer_name}:%{cursor_line}\""
 
+  C-A-S-p = ":sh phpstorm --line %{cursor_line} \"%{buffer_name}\""
+Cmd-A-S-p = ":sh phpstorm --line %{cursor_line} \"%{buffer_name}\""
+
 A-w = ":toggle soft-wrap.enable"
 
 [keys.insert]
