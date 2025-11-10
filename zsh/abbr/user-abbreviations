@@ -1,4 +1,5 @@
 abbr -g "art"="php artisan"
+abbr -g "bc"="bin/console"
 abbr -g "c"="composer"
 abbr -g "composer i"="composer install"
 abbr -g "d"="docker"
