@@ -28,3 +28,11 @@ forward-kill-dir () {
 zle -N forward-kill-dir
 bindkey '^\b' forward-kill-dir
 
+# Alt+L → run `lh`
+lh-run-widget() {
+  zle -I
+  BUFFER='lh'
+  zle accept-line
+}
+zle -N lh-run-widget
+bindkey '^[l' lh-run-widget
