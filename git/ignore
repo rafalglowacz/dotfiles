@@ -5,3 +5,4 @@ __pycache__
 .phpactor.json
 .vim-bookmarks
 patch.patch
+phpactor.log
