@@ -10,7 +10,17 @@
         "when": "editorFocus && !composerBarIsVisible"
     },
     {
+        "key": "cmd+\\",
+        "command": "aipopup.action.modal.generate",
+        "when": "editorFocus && !composerBarIsVisible"
+    },
+    {
         "key": "ctrl+k",
+        "command": "-aipopup.action.modal.generate",
+        "when": "editorFocus && !composerBarIsVisible"
+    },
+    {
+        "key": "cmd+k",
         "command": "-aipopup.action.modal.generate",
         "when": "editorFocus && !composerBarIsVisible"
     },
@@ -25,7 +35,17 @@
         "when": "!notebookEditorFocused"
     },
     {
+        "key": "cmd+k m",
+        "command": "workbench.action.editor.changeLanguageMode",
+        "when": "!notebookEditorFocused"
+    },
+    {
         "key": "ctrl+m m",
+        "command": "-workbench.action.editor.changeLanguageMode",
+        "when": "!notebookEditorFocused"
+    },
+    {
+        "key": "cmd+m m",
         "command": "-workbench.action.editor.changeLanguageMode",
         "when": "!notebookEditorFocused"
     },
@@ -54,5 +74,55 @@
         "key": "ctrl+pageup",
         "command": "-scrollLineUp",
         "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+shift+i",
+        "command": "-composer.newAgentChat"
+    },
+    {
+        "key": "cmd+shift+i",
+        "command": "-composer.newAgentChat"
+    },
+    {
+        "key": "alt+w",
+        "command": "-toggleFindWholeWord",
+        "when": "editorFocus"
+    },
+    {
+        "key": "opt+w",
+        "command": "-toggleFindWholeWord",
+        "when": "editorFocus"
+    },
+    {
+        "key": "alt+z",
+        "command": "-editor.action.toggleWordWrap"
+    },
+    {
+        "key": "opt+z",
+        "command": "-editor.action.toggleWordWrap"
+    },
+    {
+        "key": "alt+w",
+        "command": "editor.action.toggleWordWrap"
+    },
+    {
+        "key": "opt+w",
+        "command": "editor.action.toggleWordWrap"
+    },
+    {
+        "key": "ctrl+alt+e",
+        "command": "workbench.files.action.collapseExplorerFolders"
+    },
+    {
+        "key": "cmd+alt+e",
+        "command": "workbench.files.action.collapseExplorerFolders"
+    },
+    {
+        "key": "shift+alt+e",
+        "command": "workbench.files.action.showActiveFileInExplorer"
+    },
+    {
+        "key": "shift+opt+e",
+        "command": "workbench.files.action.showActiveFileInExplorer"
     }
 ]

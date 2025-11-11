@@ -4,7 +4,8 @@
         120
     ],
     "window.commandCenter": true,
-    "workbench.colorTheme": "Default Light Modern",
+    "workbench.colorTheme": "Default Dark Modern",
     "workbench.sideBar.location": "right",
-    "editor.fontSize": 16
+    "editor.fontSize": 16,
+    "editor.fontFamily": "'Fira Code','Droid Sans Mono', 'monospace', monospace"
 }
