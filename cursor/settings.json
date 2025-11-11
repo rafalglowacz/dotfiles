@@ -7,5 +7,8 @@
     "workbench.colorTheme": "Default Dark Modern",
     "workbench.sideBar.location": "right",
     "editor.fontSize": 16,
-    "editor.fontFamily": "'Fira Code','Droid Sans Mono', 'monospace', monospace"
+    "editor.fontFamily": "'Fira Code','Droid Sans Mono', 'monospace', monospace",
+    "[json]": {
+        "editor.tabSize": 2
+    }
 }
