@@ -130,5 +130,21 @@
         "key": "ctrl+m ctrl+i",
         "command": "-editor.debug.action.showDebugHover",
         "when": "editorTextFocus && inDebugMode"
+    },
+    {
+        "key": "ctrl+=",
+        "command": "-workbench.action.zoomIn"
+    },
+    {
+        "key": "ctrl+numpad_subtract",
+        "command": "-workbench.action.zoomOut"
+    },
+    {
+        "key": "ctrl+shift+-",
+        "command": "workbench.action.zoomOut"
+    },
+    {
+        "key": "ctrl+-",
+        "command": "-workbench.action.zoomOut"
     }
 ]
