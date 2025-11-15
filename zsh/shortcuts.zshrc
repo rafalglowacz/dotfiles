@@ -35,4 +35,10 @@ lh-run-widget() {
   zle accept-line
 }
 zle -N lh-run-widget
-bindkey '^[l' lh-run-widget
+
+# foo() {
+#   zle -I
+#   BUFFER='hello'
+# }
+# zle -N foo
+# bindkey '^[h' foo
