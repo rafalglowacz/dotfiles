@@ -10,5 +10,6 @@
     "editor.fontFamily": "'Fira Code','Droid Sans Mono', 'monospace', monospace",
     "[json]": {
         "editor.tabSize": 2
-    }
+    },
+    "security.promptForLocalFileProtocolHandling": false
 }
