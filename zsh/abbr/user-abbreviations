@@ -1,5 +1,8 @@
 abbr -g "art"="php artisan"
 abbr -g "bc"="bin/console"
+abbr -g "b"="brew"
+abbr -g "brew s"="brew search"
+abbr -g "brew i"="brew install"
 abbr -g "c"="composer"
 abbr -g "composer c"="composer config"
 abbr -g "composer g"="composer global"
