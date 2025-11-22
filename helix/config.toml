@@ -73,9 +73,12 @@ B = "file_picker_in_current_buffer_directory"
 e = "file_explorer_in_current_directory"
 f = "file_picker_in_current_directory"
 l = ":reload"
-r = ":reset-diff-change"
 space = "buffer_picker"
 x = ":buffer-close"
+
+[keys.normal.space.c]
+r = "rename_symbol"
+R = ":reset-diff-change"
 
 [keys.normal.space.t]
 t = ":sh ~/dev/dotfiles/vimlike/nvim/bin/kitty-runner \"test-runner %{buffer_name}:%{cursor_line}\" > /dev/null"
