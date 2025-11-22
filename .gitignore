@@ -2,6 +2,7 @@
 /.idea
 /helix/runtime
 /helix/themes/theme_link.toml
+/tmux/plugins
 *.bak.conf
 local
 local.conf
