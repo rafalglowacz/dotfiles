@@ -3,6 +3,11 @@
 /helix/runtime
 /helix/themes/theme_link.toml
 /tmux/plugins
+/vimlike/nvim/data/dbee-sources.json
+/zed/conversations
+/zed/prompts
+/zed/themes
+
 *.bak.conf
 local
 local.conf
@@ -12,4 +17,3 @@ local.zshrc
 local-init.zshrc
 local-diff.conf
 
-vimlike/nvim/data/dbee-sources.json
