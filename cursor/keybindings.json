@@ -148,7 +148,7 @@
         "command": "-workbench.action.zoomOut"
     },
     {
-        "key": "ctrl+-",
+        "key": "cmd+-",
         "command": "workbench.action.navigateBack",
         "when": "canNavigateBack"
     },
@@ -158,7 +158,7 @@
         "when": "canNavigateBack"
     },
     {
-        "key": "ctrl+alt+-",
+        "key": "alt+cmd+-",
         "command": "workbench.action.navigateForward",
         "when": "canNavigateForward"
     },
@@ -166,5 +166,33 @@
         "key": "ctrl+shift+-",
         "command": "-workbench.action.navigateForward",
         "when": "canNavigateForward"
+    },
+    {
+        "key": "shift+cmd+k",
+        "command": "-aipopup.action.modal.generate",
+        "when": "editorFocus && !composerBarIsVisible"
+    },
+    {
+        "key": "cmd+k cmd+k",
+        "command": "editor.action.showHover",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+r cmd+i",
+        "command": "-editor.action.showHover",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+=",
+        "command": "-workbench.action.zoomIn"
+    },
+    {
+        "key": "cmd+-",
+        "command": "-workbench.action.zoomOut"
+    },
+    {
+        "key": "ctrl+-",
+        "command": "-workbench.action.navigateBack",
+        "when": "canNavigateBack"
     }
 ]
