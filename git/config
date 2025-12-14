@@ -59,6 +59,7 @@
 	line-numbers = true
 [merge]
 	conflictstyle = diff3
+	autostash = true
 [diff]
     tool = kitty
     guitool = kitty.gui
