@@ -11,5 +11,6 @@
     "[json]": {
         "editor.tabSize": 2
     },
-    "security.promptForLocalFileProtocolHandling": false
+    "security.promptForLocalFileProtocolHandling": false,
+    "files.autoSave": "onFocusChange"
 }

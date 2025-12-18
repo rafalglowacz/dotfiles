@@ -55,5 +55,6 @@
     "rust-analyzer.inlayHints.renderColons": false,
     "rust-analyzer.inlayHints.typeHints.enable": false,
     "explorer.autoReveal": false,
-    "scrolloff.scrolloff": 3
+    "scrolloff.scrolloff": 3,
+    "files.autoSave": "onFocusChange"
 }
