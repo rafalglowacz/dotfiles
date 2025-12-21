@@ -29,5 +29,29 @@
     "bindings": {
       "ctrl-v": "editor::Paste"
     }
+  },
+  {
+    "context": "(VimControl && !menu)",
+    "bindings": {
+      "alt-u": "vim::Up"
+    }
+  },
+  {
+    "context": "(VimControl && !menu)",
+    "bindings": {
+      "alt-e": "vim::Down"
+    }
+  },
+  {
+    "context": "(VimControl && !menu)",
+    "bindings": {
+      "alt-n": "vim::Left"
+    }
+  },
+  {
+    "context": "(VimControl && !menu)",
+    "bindings": {
+      "alt-i": "vim::Right"
+    }
   }
 ]
