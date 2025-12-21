@@ -6,11 +6,12 @@
     "window.commandCenter": true,
     "workbench.colorTheme": "Cursor Light",
     "workbench.sideBar.location": "right",
-    "editor.fontSize": 14,
+    "editor.fontSize": 15,
     "editor.fontFamily": "'Fira Code','Droid Sans Mono', 'monospace', monospace",
     "[json]": {
         "editor.tabSize": 2
     },
     "security.promptForLocalFileProtocolHandling": false,
-    "files.autoSave": "onFocusChange"
+    "files.autoSave": "onFocusChange",
+    "editor.mouseWheelScrollSensitivity": 0.5
 }
