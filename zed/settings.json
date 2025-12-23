@@ -25,11 +25,7 @@
   "helix_mode": true,
   "ui_font_size": 19.0,
   "buffer_font_size": 18.0,
-  "theme": {
-    "mode": "system",
-    "light": "One Light",
-    "dark": "One Dark"
-  },
+  "theme": "Gruvbox Dark Hard",
   "wrap_guides": [80, 120],
   "languages": {
     "PHP": {
