@@ -15,7 +15,6 @@ plugins=(
 	zsh-abbr
 	zsh-autosuggestions-abbreviations-strategy
 	zsh-syntax-highlighting
-	z
 )
 
 # Local config that needs to be included early.
@@ -113,6 +112,7 @@ which chromium >> /dev/null &&
 # source $ZSHRC_DIR/configs/fnm.zshrc
 source $ZSHRC_DIR/configs/fzf.zshrc
 source $ZSHRC_DIR/configs/atuin.zshrc
+source $ZSHRC_DIR/configs/zoxide.zshrc
 
 # Haskell
 [ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env"
