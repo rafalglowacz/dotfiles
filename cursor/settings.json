@@ -13,5 +13,7 @@
     },
     "security.promptForLocalFileProtocolHandling": false,
     "files.autoSave": "onFocusChange",
-    "editor.mouseWheelScrollSensitivity": 0.5
+    "editor.mouseWheelScrollSensitivity": 0.5,
+    "kotlin.diagnostics.enabled": false,
+    "kotlin.indexing.enabled": false
 }
