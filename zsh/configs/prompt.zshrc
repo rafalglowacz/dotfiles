@@ -17,7 +17,7 @@ local fg_blue="%{$fg[blue]%}"
 local color_reset="%{$reset_color%}"
 
 promptParts=(
-  "${dark_gray}🭔"
+  "${dark_gray}"
   "${white_on_gray}${bold}%D{%X} │${reset}"
 )
 
@@ -30,11 +30,11 @@ fi
 
 promptParts+=(
   "${white_on_gray} %~%{$reset_color%}"
-  "${dark_gray}🭎${reset} "
+  "${dark_gray}${reset} "
 )
 # Add job count. Base form is:  %(1j.%j.)
 promptParts+=(
-  "%(1j.$fg_yellow🭔$bg_yellow$fg_black%j$color_reset$fg_yellow🭎$color_reset .)"
+  "%(1j.$fg_yellow$bg_yellow$fg_black%j$color_reset$fg_yellow$color_reset .)"
 )
 if [ -z "$PROMPT_PADDING" ]; then
   PROMPT_PADDING=' '
