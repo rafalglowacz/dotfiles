@@ -36,6 +36,7 @@ ZLE_REMOVE_SUFFIX_CHARS=""
 # See also omz-termsupport-preexec-custom.zshrc
 ZSH_THEME_TERM_TITLE_IDLE="%~"
 ABBR_SET_EXPANSION_CURSOR=1
+export STARSHIP_CONFIG=~/.config/starship/starship.toml
 setopt GLOB_DOTS
 # Ask ZSH not to break `rm -f`
 setopt RM_STARSILENT
@@ -44,7 +45,9 @@ zstyle ':completion:*' ignored-patterns '.' '..' '*/.' '*/..'
 # source $ZSHRC_DIR/configs/commandline-editing.zshrc
 source $ZSHRC_DIR/configs/precmd.zshrc
 source $ZSHRC_DIR/configs/plugins.zshrc
-source $ZSHRC_DIR/configs/prompt.zshrc
+which starship > /dev/null &&
+    eval "$(starship init zsh)" ||
+    source $ZSHRC_DIR/configs/prompt.zshrc
 source $ZSHRC_DIR/shortcuts.zshrc
 
 ##################
