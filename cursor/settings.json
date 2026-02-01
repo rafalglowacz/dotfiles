@@ -15,5 +15,7 @@
     "files.autoSave": "onFocusChange",
     "editor.mouseWheelScrollSensitivity": 0.5,
     "kotlin.diagnostics.enabled": false,
-    "kotlin.indexing.enabled": false
+    "kotlin.indexing.enabled": false,
+    "update.releaseTrack": "prerelease",
+    "update.mode": "silentlyApplyOnQuit"
 }
