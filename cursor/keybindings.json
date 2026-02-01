@@ -216,5 +216,15 @@
         "key": "ctrl+-",
         "command": "-workbench.action.navigateBack",
         "when": "canNavigateBack"
+    },
+    {
+        "key": "alt+m",
+        "command": "editor.action.jumpToBracket",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+cmd+\\",
+        "command": "-editor.action.jumpToBracket",
+        "when": "editorTextFocus"
     }
 ]
