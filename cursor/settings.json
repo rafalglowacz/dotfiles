@@ -17,5 +17,6 @@
     "kotlin.diagnostics.enabled": false,
     "kotlin.indexing.enabled": false,
     "update.releaseTrack": "prerelease",
-    "update.mode": "silentlyApplyOnQuit"
+    "cursor.composer.queueMessageDefaultBehavior": "send",
+    "cursor.composer.usageSummaryDisplay": "always"
 }
