@@ -24,8 +24,8 @@
   },
   "helix_mode": true,
   "ui_font_size": 19.0,
-  "buffer_font_size": 18.0,
-  "theme": "Gruvbox Dark Hard",
+  "buffer_font_size": 16.0,
+  "theme": "Gruvbox Light Hard",
   "wrap_guides": [80, 120],
   "languages": {
     "PHP": {
