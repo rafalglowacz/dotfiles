@@ -39,6 +39,8 @@
 	showUntrackedFiles = true
 [checkout]
 	defaultRemote = origin
+[push]
+	default = upstream
 [pull]
 	rebase = false
 [stash]
