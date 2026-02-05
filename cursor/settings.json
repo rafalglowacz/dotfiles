@@ -18,5 +18,6 @@
     "kotlin.indexing.enabled": false,
     "update.releaseTrack": "prerelease",
     "cursor.composer.queueMessageDefaultBehavior": "send",
-    "cursor.composer.usageSummaryDisplay": "always"
+    "cursor.composer.usageSummaryDisplay": "always",
+    "workbench.editor.tabSizing": "shrink"
 }
