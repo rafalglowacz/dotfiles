@@ -1,6 +1,6 @@
 """Custom tab bar that shows window title in brackets when fullscreen"""
 
-from kitty.fast_data_types import Screen
+from kitty.fast_data_types import Screen, get_options
 from kitty.tab_bar import (
     DrawData,
     ExtraData,
@@ -29,33 +29,49 @@ def draw_tab(
         # Wrap the title in brackets if in stack/fullscreen layout
         title = f"[{title}]"
     
-    # Build the tab text with the same format as your current template:
-    # " {fmt.fg._444444}{index}{fmt.fg.default} {title}  "
+    # Get the tab bar background color (default background)
+    opts = get_options()
+    tab_bar_bg = as_rgb(int(opts.background))
     
-    # Get default colors based on whether tab is active
+    # Get colors based on whether tab is active
     if tab.is_active:
-        default_bg = as_rgb(int(draw_data.active_bg))
-        default_fg = as_rgb(int(draw_data.active_fg))
+        # Active tab colors
+        tab_bg = as_rgb(int(draw_data.active_bg))
+        tab_fg = as_rgb(int(draw_data.active_fg))
+        # Index color (gray #444444 for dark theme, #cccccc for light theme)
+        # We'll use a slightly lighter gray for the index
+        index_fg = as_rgb(0x00cccccc)
     else:
-        default_bg = as_rgb(int(draw_data.inactive_bg))
-        default_fg = as_rgb(int(draw_data.inactive_fg))
+        # Inactive tab colors
+        tab_bg = as_rgb(int(draw_data.inactive_bg))
+        tab_fg = as_rgb(int(draw_data.inactive_fg))
+        index_fg = tab_fg
     
-    # Gray color for index (#444444)
-    gray_fg = as_rgb(0x00444444)
+    # Draw left rounded corner
+    # The powerline character is drawn with fg=tab_bg against the tab_bar_bg
+    screen.cursor.fg = tab_bg
+    screen.cursor.bg = tab_bar_bg
+    screen.draw("\ue0b6")  # 
     
-    # Set colors and draw
-    screen.cursor.bg = default_bg
-    screen.cursor.fg = default_fg
-    
-    # Draw the tab content: " {gray_index} {title}  "
+    # Switch to tab background for the content
+    screen.cursor.bg = tab_bg
+    screen.cursor.fg = tab_fg
     screen.draw(" ")
     
-    # Draw index in gray
-    screen.cursor.fg = gray_fg
+    # Draw the index in a lighter gray
+    screen.cursor.fg = index_fg
     screen.draw(str(index))
+    screen.draw(" ")
     
-    # Reset to default foreground and draw title
-    screen.cursor.fg = default_fg
-    screen.draw(f" {title}  ")
+    # Draw the title in the main foreground color
+    screen.cursor.fg = tab_fg
+    screen.draw(title)
+    screen.draw(" ")
+    
+    # Draw right rounded corner
+    # The powerline character is drawn with fg=tab_bg against the tab_bar_bg
+    screen.cursor.fg = tab_bg
+    screen.cursor.bg = tab_bar_bg
+    screen.draw("\ue0b4")  # 
     
     return screen.cursor.x
