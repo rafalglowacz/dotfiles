@@ -27,7 +27,7 @@ def draw_tab(
     # Check if the layout is 'stack' (fullscreen mode)
     if tab.layout_name == 'stack':
         # Wrap the title in brackets if in stack/fullscreen layout
-        title = f"[{title}]"
+        title = f"🯙{title}🯛"
     
     # Get the tab bar background color (default background)
     opts = get_options()
