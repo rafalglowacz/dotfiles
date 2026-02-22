@@ -41,10 +41,11 @@
 	defaultRemote = origin
 [push]
 	default = upstream
-	recurse-submodules = on-demand
+	recurseSubmodules = on-demand
 [pull]
 	rebase = false
-	recurse-submodules = yes
+[fetch]
+	recurseSubmodules = true
 [stash]
 	showPatch = 1
 	showStat = 0
