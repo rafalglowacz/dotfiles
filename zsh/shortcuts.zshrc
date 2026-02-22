@@ -1,4 +1,6 @@
 bindkey '^U' backward-kill-line
+# Ctrl+Alt+U
+bindkey '^[^U' clear-whole-buffer
 # By default Ctrl+P/N cycles through previous commands, even if some text 
 # is already typed in. This makes it act like the up/down arrows, which take
 # the typed-in text into consideration.

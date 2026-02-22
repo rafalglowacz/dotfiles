@@ -42,7 +42,7 @@ setopt GLOB_DOTS
 setopt RM_STARSILENT
 zstyle ':completion:*' ignored-patterns '.' '..' '*/.' '*/..'
 
-# source $ZSHRC_DIR/configs/commandline-editing.zshrc
+source $ZSHRC_DIR/configs/commandline-editing.zshrc
 source $ZSHRC_DIR/configs/precmd.zshrc
 source $ZSHRC_DIR/configs/plugins.zshrc
 which starship > /dev/null &&
