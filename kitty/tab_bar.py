@@ -21,7 +21,6 @@ def draw_tab(
 ) -> int:
     """Draw a single tab with custom formatting"""
     
-    # Get the tab title
     title = tab.title
     
     # Check if the layout is 'stack' (fullscreen mode)
@@ -30,8 +29,7 @@ def draw_tab(
         title = f"🯙{title}🯛"
     
     # Get the tab bar background color (default background)
-    opts = get_options()
-    tab_bar_bg = as_rgb(int(opts.background))
+    tab_bar_bg = as_rgb(int(get_options().background))
     
     # Get colors based on whether tab is active
     if tab.is_active:
