@@ -46,6 +46,7 @@
 	rebase = false
 [fetch]
 	recurseSubmodules = on-demand
+	prune = true
 [stash]
 	showPatch = 1
 	showStat = 0
