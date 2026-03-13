@@ -30,7 +30,7 @@
   "helix_mode": true,
   "ui_font_size": 19.0,
   "buffer_font_size": 16.0,
-  "theme": "Gruvbox Light Hard",
+  "theme": "Night Owl Light",
   "wrap_guides": [80, 120],
   "languages": {
     "PHP": {
