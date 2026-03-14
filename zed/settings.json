@@ -7,6 +7,8 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "agent_buffer_font_size": 15.0,
+  "agent_ui_font_size": 18.0,
   "auto_signature_help": true,
   "tab_bar": {
     "show_pinned_tabs_in_separate_row": true,
@@ -44,8 +46,8 @@
     }
   },
   "helix_mode": true,
-  "ui_font_size": 19.0,
-  "buffer_font_size": 16.0,
+  "ui_font_size": 17.0,
+  "buffer_font_size": 17.0,
   "theme": "Night Owl Light",
   "wrap_guides": [80, 120],
   "languages": {
