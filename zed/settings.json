@@ -7,6 +7,18 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "tab_bar": {
+    "show_pinned_tabs_in_separate_row": true,
+    "show_nav_history_buttons": true
+  },
+  "tabs": {
+    "git_status": false
+  },
+  "which_key": {
+    "delay_ms": 500,
+    "enabled": true
+  },
+  "buffer_line_height": "standard",
   "agent_servers": {
     "claude-acp": {
       "type": "registry"
