@@ -53,5 +53,11 @@
     "bindings": {
       "alt-i": "vim::Right"
     }
+  },
+  {
+    "context": "(Editor && showing_completions)",
+    "bindings": {
+      "cmd-t": "editor::ComposeCompletion"
+    }
   }
 ]
