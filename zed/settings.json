@@ -7,9 +7,10 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "format_on_save": "off",
+  "restore_on_startup": "last_workspace",
   "agent_buffer_font_size": 15.0,
   "agent_ui_font_size": 18.0,
-  "auto_signature_help": true,
   "tab_bar": {
     "show_pinned_tabs_in_separate_row": true,
     "show_nav_history_buttons": true
