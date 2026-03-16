@@ -63,7 +63,6 @@
 [difftool "vscode"]
 	cmd = code --wait --diff $LOCAL $REMOTE
 [fetch]
-	recurseSubmodules = on-demand
 	prune = true
 [init]
 	defaultBranch = main
@@ -79,7 +78,8 @@
 	rebase = false
 [push]
 	default = upstream
-	recurseSubmodules = on-demand
 [stash]
 	showPatch = 1
 	showStat = 0
+[submodule]
+    recurse = true
