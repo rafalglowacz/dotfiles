@@ -1,6 +1,3 @@
-[core]
-	editor = hx
-	pager = LESS=Ri delta -s
 [include]
 	path = ~/.gitconfig.local
 	# path = ~/Dev/lib/delta/themes.gitconfig
@@ -39,23 +36,11 @@
 	showUntrackedFiles = true
 [checkout]
 	defaultRemote = origin
-[push]
-	default = upstream
-	recurseSubmodules = on-demand
-[pull]
-	rebase = false
-[fetch]
-	recurseSubmodules = on-demand
-	prune = true
-[stash]
-	showPatch = 1
-	showStat = 0
-[init]
-	defaultBranch = main
+[core]
+	editor = hx
+	pager = LESS=Ri delta -s
 [credential]
 	helper = cache --timeout=3600
-[interactive]
-	diffFilter = delta --color-only
 [delta]
 	# features = tangara-chilensis
 	# syntax-theme = Solarized (light)
@@ -63,9 +48,6 @@
 	diff-highlight = false
 	diff-so-fancy = false
 	line-numbers = true
-[merge]
-	conflictstyle = diff3
-	autostash = true
 [diff]
     tool = kitty
     guitool = kitty.gui
@@ -75,11 +57,29 @@
 [difftool "kitty"]
     cmd = kitten diff $LOCAL $REMOTE
 [difftool "kitty.gui"]
-    cmd = kitten diff $LOCAL $REMOTE[merge]
-	tool = vscode
+    cmd = kitten diff $LOCAL $REMOTE
 [difftool "nvim"]
 	cmd = nvim -d $LOCAL $REMOTE
 [difftool "vscode"]
 	cmd = code --wait --diff $LOCAL $REMOTE
+[fetch]
+	recurseSubmodules = on-demand
+	prune = true
+[init]
+	defaultBranch = main
+[interactive]
+	diffFilter = delta --color-only
+[merge]
+	conflictstyle = diff3
+	autostash = true
+	tool = vscode
 [mergetool "vscode"]
 	cmd = code --wait $MERGED
+[pull]
+	rebase = false
+[push]
+	default = upstream
+	recurseSubmodules = on-demand
+[stash]
+	showPatch = 1
+	showStat = 0
