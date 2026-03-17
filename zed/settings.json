@@ -49,7 +49,7 @@
   "helix_mode": true,
   "ui_font_size": 17.0,
   "buffer_font_size": 17.0,
-  "theme": "Night Owl Light",
+  "theme": "Fleet Light",
   "wrap_guides": [80, 120],
   "languages": {
     "PHP": {
