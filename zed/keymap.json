@@ -59,5 +59,11 @@
     "bindings": {
       "cmd-t": "editor::ComposeCompletion"
     }
+  },
+  {
+    "context": "(VimControl && !menu)",
+    "bindings": {
+      "space": null
+    }
   }
 ]
