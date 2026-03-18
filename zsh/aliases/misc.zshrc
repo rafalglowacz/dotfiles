@@ -4,6 +4,7 @@ alias art='php artisan'
 ! which bat >> /dev/null &&
     alias bat='batcat -p'
 
+alias claude=claude-wrapper
 alias clearall="printf '\033[2J\033[3J\033[1;1H'"
 alias clip="$COPY_CMD"
 alias diff='diff --color=always'
