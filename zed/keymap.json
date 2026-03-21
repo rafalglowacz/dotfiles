@@ -85,17 +85,5 @@
     "bindings": {
       "f6": "debugger::EvaluateSelectedText"
     }
-  },
-  {
-    "context": "(Editor && mode == full)",
-    "bindings": {
-      "alt-pagedown": "editor::GoToNextChange"
-    }
-  },
-  {
-    "context": "(Editor && mode == full)",
-    "bindings": {
-      "alt-pageup": "editor::GoToPreviousChange"
-    }
   }
 ]
