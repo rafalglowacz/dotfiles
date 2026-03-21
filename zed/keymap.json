@@ -85,5 +85,17 @@
     "bindings": {
       "f6": "debugger::EvaluateSelectedText"
     }
+  },
+  {
+    "context": "(!ContextEditor && !AcpThread) > (Editor && mode == full)",
+    "bindings": {
+      "alt-pagedown": "editor::GoToHunk"
+    }
+  },
+  {
+    "context": "(!ContextEditor && !AcpThread) > (Editor && mode == full)",
+    "bindings": {
+      "alt-pageup": "editor::GoToPreviousHunk"
+    }
   }
 ]
