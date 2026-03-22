@@ -12,9 +12,6 @@ $directory\
 $git_branch\
 $git_status\
 [](fg:color_aqua bg:color_bg3)\
-$docker_context\
-$conda\
-$pixi\
 [](fg:color_bg3 bg:color_bg1)\
 $time\
 [ ](fg:color_bg1)\
@@ -71,8 +68,9 @@ format = '[ $user ]($style)'
 [directory]
 style = "fg:color_fg0 bg:color_yellow"
 format = "[ $path ]($style)"
-truncation_length = 3
-truncation_symbol = "…/"
+truncation_length = 100
+truncate_to_repo = false
+home_symbol = "~"
 
 [directory.substitutions]
 "Documents" = "󰈙 "
