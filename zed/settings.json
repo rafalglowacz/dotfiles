@@ -55,5 +55,9 @@
     "PHP": {
       "language_servers": ["!phptools", "!intelephense", "..."]
     }
+  },
+  "easy_motion": {
+    "enabled": true,
+    "keys": "tnseriaogm"
   }
 }
