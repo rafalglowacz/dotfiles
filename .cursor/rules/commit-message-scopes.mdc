@@ -1,0 +1,46 @@
+---
+description: Add top-level directory scope to commit messages
+alwaysApply: true
+---
+
+# Commit Message Scopes
+
+When committing changes, always prepend the scope based on the top-level directory that was modified. The scope is wrapped in parentheses, followed by a colon and space before the commit message. Use **title case** (first letter uppercase, rest lowercase) for normal names; use **all caps** when the scope is an abbreviation (e.g. `ZSH`).
+
+After the colon, the first word of the commit message should be **lowercase** unless it's a proper name or acronym.
+
+## Scope Format
+
+```
+(ScopeOrABBREV): lowercase message here unless proper name
+```
+
+## Directory to Scope Mapping
+
+- **Abbreviations** (all caps): `zsh/` → `(ZSH)`
+- **Full words** (title case): `kitty/` → `(Kitty)`, `nvim/` → `(Nvim)`, `git/` → `(Git)`, `starship/` → `(Starship)`, `tmux/` → `(Tmux)`
+
+For other top-level directories: if the name is a common abbreviation (e.g. `API`, `CLI`), use all caps; otherwise use title case.
+
+## Examples
+
+✅ **GOOD**
+```
+(Kitty): add new keybinding for window switching
+(ZSH): update abbreviations for common commands
+(Nvim): improve LSP configuration
+(Git): fix merge conflict in config
+```
+
+❌ **BAD**
+```
+add new keybinding  # Missing scope
+(Kitty): Add new keybinding  # First word after colon should be lowercase
+(KITTY): Add keybinding  # "Kitty" is not an abbreviation—use title case, not all caps
+(Zsh): add keybinding  # ZSH is an abbreviation—use (ZSH), not (Zsh)
+(kitty): add keybinding  # Scope should start with uppercase
+```
+
+## When Changes Affect Multiple Directories
+
+If changes span multiple top-level directories, use the primary or most significant directory for the scope.
