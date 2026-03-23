@@ -97,5 +97,22 @@
     "bindings": {
       "alt-pageup": "editor::GoToPreviousHunk"
     }
+  },
+  {
+    "context": "Pane && vim_mode == insert",
+    "bindings": {
+      "ctrl-w": [
+        "pane::CloseActiveItem",
+        {
+          "close_pinned": false
+        }
+      ]
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "ctrl-w": null
+    }
   }
 ]
