@@ -10,6 +10,7 @@
     "context": "Workspace",
     "bindings": {
       // "shift shift": "file_finder::Toggle"
+      "ctrl-alt-k": ["task::Spawn", {"task_name": "Send file and line to Kitty"}]
     }
   },
   {
