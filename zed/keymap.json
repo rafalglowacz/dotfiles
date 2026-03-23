@@ -33,24 +33,9 @@
   {
     "context": "(VimControl && !menu)",
     "bindings": {
-      "alt-u": "vim::Up"
-    }
-  },
-  {
-    "context": "(VimControl && !menu)",
-    "bindings": {
-      "alt-e": "vim::Down"
-    }
-  },
-  {
-    "context": "(VimControl && !menu)",
-    "bindings": {
-      "alt-n": "vim::Left"
-    }
-  },
-  {
-    "context": "(VimControl && !menu)",
-    "bindings": {
+      "alt-u": "vim::Up",
+      "alt-e": "vim::Down",
+      "alt-n": "vim::Left",
       "alt-i": "vim::Right"
     }
   },
@@ -68,33 +53,16 @@
   },
   {
     "bindings": {
+      "f6": "debugger::EvaluateSelectedText",
+      "f7": "debugger::StepInto",
+      "f8": "debugger::RunToCursor",
       "f10": "debugger::StepOver"
     }
   },
   {
-    "bindings": {
-      "f7": "debugger::StepInto"
-    }
-  },
-  {
-    "bindings": {
-      "f8": "debugger::RunToCursor"
-    }
-  },
-  {
-    "bindings": {
-      "f6": "debugger::EvaluateSelectedText"
-    }
-  },
-  {
     "context": "(!ContextEditor && !AcpThread) > (Editor && mode == full)",
     "bindings": {
-      "alt-pagedown": "editor::GoToHunk"
-    }
-  },
-  {
-    "context": "(!ContextEditor && !AcpThread) > (Editor && mode == full)",
-    "bindings": {
+      "alt-pagedown": "editor::GoToHunk",
       "alt-pageup": "editor::GoToPreviousHunk"
     }
   },
