@@ -61,6 +61,13 @@ def draw_tab(
     screen.draw(str(index))
     screen.draw(" ")
     
+    # Truncate title to fit within max_tab_length
+    # Account for: left corner (1) + space (1) + index + space (1) + title + space (1) + right corner (1)
+    overhead = 4 + len(str(index))
+    max_title_len = max(1, max_tab_length - overhead)
+    if len(title) > max_title_len:
+        title = title[:max_title_len - 1] + "…"
+
     # Draw the title in the main foreground color
     screen.cursor.fg = tab_fg
     screen.draw(title)
