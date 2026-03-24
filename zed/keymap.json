@@ -10,7 +10,8 @@
     "context": "Workspace",
     "bindings": {
       // "shift shift": "file_finder::Toggle"
-      "ctrl-alt-k": ["task::Spawn", {"task_name": "Send file and line to Kitty"}]
+      "ctrl-alt-k": ["task::Spawn", {"task_name": "Send file and line to Kitty"}],
+      "cmd-alt-k": ["task::Spawn", {"task_name": "Send file and line to Kitty"}]
     }
   },
   {
@@ -94,6 +95,24 @@
     "context": "(!ContextEditor && !AcpThread) > (Editor && mode == full)",
     "bindings": {
       "cmd-shift-e": null
+    }
+  },
+  {
+    "context": "(VimControl && !menu)",
+    "bindings": {
+      "+": null
+    }
+  },
+  {
+    "context": "(VimControl && !menu)",
+    "bindings": {
+      "-": "editor::ScrollCursorTop"
+    }
+  },
+  {
+    "context": "(VimControl && !menu)",
+    "bindings": {
+      "+": "editor::ScrollCursorBottom"
     }
   }
 ]
