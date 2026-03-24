@@ -80,7 +80,6 @@ if status is-interactive
     abbr lg lazygit
     abbr --command nest nest_g --regex g generate
     abbr rgp rg --engine pcre2
-    abbr t tofu
 
     abbr yayinstall yay -S
     abbr yayrm yay -Rs
