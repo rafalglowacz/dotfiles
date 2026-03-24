@@ -100,19 +100,13 @@
   {
     "context": "(VimControl && !menu)",
     "bindings": {
-      "+": null
-    }
-  },
-  {
-    "context": "(VimControl && !menu)",
-    "bindings": {
-      "-": "editor::ScrollCursorTop"
-    }
-  },
-  {
-    "context": "(VimControl && !menu)",
-    "bindings": {
-      "+": "editor::ScrollCursorBottom"
+      "+": null,
+      "backspace": "editor::ScrollCursorTop",
+      "shift-backspace": "editor::ScrollCursorBottom",
+      "space shift-l": "editor::ReloadFile",
+      "- i": "debugger::StepInto",
+      "- o": "debugger::StepOver",
+      "- shift-o": "debugger::StepOut"
     }
   }
 ]
