@@ -83,5 +83,17 @@
     "bindings": {
       "ctrl-w": null
     }
+  },
+  {
+    "context": "(!ContextEditor && !AcpThread) > (Editor && mode == full)",
+    "bindings": {
+      "cmd-k e": "pane::RevealInProjectPanel"
+    }
+  },
+  {
+    "context": "(!ContextEditor && !AcpThread) > (Editor && mode == full)",
+    "bindings": {
+      "cmd-shift-e": null
+    }
   }
 ]

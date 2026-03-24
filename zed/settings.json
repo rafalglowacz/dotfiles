@@ -39,6 +39,7 @@
     "model_parameters": []
   },
   "project_panel": {
+    "auto_reveal_entries": false,
     "dock": "right"
   },
   "git": {
