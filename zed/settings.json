@@ -7,6 +7,11 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "bottom_dock_layout": "full",
+  "title_bar": {
+    "show_sign_in": false,
+    "show_branch_icon": true
+  },
   "document_folding_ranges": "on",
   "format_on_save": "off",
   "restore_on_startup": "last_workspace",
@@ -18,7 +23,8 @@
     "max_tabs": 7
   },
   "tabs": {
-    "git_status": false
+    "file_icons": true,
+    "git_status": true
   },
   "which_key": {
     "delay_ms": 500,
@@ -61,6 +67,6 @@
   },
   "easy_motion": {
     "enabled": true,
-    "keys": "tnseriaogm"
+    "keys": "tnseriaocdvhzkwfpyul"
   }
 }

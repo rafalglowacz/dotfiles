@@ -108,5 +108,19 @@
       "- o": "debugger::StepOver",
       "- shift-o": "debugger::StepOut"
     }
+  },
+  {
+    "bindings": {
+      "alt-escape": "editor::ToggleFocus"
+    }
+  },
+  {
+    "context": "(VimControl && !menu)",
+    "bindings": {
+      "alt-t": [
+        "easy_motion::Word",
+        "both"
+      ]
+    }
   }
 ]
