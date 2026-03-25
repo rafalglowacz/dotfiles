@@ -62,7 +62,7 @@
   "wrap_guides": [80, 120],
   "languages": {
     "PHP": {
-      "language_servers": ["!phptools", "!intelephense", "..."]
+      "language_servers": ["!phptools", "!phpactor", "..."]
     }
   },
   "easy_motion": {
