@@ -104,9 +104,12 @@
       "backspace": "editor::ScrollCursorTop",
       "shift-backspace": "editor::ScrollCursorBottom",
       "space shift-l": "editor::ReloadFile",
+      "- -": "debugger::Continue",
+      "- e": "debugger::EvaluateSelectedText",
       "- i": "debugger::StepInto",
       "- o": "debugger::StepOver",
-      "- shift-o": "debugger::StepOut"
+      "- shift-o": "debugger::StepOut",
+      "- r": "debugger::RunToCursor"
     }
   },
   {
