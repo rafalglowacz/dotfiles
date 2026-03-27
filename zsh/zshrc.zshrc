@@ -14,6 +14,7 @@ plugins=(
 	zsh-autosuggestions
 	zsh-abbr
 	zsh-autosuggestions-abbreviations-strategy
+	# Should stay at the end to work correctly:
 	zsh-syntax-highlighting
 )
 
