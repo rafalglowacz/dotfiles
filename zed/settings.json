@@ -7,6 +7,9 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "search": {
+    "regex": true
+  },
   "bottom_dock_layout": "full",
   "title_bar": {
     "show_sign_in": false,
