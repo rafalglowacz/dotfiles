@@ -20,12 +20,12 @@
   "tab_bar": {
     "show_pinned_tabs_in_separate_row": true,
     "show_nav_history_buttons": true,
-    "max_tabs": 7
   },
   "tabs": {
     "file_icons": true,
     "git_status": true
   },
+  "max_tabs": 7,
   "which_key": {
     "delay_ms": 500,
     "enabled": true
