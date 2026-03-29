@@ -1,7 +1,7 @@
 [
   {
     "label": "Send file and line to Kitty",
-    "command": "kitty @ --to unix:$(for f in /tmp/kitty-remote-control-[0-9]*; do pid=\"${f##*-}\"; kill -0 \"$pid\" 2>/dev/null && echo \"$f\" && break; done) send-text -- '$ZED_RELATIVE_FILE:$ZED_ROW'",
+    "command": "kitty @ --to unix:$(for f in /tmp/kitty-remote-control-[0-9]*; do pid=\"${f##*-}\"; kill -0 \"$pid\" 2>/dev/null && echo \"$f\" && break; done) send-text -- '$ZED_RELATIVE_FILE:$ZED_ROW '",
     "reveal": "never"
   }
 ]
