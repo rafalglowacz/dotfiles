@@ -82,7 +82,12 @@
   {
     "context": "Pane",
     "bindings": {
-      "ctrl-w": null
+      "cmd-w": [
+        "pane::CloseActiveItem",
+        {
+          "close_pinned": true
+        }
+      ]
     }
   },
   {
@@ -124,6 +129,11 @@
         "easy_motion::Word",
         "both"
       ]
+    }
+  },
+  {
+    "bindings": {
+      "f13": "editor::OpenContextMenu"
     }
   }
 ]
