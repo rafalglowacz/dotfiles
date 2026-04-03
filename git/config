@@ -78,6 +78,7 @@
 	rebase = false
 [push]
 	default = upstream
+	autoSetupRemote = true
 [stash]
 	showPatch = 1
 	showStat = 0
