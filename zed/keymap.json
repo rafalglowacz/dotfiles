@@ -93,7 +93,8 @@
   {
     "context": "(!ContextEditor && !AcpThread) > (Editor && mode == full)",
     "bindings": {
-      "cmd-k e": "pane::RevealInProjectPanel"
+      "cmd-k e": "pane::RevealInProjectPanel",
+      "ctrl-k e": "pane::RevealInProjectPanel"
     }
   },
   {
@@ -140,6 +141,18 @@
     "context": "Editor",
     "bindings": {
       "ctrl-k shift-p": "workspace::CopyRelativePath"
+    }
+  },
+  {
+    "context": "!ContextEditor > (Editor && mode == full)",
+    "bindings": {
+      "ctrl-shift-e": null
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-shift-e": "project_panel::ToggleFocus"
     }
   }
 ]
