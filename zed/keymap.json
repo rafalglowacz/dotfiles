@@ -135,5 +135,11 @@
     "bindings": {
       "f13": "editor::OpenContextMenu"
     }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-k shift-p": "workspace::CopyRelativePath"
+    }
   }
 ]
