@@ -139,5 +139,11 @@
       "ctrl-k shift-p": "workspace::CopyRelativePath",
       "ctrl-shift-e": "project_panel::ToggleFocus"
     }
+  },
+  {
+    "context": "Editor",
+      "bindings": {
+      "cmd-k shift-p": "workspace::CopyRelativePath"
+    }
   }
 ]
