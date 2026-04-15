@@ -7,7 +7,7 @@
         120
     ],
     "window.openFoldersInNewWindow": "off",
-    "workbench.colorTheme": "Default Light Modern",
+    "workbench.colorTheme": "Light Modern",
     "window.menuBarVisibility": "toggle",
     "window.newWindowDimensions": "inherit",
     "workbench.startupEditor": "none",
