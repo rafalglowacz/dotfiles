@@ -98,6 +98,7 @@ export PATH="$MY_PATH:$PATH"
 #######
 
 export COMPOSER_HOME="$HOME/.config/composer"
+export DOCKER_CLI_HINTS=false
 export EDITOR=hx
 export VISUAL=$EDITOR
 export LESS='XRi'
