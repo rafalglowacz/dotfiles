@@ -139,7 +139,9 @@
       "ctrl-k shift-p": "workspace::CopyRelativePath",
       "ctrl-shift-e": "project_panel::ToggleFocus",
       "cmd-k p": "workspace::CopyRelativePath",
-      "cmd-k shift-p": "workspace::CopyPath"
+      "cmd-k shift-p": "workspace::CopyPath",
+      "ctrl-shift-down": "vim::NextMethodStart",
+      "ctrl-shift-up": "vim::PreviousMethodStart"
     }
   }
 ]
