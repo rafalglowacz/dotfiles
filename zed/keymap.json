@@ -38,19 +38,27 @@
       "alt-u": "vim::Up",
       "alt-e": "vim::Down",
       "alt-n": "vim::Left",
-      "alt-i": "vim::Right"
+      "alt-i": "vim::Right",
+      "space": null,
+      "+": null,
+      "backspace": "editor::ScrollCursorTop",
+      "shift-backspace": "editor::ScrollCursorBottom",
+      "space shift-l": "editor::ReloadFile",
+      "- -": "debugger::Continue",
+      "- e": "debugger::EvaluateSelectedText",
+      "- i": "debugger::StepInto",
+      "- o": "debugger::StepOver",
+      "- shift-o": "debugger::StepOut",
+      "- r": "debugger::RunToCursor",
+    },
+    "unbind": {
+      "-": "vim::PreviousLineStart"
     }
   },
   {
     "context": "(Editor && showing_completions)",
     "bindings": {
       "cmd-t": "editor::ComposeCompletion"
-    }
-  },
-  {
-    "context": "(VimControl && !menu)",
-    "bindings": {
-      "space": null
     }
   },
   {
@@ -100,32 +108,8 @@
     }
   },
   {
-    "context": "(VimControl && !menu)",
-    "bindings": {
-      "+": null,
-      "backspace": "editor::ScrollCursorTop",
-      "shift-backspace": "editor::ScrollCursorBottom",
-      "space shift-l": "editor::ReloadFile",
-      "- -": "debugger::Continue",
-      "- e": "debugger::EvaluateSelectedText",
-      "- i": "debugger::StepInto",
-      "- o": "debugger::StepOver",
-      "- shift-o": "debugger::StepOut",
-      "- r": "debugger::RunToCursor"
-    }
-  },
-  {
     "bindings": {
       "alt-escape": "editor::ToggleFocus"
-    }
-  },
-  {
-    "context": "(VimControl && !menu)",
-    "bindings": {
-      "alt-t": [
-        "easy_motion::Word",
-        "both"
-      ]
     }
   },
   {
