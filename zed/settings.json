@@ -13,8 +13,8 @@
   },
   "bottom_dock_layout": "full",
   "title_bar": {
-    "show_sign_in": false,
-    "show_branch_icon": true
+    "show_branch_status_icon": true,
+    "show_sign_in": false
   },
   "document_folding_ranges": "on",
   "format_on_save": "off",
