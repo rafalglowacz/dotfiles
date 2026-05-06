@@ -17,7 +17,6 @@
     "editor.mouseWheelScrollSensitivity": 0.5,
     "kotlin.diagnostics.enabled": false,
     "kotlin.indexing.enabled": false,
-    "update.releaseTrack": "prerelease",
     "cursor.composer.queueMessageDefaultBehavior": "send",
     "cursor.composer.usageSummaryDisplay": "always",
     "workbench.editor.tabSizing": "shrink",
