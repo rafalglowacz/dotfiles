@@ -1,6 +1,7 @@
 abbr -g "-calw"="--color always"
 abbr -g "art"="php artisan"
 abbr -g "b"="brew"
+abbr -g "batw"="bat $(which %)"
 abbr -g "bc"="bin/console"
 abbr -g "brew i"="brew install"
 abbr -g "brew s"="brew search"
