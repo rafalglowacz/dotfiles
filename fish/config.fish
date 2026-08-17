@@ -57,23 +57,16 @@ if status is-interactive
 
     abbr art php artisan
     abbr b brew
+    abbr --command brew b_i --regex i install
+    abbr --command brew b_s --regex s search
+    abbr --command brew b_up --regex up upgrade
     abbr c composer
     abbr cl claude
     abbr clc claude --continue
     abbr clr claude --resume
     abbr d docker
     abbr dc docker compose
-    abbr --command docker d_c --regex c config
-    abbr --command docker d_d --regex d down
-    abbr --command docker d_e --regex e exec -it
-    abbr --command docker d_i --regex i image
-    abbr --command docker d_j --regex j -- --format json
-    abbr --command docker d_l --regex l logs
-    abbr --command docker d_ll --regex ll logs -n 0 -f
-    abbr --command docker d_n --regex n network
-    abbr --command docker d_r --regex r restart
-    abbr --command docker d_u --regex u up -d
-    abbr --command docker d_v --regex v volume
+    abbr --add docker_sub --command docker --regex '^(c|d|e|i|j|l|ll|n|r|u|v)$' --function _docker_abbr
     abbr fp flatpak
     abbr p podman
     abbr pc podman compose
