@@ -43,6 +43,7 @@ if status is-interactive
     end
 
     alias art='php artisan'
+    alias claude='claude-wrapper'
     alias clip=pbcopy
     alias diff='diff --color=always'
     alias h=history
