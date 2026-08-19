@@ -5,3 +5,6 @@ inline_height = 20
 style = "compact"
 invert = true
 exit_mode = "return-query"
+
+[search]
+shells = "all"
