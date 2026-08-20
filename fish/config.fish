@@ -199,4 +199,8 @@ if status is-interactive
     function fish_postexec --on-event fish_postexec
         echo
     end
+
+    if test -f "$config_dir/local.fish"
+        source "$config_dir/local.fish"
+    end
 end
