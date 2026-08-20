@@ -42,7 +42,6 @@ if status is-interactive
         fish_add_path -P ~/.local/share/JetBrains/Toolbox/apps/phpstorm/bin
     end
 
-    alias art='php artisan'
     alias claude='claude-wrapper'
     alias clip=pbcopy
     alias diff='diff --color=always'
@@ -53,7 +52,6 @@ if status is-interactive
     alias lh='ls -lh --time-style relative'
     alias lhiso='lh --time-style long-iso'
     alias l1='ls -1'
-    alias phpv='php --version'
     alias rm='rm --interactive=never'
 
     abbr art php artisan
