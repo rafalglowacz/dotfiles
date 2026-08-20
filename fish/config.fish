@@ -57,12 +57,17 @@ if status is-interactive
     alias rm='rm --interactive=never'
 
     abbr art php artisan
+    abbr --add artisan_sub --command php --regex '^(m|mr)$' --function _php_artisan_abbr
     abbr batw --set-cursor 'bat (which %)'
     abbr b brew
     abbr --command brew b_i --regex i install
     abbr --command brew b_s --regex s search
     abbr --command brew b_up --regex up upgrade
     abbr c composer
+    abbr --command composer composer_c --regex c config
+    abbr --command composer composer_g --regex g global
+    abbr --command composer composer_i --regex i install
+    abbr --command composer composer_ls --regex ls show
     abbr cl claude
     abbr clc claude --continue
     abbr clr claude --resume
@@ -72,6 +77,9 @@ if status is-interactive
     abbr dsru --set-cursor 'set service %; docker compose stop $service && docker compose rm -f $service && docker compose up -d'
     abbr ege --set-cursor 'echo % >> .git/info/exclude'
     abbr fp flatpak
+    abbr --command flatpak fp_i --regex i install
+    abbr --command flatpak fp_rm --regex rm uninstall
+    abbr --command flatpak fp_s --regex s search
     abbr p podman
     abbr pc podman compose
 
@@ -142,12 +150,15 @@ if status is-interactive
     abbr kssh kitten ssh
     abbr ld lazydocker
     abbr lg lazygit
+    abbr mds npx markserv
     abbr --command nest nest_g --regex g generate
     abbr rgp rg --engine pcre2
+    abbr --command supervisorctl supervisorctl_st --regex st status
     abbr storm phpstorm
     abbr tin --set-cursor 'php artisan tinker --execute "%"'
     abbr tr trash -F
     abbr whi --set-cursor 'while true; %; sleep 3; end'
+    abbr xdst "de php -i | rg 'xdebug\.(mode|start|client)'"
 
     abbr yayinstall yay -S
     abbr yayrm yay -Rs
