@@ -39,7 +39,7 @@ if status is-interactive
         fish_add_path -P ~/dev/lib/phpactor/bin
     end
     if test -d ~/.local/share/JetBrains/Toolbox/apps/phpstorm/bin
-        fish_add_path ~/.local/share/JetBrains/Toolbox/apps/phpstorm/bin
+        fish_add_path -P ~/.local/share/JetBrains/Toolbox/apps/phpstorm/bin
     end
 
     alias art='php artisan'
