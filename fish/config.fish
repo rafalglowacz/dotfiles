@@ -57,6 +57,7 @@ if status is-interactive
     alias rm='rm --interactive=never'
 
     abbr art php artisan
+    abbr batw --set-cursor 'bat (which %)'
     abbr b brew
     abbr --command brew b_i --regex i install
     abbr --command brew b_s --regex s search
@@ -68,6 +69,8 @@ if status is-interactive
     abbr d docker
     abbr dc docker compose
     abbr --add docker_sub --command docker --regex '^(c|d|e|i|j|l|ll|n|r|u|v)$' --function _docker_abbr
+    abbr dsru --set-cursor 'set service %; docker compose stop $service && docker compose rm -f $service && docker compose up -d'
+    abbr ege --set-cursor 'echo % >> .git/info/exclude'
     abbr fp flatpak
     abbr p podman
     abbr pc podman compose
@@ -104,7 +107,7 @@ if status is-interactive
     abbr --command git g_l --regex l mylog
     abbr --command git g_m --regex m merge
     abbr --command git g_ma --regex ma merge --abort
-    abbr --command git g_mb --regex mb merge-base origin/develop HEAD
+    abbr --command git g_mb --regex mb --function _git_mb --set-cursor
     abbr --command git g_pl --regex pl pull
     abbr --command git g_ps --regex ps push
     abbr --command git g_psd --regex psd push -d origin
@@ -134,18 +137,23 @@ if status is-interactive
     abbr --command kubectl k_g --regex g get
     abbr --command kubectl k_gd --regex gd get deploy
     abbr --command kubectl k_gp --regex gp get pod
+    abbr kcm --set-cursor 'kitten @ create-marker iregex 1 "%"'
+    abbr kcmt --set-cursor 'kitten @ create-marker -m neighbor:top iregex 1 "%"; exit'
     abbr kssh kitten ssh
     abbr ld lazydocker
     abbr lg lazygit
     abbr --command nest nest_g --regex g generate
     abbr rgp rg --engine pcre2
     abbr storm phpstorm
+    abbr tin --set-cursor 'php artisan tinker --execute "%"'
     abbr tr trash -F
+    abbr whi --set-cursor 'while true; %; sleep 3; end'
 
     abbr yayinstall yay -S
     abbr yayrm yay -Rs
     abbr yaylist yay -Q
     abbr yayinfo yay -Qi
+    abbr yaysearch --set-cursor 'set term "%"; yay -Ss "$term" | rg -A1 "^\S.*$term"'
     abbr yayup yay -Syu --noconfirm
 
     if test -x /opt/homebrew/bin/brew
