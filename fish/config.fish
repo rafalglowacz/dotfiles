@@ -42,6 +42,10 @@ if status is-interactive
         fish_add_path -P ~/Library/Application\ Support/JetBrains/Toolbox/scripts
     end
 
+    if test -x /opt/homebrew/bin/brew
+        /opt/homebrew/bin/brew shellenv fish | source
+    end
+
     alias claude='claude-wrapper'
     alias clip=pbcopy
     alias diff='diff --color=always'
@@ -168,10 +172,6 @@ if status is-interactive
     abbr yayinfo yay -Qi
     abbr yaysearch --set-cursor 'set term "%"; yay -Ss "$term" | rg -A1 "^\S.*$term"'
     abbr yayup yay -Syu --noconfirm
-
-    if test -x /opt/homebrew/bin/brew
-        /opt/homebrew/bin/brew shellenv fish | source
-    end
 
     thefuck -a wat | source
     zoxide init fish | source
