@@ -52,7 +52,11 @@ if status is-interactive
     alias lh='ls -lh --time-style relative'
     alias lhiso='lh --time-style long-iso'
     alias l1='ls -1'
-    alias rm='rm --interactive=never'
+    if command -q grm
+        alias rm='grm --interactive=never'
+    else
+        alias rm='rm --interactive=never'
+    end
 
     abbr art php artisan
     abbr --add artisan_sub --command php --regex '^(m|mr)$' --function _php_artisan_abbr
