@@ -38,8 +38,8 @@ if status is-interactive
     if test -d ~/dev/lib/phpactor/bin
         fish_add_path -P ~/dev/lib/phpactor/bin
     end
-    if test -d ~/.local/share/JetBrains/Toolbox/apps/phpstorm/bin
-        fish_add_path -P ~/.local/share/JetBrains/Toolbox/apps/phpstorm/bin
+    if test -d ~/Library/Application\ Support/JetBrains/Toolbox/scripts
+        fish_add_path -P ~/Library/Application\ Support/JetBrains/Toolbox/scripts
     end
 
     alias claude='claude-wrapper'
