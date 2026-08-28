@@ -196,6 +196,8 @@ if status is-interactive
     bind \ee edit_command_buffer
     bind \el lh_run
 
+    fish_config theme choose my
+
     # Starship replaces the custom Fish prompt when available. The existing
     # prompt functions remain a fallback for machines without Starship.
     if command -q starship
