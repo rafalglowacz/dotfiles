@@ -189,7 +189,7 @@ if status is-interactive
     eval "$(atuin init fish --disable-up-arrow)"
     # Bind down arrow to open search. I'm using inverted mode
     # so it makes more sense this way.
-    bind \e\[B _atuin_bind_up
+    bind \e\[B _atuin_bind_down
 
     bind \cp history-prefix-search-backward
     bind \cn history-prefix-search-forward
