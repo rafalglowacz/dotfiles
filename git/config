@@ -74,6 +74,9 @@
 	tool = vscode
 [mergetool "vscode"]
 	cmd = code --wait $MERGED
+[pager]
+	log = less -RiS
+	reflog = less -RiS
 [pull]
 	rebase = false
 [push]
