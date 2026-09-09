@@ -35,6 +35,9 @@ if status is-interactive
     if test -d ~/.atuin/bin
         fish_add_path -P ~/.atuin/bin
     end
+    if test -d ~/.docker/bin
+        fish_add_path -P ~/.docker/bin
+    end
     if test -d ~/dev/lib/phpactor/bin
         fish_add_path -P ~/dev/lib/phpactor/bin
     end
