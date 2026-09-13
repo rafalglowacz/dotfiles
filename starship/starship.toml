@@ -3,12 +3,12 @@
 add_newline=false
 
 format = """
-[](color_orange)\
+[](color_bg1)\
 $os\
 $username\
-[](bg:color_yellow fg:color_orange)\
+[](bg:color_blue fg:color_bg1)\
 $directory\
-[](fg:color_yellow bg:color_aqua)\
+[](fg:color_blue bg:color_aqua)\
 $git_branch\
 $git_status\
 [](fg:color_aqua bg:color_bg3)\
@@ -47,7 +47,7 @@ color_white = 'white'
 
 [os]
 disabled = false
-style = "bg:color_orange fg:color_fg0"
+style = "bg:color_bg1 fg:color_fg0"
 
 [os.symbols]
 Windows = "󰍲"
@@ -75,12 +75,12 @@ Pop = ""
 
 [username]
 show_always = true
-style_user = "bg:color_orange fg:color_fg0"
-style_root = "bg:color_orange fg:color_fg0"
+style_user = "bg:color_bg1 fg:color_fg0"
+style_root = "bg:color_bg1 fg:color_fg0"
 format = '[ $user ]($style)'
 
 [directory]
-style = "fg:color_fg0 bg:color_yellow"
+style = "fg:color_fg0 bg:color_blue"
 format = "[ $path ]($style)"
 truncation_length = 100
 truncate_to_repo = false
