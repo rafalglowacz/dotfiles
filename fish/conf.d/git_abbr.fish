@@ -1,6 +1,6 @@
-function _git_mb --description 'Expand git mb, including after dt'
+function _git_mbh --description 'Expand git mbh, including after dt'
     set -l cmd (commandline --tokens-expanded --current-process --cut-at-cursor)
-    if test "$cmd[-1]" = mb
+    if test "$cmd[-1]" = mbh
         set -e cmd[-1]
     end
 
