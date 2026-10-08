@@ -36,9 +36,9 @@ def draw_tab(
         # Active tab colors
         tab_bg = as_rgb(int(draw_data.active_bg))
         tab_fg = as_rgb(int(draw_data.active_fg))
-        # Index color (gray #444444 for dark theme, #cccccc for light theme)
-        # We'll use a slightly lighter gray for the index
-        index_fg = as_rgb(0x00cccccc)
+        # Dim the index against the title, but keep it readable on the pill.
+        # Dark theme uses a light pill, so the number has to be dark there.
+        index_fg = as_rgb(0x00333333 if not draw_data.active_bg.is_dark else 0x00cccccc)
     else:
         # Inactive tab colors
         tab_bg = as_rgb(int(draw_data.inactive_bg))
