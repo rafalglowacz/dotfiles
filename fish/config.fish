@@ -69,9 +69,9 @@ if status is-interactive
     end
 
     abbr art php artisan
-    abbr --command de de_art --regex art php artisan
+    abbr --command docker docker_art --regex art php artisan
     abbr --add artisan_sub --command php --regex '^(m|mr)$' --function _php_artisan_abbr
-    abbr --add artisan_sub_de --command de --regex '^(m|mr)$' --function _php_artisan_abbr
+    abbr --add artisan_sub_docker --command docker --regex '^(m|mr)$' --function _php_artisan_abbr
     abbr batw --set-cursor 'bat (which %)'
     abbr b brew
     abbr --command brew b_i --regex i install
