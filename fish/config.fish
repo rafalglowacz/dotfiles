@@ -64,6 +64,9 @@ if status is-interactive
     else
         alias rm='rm --interactive=never'
     end
+    if command -q zeditor
+        alias zed=zeditor
+    end
 
     abbr art php artisan
     abbr --command de de_art --regex art php artisan
