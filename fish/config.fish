@@ -101,8 +101,8 @@ if status is-interactive
     abbr good git bisect good
 
     abbr g git
-    abbr gd git dt HEAD
-    abbr gds git dt --staged
+    abbr gd git diff -w
+    abbr gds git diff -w --staged
     abbr gs git status
     abbr gcav git-commit -a
     abbr gcava git commit -av --amend
