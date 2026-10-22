@@ -76,7 +76,7 @@ if status is-interactive
     abbr b brew
     abbr --command brew b_i --regex i install
     abbr --command brew b_s --regex s search
-    abbr --command brew b_up --regex up upgrade
+    abbr --command brew b_up --regex up upgrade -y
     abbr c composer
     abbr --command composer composer_c --regex c config
     abbr --command composer composer_g --regex g global
