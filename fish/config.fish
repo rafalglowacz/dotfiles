@@ -109,7 +109,7 @@ if status is-interactive
     abbr gdu git diff -w HEAD
     abbr gpf git push --force
     abbr grh git reset --hard
-    abbr gsh git-difftool-show
+    abbr gsh git show
     abbr gpuoh git push -u origin HEAD
     abbr --command git g_a --regex a add
     abbr --command git g_b --regex b branch
