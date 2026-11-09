@@ -129,7 +129,7 @@ if status is-interactive
     abbr --command git g_l --regex l mylog
     abbr --command git g_m --regex m merge
     abbr --command git g_ma --regex ma merge --abort
-    abbr --command git g_mb --regex mb merge-base
+    abbr --command git g_mb --regex mb --set-cursor 'merge-base origin/%'
     abbr --command git g_mbh --regex mbh --function _git_mbh --set-cursor
     abbr --command git g_pl --regex pl pull
     abbr --command git g_ps --regex ps push
