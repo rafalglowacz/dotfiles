@@ -35,7 +35,7 @@
     "editor.accessibilitySupport": "off",
     "files.insertFinalNewline": true,
     "redhat.telemetry.enabled": false,
-    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrap": "bounded",
     "editor.wordWrapColumn": 120,
     "editor.tabCompletion": "onlySnippets",
     "terminal.integrated.cursorBlinking": true,
