@@ -5,7 +5,7 @@ if status is-interactive
     set -gx DOCKER_CLI_HINTS false
     set -gx EDITOR hx
     set -gx VISUAL $EDITOR
-    set -gx LESS XRi
+    set -gx LESS FRi
     set -gx MOAR '--no-clear-on-exit --quit-if-one-screen'
     set -gx GIT_OPTIONAL_LOCKS 0
     set -gx GOPATH ~/.local/bin/go

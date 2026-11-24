@@ -38,7 +38,7 @@
 	defaultRemote = origin
 [core]
 	editor = hx
-	pager = LESS=Ri delta -s
+	pager = delta -s
 [credential]
 	helper = cache --timeout=3600
 [delta]
@@ -75,8 +75,8 @@
 [mergetool "vscode"]
 	cmd = code --wait $MERGED
 [pager]
-	log = less -RiS
-	reflog = less -RiS
+	log = less
+	reflog = less
 [pull]
 	rebase = false
 [push]
